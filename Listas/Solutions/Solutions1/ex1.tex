@@ -1,0 +1,611 @@
+
+
+Para determinar a ação, integramos a densidade de lagrangiana em $\dd[4]{x}$, de modo que
+    \begin{equation*}
+        S = \int \mathcal{L}_{0} \dd[4]{x}
+    \end{equation*}
+
+Fazendo uma variação na ação $\delta S$, como a densidade de lagrangiana $\mathcal{L}_{0} \equiv \mathcal{L}_{0}(\phi_{0}, \partial_{\mu}\phi_{0})$, a variação fica
+    \begin{equation*}
+        \delta S = \int \qty[
+            \fdv{\mathcal{L}_{0}}{\phi_{0}} \delta\phi_{0} +
+            \fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})} \delta(\partial_{\mu}\phi_{0})
+        ] \dd[4]{x}
+    \end{equation*}
+
+Note que
+    \begin{align*}
+        \partial_{\mu}\qty[
+            \fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})} \delta\phi_{0}
+        ] = \partial_{\mu}\qty[
+            \fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}
+        ]\delta\phi_{0} + 
+        \fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}\partial_{\mu}(\delta\phi_{0})
+    \end{align*}
+
+Como uma variação $\delta$ pode permutar com uma derivada parcial $\partial_{\mu}$, temos
+    \begin{align*}
+        \partial_{\mu}\qty[
+            \fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})} \delta\phi_{0}
+        ] &= \partial_{\mu}\qty[
+            \fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}
+        ]\delta\phi_{0} + 
+        \fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}\delta(\partial_{\mu}\phi_{0})
+    \end{align*}
+
+Portanto podemos substituir a variação da ação por
+    \begin{align*}
+        \delta S &\eq \int \qty{
+            \fdv{\mathcal{L}_{0}}{\phi_{0}} \delta\phi_{0} - \partial_{\mu}\qty[
+                \fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}
+            ] \delta\phi_{0} +
+            \partial_{\mu}\qty[
+                \fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}\delta\phi_{0}
+            ]
+        }\dd[4]{x} \\
+        &\eq \int \qty{
+            \fdv{\mathcal{L}_{0}}{\phi_{0}} - 
+            \partial_{\mu}\qty[
+                \fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}
+            ]
+        }\delta\phi_{0} \dd[4]{x} +
+        \int \partial_{\mu}\qty[
+            \fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}\delta\phi_{0}
+        ]\dd[4]{x}
+    \end{align*}
+
+O último termo desta expressão é uma derivada total em todo o espaço-tempo, de modo que ao impormos que nos limites assintóticos o campo desaparece, concluímos que a integração vai dar zero, restando apenas
+    \begin{equation*}
+        \delta S = \int \qty{
+            \fdv{\mathcal{L}_{0}}{\phi_{0}} - \partial_{\mu}\qty[\fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}]
+        }\delta\phi_{0} \dd[4]{x}
+    \end{equation*}
+
+O princípio de mínima ação $\delta S = 0$ fornece
+    \begin{equation*}
+        \delta S = \int \qty{
+            \fdv{\mathcal{L}_{0}}{\phi_{0}} - \partial_{\mu}\qty[\fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}]
+        }\delta\phi_{0} \dd[4]{x} = 0
+    \end{equation*}
+que deve ser satisfeito para qualquer variação $\delta\phi_{0}$ do campo, logo impomos que o argumento dentro das chaves $\{\cdots\}$ é igual a zero, gerando a equação de Euler-Lagrange:
+    \begin{equation*}
+        \fdv{\mathcal{L}_{0}}{\phi_{0}} - \partial_{\mu}\qty[\fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}] = 0
+    \end{equation*}
+
+Calculando o primeiro termo com base na densidade de lagrangiana, temos
+    \begin{equation*}
+        \fdv{\mathcal{L}_{0}}{\phi_{0}} = \fdv{\phi_{0}}(-\dfrac{1}{2}m^2\phi_{0}^2) = -\dfrac{1}{2}m^2 (2\phi_{0}) = -m^2\phi_{0}
+    \end{equation*}
+em que apenas o segundo termo da lagrangiana vai ser relevante, pois o primeiro depende apenas das derivadas do campo. Para o segundo termo da equação de Euler-Lagrange, apenas o primeiro termo da lagrangiana vai ser relevante, de modo que
+    \begin{align*}
+        \partial_{\mu}\qty[\fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}] 
+        &\eq \partial_{\mu}\qty[
+            \fdv{}{(\partial_{\mu}\phi_{0})}\qty(\dfrac{1}{2}\partial_{\mu}\phi_{0}\partial^{\mu}\phi_{0})
+        ] 
+        = \partial_{\mu}\qty[
+            \dfrac{1}{2}\fdv{}{(\partial_{\mu}\phi_{0})}\qty(g^{\alpha\beta}\partial_{\alpha}\phi_{0}\partial_{\beta}\phi_{0})
+        ] \\
+        &\eq \partial_{\mu}\qty{
+            \dfrac{1}{2}g^{\alpha\beta}\qty[
+                \fdv{(\partial_{\alpha}\phi_{0})}{(\partial_{\mu}\phi_{0})} \partial_{\beta}\phi_{0} +
+                \partial_{\alpha}\phi_{0} \fdv{(\partial_{\beta}\phi_{0})}{(\partial_{\mu}\phi_{0})}
+            ]
+        }
+    \end{align*}
+
+Sabendo então que
+    \begin{equation*}
+        \fdv{(\partial_{\alpha}\phi_{0})}{(\partial_{\mu}\phi_{0})} = \delta_{\alpha}^{\mu} 
+        \qquad \& \qquad 
+        \fdv{(\partial_{\beta}\phi_{0})}{(\partial_{\mu}\phi_{0})} = \delta_{\beta}^{\mu} 
+    \end{equation*}
+obtemos
+    \begin{align*}
+        \partial_{\mu}\qty[\fdv{\mathcal{L}_{0}}{(\partial_{\mu}\phi_{0})}] &\eq \partial_{\mu}\qty[
+            \dfrac{1}{2}g^{\alpha\beta} \qty(
+                \delta_{\alpha}^{\mu}\partial_{\beta}\phi_{0} + 
+                \delta_{\beta}^{\mu}\partial_{\alpha}\phi_{0}
+            )
+        ] = \partial_{\mu}\qty[
+            \dfrac{1}{2}\qty(
+                g^{\mu\beta}\partial_{\beta}\phi_{0} + 
+                g^{\alpha\mu}\partial_{\alpha}\phi_{0}
+            )
+        ] \\
+        &\eq \partial_{\mu}\qty[
+            \dfrac{1}{2}\qty(
+                \partial^{\mu}\phi_{0} + 
+                \partial^{\mu}\phi_{0}
+            )
+        ] = \partial_{\mu}\partial^{\mu}\phi_{0}
+    \end{align*}
+
+Juntando então os resultados na equação de Euler-Lagrange:
+    \begin{equation*}
+        -m^2\phi_{0} - \partial_{\mu}\partial^{\mu}\phi_{0} = 0
+    \end{equation*}
+
+Concluindo que o campo livre $\phi_{0}$ satisfaz a equação de Klein-Gordon
+    \begin{answer}\label{eq: Klein-Gordon}
+        (\partial_{\mu}\partial^{\mu} + m^2)\phi_{0} = 0
+    \end{answer}
+
+
+% Sabemos que a \textbf{equação de Klein-Gordon} se escreve na forma $(\partial_{\mu} \partial^{\mu} + m^2)\phi(x) = 0$ e que ela descreve as equações de movimento de um \textbf{campo escalar livre}. Comecemos escrevendo $\phi(x)$ no espaço de Fourier (momento):
+%     \begin{equation*}
+%         \phi(x) = \int \dfrac{1}{(2\pi)^4} \tilde{\phi}(k) e^{-ikx} \dd[4]{k}
+%     \end{equation*}
+
+% Utilizando então a equação de Klein-Gordon, temos
+%     \begin{equation*}
+%         (\partial_{\mu}\partial^{\mu} + m^2)\int \dfrac{1}{(2\pi)^4} \tilde{\phi}(k) e^{-ikx} \dd[4]{k} = 0
+%     \end{equation*}
+
+% Como o d'Alambertiano está no espaço de posição e a integração é feita no espaço de momento, podemos inserir as derivações dentro da integral:
+%     \begin{equation*}
+%         \int \dfrac{1}{(2\pi)^4} \tilde{\phi}(k) \qty[\partial_{\mu}\partial^{\mu}\qty(e^{-ikx}) + m^2e^{-ikx}]\dd[4]{k} = 0
+%     \end{equation*}
+
+% Expandindo o d'Alambertiano sob a forma $\partial_{\mu}\partial^{\mu} = \pdv[2]{}{t} - \nabla^2$:
+%     \begin{equation*}
+%         \int \dfrac{1}{(2\pi)^4}\tilde{\phi}(k) \qty[\pdv[2]{}{t} \qty(e^{-ikx}) - \nabla^2 \qty(e^{-ikx}) + m^2e^{-ikx}]\dd[4]{k} = 0
+%     \end{equation*}
+
+% As derivações ficam
+%     \begin{align*}
+%         \pdv[2]{}{t}\qty(e^{-ikx}) &= \pdv[2]{}{t}\qty(e^{-ik_{0}t + i\vb{k}\cdot\vb{x}}) 
+%         = \pdv[2]{}{t}\qty(e^{-ik_{0}t})e^{i\vb{k}\cdot\vb{x}} 
+%         = (-ik_{0})^2 e^{-ik_{0}t}e^{i\vb{k}\cdot\vb{x}}
+%         = -k_{0}^2 e^{-ikx} \\
+%         \nabla^2\qty(e^{-ikx}) &= \nabla^2\qty(e^{-ik_{0}t+i\vb{k}\cdot\vb{x}}) 
+%         = e^{-ik_{0}t} \nabla^2 \qty(e^{i\vb{k}\cdot\vb{x}}) 
+%         = e^{-ik_{0}t} \abs{\vb{k}}^2 e^{i\vb{k}\cdot\vb{x}} 
+%         = \abs{\vb{k}}^2 e^{-ikx}
+%     \end{align*}
+% e portanto
+%     \begin{equation*}
+%         \int \dfrac{1}{(2\pi)^4} \tilde{\phi}(k) \qty(-k_{0}^2 + \abs{\vb{k}}^2 + m^2)e^{-ikx}\dd[4]{k} = 0
+%     \end{equation*}
+
+% Podemos multiplicar ambos os lados da equação por $-1$ afim de visualizar que $k_{0}^2 - \abs{\vb{k}}^2 = k^2$, restando então
+%     \begin{equation*}
+%         \int \dfrac{1}{(2\pi)^4} \tilde{\phi}(k) \qty(k^2 - m^2)e^{-ikx}\dd[4]{k} = 0
+%     \end{equation*}
+
+% Olhando para esta equação, vemos que o $\tilde{\phi}(k)$ que satisfaz a igualdade consiste de modos onde $k^2 = m^2$, ou seja, \textit{on-shell}. Isto nos permite assumir que
+%     \begin{equation*}
+%         \tilde{\phi}(k) = 2\pi \delta(k^2-m^2)C(k)
+%     \end{equation*}
+% onde $C(k)$ é uma função arbitrária de $k$ a ser determinada. Portanto
+%     \begin{align*}
+%         \phi(x) &= \int \dfrac{1}{(2\pi)^4} 2\pi \delta(k^2 - m^2) C(k) e^{-ikx}\dd[4]{k} \\
+%         &= \int \dfrac{1}{(2\pi)^3} \delta(k_{0}^2 - \abs{\vb{k}}^2 - m^2) C(k) e^{-ikx}\dd[4]{k}
+%     \end{align*}
+
+% Vemos então que o argumento da distribuição delta de Dirac possui zeros em $k_{0} = \pm \sqrt{\abs{\vb{k}}^2 + m^2}$. Podemos definir esta quantidade como sendo
+%     \begin{equation*}
+%         \omega_{\vb{k}} \coloneqq \sqrt{\vb{\abs{k}}^2 + m^2}
+%     \end{equation*}
+% como um análogo de uma frequência de um oscilador harmônico simples, pois ao passarmos a equação de Klein-Gordon para o espaço de Fourier, temos
+%     \begin{equation*}
+%         \qty[\pdv[2]{}{t} + \qty(\abs{\vb{k}}^2 + m^2)]\tilde{\phi}(k) = 0
+%     \end{equation*}
+% que é uma equação de movimento de um oscilador harmônico simples com a frequência de oscilação $\omega_{\vb{k}}$. Podemos então utilizar a seguinte propriedade da distribuição delta de Dirac:
+%     \begin{equation*}
+%         \delta[f(x)] = \sum_{f(x_{i})=0} \dfrac{1}{\abs{f'(x_{i})}} \delta(x-x_{i})
+%     \end{equation*}
+
+% No caso, $f(x)$ vai ser uma função de $k_{0}$, ou seja $f(k_{0}) = k_{0}^2 - \abs{\vb{k}}^2 - m^2$, cuja derivada é $f'(k_{0}) = 2k_{0}$, sendo assim, temos
+%     \begin{equation*}
+%         \delta(k^2 - m^2) = 
+%         \underbrace{\dfrac{\delta(k_{0} - \omega_{\vb{k}})}{2\omega_{\vb{k}}}}_{k_{0}>0} + 
+%         \underbrace{\dfrac{\delta(k_{0}+\omega_{\vb{k}})}{\abs{-2\omega_{\vb{k}}}}}_{k_{0}<0}
+%     \end{equation*}
+
+% % EU ACHO Q A FUNÇÃO DE HEAVISIDE ENTRA AQUI NESSE PONTO
+% O fato do 4-momento ser sempre time-like, o sinal de $k_{0}$ é invariante de Lorentz, implicando que a integração de $k_{0}$ precisa ser feita apenas em $k_{0} > 0$, portanto, inserimos na integral uma função de Heaviside definida por
+%     \begin{equation*}
+%         \Theta(k_{0}) = \begin{cases}
+%             1&, k_{0}\geqslant 0 \\
+%             0&, k_{0}< 0
+%         \end{cases}
+%     \end{equation*} 
+
+% Isto nos permite escrever
+%     \begin{equation*}
+%         \phi(x) = \int \dfrac{1}{(2\pi)^3}\Theta(k_{0})\qty[\dfrac{\delta(k_{0}-\omega_{\vb{k}})}{2\omega_{\vb{k}}} + \dfrac{\delta(k_{0} + \omega_{\vb{k}})}{\abs{2\omega_{\vb{k}}}}]C(k_{0},\vb{k})e^{-ik_{0}t + i\vb{k}\cdot\vb{x}}\dd[4]{k}
+%     \end{equation*}
+
+% Performando então uma integração em $k_{0}$, temos
+%     \begin{align*}
+%         \phi(x) &= \int \dfrac{1}{(2\pi)^3}\dfrac{1}{2\omega_{\vb{k}}}\qty[
+%             C(\omega_{\vb{k}},\vb{k})e^{-i\omega_{\vb{k}}t + i\vb{k}\cdot\vb{x}} +
+%             C(-\omega_{\vb{k}},\vb{k})e^{+i\omega_{\vb{k}}t + i\vb{k}\cdot\vb{x}}
+%         ]\dd[3]{k}
+%     \end{align*}
+
+% Fazendo uma mudança no momento tridimensional $\vb{k} \mapsto -\vb{k}$ ({\color{orange}PORQUE?}) do segundo termo:
+%     \begin{equation*}
+%         \phi(x) = \int \dfrac{1}{(2\pi)^3}\dfrac{1}{2\omega_{\vb{k}}}\qty[
+%             C(\omega_{\vb{k}},\vb{k})e^{-i\omega_{\vb{k}}t + i\vb{k}\cdot\vb{x}} +
+%             C(-\omega_{\vb{k}}, -\vb{k})e^{i\omega_{\vb{k}}t - i\vb{k}\cdot\vb{x}}
+%         ]\dd[3]{k}
+%     \end{equation*}
+
+% Afim de quantizar este campo, fazemos com que a função $C(k)$ seja proporcional aos operadores de criação ({\color{MyOrange}$a^{\dagger}(k)$}) e aniquilação ({\color{MyOrange}$a(k)$})
+%     \begin{equation*}
+%         C(\omega_{\vb{k}},\vb{k}) = \sqrt{2\omega_{\vb{k}}} a(k) \qquad \& \qquad 
+%         C(-\omega_{\vb{k}},-\vb{k}) = \sqrt{2\omega_{\vb{k}}} a^{\dagger}(k)
+%     \end{equation*}
+
+% Podemos também chamar de $e^{-i\omega_{\vb{k}}t+i\vb{k}\cdot\vb{x}} = \sqrt{2\omega_{\vb{k}}}f_{k}(x)$, concluindo que
+%     \begin{answer} \label{eq: free scalar field}
+%         \phi(x) = \int \dfrac{1}{(2\pi)^3}\qty[
+%             a(k)f_{k}(x) + 
+%             a^{\dagger}(k)f_{k}^{\ast}(x)
+%         ]\dd[3]{k}
+%     \end{answer}
+
+% Como o momento conjugado $\pi(x) = \dot{\phi}(x)$, temos
+%     \begin{equation*}
+%         \pi(x) = \int \dfrac{1}{(2\pi)^3} \qty[
+%             a(k) \pdv{f_{k}(x)}{t} +
+%             a^{\dagger}(k) \pdv{f_{k}^{\ast}(x)}{t}
+%         ]\dd[3]{k}
+%     \end{equation*}
+% onde
+%     \begin{align*}
+%         \pdv{f_{k}(x)}{t} &= \sqrt{2\omega_{\vb{k}}}\pdv{}{t}\qty(e^{-i\omega_{\vb{k}}t})e^{i\vb{k}\cdot\vb{x}} = -i\omega_{\vb{k}} \sqrt{2\omega_{\vb{k}}}e^{-i\omega_{\vb{k}}t+i\vb{k}\cdot\vb{x}} = -i\omega_{\vb{k}}f_{k}(x) \\
+%         \pdv{f_{k}^{\ast}(x)}{t} &= \sqrt{2\omega_{\vb{k}}}\pdv{}{t}\qty(e^{+i\omega_{\vb{k}}t})e^{-i\vb{k}\cdot\vb{x}} = +i\omega_{\vb{k}} \sqrt{2\omega_{\vb{k}}}e^{i\omega_{\vb{k}}t-i\vb{k}\cdot\vb{x}} = +i\omega_{\vb{k}}f_{k}^{\ast}(x)
+%     \end{align*}
+
+% Concluindo que
+%     \begin{answer}\label{eq: conjugate momenta of free scalar field}
+%         \pi(x) = \int \dfrac{i\omega_{\vb{k}}}{(2\pi)^3} \qty[
+%             -a(k)f_{k}(x) +
+%             a^{\dagger}(k)f_{k}^{\ast}(x)
+%         ]\dd[3]{k}
+%     \end{answer}
+
+% % Toda esta construção impõe automaticamente a quantização dos campos $\phi(x)$ e $\pi(x)$ a partir da relação de comutação
+% %     \begin{equation}\label{eq: commutation rule between free scalar fields}
+% %         [\phi(\vb{x},t), \pi(\vb{y},t)] = i\delta^3(\vb{x} - \vb{y})
+% %     \end{equation}
+
+% Para computar os operadores de criação e aniquilação em termos do campo $\phi(x)$, aplicamos uma nova transformação de Fourier nos campos $\phi(x)$ e $\pi(x)$. Fazendo então uma transformada de Fourier em \eqref{eq: free scalar field}, temos
+%     \begin{equation*}
+%         \int \phi(x)e^{ikx}\dd[3]{x} = \int \qty{\int \dfrac{1}{(2\pi)^3}\qty[
+%             a(k')f_{k'}(x) + 
+%             a^{\dagger}(k')f_{k'}^{\ast}(x)
+%         ]\dd[3]{k'}}e^{ikx}\dd[3]{x}
+%     \end{equation*}
+
+% Por simplicidade, retomarei $e^{-i\omega_{\vb{k}}t+i\vb{k}\cdot\vb{x}} = \sqrt{2\omega_{\vb{k}}} f_{k}(x)$ sob a forma $e^{-ikx} = \sqrt{2\omega_{\vb{k}}}f_{k}(x)$, assumindo que $k = (\omega_{\vb{k}},\vb{k})$. A expressão fica então
+%     \begin{equation*}
+%         \int \phi(x) e^{ikx}\dd[3]{x} = \iint \dfrac{1}{(2\pi)^3}\dfrac{1}{\sqrt{2\omega_{\vb{k}'}}}\qty[
+%             a(k')e^{-i(k'-k)x} + 
+%             a^{\dagger}(k')e^{i(k'+k)x}
+%         ]\dd[3]{k'}\dd[3]{x}
+%     \end{equation*}
+
+% Como do lado direito da expressão, apenas as exponenciais dependem das coordenadas espaciais, temos como escrever
+%     \begin{equation*}
+%         \int \phi(x)e^{ikx}\dd[3]{x} = \int \dfrac{1}{(2\pi)^3}\dfrac{1}{\sqrt{2\omega_{\vb{k}'}}}\qty[
+%             a(k')\int e^{-i(k'-k)x}\dd[3]{x} + 
+%             a^{\dagger}(x) \int e^{i(k'+k)x}\dd[3]{x}
+%         ]\dd[3]{k'}
+%     \end{equation*}
+
+% Note então que as integrais em $\dd[3]{x}$ são partes de uma das principais definições da distribuição delta de Dirac, de modo que
+%     \begin{align*}
+%         \int e^{-i(k'-k)x}\dd[3]{x} &= e^{-i(\omega_{\vb{k}'}-\omega_{\vb{k}})t} \int e^{i(\vb{k}'-\vb{k})\cdot\vb{x}} \dd[3]{x} \\
+%         &= e^{-i(\omega_{\vb{k}'} - \omega_{\vb{k}})t} (2\pi)^3\delta^3(\vb{k}' - \vb{k}) \\
+%         \int e^{i(k'+k)x}\dd[3]{x} &= e^{i(\omega_{\vb{k}'}+\omega_{\vb{k}})t} \int e^{-i(\vb{k}' + \vb{k})\cdot\vb{x}} \dd[3]{x} \\
+%         &= e^{i(\omega_{\vb{k}'} + \omega_{\vb{k}})t} (2\pi)^3 \delta^3(\vb{k}' + \vb{k})
+%     \end{align*}
+
+% Sendo assim, obtemos
+%     \begin{equation*}
+%         \int \phi(x)e^{ikx}\dd[3]{x} = \int \dfrac{1}{\sqrt{2\omega_{\vb{k}'}}}\qty[
+%             a(k')e^{-i(\omega_{\vb{k}'}-\omega_{\vb{k}})t}\delta^3(\vb{k}'-\vb{k}) + 
+%             a^{\dagger}(k')e^{i(\omega_{\vb{k}'}+\omega_{\vb{k}})t}\delta^3(\vb{k}'+\vb{k})
+%         ]\dd[3]{k'}
+%     \end{equation*}
+
+% Podemos notar também que $\omega_{-\vb{k}'} = \sqrt{\abs{-\vb{k}'}^2 + m^2} = \omega_{\vb{k}'}$, logo ao performar a integral obtemos
+%     \begin{align*}
+%         \int \phi(x) e^{ikx}\dd[3]{x} &= \dfrac{1}{\sqrt{2\omega_{\vb{k}}}}\qty[
+%             a(k) e^{-i(\omega_{\vb{k}}-\omega_{\vb{k}})t} +
+%             a^{\dagger}(k) e^{i(\omega_{-\vb{k}}+\omega_{\vb{k}})t}
+%         ]\\ 
+%         &= \dfrac{1}{\sqrt{2\omega_{\vb{k}}}}\qty[
+%             a(k) + 
+%             a^{\dagger}(k) e^{2i\omega_{\vb{k}}t}
+%         ]
+%     \end{align*}
+
+% No caso do momento conjugado, temos
+%     \begin{align*}
+%         \int \pi(x) e^{ikx}\dd[3]{x} &= \int \qty{
+%             \int \dfrac{i\omega_{\vb{k}'}}{(2\pi)^3} \qty[
+%                 -a(k')f_{k}(x) +
+%                 a^{\dagger}(k')f_{k'}^{\ast}(x)
+%             ]\dd[3]{k'}
+%         }e^{ikx}\dd[3]{x} \\
+%         &= \iint \dfrac{1}{(2\pi)^3}\dfrac{i\omega_{\vb{k}'}}{\sqrt{2\omega_{\vb{k}'}}}\qty[
+%             -a(k')e^{-i(k'-k)x} +
+%             a^{\dagger}(k')e^{i(k'+k)x}
+%         ]\dd[3]{k'}\dd[3]{x} \\
+%         &= \int \dfrac{-i}{(2\pi)^3}\sqrt{\dfrac{\omega_{\vb{k}'}}{2}}\qty[
+%             a(k')\int e^{-i(k'-k)x}\dd[3]{x} - 
+%             a^{\dagger}(k')\int e^{i(k'+k)x}\dd[3]{x}
+%         ]\dd[3]{k'} \\
+%         &= -i\int \sqrt{\dfrac{\omega_{\vb{k}'}}{2}}\qty[
+%             a(k')e^{-i(\omega_{\vb{k}'} - \omega_{\vb{k}})t} \delta^3(\vb{k}' - \vb{k}) -
+%             a^{\dagger}(k') e^{i(\omega_{\vb{k}'} + \omega_{\vb{k}})t} \delta^3(\vb{k}' + \vb{k})
+%         ] \dd[3]{k'} \\
+%         &= -i\sqrt{\dfrac{\omega_{\vb{k}}}{2}}\qty[
+%             a(k) e^{-i(\omega_{\vb{k}} - \omega_{\vb{k}})t} -
+%             a^{\dagger}(k) e^{i(\omega_{-\vb{k}} + \omega_{\vb{k}})t}
+%         ] \\
+%         &= -i\sqrt{\dfrac{\omega_{\vb{k}}}{2}}\qty[
+%             a(k) - a^{\dagger}(k)e^{2i\omega_{\vb{k}}t}
+%         ]
+%     \end{align*}
+
+% Com estes resultados, podemos obter as formas
+%     \begin{equation*}
+%         \sqrt{2\omega_{\vb{k}}} \int \phi(x) e^{ikx}\dd[3]{x} = a(k) + a^{\dagger}(k) e^{2i\omega_{\vb{k}}t}
+%     \end{equation*}
+%     \begin{equation*}
+%         i\sqrt{\dfrac{2}{\omega_{\vb{k}}}} \int \pi(x) e^{ikx}\dd[3]{x} = a(k) - a^{\dagger}(k) e^{2i\omega_{\vb{k}}t}
+%     \end{equation*}
+
+% Somando as duas equações:
+%     \begin{align*}
+%         a(k) &= \int \qty[
+%             \dfrac{i}{\sqrt{2\omega_{\vb{k}}}}\pi(x) + 
+%             \sqrt{\dfrac{\omega_{\vb{k}}}{2}}\phi(x) 
+%         ] e^{ikx}\dd[3]{x} \\
+%         &= \int \qty[
+%             \dfrac{i}{\sqrt{2\omega_{\vb{k}}}}\dot{\phi}(x) +
+%             \sqrt{\dfrac{\omega_{\vb{k}}}{2}}\phi(x) 
+%         ]\sqrt{2\omega_{\vb{k}}}f_{k}^{\ast}(x) \dd[3]{x} \\
+%         &= \int \qty[
+%             i\dot{\phi}(x) + 
+%             \omega_{\vb{k}} \phi(x)
+%         ]f_{k}^{\ast}(x) \dd[3]{x} \\
+%         &= \int \qty[
+%             i\dot{\phi}(x)f_{k}^{\ast}(x) + 
+%             \omega_{\vb{k}} \phi(x) f_{k}^{\ast}(x)
+%         ]\dd[3]{x} \\
+%         &= i\int \qty[
+%             f_{k}^{\ast}(x)\dot{\phi}(x) -
+%             i\omega_{\vb{k}}\phi(x)f_{k}^{\ast}(x)
+%         ]\dd[3]{x} \\
+%         &= i\int \qty[
+%             f_{k}^{\ast}(x) \pdv{\phi(x)}{t} - 
+%             \phi(x) \pdv{f_{k}^{\ast}(x)}{t}
+%         ]\dd[3]{x}
+%     \end{align*}
+
+% Pela notação
+%     \begin{equation*}
+%         A \overset{\leftrightarrow}{\partial_0} B = 
+%         A \pdv{B}{t} - \pdv{A}{t} B
+%     \end{equation*}
+
+% Podemos concluir que o operador de aniquilação $a(k)$ admite ser escrito sob a forma
+%     \begin{answer}\label{eq: annihilation operator}
+%         a(k) = i\int f_{k}^{\ast}(x) \overset{\leftrightarrow}{\partial_{0}}\phi(x) \dd[3]{x}
+%     \end{answer}
+
+% Como estamos considerando um campo $\phi(x)$ real, temos $\phi^{\dagger}(x) = \phi(x)$, portanto ao calcular $a^{\dagger}(k)$, trocaremos $i \mapsto -i$ e $f_{k}^{\ast}(x) \mapsto f_{k}(x)$, concluindo que
+%     \begin{answer}\label{eq: creation operator}
+%         a^{\dagger}(k) = -i\int f_{k}(x) \overset{\leftrightarrow}{\partial_{0}}\phi(x)\dd[3]{x}
+%     \end{answer}
+
+% Para determinar a relação de comutação $[\phi(\vb{x},t), \pi(\vb{y},t)]$, podemos expandir separadamente os termos do comutador:
+%     \begin{align*}
+%         \phi(\vb{x},t)\pi(\vb{y},t) 
+%         &= \int \dfrac{1}{(2\pi)^3}\qty[
+%             a(k) f_{k}(x) + a^{\dagger}(k) f_{k}^{\ast}(x)
+%         ] \dd[3]{k} \int \dfrac{-i\omega_{\vb{p}}}{(2\pi)^3}\qty[
+%             a(p) f_{p}(y) - a^{\dagger}(p) f_{p}^{\ast}(y)
+%         ] \dd[3]{p} \\
+%         &= \iint \dfrac{-i\omega_{\vb{p}}}{(2\pi)^6}\qty[
+%             a(k) f_{k}(x) + a^{\dagger}(k) f_{k}^{\ast}(x)
+%         ]\qty[
+%             a(p) f_{p}(y) - a^{\dagger}(p) f_{p}^{\ast}(y)
+%         ] \dd[3]{k} \dd[3]{p} \\
+%         &= \iint \dfrac{-i\omega_{\vb{p}}}{(2\pi)^6}\Big[
+%             a(k)a(p) f_{k}(x)f_{p}(y) -
+%             a(k)a^{\dagger}(p) f_{k}(x)f_{p}^{\ast}(y) + \\
+%         &+  a^{\dagger}(k)a(p) f_{k}^{\ast}(x) f_{p}(y) -
+%             a^{\dagger}(k)a^{\dagger}(p) f_{k}^{\ast}(x) f_{p}^{\ast}(y)
+%         \Big] \dd[3]{k} \dd[3]{p}
+%     \end{align*}
+%     \begin{align*}
+%         \pi(\vb{y},t)\phi(\vb{x},t) 
+%         &= \int \dfrac{-i\omega_{\vb{p}}}{(2\pi)^3}\qty[
+%             a(p) f_{p}(y) - a^{\dagger}(p) f_{p}^{\ast}(y)
+%         ] \dd[3]{p} \int \dfrac{1}{(2\pi)^3}\qty[
+%             a(k) f_{k}(x) + a^{\dagger}(k) f_{k}^{\ast}(x)
+%         ] \dd[3]{k} \\
+%         &= \iint \dfrac{-i\omega_{\vb{p}}}{(2\pi)^6}\qty[
+%             a(p) f_{p}(y) - a^{\dagger}(p) f_{p}^{\ast}(y)
+%         ]\qty[
+%             a(k) f_{k}(x) + a^{\dagger}(k) f_{k}^{\ast}(x)
+%         ] \dd[3]{k} \dd[3]{p} \\
+%         &= \iint \dfrac{-i\omega_{\vb{p}}}{(2\pi)^6}\Big[
+%             a(p) a(k) f_{p}(y) f_{k}(x) + 
+%             a(p) a^{\dagger}(k) f_{p}(y) f_{k}^{\ast}(x) - \\
+%         &-  a^{\dagger}(p) a(k) f_{p}^{\ast}(y) f_{k}(x) -
+%             a^{\dagger}(p) a^{\dagger}(k) f_{p}^{\ast}(y) f_{k}^{\ast}(x)
+%         \Big] \dd[3]{k} \dd[3]{p}
+%     \end{align*}
+
+% Juntando tudo no comutador $[\phi(\vb{x},t),\pi(\vb{y},t)]$:
+%     \begin{align*}
+%         [\phi(\vb{x},t),\pi(\vb{y},t)] 
+%         &= \phi(\vb{x},t)\pi(\vb{y},t) - \pi(\vb{y},t)\phi(\vb{x},t) \\
+%         &= \iint \dfrac{-i\omega_{\vb{p}}}{(2\pi)^6} \Big[
+%             a(k)a(p) f_{k}(x)f_{p}(y) -
+%             {\color{MyOrange} a(k)a^{\dagger}(p) f_{k}(x)f_{p}^{\ast}(y)} + \\
+%         &+  {\color{Blue} a^{\dagger}(k)a(p) f_{k}^{\ast}(x) f_{p}(y)} -
+%             a^{\dagger}(k)a^{\dagger}(p) f_{k}^{\ast}(x) f_{p}^{\ast}(y) - \\
+%         &-  a(p) a(k) f_{p}(y) f_{k}(x) - 
+%             {\color{Blue} a(p) a^{\dagger}(k) f_{p}(y) f_{k}^{\ast}(x)} - \\
+%         &+  {\color{MyOrange} a^{\dagger}(p) a(k) f_{p}^{\ast}(y) f_{k}(x)} +
+%             a^{\dagger}(p) a^{\dagger}(k) f_{p}^{\ast}(y) f_{k}^{\ast}(x)
+%         \Big] \dd[3]{k} \dd[3]{p} \\
+%         &= \iint \dfrac{-i\omega_{\vb{p}}}{(2\pi)^6} \Big[
+%             [a(k), a(p)] f_{k}(x) f_{p}(y) + 
+%             {\color{MyOrange}[a^{\dagger}(p),a(k)] f_{k}(x) f_{p}^{\ast}(y)} - \\
+%         &-  {\color{Blue}[a(p), a^{\dagger}(k)] f_{k}^{\ast}(x) f_{p}(y)} +
+%             [a^{\dagger}(p), a^{\dagger}(k)] f_{p}^{\ast}(y)  f_{k}^{\ast}(x)
+%         \Big] \dd[3]{k} \dd[3]{p}
+%     \end{align*}
+
+% Considerando então as relações de comutação
+%     \begin{equation}\label{eq: canonical comutation rules}
+%         \begin{matrix}
+%             [a(k), a^{\dagger}(k')] = (2\pi)^3 \delta^3(\vb{k} - \vb{k}') \\ \\
+%             [a(k), a(k')] = 0 \qquad \& \qquad 
+%             [a^{\dagger}(k), a^{\dagger}(k')] = 0
+%         \end{matrix}
+%     \end{equation}
+% temos
+%     \begin{equation*}
+%         [\phi(\vb{x},t), \pi(\vb{y},t)] = \iint \dfrac{-i\omega_{\vb{p}}}{(2\pi)^3} \Big[
+%             -\delta^3(\vb{k} - \vb{p}) f_{k}(x) f_{p}^{\ast}(y) -
+%             \delta^3(\vb{p} - \vb{k}) f_{k}^{\ast}(x) f_{p}(y)
+%         \Big]\dd[3]{k} \dd[3]{p}
+%     \end{equation*}
+
+% Expandindo $f_{k}(x)f_{p}^{\ast}(y)$ e $f_{k}^{\ast}(x)f_{p}(y)$:
+%     \begin{align*}
+%         f_{k}(x)f_{p}^{\ast}(y) &= \dfrac{1}{\sqrt{2\omega_{\vb{k}}}}e^{-ikx} \dfrac{1}{\sqrt{2\omega_{\vb{p}}}}e^{ipy} &
+%         f_{k}^{\ast}(x)f_{p}(y) &= \dfrac{1}{\sqrt{2\omega_{\vb{k}}}}e^{ikx} \dfrac{1}{\sqrt{2\omega_{\vb{p}}}}e^{-ipy} \\
+%         &= \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{p}}}}e^{-i\omega_{\vb{k}}t + i\vb{k}\cdot\vb{x}}e^{i\omega_{\vb{p}}t - \vb{p}\cdot\vb{y}} & &= \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{p}}}}e^{i\omega_{\vb{k}}t - i\vb{k}\cdot\vb{x}} e^{-i\omega_{\vb{p}}t + i\vb{p}\cdot\vb{y}} \\
+%         &= \dfrac{e^{-i(\omega_{\vb{k}} - \omega_{\vb{p}})}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{p}}}}e^{i(\vb{k}\cdot\vb{x} - \vb{p}\cdot\vb{y})} & &= \dfrac{e^{i(\omega_{\vb{k}} - \omega_{\vb{p}})}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{p}}}}e^{-i(\vb{k}\cdot\vb{x} - \vb{p}\cdot\vb{y})}
+%     \end{align*}
+
+% Como $\delta(\vb{x}) = \delta(-\vb{x})$, temos a forma expandida
+%     \begin{align*}
+%         [\phi(\vb{x},t), \pi(\vb{y},t)] &= \iint \dfrac{i\omega_{\vb{p}}}{(2\pi)^3}\dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{p}}}}\Big[
+%             e^{-i(\omega_{\vb{k}} - \omega_{\vb{p}})} e^{i(\vb{k}\cdot\vb{x} - \vb{p}\cdot\vb{y})} + \\
+%         &+  e^{i(\omega_{\vb{k}} - \omega_{\vb{p}})} e^{-i(\vb{k}\cdot\vb{x} - \vb{p}\cdot\vb{y})} \Big]\delta^3(\vb{p} - \vb{k}) \dd[3]{k} \dd[3]{p}
+%     \end{align*}
+
+% Realizando a integração em $\dd[3]{p}$, temos pela presença da distribuição delta de Dirac que $\vb{p} \mapsto \vb{k}$, resultando em
+%     \begin{align*}
+%         [\phi(\vb{x},t), \pi(\vb{y},t)] &= \int \dfrac{i\omega_{\vb{k}}}{(2\pi)^3}\dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}}}}\qty[
+%             e^{-i(\omega_{\vb{k}} - \omega_{\vb{k}})} e^{i(\vb{k}\cdot\vb{x} - \vb{k}\cdot\vb{y})} + 
+%             e^{i(\omega_{\vb{k}} - \omega_{\vb{k}})} e^{-i(\vb{k}\cdot\vb{x} - \vb{k}\cdot\vb{y})}
+%         ] \dd[3]{k} \\
+%         &= \dfrac{i}{2}\int \dfrac{1}{(2\pi)^3}\qty[
+%             e^{i\vb{k}\cdot(\vb{x} - \vb{y})} +
+%             e^{-i\vb{k}\cdot(\vb{x} - \vb{y})}
+%         ] \dd[3]{k} \\
+%         &= \dfrac{i}{2}\qty[
+%             \int \dfrac{1}{(2\pi)^3}e^{i\vb{k}\cdot(\vb{x}-\vb{y})}\dd[3]{k} +
+%             \int \dfrac{1}{(2\pi)^3}e^{-i\vb{k}\cdot(\vb{x}-\vb{y})}\dd[3]{k}
+%         ] \\
+%         &= \dfrac{i}{2}\qty[
+%             \delta^3(\vb{x} - \vb{y}) + \delta^3(\vb{y} - \vb{x})
+%         ]
+%     \end{align*}
+
+% Concluindo que a partir das relações de comutação \eqref{eq: canonical comutation rules}, chegamos em
+%     \begin{answer}\label{eq: canonical commutation rule between free scalar fields}
+%         [\phi(\vb{x},t), \pi(\vb{y},t)] = i\delta^3(\vb{x} - \vb{y})
+%     \end{answer}
+
+% Sabendo da forma da densidade de lagrangiana livre $\mathcal{L}(\phi,\partial_{\mu}\phi)$ e dos campos $\phi(\vb{x},t)$ e $\pi(\vb{x},t)$, podemos determinar a densidade de hamiltoniana $\mathcal{H}(\phi,\pi,\partial_{\mu}\phi,\partial_{\mu}\pi)$ por
+%     \begin{equation*}
+%         \mathcal{H}(\phi,\pi,\partial_{\mu}\phi,\partial_{\mu}\pi) = \dot{\phi}(x)\pi(x) - \mathcal{L}(\phi,\partial_{\mu}\phi)
+%     \end{equation*}
+
+% Como $\pi(x) = \partial_{0}\phi(x)$, é fácil ver que
+%     \begin{align*}
+%         \mathcal{H} &= \pi^2 - \dfrac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi + \dfrac{1}{2}m^2\phi^2 \\
+%         &= \pi^2 - \dfrac{1}{2}\dot{\phi}^2 + \dfrac{1}{2}\nabla\phi\cdot\nabla\phi + \dfrac{1}{2} m^2 \phi^2 \\
+%         &= \dfrac{1}{2}\pi^2 + \dfrac{1}{2}(\nabla\phi)^2 + \dfrac{1}{2}m^2\phi^2
+%     \end{align*}
+
+% Concluindo que 
+%     \begin{answer}\label{eq: hamiltonian density}
+%         \mathcal{H} = \dfrac{1}{2}\qty[
+%             \pi^2 + (\nabla\phi)^2 + m^2\phi^2
+%         ]
+%     \end{answer}
+
+% Tendo a densidade de hamiltoniana, somos então capazes de mostrar a hamiltoniana de fato, então ``basta'' integrar nas coordenadas espaciais:
+%     \begin{align*}
+%         H &= \int \mathcal{H} \dd[3]{x} = \dfrac{1}{2}\int [\pi^2 + (\nabla\phi)^2 + m^2\phi^2]\dd[3]{x} \\
+%         &= \dfrac{1}{2}\int \pi^2\dd[3]{x} + \dfrac{1}{2}\int \nabla\phi\cdot\nabla\phi \dd[3]{x} + \dfrac{m^2}{2}\int \phi^2\dd[3]{x}
+%     \end{align*}
+
+% O primeiro termo vai ficar
+%     \begin{align*}
+%         \dfrac{1}{2}\int\pi^2\dd[3]{x} 
+%         =&\; \dfrac{1}{2}\iiint \dfrac{\omega_{\vb{k}}\omega_{\vb{k}'}}{(2\pi)^3}
+%             \qty[
+%                 a(k)f_{k}(x) - a^{\dagger}(k)f_{k}^{\ast}(x)
+%             ]\qty[
+%                 a(k')f_{k'}(x) - a^{\dagger}(k')f_{k'}^{\ast}(x)
+%             ]\dd[3]{k}\dd[3]{k'}
+%         \dd[3]{x} \\
+%         =&\; \dfrac{1}{2}\iiint \dfrac{\omega_{\vb{k}}\omega_{\vb{k}'}}{(2\pi)^3}
+%         \Big[
+%             a(k)a(k')f_{k}(x)f_{k'}(x) - a(k)a^{\dagger}(k')f_{k}(x)f_{k'}^{\ast}(x) - \\
+%         &- a^{\dagger}(k)a(k')f_{k}^{\ast}(x)f_{k'}(x) + a^{\dagger}(k)a^{\dagger}(k')f_{k}^{\ast}(x)f_{k'}^{\ast}(x)
+%         \Big]\dd[3]{k}\dd[3]{k'}\dd[3]{x}
+%     \end{align*}
+
+% Lembrando da forma de $f_{k}(x)$, temos que os produtos entre estas funções são
+%     \begin{align*}
+%         f_{k}(x)f_{k'}(x) 
+%         &= \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+%             e^{-i\omega_{\vb{k}}t + i\vb{k}\cdot\vb{x}} 
+%             e^{-i\omega_{\vb{k}'}t + i\vb{k}'\cdot\vb{x}} 
+%         = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+%             e^{-i(\omega_{\vb{k}} + \omega_{\vb{k}'})t} 
+%             e^{i(\vb{k}+\vb{k}')\cdot\vb{x}}
+%     \end{align*}
+%     \begin{align*}
+%         f_{k}(x)f_{k'}^{\ast}(x) 
+%         &= \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+%             e^{-i\omega_{\vb{k}}t + i\vb{k}\cdot\vb{x}} 
+%             e^{i\omega_{\vb{k'}}t - i\vb{k}'\cdot\vb{x}} 
+%         = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+%             e^{-i(\omega_{\vb{k}} - \omega_{\vb{k}'})t} 
+%             e^{i(\vb{k} - \vb{k}')\cdot\vb{x}}
+%     \end{align*}
+%     \begin{align*}
+%         f_{k}^{\ast}(x)f_{k'}(x) 
+%         &= \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+%             e^{i\omega_{\vb{k}}t - i\vb{k}\cdot\vb{x}} 
+%             e^{-i\omega_{\vb{k}'}t + i\vb{k}'\cdot\vb{x}} 
+%         = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+%             e^{i(\omega_{\vb{k}} - \omega_{\vb{k}'})t} 
+%             e^{-i(\vb{k} - \vb{k}')\cdot\vb{x}}
+%     \end{align*}
+%     \begin{align*}
+%         f_{k}^{\ast}(x)f_{k'}^{\ast}(x) 
+%         &= \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+%             e^{i\omega_{\vb{k}}t - i\vb{k}\cdot\vb{x}} 
+%             e^{i\omega_{\vb{k}'}t - i\vb{k}'\cdot\vb{x}} 
+%         = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+%             e^{i(\omega_{\vb{k}} + \omega_{\vb{k}'})t} 
+%             e^{-i(\vb{k} + \vb{k}')\cdot\vb{x}}
+%     \end{align*}
+
+% Note então que as integrais em $\dd[3]{x}$ podem ser feitas apenas nos produtos de $f_{k}(x)$, pois os operadores de criação e aniquilação independem de $\vb{x}$, logo, junto com um fator $1/(2\pi)^3$, temos
+%     \begin{align*}
+%         \dfrac{1}{(2\pi)^3}\int f_{k}(x)f_{k'}(x)\dd[3]{x} 
+%         &= \dfrac{e^{-i(\omega_{\vb{k}} + \omega_{\vb{k}'})t}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+%         \int \dfrac{1}{(2\pi)^3} e^{i(\vb{k} + \vb{k}')\cdot\vb{x}}\dd[3]{x} 
+%         = \dfrac{e^{-i(\omega_{\vb{k}} + \omega_{\vb{k}'})t}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} \delta^3(\vb{k} + \vb{k}')
+%     \end{align*}

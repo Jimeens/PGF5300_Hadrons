@@ -1,0 +1,126 @@
+
+
+Considere a primeira propriedade do item (c), de modo que utilizando o campo interpolante do item (b) obtemos
+    \begin{align*}
+        \pdv{\phi}{t} &\eq \pdv{}{t}\qty[
+            U^{-1} \phi_{\text{in}} U
+        ] \\
+        &\eq \dot{U}^{-1} \phi_{\text{in}} U +
+        U^{-1} \dot{\phi}_{\text{in}} U +
+        U^{-1} \phi_{\text{in}} \dot{U}
+    \end{align*}
+
+A propriedade (a) nos dá
+    \begin{equation*}
+        \dv{}{t}\qty[U U^{-1}] = \dot{U} U^{-1} + U \dot{U}^{-1} = 0
+    \end{equation*}
+
+Logo
+    \begin{equation*}
+        \dot{U} U^{-1} = -U \dot{U}^{-1}
+    \end{equation*}
+
+Como $U^{-1} U = \boldone$, podemos aplicar $U^{-1}$ pela esquerda, ficando com
+    \begin{equation*}
+        \dot{U}^{-1} = -U^{-1} \dot{U} U^{-1}
+    \end{equation*}
+    
+Portanto
+    \begin{align*}
+        \pdv{\phi}{t} &\eq -U^{-1}\dot{U}U^{-1} \phi_{\text{in}} U +
+        U^{-1} \pdv{\phi_{\text{in}}}{t} U +
+        U^{-1} \phi_{\text{in}} \dot{U} \\
+        &\eq -U^{-1} \dot{U} \phi + 
+        U^{-1} \pdv{\phi_{\text{in}}}{t} U + 
+        U^{-1} U \phi U^{-1} \dot{U} \\
+        &\eq -U^{-1} \dot{U} \phi + 
+        U^{-1} \pdv{\phi_{\text{in}}}{t} U + 
+        \phi U^{-1} \dot{U}
+    \end{align*}
+
+Pela propriedade (c), temos
+    \begin{align*}
+        \pdv{\phi_{\text{in}}}{t} &\eq i\qty[\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}}), \phi_{\text{in}}] \\
+        &\eq i\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}})\phi_{\text{in}} - i\phi_{\text{in}}\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}}) \\
+        &\eq i\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}}) U \phi U^{-1} - 
+        iU\phi U^{-1}\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}})
+    \end{align*}
+
+Como precisamos calcular $U^{-1}\displaystyle\pdv{\phi_{\text{in}}}{t}U$, 
+    \begin{align*}
+        U^{-1}\pdv{\phi_{\text{in}}}{t}U &\eq 
+        U^{-1} i\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}}) U \phi U^{-1} U -
+        U^{-1} iU\phi U^{-1}\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}}) U \\
+        &\eq U^{-1} i\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}}) U \phi - 
+        i\phi U^{-1}\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}}) U \\
+        &\eq \qty[U^{-1}i\hat{H}(\phi_{\text{in}}, \pi_{\text{in}})U, \phi]
+    \end{align*}
+
+Considerando que $\hat{H}(\phi,\pi)$ é polinomial nos campos $\phi$ e $\pi$, podemos assumir que vale a igualdade $\hat{H}(\phi,\pi) = U^{-1}\hat{H}(\phi_{\text{in}},\pi_{\text{in}}) U$, pois os operadores de evolução temporal são aplicados nos campos, tal que
+    \begin{align*}
+        \pdv{\phi}{t} &\eq i\qty[\hat{H}(\phi,\pi), \phi] \\
+        &\eq i\hat{H}(\phi,\pi)\phi - i\phi\hat{H}(\phi,\pi) \\
+        &\eq U^{-1}i\hat{H}(\phi_{\text{in}}, \pi_{\text{in}}) U \phi -
+        i\phi U^{-1}\hat{H}(\phi_{\text{in}}, \pi_{\text{in}}) U \\
+        &\eq \qty[U^{-1}i\hat{H}(\phi_{\text{in}}, \pi_{\text{in}})U, \phi]
+    \end{align*}
+
+Temos então
+    \begin{align*}
+        \qty[U^{-1}i\hat{H}(\phi_{\text{in}}, \pi_{\text{in}})U, \phi] = 
+        -U^{-1} \dot{U} \phi +
+        \qty[U^{-1}i\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}})U, \phi] + 
+        \phi U^{-1} \dot{U}
+    \end{align*}
+
+Somando e subtraindo $U^{-1}\phi\displaystyle \dot{U}$, podemos escrever
+    \begin{align*}
+        -U^{-1} \dot{U} \phi + 
+        \phi U^{-1} \dot{U} + 
+        U^{-1}\phi\displaystyle \dot{U} - 
+        U^{-1}\phi\displaystyle \dot{U} 
+        &\eq
+        \qty[\phi, U^{-1}]\dot{U} + 
+        U^{-1}\qty[\phi, \dot{U}] 
+        =
+        \qty[\phi, U^{-1}\dot{U}] \\
+        &\eq -\qty[U^{-1}\dot{U}, \phi]
+    \end{align*}
+
+Adicionando $\boldone = U^{-1}U$ teremos
+    \begin{equation*}
+        -\qty[U^{-1}\dot{U}, \phi] = -\qty[U^{-1} \dot{U} U^{-1} U, \phi]
+    \end{equation*}
+
+Resultando portanto na expressão
+    \begin{equation*}
+        \qty[U^{-1}i\hat{H}(\phi_{\text{in}}, \pi_{\text{in}})U, \phi] = 
+        \qty[U^{-1}i\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}})U, \phi] - 
+        \qty[U^{-1} \dot{U} U^{-1} U, \phi]
+    \end{equation*}
+
+Reorganizando um pouco, levando em conta que $[A + B, C] = [A,B] + [B,C]$, 
+    \begin{equation*}
+        \qty[U^{-1} \qty(\dot{U} U^{-1} + i\hat{H}(\phi_{\text{in}}, \pi_{\text{in}})) U, \phi] = 
+        \qty[U^{-1} i\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}}) U, \phi]
+    \end{equation*}
+
+De modo que pela igualdade, podemos afirmar que
+    \begin{answer}\label{eq: hamiltonian relation}
+        \dot{U} U^{-1} + i\hat{H}(\phi_{\text{in}}, \pi_{\text{in}}) = i\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}})
+    \end{answer}
+
+Dado que $\hat{H} = \hat{H}_{0} + \hat{H}_{\text{int}}$, temos que 
+    \begin{equation*}
+        \hat{H}_{\text{int}}(\phi_{\text{in}}, \pi_{\text{in}}) = \hat{H}(\phi_{\text{in}}, \pi_{\text{in}}) - \hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}})
+    \end{equation*}
+
+A \eqref{eq: hamiltonian relation} pode ser reescrita multiplicando tudo por $i$ e isolando $\dot{U}U^{-1}$, ou seja
+    \begin{equation*}
+        i\dot{U} U^{-1} = \hat{H}(\phi_{\text{in}},\pi_{\text{in}}) - \hat{H}_{0}(\phi_{\text{in}},\pi_{\text{in}}) = \hat{H}_{\text{int}}(\phi_{\text{in}}, \pi_{\text{in}})
+    \end{equation*}
+
+Multiplicando $U$ pela direita das duas expressões, concluímos que
+    \begin{answer}\label{eq: temporal operador in interaction hamiltonian term}
+        i\pdv{U(t)}{t} = \hat{H}_{\text{int}}(\phi_{\text{in}}, \pi_{\text{in}})U(t)
+    \end{answer}

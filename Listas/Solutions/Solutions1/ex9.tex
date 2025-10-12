@@ -1,0 +1,397 @@
+
+
+A convergência fraca nos dá a normalização do campo interpolante em relação ao campo livre inicial, de modo que podemos escrever 
+    \begin{equation*}
+        \ket{\vb{p}_{1}\bar{\vb{p}}_{1}}_{\text{in}} = Z_{2}^{-1/2}\lim_{t_{1}\to-\infty} \sqrt{2E_{\vb{p}_{1}}}b^{\dagger}_{s}(\vb{p}_{1},t_{1})\ket{\bar{\vb{p}}_{1}}_{\text{in}}
+    \end{equation*}
+
+Definindo então $A \coloneqq \tensor[_{\text{out}}]{\braket{\vb{q}_{1}\bar{\vb{q}}_{1}}{\vb{p}_{1}\bar{\vb{p}}_{1}}}{_{\text{in}}}$, temos
+    \begin{equation*}
+        A = Z^{-1/2}_{2} \lim_{t_{1}\to-\infty} 
+        \tensor[_{\text{out}}]{\bra{\vb{q}_{1} \bar{\vb{q}}_{1}}}{} \sqrt{2E_{\vb{p}_{1}}} b^{\dagger}_{s}(\vb{p}_{1},t_{1})\ket{\bar{\vb{p}}_{1}}_{\text{in}}
+    \end{equation*}
+
+Considerando então uma integral em $\dd{t_{1}}$ de uma derivada total temporal também em $t_{1}$, escrevemos
+    \begin{align*}
+        \int_{-\infty}^{\infty}\partial_{0}\qty[
+            \tensor[_{\text{out}}]{\bra{\vb{q}_{1} \bar{\vb{q}}_{1}}}{} \sqrt{2E_{\vb{p}_{1}}} b^{\dagger}_{s}(\vb{p}_{1},t_{1})\ket{\bar{\vb{p}}_{1}}_{\text{in}}
+        ]\dd{t_{1}} &\eq
+        \lim_{t_{1}\to\infty}\qty[
+            \tensor[_{\text{out}}]{\bra{\vb{q}_{1} \bar{\vb{q}}_{1}}}{} \sqrt{2E_{\vb{p}_{1}}} b^{\dagger}_{s}(\vb{p}_{1},t_{1})\ket{\bar{\vb{p}}_{1}}_{\text{in}}
+        ] - \\
+        &\noeq - 
+        \lim_{t_{1}\to-\infty}\qty[
+            \tensor[_{\text{out}}]{\bra{\vb{q}_{1} \bar{\vb{q}}_{1}}}{} \sqrt{2E_{\vb{p}_{1}}} b^{\dagger}_{s}(\vb{p}_{1},t_{1})\ket{\bar{\vb{p}}_{1}}_{\text{in}}
+        ]
+    \end{align*}
+
+Note então que
+    \begin{equation*}
+        Z_{2}^{-1/2}\lim_{t_{1}\to\infty}\qty[
+            \tensor[_{\text{out}}]{\bra{\vb{q}_{1} \bar{\vb{q}}_{1}}}{} \sqrt{2E_{\vb{p}_{1}}} b^{\dagger}_{s}(\vb{p}_{1},t_{1})\ket{\bar{\vb{p}}_{1}}_{\text{in}}
+        ]
+    \end{equation*}
+será não nulo apenas para casos irrelevantes, onde 1 férmion de momento $\vb{p}_{1}$ se transforma em um outro férmion de momento $\vb{q}_{1}$ ou um anti-férmion de momento $\bar{\vb{q}}_{1}$, que não é o caso de interesse, logo fazemos este termo ser ``1''. Portanto
+    \begin{align*}
+        A = \text{``1''} - Z_{2}^{-1/2}\int_{-\infty}^{\infty}\partial_{0}\qty[
+            \tensor[_{\text{out}}]{\bra{\vb{q}_{1} \bar{\vb{q}}_{1}}}{} \sqrt{2E_{\vb{p}_{1}}} b^{\dagger}_{s}(\vb{p}_{1},t_{1})\ket{\bar{\vb{p}}_{1}}_{\text{in}}
+        ]\dd{t_{1}}
+    \end{align*}
+onde essa derivada só se aplica no operador $b_{s}^{\dagger}(\vb{p}_{1},t_{1})$, sendo então a quantidade que precisamos calcular. Sabendo a forma de $b_{s}(\vb{k})$, conforme \eqref{eq: annihilation operator for particle fermion}, fica claro que
+    \begin{equation*}
+        b^{\dagger}_{s}(\vb{p}_{1},t_{1}) = \int \bar{\psi}(x_{1}) \gamma^{0} U_{p_{1}}^{s}(x_{1}) \dd[3]{x_{1}}
+    \end{equation*}
+
+Segue que a derivada em relação à $t_{1}$ nos dá
+    \begin{equation*}
+        \partial_{0}b_{s}^{\dagger}(\vb{p}_{1},t_{1}) = 
+        \int \qty[\partial_{0}\bar{\psi}(x_{1})] \gamma^{0} U_{p_{1}}^{s}(x_{1})\dd[3]{x_{1}} +
+        \int \bar{\psi}(x_{1}) \gamma^{0} \qty[\partial_{0}U_{p_{1}}^{s}(x_{1})]\dd[3]{x_{1}}
+    \end{equation*}
+
+Notemos que $U_{p_{1}}^{s}(x_{1})$ satisfaz a equação de Dirac, tal que
+    \begin{equation*}
+        (i\slashed{\partial} - m)U_{p_{1}}^{s}(x_{1}) = 0
+    \end{equation*}
+portanto
+    \begin{equation*}
+        i\gamma^{0}\partial_{0}U_{p_{1}}^{s}(x_{1}) + i\gamma^{k}\partial_{k}U_{p_{1}}^{s}(x_{1}) - mU_{p_{1}}^{s}(x_{1}) = 0
+    \end{equation*}
+o que nos dá, multiplicando tudo por $-i$ e isolando o termo de interesse
+    \begin{align*}
+        \gamma^{0}\partial_{0}U_{p_{1}}^{s}(x_{1}) &\eq -imU_{p_{1}}^{s}(x_{1}) - \gamma^{k}\partial_{k}U_{p_{1}}^{s}(x_{1}) \\
+        &\eq -im U_{p_{1}}^{s}(x_{1}) - \gamma^{k}(ip_{k})U_{p_{1}}^{s}(x_{1})
+    \end{align*}
+
+Então a segunda integral pode ser substituída, de modo que
+    \begin{equation*}
+        \partial_{0}b^{\dagger}_{s}(\vb{p}_{1},t_{1}) = 
+        \int \qty[\partial_{0}\bar{\psi}(x_{1})\gamma^{0}] U_{p_{1}}^{s}(x_{1})\dd[3]{x_{1}} +
+        \int \bar{\psi}(x_{1})\qty[
+            -im - i\gamma^{k}p_{k}
+        ]U_{p_{1}}^{s}(x_{1})\dd[3]{x}
+    \end{equation*}
+
+Em uma integração por partes no segundo termo, consideramos que o campo desaparece nos limites assintóticos, e obtemos
+    \begin{align*}
+        \partial_{0}b^{\dagger}_{s}(\vb{p}_{1},t_{1}) &\eq \int \qty[
+            \partial_{0}\bar{\psi}(x_{1})\gamma^{0} + \partial_{k}\bar{\psi}(x_{1})\gamma^{k} - i\bar{\psi}(x_{1})m
+        ]U_{p_{1}}^{s}(x_{1})\dd[3]{x_{1}} \\
+        &\eq i\int \qty[-i\partial_{0}\bar{\psi}(x_{1})\gamma^{0} - i\partial_{k}\bar{\psi}(x_{1})\gamma^{k} - \bar{\psi}(x_{1})m]U_{p_{1}}^{s}(x_{1})\dd[3]{x_{1}} \\
+        &\eq i\int \qty[
+            -i\partial_{\mu}\bar{\psi}(x_{1})\gamma^{\mu} - \bar{\psi}(x_{1})m
+        ]U_{p_{1}}^{s}(x_{1}) \dd[3]{x_{1}}
+    \end{align*}
+
+Sendo então
+    \begin{equation*}
+        -i\partial_{\mu}\bar{\psi}(x_{1})\gamma^{\mu} - \bar{\psi}(x_{1})m = \bar{\psi}(x_{1})\big(
+            -i\overset{\leftarrow}{\slashed{\partial}} - m
+        \big)_{x_{1}} = \bar{\psi}(x_{1}) \overset{\leftarrow}{F}_{x_{1}}
+    \end{equation*}
+obtemos que
+    \begin{equation*}
+        \partial_{0}b^{\dagger}_{s}(\vb{p}_{1},t_{1}) = i\int \bar{\psi}(x_{1})\overset{\leftarrow}{F}_{x_{1}} U_{p_{1}}^{s}(x_{1}) \dd[3]{x_{1}}
+    \end{equation*}
+
+Portanto
+    \begin{equation*}
+        A = \text{``1''} - iZ_{2}^{-1/2}\iint_{-\infty}^{\infty} 
+            \tensor[_{\text{out}}]{\bra{\vb{q}_{1} \bar{\vb{q}}_{1}}}{} 
+            \bar{\psi}(x_{1})\ket{\bar{\vb{p}}_{1}}_{\text{in}} \overset{\leftarrow}{F}_{x_{1}} \sqrt{2E_{\vb{p}_{1}}} U_{p_{1}}^{s}(x_{1}) \dd[3]{x_{1}}\dd{t_{1}}
+    \end{equation*}
+
+Como $\tilde{U}_{p_{1}}^{s}(x_{1}) = \sqrt{2E_{\vb{p}_{1}}} U_{p_{1}}^{s}(x_{1})$ (exercício 6), concluindo que a primeira redução fica
+    \begin{equation*}
+        A = \text{``1''} - iZ_{2}^{-1/2}\int
+            \tensor[_{\text{out}}]{\bra{\vb{q}_{1} \bar{\vb{q}}_{1}}}{} 
+            \bar{\psi}(x_{1}) 
+        \ket{\bar{\vb{p}}_{1}}_{\text{in}} 
+        \overset{\leftarrow}{F}_{x_{1}} 
+        \tilde{U}_{p_{1}}^{s}(x_{1}) 
+        \dd[4]{x_{1}}
+    \end{equation*}
+
+Seguindo com a redução, podemos escrever
+    \begin{equation*}
+        \ket{\bar{\vb{p}}_{1}}_{\text{in}} = Z_{2}^{-1/2} \lim_{\bar{t}_{1}\to-\infty} \sqrt{2E_{\bar{\vb{p}}_{1}}} d^{\dagger}_{s}(\bar{\vb{p}}_{1},\bar{t}_{1})\ket{\vb{0}}_{\text{in}}
+    \end{equation*}
+
+Portanto
+    \begin{equation*}
+        A = \text{``1''} - i(Z_{2}^{-1/2})^2 \lim_{\bar{t}_{1}\to-\infty}\int
+        \tensor[_{\text{out}}]{\bra{\vb{q}_{1}\bar{\vb{q}}_{1}}}{} 
+            \bar{\psi}(x_{1})
+            \sqrt{2E_{\bar{\vb{p}}_{1}}}
+            d^{\dagger}_{s}(\bar{\vb{p}}_{1}, \bar{t}_{1})
+        \ket{\vb{0}}_{\text{in}}
+        \overset{\leftarrow}{F}_{x_{1}} 
+        \tilde{U}_{p_{1}}^{s}(x_{1})\dd[4]{x_{1}}
+    \end{equation*}
+
+Usando novamente o argumento de uma integração em uma derivada total, mas agora $\bar{t}_{1}$, temos
+    \begin{align*}
+        \int_{-\infty}^{\infty} \partial_{0}\qty[
+            \tensor[_{\text{out}}]{\bra{\vb{q}_{1}\bar{\vb{q}}_{1}}}{} 
+            \cdots
+            d^{\dagger}_{s}(\bar{\vb{p}}_{1}, \bar{t}_{1})
+        \ket{\vb{0}}_{\text{in}}
+        ] \dd{\bar{t}_{1}} &\eq 
+        \lim_{\bar{t}_{1}\to\infty}
+        \tensor[_{\text{out}}]{\bra{\vb{q}_{1}\bar{\vb{q}}_{1}}}{} 
+            \cdots
+            d^{\dagger}_{s}(\bar{\vb{p}}_{1}, \bar{t}_{1})
+        \ket{\vb{0}}_{\text{in}} - \\
+        &\noeq - \lim_{\bar{t}_{1}\to-\infty}
+        \tensor[_{\text{out}}]{\bra{\vb{q}_{1}\bar{\vb{q}}_{1}}}{} 
+            \cdots
+            d^{\dagger}_{s}(\bar{\vb{p}}_{1}, \bar{t}_{1})
+        \ket{\vb{0}}_{\text{in}}
+    \end{align*}
+
+O limite de $\bar{t}_{1}\to\infty$ vai gerar um termo desconexo (não relevante para interação que estamos interessados), tal que o adicionamos a ``1'' e ficamos com
+    \begin{equation*}
+        A = \text{``1''} - i(Z_{2}^{-1/2})^2 \iint_{-\infty}^{\infty}
+        \tensor[_{\text{out}}]{\bra{\vb{q}_{1}\bar{\vb{q}}_{1}}}{} 
+            \bar{\psi}(x_{1})
+            \sqrt{2E_{\bar{\vb{p}}_{1}}}
+            \partial_{0}d^{\dagger}_{s}(\bar{\vb{p}}_{1}, \bar{t}_{1})
+        \ket{\vb{0}}_{\text{in}}
+        \overset{\leftarrow}{F}_{x_{1}} 
+        \tilde{U}_{p_{1}}^{s}(x_{1})
+        \dd{\bar{t}_{1}}\dd[4]{x_{1}}
+    \end{equation*}
+
+Sabendo a forma explícita de $d_{s}(\vb{k})$, conforme \eqref{eq: annihilation operator for antiparticle fermion}, podemos escrever seu hermitiano conjugado interpolante sob a forma
+    \begin{equation*}
+        d^{\dagger}_{s}(\bar{\vb{p}}_{1}, \bar{t}_{1}) = \int 
+            \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) 
+            \gamma^{0}
+            \psi(\bar{x}_{1})
+        \dd[3]{\bar{x}_{1}}
+    \end{equation*}
+
+Logo a derivada em $\dd{\bar{t}_{1}}$ se expande na forma
+    \begin{equation*}
+        \partial_{0}d^{\dagger}_{s}(\bar{\vb{p}}_{1}, \bar{t}_{1}) = 
+        \int \qty[\partial_{0}\bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1})] \gamma^{0} \psi(\bar{x}_{1}) \dd[3]{\bar{x}_{1}} +
+        \int \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \gamma^{0} \qty[\partial_{0}\psi(\bar{x}_{1})]\dd[3]{\bar{x}_{1}}
+    \end{equation*}
+
+Notemos que $\bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1})$ satisfaz a equação de Dirac adjunta, isto é
+    \begin{equation*}
+        \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) (-i\overset{\leftarrow}{\slashed{\partial}} - m)_{\bar{x}_{1}} = 0
+    \end{equation*}
+que expandindo assume a forma
+    \begin{equation*}
+        -i\partial_{0}\bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \gamma^{0} - 
+        i\partial_{k}\bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \gamma^{k} - 
+        m\bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) = 0
+    \end{equation*}
+
+Multiplicando tudo por $i$ e isolando um termo de interesse, temos
+    \begin{align*}
+        \partial_{0} \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \gamma^{0} &\eq 
+        im \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) - 
+        \partial_{k} \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \gamma^{k} \\
+        &\eq im \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) - ip_{k} \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \gamma^{k} \\
+        &\eq \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \qty(
+            im -ip_{k}\gamma^{k}
+        )
+    \end{align*}
+
+Portanto
+    \begin{equation*}
+        \partial_{0}d^{\dagger}_{s}(\bar{\vb{p}}_{1}, \bar{t}_{1}) = 
+        \int \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \qty(
+            im - ip_{k}\gamma^{k}
+        )\psi(\bar{x}_{1}) \dd[3]{\bar{x}_{1}} + 
+        \int \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \gamma^{0}\partial_{0}\psi(\bar{x}_{1})\dd[3]{\bar{x}_{1}}
+    \end{equation*}
+
+A partir de uma integração por partes, transformamos o primeiro termo, de modo que
+    \begin{align*}
+        \partial_{0}d^{\dagger}_{s}(\bar{\vb{p}}_{1},\bar{t}_{1}) &\eq 
+        \int \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \qty(
+            im + \gamma^{k}\partial_{k}
+        )\psi(\bar{x}_{1}) \dd[3]{\bar{x}_{1}} +
+        \int \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \gamma^{0}\partial_{0}\psi(\bar{x}_{1})\dd[3]{\bar{x}_{1}} \\
+        &\eq \int \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \qty(
+            \gamma^{0}\partial_{0} + \gamma^{k}\partial_{k} + im
+        )\psi(\bar{x}_{1}) \dd[3]{\bar{x}_{1}} \\
+        &\eq -i\int \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \qty(
+            i\gamma^{\mu}\partial_{\mu} - m
+        )_{\bar{x}_{1}}\psi(\bar{x}_{1})
+        \dd[3]{\bar{x}_{1}}
+    \end{align*}
+
+Sendo então
+    \begin{equation*}
+        (i\slashed{\partial} - m)_{\bar{x}_{1}}\psi(\bar{x}_{1}) = \overset{\rightarrow}{F}_{\bar{x}_{1}}\psi(\bar{x}_{1})
+    \end{equation*}
+obtemos
+    \begin{equation*}
+        \partial_{0}d^{\dagger}_{s}(\bar{\vb{p}}_{1},\bar{t}_{1}) = -i\int 
+        \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) 
+        \overset{\rightarrow}{F}_{\bar{x}_{1}}\psi(\bar{x}_{1})
+        \dd[3]{\bar{x}_{1}}
+    \end{equation*}
+
+Portanto 
+    \begin{align*}
+        A &\eq \text{``1''} + (iZ_{2}^{-1/2})(-iZ_{2}^{-1/2}) \iint_{-\infty}^{\infty}
+        \sqrt{2E_{\bar{\vb{p}}_{1}}} 
+        \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \overset{\rightarrow}{F}_{\bar{x}_{1}}\psi(\bar{x}_{1})
+        \tensor[_{\text{out}}]{\bra{\vb{q}_{1}\bar{\vb{q}}_{1}}}{} 
+            \bar{\psi}(x_{1})
+            \psi(\bar{x}_{1})
+        \ket{\vb{0}}_{\text{in}} \times \\
+        &\noeq \times 
+        \overset{\leftarrow}{F}_{x_{1}} 
+        \tilde{U}_{p_{1}}^{s}(x_{1})
+        \dd{\bar{t}_{1}}\dd[3]{\bar{x}_{1}}\dd[4]{x_{1}}
+    \end{align*}
+
+Como $\bar{\tilde{V}}_{\bar{p}_{1}}^{s} = \sqrt{2E_{\bar{\vb{p}}_{1}}} \bar{V}_{\bar{p}_{1}}^{s}(\bar{x}_{1})$, obtemos
+    \begin{align*}
+        A &\eq \text{``1''} + (iZ_{2}^{-1/2})(-iZ_{2}^{-1/2}) \int
+        \bar{\tilde{V}}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \overset{\rightarrow}{F}_{\bar{x}_{1}}\psi(\bar{x}_{1})
+        \tensor[_{\text{out}}]{\bra{\vb{q}_{1}\bar{\vb{q}}_{1}}}{} 
+            \bar{\psi}(x_{1})
+            \psi(\bar{x}_{1})
+        \ket{\vb{0}}_{\text{in}} \times \\
+        &\noeq \times 
+        \overset{\leftarrow}{F}_{x_{1}} 
+        \tilde{U}_{p_{1}}^{s}(x_{1})
+        \dd[4]{\bar{x}_{1}}\dd[4]{x_{1}}
+    \end{align*}
+
+Considerando agora os estados finais, temos
+    \begin{equation*}
+        \tensor[_{\text{out}}]{
+             \bra{\vb{q}_{1} \bar{\vb{q}}_{1}}
+        }{} =
+        Z_{2}^{-1/2} \lim_{\bar{\tau}_{1}\to\infty} \tensor[_{\text{out}}]{
+            \bra{\vb{q}_{1}}
+        }{} d_{s}(\bar{\vb{q}}_{1}, \bar{\tau}_{1}) \sqrt{2E_{\bar{q}_{1}}}
+    \end{equation*}
+
+Com isso
+    \begin{align*}
+        A &\eq \text{``1''} + (iZ_{2}^{-1/2})(-iZ_{2}^{-1/2})Z_{2}^{-1/2} \lim_{\bar{\tau}_{1}\to\infty}\int
+        \bar{\tilde{V}}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \overset{\rightarrow}{F}_{\bar{x}_{1}}\psi(\bar{x}_{1})
+        \tensor[_{\text{out}}]{\bra{\vb{q}_{1}}}{} 
+            d_{s}(\bar{\vb{q}}_{1},\bar{\tau}_{1})
+            \sqrt{2E_{\bar{q}_{1}}}\times \\
+        &\noeq \times \bar{\psi}(x_{1}) 
+            \psi(\bar{x}_{1})
+        \ket{\vb{0}}_{\text{in}} 
+        \overset{\leftarrow}{F}_{x_{1}} 
+        \tilde{U}_{p_{1}}^{s}(x_{1})
+        \dd[4]{\bar{x}_{1}}\dd[4]{x_{1}}
+    \end{align*}
+
+Fazendo outra vez a substituição por uma integração de uma derivada total no tempo, tal que
+    \begin{align*}
+        \int_{-\infty}^{\infty} \partial_{0}\qty[
+            \tensor[_{\text{out}}]{\bra{\vb{q}_{1}}}{}
+            d_{s}(\bar{\vb{q}}_{1}, \bar{\tau}_{1})\cdots
+            \ket{\vb{0}}_{\text{in}}
+        ]\dd{\bar{\tau}_{1}} &\eq
+        \lim_{\bar{\tau}_{1}\to\infty}\tensor[_{\text{out}}]{\bra{\vb{q}_{1}}}{}
+            d_{s}(\bar{\vb{q}}_{1}, \bar{\tau}_{1})\cdots
+        \ket{\vb{0}}_{\text{in}} - \\
+        &\noeq - \lim_{\bar{\tau}_{1}\to-\infty}\tensor[_{\text{out}}]{\bra{\vb{q}_{1}}}{}
+            d_{s}(\bar{\vb{q}}_{1}, \bar{\tau}_{1})\cdots
+        \ket{\vb{0}}_{\text{in}}
+    \end{align*}
+
+Neste caso, o termo com o limite $\bar{\tau}_{1}\to\infty$ será irrelevante para o tipo de interação que estamos interessados, de modo a inserirmos em ``1'' e portanto
+    \begin{align*}
+        A &\eq \text{``1''} + (iZ_{2}^{-1/2})(-iZ_{2}^{-1/2})Z_{2}^{-1/2} \iint_{-\infty}^{\infty}
+        \bar{\tilde{V}}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) \overset{\rightarrow}{F}_{\bar{x}_{1}}\psi(\bar{x}_{1})
+        \tensor[_{\text{out}}]{\bra{\vb{q}_{1}}}{} 
+            \partial_{0}d_{s}(\bar{\vb{q}}_{1},\bar{\tau}_{1})
+            \sqrt{2E_{\bar{q}_{1}}}\times \\
+        &\noeq \times \bar{\psi}(x_{1}) 
+            \psi(\bar{x}_{1})
+        \ket{\vb{0}}_{\text{in}} 
+        \overset{\leftarrow}{F}_{x_{1}} 
+        \tilde{U}_{p_{1}}^{s}(x_{1})
+        \dd{\bar{\tau}_{1}}\dd[4]{\bar{x}_{1}}\dd[4]{x_{1}}
+    \end{align*}
+
+Calculando então a derivada do operador $d_{s}(\bar{\vb{q}}_{1},\bar{\tau}_{1})$ com base na forma explícita \eqref{eq: annihilation operator for antiparticle fermion}, temos
+    \begin{equation*}
+        \partial_{0}d_{s}(\bar{\vb{q}}_{1},\bar{\tau}_{1}) = 
+        \int 
+            \qty[\partial_{0}\bar{\psi}(\bar{y}_{1})] 
+            \gamma^{0} 
+            V_{k}^{s}(\bar{y}_{1}) 
+        \dd[3]{\bar{y}_{1}} + 
+        \int 
+            \bar{\psi}(\bar{y}_{1}) 
+            \gamma^{0}
+            \qty[\partial_{0}V_{k}^{s}(\bar{y}_{1})]
+        \dd[3]{\bar{y}_{1}}
+    \end{equation*}
+
+Essa derivada é similar à $\partial_{0}b_{s}^{\dagger}(\vb{p}_{1},t_{1})$, de modo podemos seguir o mesmo raciocínio e obter
+    \begin{equation*}
+        \partial_{0}d_{s}(\bar{\vb{q}}_{1}, \bar{\tau}_{1}) = i\int \bar{\psi}(\bar{y}_{1}) 
+        \overset{\leftarrow}{F}_{\bar{y}_{1}} V_{\bar{q}_{1}}(\bar{y}_{1})\dd[3]{\bar{y}_{1}}
+    \end{equation*}
+
+Considerando então $\tilde{V}_{\bar{q}_{1}}^{s}(\bar{y}_{1}) = \sqrt{2E_{\bar{q}_{1}}} V_{\bar{q}_{1}}^{s}(\bar{y}_{1})$, temos
+    \begin{align*}
+        A &\eq \text{``1''} + (iZ_{2}^{-1/2})^2(-iZ_{2}^{-1/2}) \int
+        \bar{\tilde{V}}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) 
+        \overset{\rightarrow}{F}_{\bar{x}_{1}}
+        \tensor[_{\text{out}}]{\bra{\vb{q}_{1}}}{} 
+            \bar{\psi}(\bar{y}_{1})
+            \bar{\psi}(x_{1}) 
+            \psi(\bar{x}_{1})
+        \ket{\vb{0}}_{\text{in}} \times \\
+        &\noeq \times\overset{\leftarrow}{F}_{x_{1}} 
+        \tilde{U}_{p_{1}}^{s}(x_{1})
+        \overset{\leftarrow}{F}_{\bar{y}_{1}} 
+        \tilde{V}_{\bar{q}_{1}}^{s}(\bar{y}_{1})
+        \dd[4]{\bar{y}_{1}}\dd[4]{\bar{x}_{1}}\dd[4]{x_{1}}
+    \end{align*}
+
+Com todo o procedimento feito até então, fica simples induzir a redução para $\tensor[_{\text{out}}]{\bra{\vb{q}_{1}}}{}$ tal que
+    \begin{align*}
+        A &\eq \text{``1''} + (iZ_{2}^{-1/2})^2(-iZ_{2}^{-1/2})^2 \int
+        \bar{\tilde{U}}_{\bar{q}_{1}}^{s}(y_{1})
+        \overset{\rightarrow}{F}_{y_{1}}
+        \bar{\tilde{V}}_{\bar{p}_{1}}^{s}(\bar{x}_{1}) 
+        \overset{\rightarrow}{F}_{\bar{x}_{1}}
+        \tensor[_{\text{out}}]{\bra{\vb{0}}}{} 
+            \psi(y_{1})
+            \bar{\psi}(\bar{y}_{1})
+            \bar{\psi}(x_{1}) 
+            \psi(\bar{x}_{1})
+        \ket{\vb{0}}_{\text{in}} \times \\
+        &\noeq\times\overset{\leftarrow}{F}_{x_{1}} 
+        \tilde{U}_{p_{1}}^{s}(x_{1})
+        \overset{\leftarrow}{F}_{\bar{y}_{1}} 
+        \tilde{V}_{\bar{q}_{1}}^{s}(\bar{y}_{1})
+        \dd[4]{y_{1}}\dd[4]{\bar{y}_{1}}\dd[4]{\bar{x}_{1}}\dd[4]{x_{1}}
+    \end{align*}
+
+Olhando somente para o termo $\tensor[_{\text{out}}]{\bra{\vb{0}}}{} \psi(y_{1}) \bar{\psi}(\bar{y}_{1}) \bar{\psi}(x_{1}) \psi(\bar{x}_{1})\ket{\vb{0}}_{\text{in}}$ vemos a necessidade da inclusão do operador de ordenamento temporal $T\{\cdots\}$ para evitar que operadores de aniquilação se apliquem no vácuo, argumento equivalente ao feito no exercício 8, portanto a redução LSZ para um espalhamento férmion--anti-férmion é dada por
+    \begin{answer}\label{eq: LSZ reduction for a fermion-antifermion scattering}
+        \begin{matrix}
+            \tensor[_{\text{out}}]{\braket{\vb{q}_{1}\bar{\vb{q}}_{1}}{\vb{p}_{1}\bar{\vb{p}}_{1}}}{_{\text{in}}} = \text{``1''} + (-iZ^{-1/2})^2 (iZ^{-1/2})^2 \displaystyle\int 
+            \bar{\tilde{U}}^{s}_{q_{1}}(y_{1}) 
+            \overset{\rightarrow}{F}_{y_{1}} 
+            \bar{\tilde{V}}^{s}_{\bar{p}_{1}}(\bar{x}_{1}) 
+            \overset{\rightarrow}{F}_{\bar{x}_{1}} \times \\
+            \times \tensor[_{\text{out}}]{\bra{0}T\{\bar{\psi}(\bar{y}_{1})\psi(y_{1})\bar{\psi}(x_{1})\psi(\bar{x}_{1})\}\ket{0}}{_{\text{in}}}
+            \overset{\leftarrow}{F}_{x_{1}}
+            \tilde{U}^{s}_{p_{1}}(x_{1})
+            \overset{\leftarrow}{F}_{\bar{y}_{1}}
+            \tilde{V}^{s}_{\bar{q}_{1}}(\bar{y}_{1})
+            \dd[4]{x_{1}} \dd[4]{\bar{x}_{1}} \dd[4]{y_{1}} \dd[4]{\bar{y}_{1}}
+        \end{matrix}
+    \end{answer}

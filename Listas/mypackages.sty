@@ -1,0 +1,73 @@
+\ProvidesPackage{mypackages}[2025/04/14 My Packages]
+
+\RequirePackage[svgnames]{xcolor}
+\RequirePackage{standalone}
+\RequirePackage{silence}
+\RequirePackage{fontspec}
+    \defaultfontfeatures{Scale=MatchLowercase, Ligatures=TeX}
+    \setmainfont{EB Garamond}[
+        SmallCapsFeatures = {Letters = SmallCaps},
+        Ligatures = {Common, TeX},
+        Numbers = {Proportional, Lining},
+        BoldFont = {EB Garamond Bold},
+        ItalicFont = {EB Garamond Italic},
+        BoldItalicFont = {EB Garamond Bold Italic},
+        RawFeature=+calt,]
+    \setsansfont{Libertinus Sans}
+    \RequirePackage[verbose=silent,final]{microtype} 
+    \DeclareMicrotypeAlias{EBGaramond-TU}{TU-basic}
+\RequirePackage{lipsum} 
+\RequirePackage{soul}
+\RequirePackage[portuguese]{babel}
+\RequirePackage{csquotes}
+\RequirePackage{graphicx}
+\RequirePackage[left=3.5cm, right=1.7cm]{geometry}
+\RequirePackage[shortlabels]{enumitem}
+\RequirePackage{ifdraft} 
+\RequirePackage{xspace} 
+\RequirePackage{calc}  
+\RequirePackage[hang, 
+                small,
+                labelfont=bf,
+                up,
+                textfont=it,
+                up]{caption} 
+\RequirePackage{subcaption} 
+    \captionsetup{subrefformat=parens}
+\RequirePackage{xparse}
+\RequirePackage{etoolbox}
+\RequirePackage{multicol}
+\RequirePackage{ifthen}
+\RequirePackage{afterpage}
+    \ActivateWarningFilters[pagesltscontinue]
+\RequirePackage[pagecontinue=true]{pageslts}
+    \DeactivateWarningFilters[pagesltscontinue]
+\RequirePackage[backend=biber,
+                style=numeric
+                ]{biblatex}
+    \addbibresource{bib.bib}
+\RequirePackage{bookmark}
+\RequirePackage{memhfixc}
+\RequirePackage[svgnames]{xcolor}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{textgreek}
+\RequirePackage{amsthm}
+\RequirePackage{thmtools}
+\RequirePackage{mathtools}
+\RequirePackage{mathrsfs}
+\RequirePackage[arrowdel]{physics}
+\RequirePackage{tensor}
+\RequirePackage{slashed}
+\RequirePackage{indentfirst}
+\RequirePackage{hyperref}
+\RequirePackage{verbatim}
+\RequirePackage{float}
+\RequirePackage{watermark}
+\RequirePackage{transparent}
+\RequirePackage{tcolorbox}
+    \tcbuselibrary{theorems}
+\RequirePackage{dsfont}
+\RequirePackage{tikz}
+\RequirePackage[compat=1.1.0]{tikz-feynman}
+\RequirePackage{multicol}

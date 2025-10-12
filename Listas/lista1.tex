@@ -1,0 +1,274 @@
+\RequirePackage{pdfmanagement-testphase} % tranparent package doesn't work without this
+\DeclareDocumentMetadata{} % and this
+\documentclass[a4paper, 11pt, oneside]{impression}
+
+\hwnumber{1} % Homework number in the cover page
+\title{Lista de Exercícios} % Title
+\subtitle{Introdução a Física de Hádrons} % Subtitle
+\author{Lucas R. Ximenes} % Author
+\extra{11917239} % Extra information
+
+\begin{document}
+
+\maketitle
+
+\chapter{Campo de Klein-Gordon}\label{quest: one}
+
+\begin{exercise}{}
+    A (densidade de) lagrangiana livre de uma partícula escalar neutra de massa $m$ é dada por
+        \begin{equation*}
+            \mathcal{L}_{0} = \dfrac{1}{2}\partial_{\mu}\phi_{0}\partial^{\mu}\phi_{0} - \dfrac{1}{2}m^2\phi_{0}^2
+        \end{equation*}
+    Usando o truque
+        \begin{equation*}
+            \partial_{\mu}\phi_{0}\partial^{\mu}\phi_{0} = g^{\alpha\beta}\partial_{\alpha}\phi_{0}\partial_{\beta}\phi_{0}
+        \end{equation*}
+    e o princípio da mínima ação, $\delta S = 0$, mostre que o campo livre $\phi_{0}$ satisfaz a equação de Klein-Gordon.
+\end{exercise}
+
+\input{Solutions/Solutions1/ex1}
+
+\newpage
+
+\chapter{Operadores de criação e aniquilação de um campo livre}\label{quest: two}
+
+\begin{exercise}{}
+    Em termos de $f_{k}(x) = \exp(-ikx)/\sqrt{2\omega_{\vb{k}}}$ em que $\omega_{\vb{k}} = \sqrt{\abs{\vb{k}}^2 + m^2}$, a quantização de um campo escalar neutro pode ser expressa em termos dos operadores de criação e aniquilação via
+        \begin{equation*}
+            \phi_{0}(x) = \int \dfrac{1}{(2\pi)^3}\qty[
+                a(\vb{k}) f_{k}(x) +
+                a^{\dagger}(\vb{k}) f_{k}^{\ast}(x)
+            ] \dd[3]{k}
+        \end{equation*}
+
+    \begin{enumerate}[(a)]
+        \item Partindo da equação acima, obtenha as relações
+        \begin{equation*}
+            a_{0}(\vb{k}) = i\int f_{k}^{\ast}(x)\overset{\leftrightarrow}{\partial_{0}}\phi_{0}(x) \dd[3]{x} \qquad \& \qquad 
+            a_{0}^{\dagger}(\vb{k}) = -i\int f_{k}(x) \overset{\leftrightarrow}{\partial_{0}}\phi_{0}(x) \dd[3]{x}
+        \end{equation*}
+
+        \item Demonstre que tanto $a_{0}(\vb{k})$ quanto $a^{\dagger}_{0}(\vb{k})$ são independentes do tempo.
+    \end{enumerate}
+\end{exercise}
+
+\input{Solutions/Solutions1/ex2}
+
+\newpage
+
+\chapter{Propagador de um campo livre}\label{quest: three}
+
+\begin{exercise}{}
+    O propagador de uma partícula escalar neutra pode ser obtida via a seguinte receita:
+        \begin{equation*}
+            \mathcal{L}_{0} \Rightarrow \dfrac{1}{2}\phi_{0} M \phi_{0} + \partial_{\mu}[\cdots], \qquad 
+            \tilde{\Delta}(k) \overset{\partial_{\mu}\to-ik_{\mu}}{=} [M]^{-1}
+        \end{equation*}
+        
+    \noindent Mostre que: \medskip
+
+    \begin{enumerate}[(a)]
+        \item $\tilde{\Delta}(k) = 1/(k^2 - m^2 + i\varepsilon)$, em que $\varepsilon$ é um parâmetro infinitesimal  que previne a singularidade do propagador em $k^2 = m^2$.
+
+        \item No espaço de coordenadas o propagador é escrito como
+        \begin{equation*}
+            i\Delta(x-y) = i\int \dfrac{1}{(2\pi)^4}\dfrac{e^{-ik(x-y)}}{k^2-m^2+i\varepsilon}\dd[4]{k}
+        \end{equation*}
+        
+        \noindent Mostre que a integral abaixo define a função degrau de Heaviside
+        \begin{equation*}
+            \int_{-\infty}^{\infty}\dfrac{1}{2\pi} \dfrac{e^{-ik_{0}z_{0}}}{k_{0}^2 - \omega_{\vb{k}}^2 + i\varepsilon} \dd{k_{0}} = -i\Theta(z_{0})\dfrac{e^{-i\omega_{\vb{k}}z_{0}}}{2\omega_{\vb{k}}} - i\Theta(-z_{0})\dfrac{e^{i\omega_{\vb{k}}z_{0}}}{2\omega_{\vb{k}}}
+        \end{equation*}
+
+        \item A partir do resultado acima, obtenha a relação
+            \begin{equation*}
+                i\Delta(x-y) = \int \dfrac{1}{(2\pi)^3}\qty[
+                    \Theta(x_{0}-y_{0}) f_{k}(x) f_{k}^{\ast}(y) +
+                    \Theta(y_{0}-x_{0}) f_{k}(y) f_{k}^{\ast}(x)
+                ]\dd[3]{k}
+            \end{equation*}
+        em que fixamos $k_{0} = \omega_{\vb{k}}$.
+
+       {\small \noindent Nota: Este resultado corresponde ao propagador clássico, com os campos ainda não quantizados. Após a segunda quantização o propagador assume a forma
+            \begin{equation*}
+                i\Delta(x-y) = \bra{0}T\{\phi_{0}(x)\phi_{0}(y)\}\ket{0}
+            \end{equation*}
+        em que
+            \begin{equation*}
+                T\{\phi_{0}(x)\phi_{0}(y)\} = \begin{cases}
+                    \phi_{0}(x)\phi_{0}(y) &,~ \text{se}~x_{0}>y_{0} \\
+                    \phi_{0}(y)\phi_{0}(x) &,~ \text{se}~y_{0}>x_{0}
+                \end{cases}
+            \end{equation*}}
+    \end{enumerate}
+\end{exercise}
+
+\input{Solutions/Solutions1/ex3}
+
+\newpage
+
+\chapter{Ordenamento normal de um campo livre}\label{quest: four}
+
+\begin{exercise}{}
+    O ordenamento normal dos campos no mesmo ponto do espaço-tempo evita o surgimento de certas singularidades, como a chamada ``energia do ponto zero'' da hamiltoniana de um dado sistema. Define-se $\phi_{0}(x) = \phi_{0}^{+}(x) + \phi_{0}^{-}(x)$ tais que
+        \begin{equation*}
+            \phi_{0}^{+}(x) = \int \dfrac{1}{(2\pi)^3} a(\vb{k}) f_{k}(x) \dd[3]{k} \qquad \text{(freq. positiva)},
+        \end{equation*}
+        \begin{equation*}
+            \phi_{0}^{-}(x) = \int \dfrac{1}{(2\pi)^3} a^{\dagger}(\vb{k}) f_{k}^{\ast}(x) \dd[3]{k} \qquad \text{(freq. negativa)}.
+        \end{equation*}
+
+    \noindent O produto normal de dois campos move os termos de frequência positiva para a direita, e os termos de frequência negativa, à esquerda. Partindo da hamiltoniana de uma partícula livre,
+        \begin{equation*}
+            H = \int \dfrac{1}{2}\qty[\pi_{0}^2 + \qty(\nabla\phi_{0})^2 + m^2\phi_{0}^2] \dd[3]{x}
+        \end{equation*}
+    mostre que seu ordenamento normal elimina a energia de ponto zero, ou seja,
+        \begin{equation*}
+            \normord{H} = \int \dfrac{1}{(2\pi)^3}\omega_{\vb{k}} a^{\dagger}(\vb{k})a(\vb{k}) \dd[3]{k}
+        \end{equation*}
+\end{exercise}
+
+\input{Solutions/Solutions1/ex4}
+
+\newpage
+
+\chapter{Espinores de Dirac}\label{quest: five}
+
+\begin{exercise}{}
+    Partindo das formas explícitas dos espinores de Dirac abaixo transcritos,
+        \begin{equation*}
+            u(\vb{p},s) = \dfrac{1}{\sqrt{E_{p}+m}} \begin{bmatrix}
+                (E_{p}+m)\chi_{s} \\
+                \boldsymbol{\sigma}\cdot\vb{p} \chi_{s}
+            \end{bmatrix} \qquad \& \qquad 
+            v(\vb{p},s) = \dfrac{1}{\sqrt{E_{p} + m}} \begin{bmatrix}
+                \boldsymbol{\sigma} \cdot \vb{p} \chi_{s} \\
+                (E_{p} + m) \chi_{s}
+            \end{bmatrix}
+        \end{equation*}
+    obtenha as seguintes relações:
+    \begin{enumerate}[(a)]
+        \item $\bar{u}(\vb{p},s) u(\vb{p},s) = -\bar{v}(\vb{p},s) v(\vb{p},s) = 2m$
+        \item $\Big[\Lambda^{+}(\vb{p})\Big]_{\alpha\beta} = \dfrac{1}{2m}\displaystyle\sum_{s} u_{\alpha}(\vb{p},s) \bar{u}_{\beta}(\vb{p},s) = \dfrac{1}{2m}(\slashed{p} + m)_{\alpha\beta}$
+        \item $\Big[\Lambda^{-}(\vb{p})\Big]_{\alpha\beta} = -\dfrac{1}{2m}\displaystyle\sum_{s} v_{\alpha}(\vb{p},s) \bar{v}_{\beta}(\vb{p},s) = \dfrac{1}{2m}(-\slashed{p} + m)_{\alpha\beta}$
+    \end{enumerate}
+\end{exercise}
+
+\input{Solutions/Solutions1/ex5}
+
+\newpage
+
+\chapter{Operadores de um campo espinorial}\label{quest: six}
+
+\begin{exercise}{}
+    Usando as definições
+        \begin{equation*}
+            U_{k}^{s}(x) = \dfrac{\tilde{U}_{k}^{s}(x)}{\sqrt{2E_{\vb{k}}}} = u(\vb{k},s)\dfrac{e^{-ikx}}{\sqrt{2E_{\vb{k}}}} \qquad 
+            V_{k}^{s}(x) = \dfrac{\tilde{V}_{k}^{s}(x)}{\sqrt{2E_{\vb{k}}}} = v(\vb{k},s)\dfrac{e^{ikx}}{\sqrt{2E_{\vb{k}}}}
+        \end{equation*}
+        \begin{equation*}
+            \psi(x) = \int \dfrac{1}{(2\pi)^3}\sum_{s}\qty[
+                b_{s}(\vb{k}) U_{k}^{s}(x) +
+                d_{s}^{\dagger}(\vb{k}) V_{k}^{s}(x)
+            ] \dd[3]{k}
+        \end{equation*}
+    obtenha
+        \begin{equation*}
+            b_{s}(\vb{k}) = \int \bar{U}_{k}^{s}(x) \gamma^{0} \psi(x) \dd[3]{x} 
+            \qquad \& \qquad 
+            d_{s}(\vb{k}) = \int \bar{\psi}(x) \gamma^{0} V_{k}^{s}(x) \dd[3]{x}
+        \end{equation*}
+    sendo $\bar{\psi} = \psi^{\dagger}\gamma^{0}$ e $E_{\vb{k}} = \sqrt{\abs{\vb{k}}^2 + m^2}$. (Obs.: em unidades naturais, $E_{\vb{k}} = \omega_{\vb{k}}$).
+\end{exercise}
+
+\input{Solutions/Solutions1/ex6}
+
+\newpage
+
+\chapter{Píons}\label{quest: seven}
+
+\begin{exercise}{}
+    Píons são mésons escalares com uma simetria de isospin do grupo $\text{SU}(2)$, o mesmo grupo da álgebra de momento angular. Seus campos podem ser escritos na chamada \textbf{representação cartesiana}, tal que $\boldsymbol{\pi} = (\pi_{1},\pi_{2},\pi_{3})$, ou na chamada \textbf{representação esférica}, em que $\pi_{0} = \pi_{3}$ e $\pi^{\pm} = (\pi_{1} \mp i\pi_{2})/\sqrt{2}$. Os geradores do grupo são as matrizes de Pauli agrupadas como componentes de um isovetor $\boldsymbol{\tau} = (\tau_{1},\tau_{2},\tau_{3})$. Considere a lagrangiana
+        \begin{equation*}
+            \mathcal{L} = \dfrac{1}{4}\expval{\partial_{\mu}\Phi^{\dagger}\partial^{\mu}\Phi} - \dfrac{m^2}{4}\expval{\Phi^{\dagger}\Phi}
+        \end{equation*}
+    em que $\Phi = \boldsymbol{\tau}\cdot\boldsymbol{\pi}$ e $\expval{A}$ denota o traço da matriz $A$ no espaço $(2\times2)$ de isospin.
+    \begin{enumerate}[(a)]
+        \item Na representação esférica, mostre que a lagrangiana acima reproduz as lagrangianas livres de um campo escalar neutro $(\pi_{0})$ e de um campo escalar carregado $(\pi^{\pm})$.
+
+        \item Na representação cartesiana, obtenha a corrente de Noether associada à simetria de isospin. Dica: considere a transformação $U(\boldsymbol{\theta}) = \exp(-i\boldsymbol{\tau}\cdot\boldsymbol{\theta})$, com $\boldsymbol{\theta}$ um vetor de componentes infinitesimais no espaço de isospin, aplicada à matriz $\Phi$: $\Phi' = U\Phi$.
+    \end{enumerate}
+\end{exercise}
+
+\input{Solutions/Solutions1/ex7}
+
+\newpage
+
+\chapter{Redução LSZ (bóson--bóson)}\label{quest: eight}
+
+\begin{exercise}{}
+    Considere a redução LSZ de um espalhamento com dois bósons escalares, tanto no estado inicial, quanto no estado final. A primeira redução fornece
+        \begin{equation*}
+            \tensor[_{\text{out}}]{\braket{\vb{p}_{1}'\vb{p}_{2}'}{\vb{p}_{1}\vb{p}_{2}}}{_{\text{in}}} = \text{``1''} + (iZ^{-1/2})\int \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'\vb{p}_{2}'}\phi(x_{1})\ket{\vb{p}_{2}}}{_{\text{in}}} \overset{\leftarrow}{K}_{x_{1}} \tilde{f}_{p_{1}}(x_{1}) \dd[4]{x_{1}}
+        \end{equation*}
+
+    \noindent Conclua a segunda redução (em quaisquer estados bosônicos remanescentes), demonstrando a necessidade de se introduzir o operador de ordenamento temporal. 
+\end{exercise}
+
+\input{Solutions/Solutions1/ex8}
+
+\newpage
+
+\chapter{Redução LSZ (férmion--anti-férmion)}\label{quest: nine}
+
+\begin{exercise}{}
+    Considere o espalhamento entre um férmion e um anti-férmion. A normalização do campo interpolante com relação ao campo livre inicial é dada por
+        \begin{equation*}
+            \lim_{t\to-\infty} \tensor[_{\text{out}}]{\bra{\beta}\psi_{\mu}(t)\ket{\alpha}}{_{\text{in}}} = Z^{1/2} \tensor[_{\text{out}}]{\bra{\beta}\psi_{\mu}^{\text{in}}(t)\ket{\alpha}}{_{\text{in}}}
+        \end{equation*}
+
+    \noindent Com as mesmas convenções do exercício 6, derive a redução LSZ para este processo:
+        \begin{equation*}
+            \begin{matrix}
+            \tensor[_{\text{out}}]{\braket{\vb{q}_{1}\bar{\vb{q}}_{1}}{\vb{p}_{1}\bar{\vb{p}}_{1}}}{_{\text{in}}} = \text{``1''} + (-iZ^{-1/2})^2 (iZ^{-1/2})^2 \displaystyle\int 
+            \bar{\tilde{U}}^{s}_{q_{1}}(y_{1}) 
+            \overset{\rightarrow}{F}_{y_{1}} 
+            \bar{\tilde{V}}^{s}_{\bar{p}_{1}}(\bar{x}_{1}) 
+            \overset{\rightarrow}{F}_{\bar{x}_{1}} \times \\
+            \times \tensor[_{\text{out}}]{\bra{0}T\{\bar{\psi}(\bar{y}_{1})\psi(y_{1})\bar{\psi}(x_{1})\psi(\bar{x}_{1})\}\ket{0}}{_{\text{in}}}
+            \overset{\leftarrow}{F}_{x_{1}}
+            \tilde{U}^{s}_{p_{1}}(x_{1})
+            \overset{\leftarrow}{F}_{\bar{y}_{1}}
+            \tilde{V}^{s}_{\bar{q}_{1}}(\bar{y}_{1})
+            \dd[4]{x_{1}} \dd[4]{\bar{x}_{1}} \dd[4]{y_{1}} \dd[4]{\bar{y}_{1}}
+        \end{matrix}
+        \end{equation*}
+    sendo $\overset{\rightarrow}{F}_{y_{1}} = (i\slashed{\partial} - m)_{y_{1}}$.
+\end{exercise}
+
+\input{Solutions/Solutions1/ex9}
+
+\newpage
+
+\chapter{Relações úteis com operadores hamiltonianos}\label{quest: ten}
+
+\begin{exercise}
+    A partir dos fatos abaixo,
+    \begin{enumerate}[(a)]
+        \item $\displaystyle\dv{}{t}\qty[U(t)U^{-1}(t)] = 0$
+        \item Campo interpolante $\phi(\vb{r},t) = U^{-1}(t)\phi_{\text{in}}(\vb{r},t)U(t)$
+        \item $\displaystyle\pdv{}{t}\phi(\vb{r},t) = i\qty[\hat{H}(\phi,\pi),\phi(\vb{r},t)] \qquad \displaystyle\pdv{}{t}\phi_{\text{in}}(\vb{r},t) = i\qty[\hat{H}_{0}(\phi_{\text{in}},\pi_{\text{in}}),\phi_{\text{in}}(\vb{r},t)] $, 
+    \end{enumerate}
+    mostre que
+        \begin{equation*}
+            \dot{U}U^{-1} + i\hat{H}(\phi_{\text{in}},\pi_{\text{in}}) = i\hat{H}_{0}(\phi_{\text{in}}, \pi_{\text{in}}) \qquad \& \qquad 
+            i\pdv{U(t)}{t} = \hat{H}_{\text{int}}(\phi_{\text{in}},\pi_{\text{in}}) U(t)
+        \end{equation*}
+\end{exercise}
+
+\input{Solutions/Solutions1/ex10}
+
+
+% \makefinal
+
+\end{document}

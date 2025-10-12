@@ -1,0 +1,188 @@
+
+
+Com as definições fornecidas, podemos escrever o campo $\psi(x)$ sob a forma
+    \begin{equation*}
+        \psi(x) = \int \dfrac{1}{(2\pi)^3}\sum_{s'}\qty[
+            b_{s'}(\vb{k}') u(\vb{k}',s') \dfrac{e^{-ik'x}}{\sqrt{2E_{\vb{k}'}}} +
+            d^{\dagger}_{s'}(\vb{k}') v(\vb{k}',s') \dfrac{e^{ik'x}}{\sqrt{2E_{\vb{k}'}}}
+        ]\dd[3]{k'}
+    \end{equation*}
+e portanto 
+    \begin{equation*}
+        \psi^{\dagger}(x) = \int \dfrac{1}{(2\pi)^3}\sum_{s'} \qty[
+            b_{s'}^{\dagger}(\vb{k}') u^{\dagger}(\vb{k}',s') \dfrac{e^{ik'x}}{\sqrt{2E_{\vb{k}'}}} +
+            d_{s'}(\vb{k}') v^{\dagger}(\vb{k}',s') \dfrac{e^{-ik'x}}{\sqrt{2E_{\vb{k}'}}}
+        ]\dd[3]{k'}
+    \end{equation*}
+
+Tendo $\psi(x)$ e $\psi^{\dagger}(x)$, vamos aplicar $u^{\dagger}(\vb{k},s)$ pela esquerda do campo $\psi(x)$ (fazemos isso, pois $\psi(x)$ é um vetor devidos à presença dos espinores, então ao aplicar $u^{\dagger}(\vb{k},s)$, teremos um ``número'', o que faz com que as contas possam ser feitas de forma padrão) de modo que
+    \begin{equation*}
+        u^{\dagger}(\vb{k},s)\psi(x) = \int \dfrac{1}{(2\pi)^3} \sum_{s'} \qty[
+            b_{s'}(\vb{k}') u^{\dagger}(\vb{k},s) u(\vb{k}',s') \dfrac{e^{-ik'x}}{\sqrt{2E_{\vb{k}'}}} +
+            d_{s'}^{\dagger}(\vb{k}) u^{\dagger}(\vb{k},s) v(\vb{k}',s') \dfrac{e^{ik'x}}{\sqrt{2E_{\vb{k}'}}}
+        ] \dd[3]{k'}
+    \end{equation*}
+
+Calculando uma transformada de Fourier inversa no espaço desta quantidade, temos
+    \begin{align*}
+        \int u^{\dagger}(\vb{k},s) \psi(x) e^{-i\vb{k}\cdot\vb{x}} \dd[3]{x} 
+        &\eq \iint \dfrac{1}{(2\pi)^3} \sum_{s'}\Bigg[
+            b_{s'}(\vb{k}') u^{\dagger}(\vb{k},s) u(\vb{k}',s') \dfrac{e^{-iE_{\vb{k}'}t + i(\vb{k}' - \vb{k})\cdot\vb{x}}}{\sqrt{2E_{\vb{k}'}}} + \\
+        &\noeq + 
+            d_{s'}^{\dagger}(\vb{k}') u^{\dagger}(\vb{k},s) v(\vb{k}',s') \dfrac{e^{iE_{\vb{k}'}t - i(\vb{k}'+\vb{k})\cdot\vb{x}}}{\sqrt{2E_{\vb{k}'}}}
+        \Bigg] \dd[3]{k'} \dd[3]{x} \\
+        &\eq \iint \dfrac{e^{-iE_{\vb{k}'}t}}{(2\pi)^3\sqrt{2E_{\vb{k}'}}} \sum_{s'} \Big[
+            b_{s'}(\vb{k}') u^{\dagger}(\vb{k},s) u(\vb{k}',s') e^{i(\vb{k}' - \vb{k})\cdot\vb{x}} + \\
+        &\noeq +  
+            d_{s'}^{\dagger}(\vb{k}') u^{\dagger}(\vb{k},s) v(\vb{k}',s') e^{2iE_{\vb{k}'}t} e^{-i(\vb{k}' + \vb{k})\cdot\vb{x}}
+        \Big] \dd[3]{k'} \dd[3]{x}
+    \end{align*}
+
+As integrações em $\dd[3]{x}$ vão nos dar distribuições delta de Dirac, de modo que 
+    \begin{align*}
+        \int u^{\dagger}(\vb{k},s) \psi(x) e^{-i\vb{k}\cdot\vb{x}} \dd[3]{x} 
+        =&\; \int \dfrac{e^{-iE_{\vb{k}'}t}}{\sqrt{2E_{\vb{k}'}}} \sum_{s'} \Big[
+            b_{s'}(\vb{k}') u^{\dagger}(\vb{k},x) u(\vb{k}',s') \delta^3(\vb{k}' - \vb{k}) + \\
+        &+
+            d_{s'}^{\dagger}(\vb{k}') u^{\dagger}(\vb{k},s) v(\vb{k}',s') e^{2iE_{\vb{k}'}t} \delta^3(\vb{k}' + \vb{k})
+        \Big]\dd[3]{k'}
+    \end{align*}
+
+Como $E_{\vb{k}} = E_{-\vb{k}}$ por construção, temos pela integração em $\dd[3]{k'}$:
+    \begin{align*}
+        \int u^{\dagger}(\vb{k},s) \psi(x) e^{-i\vb{k}\cdot\vb{x}} \dd[3]{x} 
+        = \dfrac{e^{-iE_{\vb{k}}t}}{\sqrt{2E_{\vb{k}}}} \sum_{s'} \Big[ 
+            b_{s'}(\vb{k}) u^{\dagger}(\vb{k},s) u(\vb{k},s') + 
+            d_{s'}^{\dagger}(-\vb{k}) u^{\dagger}(\vb{k},s) v(-\vb{k},s') e^{2iE_{\vb{k}}t}
+        \Big]
+    \end{align*}
+
+Considerando a forma explicita dos espinores, o produto entre $u^{\dagger}(\vb{k},s)$ e $u(\vb{k},s')$ vai resultar em
+    \begin{align*}
+        u^{\dagger}(\vb{k},s) u(\vb{k},s') &\eq \dfrac{1}{E_{\vb{k}}+m} \qty[
+            (E_{\vb{k}} + m)^2 \chi^{\dagger}_{s}\chi_{s'} + \chi^{\dagger}_{s}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger}(\boldsymbol{\sigma}\cdot\vb{p})\chi_{s'}
+        ] \\
+        &\eq \dfrac{1}{E_{\vb{k}}+m}\qty[
+            (E_{\vb{k}} + m)^2 \delta_{ss'} + 
+            (E_{\vb{k}} + m)(E_{\vb{k}} - m) \delta_{ss'}
+        ] \\
+        &\eq (E_{\vb{k}} + m)\delta_{ss'} + (E_{\vb{k}} - m)\delta_{ss'} \\
+        &\eq 2E_{\vb{k}}\delta_{ss'}
+    \end{align*}
+
+Usando agora a forma explicita para $v(-\vb{k},s')$, teremos
+    \begin{align*}
+        u^{\dagger}(\vb{k},s) v(-\vb{k},s') &\eq \dfrac{1}{E_{\vb{k}} + m}\qty{
+            (E_{\vb{k}}+m)\chi^{\dagger}_{s}[\boldsymbol{\sigma}\cdot(-\vb{k})]\chi_{s'} +
+            (E_{-\vb{k}}+m)(\boldsymbol{\sigma}\cdot\vb{k})\chi^{\dagger}_{s}\chi_{s'}
+        } \\
+        &\eq -(\boldsymbol{\sigma}\cdot\vb{k})\chi^{\dagger}_{s}\chi_{s'} + 
+        (\boldsymbol{\sigma}\cdot\vb{k})\chi^{\dagger}_{s}\chi_{s'} \\
+        &\eq 0
+    \end{align*}
+
+Portanto, a integral que estávamos calculando resulta em
+    \begin{equation*}
+        \int u^{\dagger}(\vb{k},s) \psi(x) e^{-i\vb{k}\cdot\vb{x}} \dd[3]{x} = \dfrac{e^{-iE_{\vb{k}}t}}{\sqrt{2E_{\vb{k}}}} \sum_{s'} b_{s'}(\vb{k}) 2E_{\vb{k}} \delta_{ss'} = \sqrt{2E_{\vb{k}}} e^{-iE_{\vb{k}}t} b_{s}(\vb{k})
+    \end{equation*}
+
+Isolando $b_{s}(\vb{k})$, obtemos
+    \begin{align*}
+        b_{s}(\vb{k}) &\eq \dfrac{1}{\sqrt{2E_{\vb{k}}}} e^{iE_{\vb{k}}t} \int u^{\dagger}(\vb{k},s) \psi(x) e^{-i\vb{k}\cdot\vb{x}} \dd[3]{x} \\
+        &\eq \int u^{\dagger}(\vb{k},s) \dfrac{e^{ikx}}{\sqrt{2E_{\vb{k}}}} \psi(x) \dd[3]{x}
+    \end{align*}
+
+Podemos ainda manipular o argumento da integral adicionando uma matriz identidade entre o espinor $u^{\dagger}(\vb{k},s)$ e o campo $\psi(x)$, onde essa matriz identidade pode ser escrita por $I = (\gamma^{0})^2$, de modo que 
+    \begin{equation*}
+        u^{\dagger}(\vb{k},s) \psi(x) = u^{\dagger}(\vb{k},s)\gamma^{0}\gamma^{0} \psi(x) = \bar{u}(\vb{k},s) \gamma^{0} \psi(x)
+    \end{equation*}
+
+Ou seja, o argumento da integral fica, com base na definição de $U_{k}^{s}(x)$ dada no enunciado:
+    \begin{equation*}
+        \bar{u}(\vb{k},s) \dfrac{e^{ikx}}{\sqrt{2E_{\vb{k}}}} \gamma^{0} \psi(x) = \bar{U}_{k}^{s}(x) \gamma^{0} \psi(x)
+    \end{equation*}
+
+Concluindo que
+    \begin{answer}\label{eq: annihilation operator for particle fermion}
+        b_{s}(\vb{k}) = \int \bar{U}_{k}^{s}(x) \gamma^{0} \psi(x) \dd[3]{x}
+    \end{answer}
+
+Aplicando agora $v(\vb{k},s)$ pela direita do campo $\psi^{\dagger}(x)$, pelo mesmo motivo do caso anterior, temos
+    \begin{equation*}
+        \psi^{\dagger}(x) v(\vb{k},s) = \int \dfrac{1}{(2\pi)^3}\sum_{s'} \qty[
+            b_{s'}^{\dagger}(\vb{k}') u^{\dagger}(\vb{k}',s') v(\vb{k},s) \dfrac{e^{ik'x}}{\sqrt{2E_{\vb{k}'}}} +
+            d_{s'}(\vb{k}') v^{\dagger}(\vb{k}',s') v(\vb{k},s) \dfrac{e^{-ik'x}}{\sqrt{2E_{\vb{k}'}}}
+        ]\dd[3]{k'}
+    \end{equation*}
+
+Fazendo também uma transformada de Fourier inversa no espaço, temos
+    \begin{align*}
+        \int \psi^{\dagger}(x) v(\vb{k},s) e^{-i\vb{k}\cdot\vb{x}} \dd[3]{x} &\eq 
+        \iint \dfrac{1}{(2\pi)^3} \sum_{s'} \Bigg[
+            b_{s'}^{\dagger}(\vb{k}') u^{\dagger}(\vb{k}',s') v(\vb{k},s) \dfrac{e^{iE_{\vb{k}}t - i(\vb{k}'+\vb{k})\cdot\vb{x}}}{\sqrt{2E_{\vb{k}'}}} + \\
+        &\noeq+ d_{s'}(\vb{k}') v^{\dagger}(\vb{k}',s') v(\vb{k},s) \dfrac{e^{-iE_{\vb{k}'}t + i(\vb{k}'-\vb{k})\cdot\vb{x}}}{\sqrt{2E_{\vb{k}'}}}
+        \Bigg] \dd[3]{k'} \dd[3]{x} \\
+        &\eq \iint \dfrac{e^{-iE_{\vb{k}}'}t}{(2\pi)^3\sqrt{2E_{\vb{k}'}}}  \sum_{s'} \Big[
+            b_{s'}^{\dagger}(\vb{k}') u^{\dagger}(\vb{k}',s') v(\vb{k},s) e^{2iE_{\vb{k}'}t} e^{-i(\vb{k}' + \vb{k})\cdot \vb{x}} + \\
+        &\noeq+
+            d_{s'}(\vb{k}') v^{\dagger}(\vb{k}',s') v(\vb{k},s) e^{i(\vb{k}' - \vb{k})\cdot\vb{x}}
+        \Big] \dd[3]{k'} \dd[3]{x}
+    \end{align*}
+
+Integrando em $\dd[3]{x}$ teremos o surgimento das deltas de Dirac tal que
+    \begin{align*}
+        \int \psi^{\dagger}(x) v(\vb{k},s) e^{-i\vb{k}\cdot\vb{x}} \dd[3]{x} &\eq \int \dfrac{e^{-iE_{\vb{k}}'}t}{(2\pi)^3\sqrt{2E_{\vb{k}'}}}  \sum_{s'} \Big[
+            b_{s'}^{\dagger}(\vb{k}') u^{\dagger}(\vb{k}',s') v(\vb{k},s) e^{2iE_{\vb{k}'}t} \delta^3(\vb{k}' + \vb{k}) \\
+        &\noeq+
+            d_{s'}(\vb{k}') v^{\dagger}(\vb{k}',s') v(\vb{k},s) \delta^3(\vb{k}' - \vb{k})
+        \Big] \dd[3]{k'} \dd[3]{x}
+    \end{align*}
+
+E levando novamente em consideração que $E_{\vb{k}} = E_{-\vb{k}}$, ao realizarmos a integração em $\dd[3]{k'}$, temos
+    \begin{equation*}
+        \int \psi^{\dagger}(x) v(\vb{k},s) e^{-i\vb{k}\cdot\vb{x}} \dd[3]{x} = \dfrac{e^{-iE_{\vb{k}}t}}{\sqrt{2E_{\vb{k}}}} \sum_{s'} \qty[
+            b_{s'}^{\dagger}(-\vb{k}) u^{\dagger}(-\vb{k},s') v(\vb{k},s) e^{2iE_{\vb{k}}t} +
+            d_{s'}(\vb{k}) v^{\dagger}(\vb{k},s') v(\vb{k},s)
+        ]
+    \end{equation*}
+
+Dado que encontramos $u^{\dagger}(\vb{k},s)v(-\vb{k},s')$, podemos simplesmente trocar $\vb{k} \leftrightarrow -\vb{k}$ e $s \leftrightarrow s'$, de modo que o resultado se mantém, ou seja
+    \begin{equation*}
+        u^{\dagger}(-\vb{k},s') v(\vb{k},s) = 0
+    \end{equation*}
+
+Já para o segundo produto de espinores, basta considerar a forma explícita, tal que
+    \begin{align*}
+        v^{\dagger}(\vb{k},s') v(\vb{k},s) &\eq \dfrac{1}{E_{\vb{k}}+m}\qty[
+            (\boldsymbol{\sigma}\cdot\vb{k})^{\dagger}\chi^{\dagger}_{s'}\chi_{s} (\boldsymbol{\sigma}\cdot\vb{k}) + 
+            (E_{\vb{k}} + m)^2 \chi^{\dagger}_{s'}\chi_{s}
+        ] \\
+        &\eq \dfrac{1}{E_{\vb{k}} + m} \qty[
+            (E_{\vb{k}} + m)(E_{\vb{k}} - m) \delta_{s's} + (E_{\vb{k}} + m)^2 \delta_{s's}
+        ] \\
+        &\eq (E_{\vb{k}} - m)\delta_{s's} + (E_{\vb{k}} + m)\delta_{s's} \\
+        &\eq 2E_{\vb{k}}\delta_{s's}
+    \end{align*}
+
+Portanto
+    \begin{equation*}
+        \int \psi^{\dagger}(x) v(\vb{k},s) e^{-i\vb{k}\cdot\vb{x}} \dd[3]{x} = \dfrac{e^{-iE_{\vb{k}}t}}{\sqrt{2E_{\vb{k}}}} \sum_{s'} 
+            d_{s'}(\vb{k}) 2 E_{\vb{k}}\delta_{s's} = \sqrt{2E_{\vb{k}}} e^{-iE_{\vb{k}}t} d_{s}(\vb{k})
+    \end{equation*}
+
+Isolando $d_{s}(\vb{k})$, temos
+    \begin{align*}
+        d_{s}(\vb{k}) &\eq \dfrac{e^{iE_{\vb{k}}t}}{\sqrt{2E_{\vb{k}}}} \int \psi^{\dagger}(x) v(\vb{k},s) e^{-i\vb{k}\cdot\vb{x}} \dd[3]{x} \\
+        &\eq \int \psi^{\dagger}(x) v(\vb{k},s) \dfrac{e^{ikx}}{\sqrt{2E_{\vb{k}}}} \dd[3]{x}
+    \end{align*}
+
+Inserindo a identidade $I = (\gamma^{0})^2$ entre $\psi^{\dagger}(x)$ e $v(\vb{k},s)$, podemos reescrever o integrando por
+    \begin{equation*}
+        \psi^{\dagger}(x) v(\vb{k},s) \dfrac{e^{ikx}}{\sqrt{2E_{\vb{k}}}} = 
+        \psi^{\dagger}(x) \gamma^{0} \gamma^{0} v(\vb{k},s) \dfrac{e^{ikx}}{\sqrt{2E_{\vb{k}}}} = \bar{\psi}(x) \gamma^{0} V_{k}^{s}(x)
+    \end{equation*}
+
+Concluindo que
+    \begin{answer}\label{eq: annihilation operator for antiparticle fermion}
+        d_{s}(\vb{k}) = \int \bar{\psi}(x) \gamma^{0} V_{k}^{s}(x) \dd[3]{x}
+    \end{answer}

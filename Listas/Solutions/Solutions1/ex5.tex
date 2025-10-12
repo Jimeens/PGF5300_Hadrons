@@ -1,0 +1,258 @@
+
+
+\noindent \textbf{(a)} Expandindo o produto $\boldsymbol{\sigma}\cdot\vb{p}$, temos
+    \begin{equation*}
+        (\boldsymbol{\sigma}\cdot\vb{p}) = \sigma_{1}p_{1} + \sigma_{2}p_{2} + \sigma_{3}p_{3} = 
+        \begin{bmatrix}
+            p_{3}           &   p_{1} - ip_{2} \\
+            p_{1} + ip_{2}  &   -p_{3}
+        \end{bmatrix}
+    \end{equation*}
+
+O que nos dá também
+    \begin{equation*}
+        (\boldsymbol{\sigma}\cdot\vb{p})^{\dagger} = 
+        \begin{bmatrix}
+            p_{3} & p_{1} - ip_{2} \\
+            p_{1} + ip_{2} & -p_{3}
+        \end{bmatrix} = (\boldsymbol{\sigma}\cdot\vb{p})
+    \end{equation*}
+
+A quantidade $\chi_{s}$ é um vetor coluna tal que $\chi_{1} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ e $\chi_{2} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$. Com isso, impomos que o produto $\chi_{s}^{\dagger}\chi_{s'} = \delta_{ss'}$. A forma explicita do espinor $\Bar{u}(\vb{p},s)$ é
+    \begin{equation*}
+        \bar{u}(\vb{p},s) = u^{\dagger}(\vb{p},s) \gamma^{0} = \dfrac{1}{\sqrt{E_{\vb{p}} + m}}
+        \begin{bmatrix}
+            (E_{\vb{p}} + m) \chi^{\dagger}_{s} & -\chi^{\dagger}_{s}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger}
+        \end{bmatrix}
+    \end{equation*}
+
+Portanto, 
+    \begin{align*}
+        \bar{u}(\vb{p},s)u(\vb{p},s') &= \dfrac{1}{E_{\vb{p}}+m} \qty[
+            (E_{\vb{p}} + m)^2 \chi^{\dagger}_{s}\chi_{s} - \chi^{\dagger}_{s}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger}(\boldsymbol{\sigma}\cdot\vb{p})\chi_{s}
+        ]
+    \end{align*}
+
+O produto
+    \begin{align*}
+        (\boldsymbol{\sigma}\cdot\vb{p})^{\dagger}(\boldsymbol{\sigma}\cdot\vb{p}) &\eq 
+        \begin{bmatrix}
+            p_{3} & p_{1} - ip_{2} \\
+            p_{1} + ip_{2} & -p_{3}
+        \end{bmatrix}
+        \begin{bmatrix}
+            p_{3} & p_{1} - ip_{2} \\
+            p_{1} + ip_{2} & -p_{3}
+        \end{bmatrix} \\
+        &\eq \begin{bmatrix}
+            p_{1}^2 + p_{2}^2 + p_{3}^2 & 0 \\
+            0 & p_{1}^2 + p_{2}^2 + p_{3}^2
+        \end{bmatrix}\\
+        &\eq \begin{bmatrix}
+            \abs{\vb{p}}^2 & 0 \\
+            0 & \abs{\vb{p}}^2
+        \end{bmatrix} \\ 
+        &\eq \abs{\vb{p}}^2 \boldone_{2\times2}
+    \end{align*}
+
+E como $E_{\vb{p}}^2 = \abs{\vb{p}}^2 + m^2$, temos
+    \begin{equation*}
+        (\boldsymbol{\sigma}\cdot\vb{p})^{\dagger}(\boldsymbol{\sigma}\cdot\vb{p}) = 
+        (E_{\vb{p}}^2 - m^2)\boldone_{2\times2} = (E_{\vb{p}} + m)(E_{\vb{p}} - m)\boldone_{2\times2}
+    \end{equation*}
+
+Segue que 
+    \begin{align*}
+        \bar{u}(\vb{p},s)u(\vb{p},s') &\eq \dfrac{1}{E_{\vb{p}}+m}\qty[
+            (E_{\vb{p}}+m)^2 \delta_{ss'} - (E_{\vb{p}}+m)(E_{\vb{p}}-m)\chi^{\dagger}_{s}\boldone_{2\times2}\chi_{s}
+        ] \\ 
+        &\eq (E_{\vb{p}} + m)\delta_{ss'} - (E_{\vb{p}} - m)\delta_{ss'} \\
+        &\eq 2m\delta_{ss'}
+    \end{align*}
+
+Concluindo que
+    \begin{answer}\label{eq: spinor relation for particles}
+        \bar{u}(\vb{p},s)u(\vb{p},s) = 2m
+    \end{answer}
+
+Agora a forma explicita de $\bar{v}(\vb{p},s)$ é
+    \begin{equation*}
+        \bar{v}(\vb{p},s) = v^{\dagger}(\vb{p},s)\gamma^{0} = \dfrac{1}{\sqrt{E_{\vb{p}}+m}}
+        \begin{bmatrix}
+            \chi^{\dagger}_{s}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger} & 
+            -(E_{\vb{p}}+m)\chi_{s}^{\dagger}
+        \end{bmatrix}
+    \end{equation*}
+
+Portanto
+    \begin{align*}
+        \bar{v}(\vb{p},s)v(\vb{p},s') &\eq \dfrac{1}{E_{\vb{p}}+m}\qty[
+            \chi^{\dagger}_{s}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger}(\boldsymbol{\sigma}\cdot\vb{p})\chi_{s'} - (E_{\vb{p}}+m)^2\chi^{\dagger}_{s}\chi_{s'}
+        ] \\
+        &\eq \dfrac{1}{E_{\vb{p}}+m}\qty[
+            (E_{\vb{p}}+m)(E_{\vb{p}}-m)\delta_{ss'} - (E_{\vb{p}}+m)^2\delta_{ss'}
+        ] \\
+        &\eq (E_{\vb{p}}-m)\delta_{ss'} - (E_{\vb{p}}+m)\delta_{ss'} \\
+        &\eq -2m\delta_{ss'}
+    \end{align*}
+
+Concluindo que
+    \begin{answer}\label{eq: spinor relation for antiparticle}
+        -\bar{v}(\vb{p},s) v(\vb{p},s) = 2m
+    \end{answer}
+
+\noindent \textbf{(b)} Usando a definição do projetor, temos
+    \begin{align*}
+        \Big[\Lambda^{+}(\vb{p})\Big]_{\alpha\beta} &\eq \dfrac{1}{2m}\sum_{s}u_{\alpha}(\vb{p},s)\bar{u}_{\beta}(\vb{p},s) \\
+        &\eq \dfrac{1}{2m(E_{\vb{p}}+m)}\sum_{s}
+        \begin{bmatrix}
+            (E_{\vb{p}}+m)\chi_{s} \\
+            (\boldsymbol{\sigma}\cdot\vb{p})\chi_{s}
+        \end{bmatrix}_{\alpha} 
+        \begin{bmatrix}
+            (E_{\vb{p}}+m)\chi^{\dagger}_{s} & 
+            -\chi^{\dagger}_{s}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger}
+        \end{bmatrix}_{\beta} \\
+        &\eq \dfrac{1}{2m(E_{\vb{p}}+m)} \sum_{s}
+        \begin{bmatrix}
+            (E_{\vb{p}} + m)^2 \chi_{s}\chi^{\dagger}_{s} & 
+            -(E_{\vb{p}}+m)\chi_{s}\chi^{\dagger}_{s}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger} \\
+            (E_{\vb{p}}+m)(\boldsymbol{\sigma}\cdot\vb{p})\chi_{s}\chi^{\dagger}_{s} &
+            -(\boldsymbol{\sigma}\cdot\vb{p}) \chi_{s}\chi_{s}^{\dagger} (\boldsymbol{\sigma}\cdot\vb{p})^{\dagger}
+        \end{bmatrix}_{\alpha\beta}
+    \end{align*}
+
+Note que 
+    \begin{equation*}
+        \chi_{1}\chi^{\dagger}_{1} = 
+        \begin{bmatrix}
+            1 \\ 0 
+        \end{bmatrix}
+        \begin{bmatrix}
+            1 & 0
+        \end{bmatrix} = 
+        \begin{bmatrix}
+            1 & 0 \\
+            0 & 0
+        \end{bmatrix} \qquad \& \qquad 
+        \chi_{2}\chi^{\dagger}_{2} = 
+        \begin{bmatrix}
+            0 \\ 1 
+        \end{bmatrix}
+        \begin{bmatrix}
+            0 & 1
+        \end{bmatrix} = 
+        \begin{bmatrix}
+            0 & 0 \\
+            0 & 1
+        \end{bmatrix}
+    \end{equation*}
+
+Implicando que quando somarmos em $s$, estaremos somando estas duas matrizes, gerando a identidade $\boldone_{2\times2}$, portanto o projetor fica
+    \begin{align*}
+        \Big[\Lambda^{+}(\vb{p})\Big]_{\alpha\beta} &\eq \dfrac{1}{2m(E_{\vb{p}}+m)}
+        \begin{bmatrix}
+            (E_{\vb{p}}+m)^2 \boldone_{2\times2} & 
+            -(E_{\vb{p}}+m)\boldone_{2\times2}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger} \\
+            (E_{\vb{p}}+m)(\boldsymbol{\sigma}\cdot\vb{p})\boldone_{2\times2} & 
+            -(\boldsymbol{\sigma}\cdot\vb{p})\boldone_{2\times2}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger}
+        \end{bmatrix}_{\alpha\beta} \\
+        &\eq \dfrac{1}{2m}
+        \begin{bmatrix}
+            (E_{\vb{p}}+m)\boldone_{2\times2} & 
+            -\boldone_{2\times2}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger} \\
+            (\boldsymbol{\sigma}\cdot\vb{p})\boldone_{2\times2} &
+            -\boldone_{2\times2}(E_{\vb{p}} - m)
+        \end{bmatrix}_{\alpha\beta} \\
+        &\eq \dfrac{1}{2m}
+        \begin{bmatrix}
+            E_{\vb{p}}\boldone_{2\times2} & -(\boldsymbol{\sigma}\cdot\vb{p})\boldone_{2\times2} \\
+            (\boldsymbol{\sigma}\cdot\vb{p})\boldone_{2\times2} & -E_{\vb{p}}\boldone_{2\times2}
+        \end{bmatrix}_{\alpha\beta} + \dfrac{1}{2m}
+        \begin{bmatrix}
+            m\boldone_{2\times2} & 0 \\
+            0 & m\boldone_{2\times2}
+        \end{bmatrix}_{\alpha\beta}
+    \end{align*}
+
+Como $p_{0} = E_{\vb{p}}$, a forma explicita deste projetor é
+    \begin{align*}
+        \Big[\Lambda^{+}(\vb{p})\Big]_{\alpha\beta} &\eq \dfrac{1}{2m}
+        \begin{bmatrix}
+            p_{0} & 0 & -p_{3} & -p_{1}+ip_{2} \\
+            0 & p_{0} & -p_{1}-ip_{2} & p_{3} \\
+            p_{3} & p_{1}-ip_{2} & -p_{0} & 0 \\
+            p_{1}+ip_{2} & -p_{3} & 0 & -p_{0}
+        \end{bmatrix}_{\alpha\beta} +
+        \dfrac{1}{2m}
+        \begin{bmatrix}
+            m & 0 & 0 & 0 \\
+            0 & m & 0 & 0 \\
+            0 & 0 & m & 0 \\
+            0 & 0 & 0 & m
+        \end{bmatrix}_{\alpha\beta} \\
+        &\eq \dfrac{1}{2m}(\gamma^{0}p_{0} + \gamma^{1}p_{1} + \gamma^{2}p_{2} + \gamma^{3}p_{3})_{\alpha\beta} + \dfrac{1}{2m} (m)_{\alpha\beta} \\
+        &\eq \dfrac{1}{2m}(\gamma^{\mu}p_{\mu} + m)_{\alpha\beta}
+    \end{align*}
+
+Concluindo que  
+    \begin{answer}\label{eq: positive energy projector}
+        \Big[\Lambda^{+}(\vb{p})\Big]_{\alpha\beta} = \dfrac{1}{2m}\displaystyle\sum_{s} u_{\alpha}(\vb{p},s) \bar{u}_{\beta}(\vb{p},s) = \dfrac{1}{2m}(\slashed{p} + m)_{\alpha\beta}
+    \end{answer}
+
+\noindent \textbf{(c)} Novamente, usando a forma explícita do projetor, temos
+    \begin{align*}
+        \Big[\Lambda^{-}(\vb{p})\Big]_{\alpha\beta} &\eq -\dfrac{1}{2m}\sum_{s} v_{\alpha}(\vb{p},s)\bar{v}_{\beta}(\vb{p},s) \\
+        &\eq \dfrac{1}{2m(E_{\vb{p}}+m)}\sum_{s}
+        \begin{bmatrix}
+            (\boldsymbol{\sigma}\cdot\vb{p})\chi_{s} \\
+            (E_{\vb{p}}+m)\chi_{s}
+        \end{bmatrix}_{\alpha}
+        \begin{bmatrix}
+            \chi^{\dagger}_{s}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger}_{\beta} & 
+            -(E_{\vb{p}}+m)\chi^{\dagger}_{s}
+        \end{bmatrix}_{\beta} \\
+        &\eq -\dfrac{1}{2m(E_{\vb{p}}+m)}\sum_{s}
+        \begin{bmatrix}
+            (\boldsymbol{\sigma}\cdot\vb{p})\chi_{s}\chi^{\dagger}_{s}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger} & -(E_{\vb{p}}+m)(\boldsymbol{\sigma}\cdot\vb{p})\chi_{s}\chi^{\dagger}_{s} \\
+            (E_{\vb{p}}+m)\chi_{s}\chi^{\dagger}_{s}(\boldsymbol{\sigma}\cdot\vb{p})^{\dagger} & 
+            -(E_{\vb{p}}+m)^2 \chi_{s}\chi^{\dagger}_{s}
+        \end{bmatrix}_{\alpha\beta} \\
+        &\eq -\dfrac{1}{2m}
+        \begin{bmatrix}
+            \boldone_{2\times2}(E_{\vb{p}} - m) & 
+            -(\boldsymbol{\sigma}\cdot\vb{p})\boldone_{2\times2} \\
+            \boldone_{2\times2}(\boldsymbol{\sigma}\cdot\vb{p}) &
+            -(E_{\vb{p}} + m)\boldone_{2\times2}
+        \end{bmatrix}_{\alpha\beta} \\
+        &\eq -\dfrac{1}{2m}
+        \begin{bmatrix}
+            E_{\vb{p}}\boldone_{2\times2} & -(\boldsymbol{\sigma}\cdot\vb{p})\boldone_{2\times2} \\
+            (\boldsymbol{\sigma}\cdot\vb{p})\boldone_{2\times2} & -E_{\vb{p}}\boldone_{2\times2}
+        \end{bmatrix}_{\alpha\beta} - \dfrac{1}{2m}
+        \begin{bmatrix}
+            -m \boldone_{2\times 2} & 0 \\
+            0 & -m \boldone_{2\times2}
+        \end{bmatrix}_{\alpha\beta} \\
+        &\eq -\dfrac{1}{2m}
+        \begin{bmatrix}
+            p_{0} & 0 & -p_{3} & -p_{1} + ip_{2} \\
+            0 & p_{0} & -p_{1} - ip_{2} & p_{3} \\
+            p_{3} & p_{1} - ip_{2} & -p_{0} & 0 \\
+            p_{1} + ip_{2} & -p_{3} & 0 & -p_{0}
+        \end{bmatrix}_{\alpha\beta} +
+        \dfrac{1}{2m}
+        \begin{bmatrix}
+            m & 0 & 0 & 0 \\
+            0 & m & 0 & 0 \\
+            0 & 0 & m & 0 \\
+            0 & 0 & 0 & m
+        \end{bmatrix}_{\alpha\beta} \\
+        &\eq \dfrac{1}{2m}(-\gamma^{0}p_{0} + \gamma^{1}p_{1} + \gamma^{2}p_{2} + \gamma^{3}p_{3})_{\alpha\beta} + \dfrac{1}{2m}(m)_{\alpha\beta} \\
+        &\eq \dfrac{1}{2m}(-\gamma^{\mu}p_{\mu} + m)_{\alpha\beta}
+    \end{align*}
+
+Concluindo que
+    \begin{answer}\label{eq: negative energy projector}
+        \Big[\Lambda^{-}(\vb{p})\Big]_{\alpha\beta} = -\dfrac{1}{2m}\displaystyle\sum_{s} v_{\alpha}(\vb{p},s) \bar{v}_{\beta}(\vb{p},s) = \dfrac{1}{2m}(-\slashed{p} + m)_{\alpha\beta}
+    \end{answer}

@@ -1,0 +1,238 @@
+
+
+Continuando a redução LSZ para o estado bosônico $\ket{\vb{p}_{2}}_{\text{in}}$, temos
+    \begin{equation*}
+        \ket{\vb{p}_{2}}_{\text{in}} = \sqrt{2\omega_{\vb{p}_{2}}} a^{\dagger}(\vb{p}_{2}) \ket{\vb{0}}_{\text{in}}
+    \end{equation*}
+que pela convergência fraca nos permite escrever
+    \begin{equation*}
+        \ket{\vb{p}_{2}}_{\text{in}} = Z^{-1/2}\sqrt{2\omega_{\vb{p}_{2}}} \lim_{t_{2}\to-\infty} a^{\dagger}(\vb{p}_{2}, t_{2}) \ket{\vb{0}}_{\text{in}}
+    \end{equation*}
+
+Logo, definindo $A \coloneqq \tensor[_{\text{out}}]{\braket{\vb{p}_{1}'\vb{p}_{2}'}{\vb{p}_{1}\vb{p}_{2}}}{_{\text{in}}}$, obtemos
+    \begin{equation*}
+        A = \text{``1''} + i(Z^{-1/2})^2 \lim_{t_{2}\to-\infty} \int 
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}' \vb{p}_{2}'}}{} 
+            \phi(x_{1}) \sqrt{2\omega_{\vb{p}_{2}}} a^{\dagger}(\vb{p}_{2},t_{2})
+            \ket{\vb{0}}_{\text{in}}
+        \overset{\leftarrow}{K}_{x_{1}} \tilde{f}_{p_{1}}(x_{1}) \dd[4]{x_{1}}
+    \end{equation*}
+
+Podemos fazer uma substituição considerando uma integral de $-\infty$ a $+\infty$ de uma derivada total no tempo $t_{2}$, isto é
+    \begin{align*}
+        \int_{-\infty}^{\infty} \partial_{0}\qty[
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}' \vb{p}_{2}'}}{} 
+            \cdots a^{\dagger}(\vb{p}_{2},t_{2})
+            \ket{\vb{0}}_{\text{in}}
+        ] \dd{t_{2}} &\eq \lim_{t_{2}\to+\infty} \qty[
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}' \vb{p}_{2}'}}{} 
+            \cdots a^{\dagger}(\vb{p}_{2},t_{2})
+            \ket{\vb{0}}_{\text{in}}
+        ] - \\
+        &\noeq - \lim_{t_{2}\to-\infty} \qty[
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}' \vb{p}_{2}'}}{} 
+            \cdots a^{\dagger}(\vb{p}_{2},t_{2})
+            \ket{\vb{0}}_{\text{in}}
+        ]
+    \end{align*}
+
+Notemos então que
+    \begin{equation*}
+        Z^{-1/2}\lim_{t_{2}\to+\infty} \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'\vb{p}_{2}'} \phi(x_{1})\sqrt{2\omega_{\vb{p}_{2}}} a^{\dagger}(\vb{p}_{2},t_{2}) \ket{\vb{0}}}{_{\text{in}}} =
+        \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'\vb{p}_{2}'} \phi(x_{1})\sqrt{2\omega_{\vb{p}_{2}}} a^{\dagger}(\vb{p}_{2}) \ket{\vb{0}}}{_{\text{in}}}
+    \end{equation*}
+e isto vai ser diferente de zero apenas se $\ket{\vb{p}_{2}}_{\text{in}}$ for igual a pelo menos um dos estados $\tensor[_{\text{out}}]{\bra{\vb{p}_{1}'}}{}$ ou $\tensor[_{\text{out}}]{\bra{\vb{p}_{2}'}}{}$ de modo que isso vai contribuir apenas para o processo de $1$ partícula inicial transformando-se em $1$ partícula final, o que torna-se irrelevante para o processo onde temos 2 partículas iniciais transformando-se em 2 partículas finais que estamos interessados, de modo que podemos fazer 
+    \begin{equation*}
+        Z^{-1/2}\lim_{t_{2}\to+\infty} \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'\vb{p}_{2}'} \phi(x_{1})\sqrt{2\omega_{\vb{p}_{2}}} a^{\dagger}(\vb{p}_{2},t_{2}) \ket{\vb{0}}}{_{\text{in}}} \mapsto
+        \text{``1''}
+    \end{equation*}
+
+Fazendo a substituição dentro do que estamos interessados, ficamos com
+    \begin{align*}
+        A = \text{``1''} - i(Z^{-1/2})^2\iint_{-\infty}^{\infty} \partial_{0}\qty[
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}' \vb{p}_{2}'}}{} 
+            \phi(x_{1}) \sqrt{2\omega_{\vb{p}_{2}}} a^{\dagger}(\vb{p}_{2},t_{2})
+            \ket{\vb{0}}_{\text{in}}
+        ] \overset{\leftarrow}{K}_{x_{1}}\tilde{f}_{p_{1}}(x_{1}) \dd{t_{2}}\dd[4]{x_{1}}
+    \end{align*}
+
+Como a derivação é feita apenas em $t_{2}$, o único termo dependente desta variável é $a^{\dagger}(\vb{p}_{2},t_{2})$, portanto, expandindo explicitamente o operador interpolante, temos
+    \begin{align*}
+        \partial_{0}a^{\dagger}(\vb{p}_{2},t_{2}) &\eq \partial_{0}\qty[
+            -i\int f_{p_{2}}(x_{2})
+            \overset{\leftrightarrow}{\partial_{0}}
+            \phi(x_{2}) \dd[3]{x_{2}}
+        ] \\
+        &\eq -i\int \partial_{0}\qty[
+            f_{p_{2}}(x_{2})
+            \overset{\leftrightarrow}{\partial_{0}}
+            \phi(x_{2})] 
+        \dd[3]{x_{2}}
+    \end{align*}
+
+No exercício \textbf{2.(b)}, calculamos esta mesma derivada, porém consideramos o campo $\phi_{0}(x)$, que é um campo livre, porém $\phi(x_{2})$ é um campo interpolante e não necessariamente satisfaz a equação de Klein-Gordon, de modo que
+    \begin{equation*}
+        \partial_{0}a^{\dagger}(\vb{p}_{2}, t_{2}) = -i\int 
+            f_{p_{2}}(x_{2})
+            \qty(\partial_{\mu}\partial^{\mu} + m^2)_{x_{2}} 
+            \phi(x_{2}) \dd[3]{x_{2}}
+    \end{equation*}
+
+Sendo então
+    \begin{equation*}
+         \phi(x_{2}) \overset{\leftarrow}{K}_{x_{2}} = \qty(\partial_{\mu}\partial^{\mu} + m^2)_{x_{2}} \phi(x_{2})
+    \end{equation*}
+
+Podemos escrever que
+    \begin{align*}
+        A 
+        &\eq \text{``1''} + (iZ^{-1/2})^2\iiint_{-\infty}^{\infty}
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}' \vb{p}_{2}'}}{} 
+            \phi(x_{1}) \phi(x_{2})
+            \ket{\vb{0}}_{\text{in}}
+         \overset{\leftarrow}{K}_{x_{1}} \tilde{f}_{p_{1}}(x_{1}) \overset{\leftarrow}{K}_{x_{2}} \tilde{f}_{p_{2}}(x_{2}) \dd{t_{2}} \dd[3]{x_{2}} \dd[4]{x_{1}}
+    \end{align*}
+
+Ou seja
+    \begin{equation*}
+        A = \text{``1''} + (iZ^{-1/2})^2 \int 
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}' \vb{p}_{2}'}}{} 
+            \phi(x_{1}) \phi(x_{2})
+            \ket{\vb{0}}_{\text{in}}
+        \overset{\leftarrow}{K}_{x_{1}} \overset{\leftarrow}{K}_{x_{2}} \tilde{f}_{p_{1}}(x_{1}) \tilde{f}_{p_{2}}(x_{2}) \dd[4]{x_{1}} \dd[4]{x_{2}}
+    \end{equation*}
+
+Continuando agora a redução para $\tensor[_{\text{out}}]{\bra{\vb{p}_{1}'\vb{p}_{2}'}}{}$, temos pela convergência fraca
+    \begin{equation*}
+        \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'\vb{p}_{2}'}}{} = Z^{-1/2} \lim_{\tau_{2}\to + \infty} \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'}}{}  a(\vb{p}_{2}',\tau_{2}) \sqrt{2\omega_{\vb{p}_{2}'}}
+    \end{equation*}
+
+O que fornece a expressão
+    \begin{align*}
+        A &\eq \text{``1''} + i^2(Z^{-1/2})^{3} \lim_{\tau_{2}\to\infty} \int 
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'}}{} a(\vb{p}_{2}',\tau_{2}) \sqrt{2\omega_{\vb{p}_{2}'}}
+            \phi(x_{1}) \phi(x_{2})
+            \ket{\vb{0}}_{\text{in}} \times \\
+        &\noeq \times \overset{\leftarrow}{K}_{x_{1}} \overset{\leftarrow}{K}_{x_{2}} \tilde{f}_{p_{1}}(x_{1}) \tilde{f}_{p_{2}}(x_{2}) \dd[4]{x_{1}} \dd[4]{x_{2}}
+    \end{align*}
+
+Usando novamente uma integração de $-\infty$ a $+\infty$ em uma derivada total no tempo, mas agora em relação à $\tau_{2}$, teremos
+    \begin{align*}
+        \int_{-\infty}^{\infty} \partial_{0}\Big[
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'}}{}
+            a(\vb{p}_{2}',\tau_{2})
+            \cdots
+            \ket{\vb{0}}_{\text{in}}
+        \Big]\dd{\tau_{2}} =&\; \lim_{\tau_{2}\to+\infty} \Big[
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'}}{}
+            a(\vb{p}_{2}',\tau_{2})
+            \cdots
+            \ket{\vb{0}}_{\text{in}}
+        \Big] - \\
+        &- \lim_{\tau_{2}\to-\infty} \Big[
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'}}{}
+            a(\vb{p}_{2}',\tau_{2})
+            \cdots
+            \ket{\vb{0}}_{\text{in}}
+        \Big]
+    \end{align*}
+
+Neste caso, o termo de interação que não nos interessa vai ser
+    \begin{equation*}
+        Z^{-1/2}\lim_{\tau_{2}\to-\infty} 
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'}}{}
+            a(\vb{p}_{2}',\tau_{2})
+            \sqrt{2\omega_{\vb{p}_{2}'}}\phi(x_{1})\phi(x_{2})
+            \ket{\vb{0}}_{\text{in}} =
+        Z^{-1/2}\tensor[_{\text{out}}]{\bra{\vb{p}_{1}'}}{}
+            a(\vb{p}_{2}')
+            \sqrt{2\omega_{\vb{p}_{2}'}}\phi(x_{1})\phi(x_{2})
+            \ket{\vb{0}}_{\text{in}}
+    \end{equation*}
+por um motivo análogo ao anterior, portanto inserimos este termo em ``1''. Com a substituição pela integral, temos então
+    \begin{align*}
+        A &\eq \text{``1''} + i^2(Z^{-1/2})^3 \iint_{-\infty}^{\infty} \partial_{0}\qty[
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'}}{}
+            a(\vb{p}_{2}',\tau_{2})
+            \sqrt{2\omega_{\vb{p}_{2}'}}\phi(x_{1})\phi(x_{2})
+            \ket{\vb{0}}_{\text{in}}
+        ]\times \\
+        &\noeq \times \overset{\leftarrow}{K}_{x_{1}} \overset{\leftarrow}{K}_{x_{2}} \tilde{f}_{p_{1}}(x_{1}) \tilde{f}_{p_{2}}(x_{2}) \dd{\tau_{2}} \dd[4]{x_{1}} \dd[4]{x_{2}}
+    \end{align*}
+
+Dado que a derivada $\partial_{0}$ é feita em $\tau_{2}$, ela vai ser aplicada apenas em $a(\vb{p}_{2}',\tau_{2})$, que explicitamente se escreve
+    \begin{equation*}
+        \partial_{0}a(\vb{p}_{2}', \tau_{2}) = i\int \partial_{0}\qty[
+            f_{p_{2}'}^{\ast}(y_{2})
+            \overset{\leftrightarrow}{\partial_{0}}
+            \phi(y_{2})
+        ] \dd[3]{y_{2}}
+    \end{equation*}
+que levando em conta que $\phi(y_{2})$ é um campo interpolante e não satisfaz necessariamente a equação de Klein-Gordon, o desenvolvimento do exercício \textbf{2.(b)} nos fornece
+    \begin{equation*}
+        \partial_{0}a(\vb{p}_{2}', \tau_{2}) = i\int 
+            f_{p_{2}'}^{\ast}(y_{2})
+            \qty(\partial_{\mu}\partial^{\mu} + m^2)_{y_{2}}
+            \phi(y_{2})
+        \dd[3]{y_{2}}
+    \end{equation*}
+
+Sendo então
+    \begin{equation*}
+        \overset{\rightarrow}{K}_{y_{2}}\phi(y_{2}) = \qty(\partial_{\mu}\partial^{\mu} + m^2)_{y_{2}} \phi(y_{2})
+    \end{equation*}
+
+Escrevemos
+    \begin{align*}
+        A &\eq \text{``1''} + (iZ^{-1/2})^3 \iiint_{-\infty}^{\infty} 
+            \tilde{f}_{p_{2}'}^{\ast}(y_{2}) \overset{\rightarrow}{K}_{y_{2}}
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'}}{}
+            \phi(y_{2})\phi(x_{1})\phi(x_{2})
+            \ket{\vb{0}}_{\text{in}} \times \\
+        &\noeq \times \overset{\leftarrow}{K}_{x_{1}} \overset{\leftarrow}{K}_{x_{2}} \tilde{f}_{p_{1}}(x_{1}) \tilde{f}_{p_{2}}(x_{2}) \dd{\tau_{2}} \dd[3]{y_{2}} \dd[4]{x_{1}} \dd[4]{x_{2}}
+    \end{align*}
+ou seja
+    \begin{align*}
+        A &\eq; \text{``1''} + (iZ^{-1/2})^3 \int
+            \tilde{f}_{p_{2}'}^{\ast}(y_{2}) \overset{\rightarrow}{K}_{y_{2}}
+            \tensor[_{\text{out}}]{\bra{\vb{p}_{1}'}}{}
+            \phi(y_{2})\phi(x_{1})\phi(x_{2})
+            \ket{\vb{0}}_{\text{in}} \times \\
+        &\noeq \times \overset{\leftarrow}{K}_{x_{1}} \overset{\leftarrow}{K}_{x_{2}} \tilde{f}_{p_{1}}(x_{1}) \tilde{f}_{p_{2}}(x_{2}) \dd[4]{y_{2}} \dd[4]{x_{1}} \dd[4]{x_{2}}
+    \end{align*}
+
+Tendo feito o procedimento para $\tensor[_{\text{out}}]{\bra{\vb{p}_{2}'}}{}$, a extensão para $\tensor[_{\text{out}}]{\bra{\vb{p}_{1}'}}{}$ torna-se imediata, tal que 
+    \begin{align*}
+        A &\eq \text{``1''} + (iZ^{-1/2})^4 \int
+            \tilde{f}_{p_{1}'}^{\ast}(y_{1}) 
+            \tilde{f}_{p_{2}'}^{\ast}(y_{2}) 
+            \overset{\rightarrow}{K}_{y_{1}}
+            \overset{\rightarrow}{K}_{y_{2}}
+            \tensor[_{\text{out}}]{\bra{\vb{0}}}{}
+                \phi(y_{1})
+                \phi(y_{2})
+                \phi(x_{1})
+                \phi(x_{2})
+            \ket{\vb{0}}_{\text{in}} \times \\
+        &\noeq \times \overset{\leftarrow}{K}_{x_{1}} \overset{\leftarrow}{K}_{x_{2}} \tilde{f}_{p_{1}}(x_{1}) \tilde{f}_{p_{2}}(x_{2}) \dd[4]{y_{1}} \dd[4]{y_{2}} \dd[4]{x_{1}} \dd[4]{x_{2}}
+    \end{align*}
+
+Analisando então apenas $\tensor[_{\text{out}}]{\bra{\vb{0}}}{} \phi(y_{1}) \phi(y_{2}) \phi(x_{1}) \phi(x_{2}) \ket{\vb{0}}_{\text{in}}$, temos que pensar do fato de que todos os campos interpolantes são combinações de operadores de criação e aniquilação interpolantes, de modo que a ocorrência de operadores $a^{\dagger}(\vb{p},\infty)$ podem ser problemáticos quando estiverem à direita, pois indicaria uma aniquilação do vácuo inicial $\ket{\vb{0}}_{\text{in}}$, de modo que queremos colocar estes operadores à esquerda a fim de ser aplicado a $\tensor[_{\text{out}}]{\bra{\vb{0}}}{}$ e criar um estado do tipo $\tensor[_{\text{out}}]{\bra{\vb{p}}}{}$, um argumento análogo ocorre ao pensarmos na ocorrência de operadores $a(\vb{p},-\infty)$, pois se estes estiverem à esquerda, haveria uma indicação de aniquilação do vácuo final $\tensor[_{\text{out}}]{\bra{\vb{0}}}{}$, então queremos que esse tipo de operador fique à direita para criar estados do tipo $\ket{\vb{p}}_{\text{in}}$ ao serem aplicados ao vácuo inicial $\ket{\vb{0}}_{\text{in}}$. Estas ocorrências aparecem com o fato de trocarmos os limites por integrais em derivadas totais e ignorarmos os termos desconexos. Para evitar estes problemas, temos a necessidade de utilizar o operador de ordenamento temporal $T\{\cdots\}$ nos campos, concluindo que a redução LSZ completa é dada por
+    \begin{answer}\label{eq: LSZ reduction for bosons in 2x2 interaction}
+        \begin{matrix}
+            \tensor[_{\text{out}}]{\braket{\vb{p}_{1}'\vb{p}_{2}'}{\vb{p}_{1}\vb{p}_{2}}}{_{\text{in}}} = \text{``1''} + (iZ^{-1/2})^4 \displaystyle\int
+            \tilde{f}_{p_{1}'}^{\ast}(y_{1}) 
+            \tilde{f}_{p_{2}'}^{\ast}(y_{2}) 
+            \overset{\rightarrow}{K}_{y_{1}}
+            \overset{\rightarrow}{K}_{y_{2}}
+             \times \\
+        \times \tensor[_{\text{out}}]{\bra{\vb{0}}}{} T
+            \qty{
+                \phi(y_{1})
+                \phi(y_{2})
+                \phi(x_{1})
+                \phi(x_{2})
+            }
+            \ket{\vb{0}}_{\text{in}}\overset{\leftarrow}{K}_{x_{1}} \overset{\leftarrow}{K}_{x_{2}} \tilde{f}_{p_{1}}(x_{1}) \tilde{f}_{p_{2}}(x_{2}) \dd[4]{y_{1}} \dd[4]{y_{2}} \dd[4]{x_{1}} \dd[4]{x_{2}}
+        \end{matrix}
+    \end{answer}

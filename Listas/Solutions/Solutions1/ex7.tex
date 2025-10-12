@@ -1,0 +1,280 @@
+
+
+\noindent \textbf{(a)} Podemos representar as componentes de $\boldsymbol{\pi}$ por
+    \begin{equation*}
+        \pi_{1} = \dfrac{\pi^{+} + \pi^{-}}{\sqrt{2}} \qquad \& \qquad 
+        \pi_{2} = \dfrac{i(\pi^{-} - \pi^{+})}{\sqrt{2}} \qquad \& \qquad 
+        \pi_{3} = \pi_{0}
+    \end{equation*}
+
+Dessa forma, o campo $\Phi = \boldsymbol{\tau}\cdot\boldsymbol{\sigma}$ pode ser representado matricialmente
+    \begin{align*}
+        \Phi &\eq \tau_{1}\pi_{1} + \tau_{2}\pi_{2} + \tau_{3}\pi_{3} \\
+        &\eq 
+        \tau_{1} \qty(\dfrac{\pi^{+} + \pi^{-}}{\sqrt{2}}) + 
+        \tau_{2}\qty[\dfrac{i(\pi^{-} - \pi^{+})}{\sqrt{2}}] + 
+        \tau_{3} \pi_{0} \\
+        &\eq 
+        \begin{bmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{bmatrix} \qty(\dfrac{\pi^{+} + \pi^{-}}{\sqrt{2}}) +
+        \begin{bmatrix}
+            0 & -i \\
+            i & 0
+        \end{bmatrix} \qty[\dfrac{i(\pi^{-} - \pi^{+})}{\sqrt{2}}] + 
+        \begin{bmatrix}
+            1 & 0 \\
+            0 & -1
+        \end{bmatrix} \pi_{0} \\
+        &\eq 
+            \dfrac{1}{\sqrt{2}}
+            \begin{bmatrix}
+                0 & \pi^{+} + \pi^{-} \\
+                \pi^{+} + \pi^{-} & 0
+            \end{bmatrix} +
+            \dfrac{1}{\sqrt{2}}
+            \begin{bmatrix}
+                0 & \pi^{-} - \pi^{+} \\
+                -\pi^{-} + \pi^{+} & 0
+            \end{bmatrix} +
+            \begin{bmatrix}
+                \pi_{0} & 0 \\
+                0 & -\pi_{0}
+            \end{bmatrix} \\
+        &\eq 
+        \begin{bmatrix}
+            \pi_{0} & \sqrt{2} \pi^{-} \\
+            \sqrt{2} \pi^{+} & -\pi_{0}
+        \end{bmatrix} = 
+        \begin{bmatrix}
+        		\pi_{3} & \pi_{1} + i\pi_{2} \\
+        		\pi_{1} - i\pi_{2} & \pi_{3}
+        \end{bmatrix}
+    \end{align*}
+
+Portanto
+    \begin{equation*}
+        \Phi^{\dagger} = 
+        \begin{bmatrix}
+            \pi_{0}^{\ast} & \sqrt{2}(\pi^{+})^{\ast} \\
+            \sqrt{2}(\pi^{-})^{\ast} & -\pi_{0}^{\ast}
+        \end{bmatrix}
+    \end{equation*}
+
+Pela forma definida de $\pi^{\pm}$, é fácil ver que $(\pi^{-})^{\ast} = \pi^{+}$ e $(\pi^{+})^{\ast} = \pi^{-}$, logo
+    \begin{equation*}
+        \Phi^{\dagger} = 
+        \begin{bmatrix}
+            \pi_{0}^{\ast} & \sqrt{2}\pi^{-} \\
+            \sqrt{2}\pi^{+} & -\pi_{0}^{\ast}
+        \end{bmatrix}
+    \end{equation*}
+
+Segue que
+    \begin{align*}
+        \partial_{\mu}\Phi^{\dagger} \partial^{\mu}\Phi &\eq 
+        \begin{bmatrix}
+            \partial_{\mu}\pi_{0}^{\ast} & \sqrt{2}\partial_{\mu}\pi^{-} \\
+            \sqrt{2}\partial_{\mu}\pi^{+} & -\partial_{\mu}\pi_{0}^{\ast}
+        \end{bmatrix}
+        \begin{bmatrix}
+            \partial^{\mu}\pi_{0} & \sqrt{2}\partial^{\mu}\pi^{-} \\
+            \sqrt{2}\partial^{\mu}\pi^{+} & -\partial^{\mu}\pi_{0}
+        \end{bmatrix} \\
+        &\eq
+        \begin{bmatrix}
+            \partial_{\mu}\pi_{0}^{\ast}\partial^{\mu}\pi_{0} + 2\partial_{\mu}\pi^{-}\partial^{\mu}\pi^{+} & \sqrt{2}\partial_{\mu}\pi_{0}^{\ast}\partial^{\mu}\pi^{-} - \sqrt{2}\partial_{\mu}\pi^{-}\partial^{\mu}\pi_{0} \\
+            \sqrt{2}\partial_{\mu}\pi^{+}\partial^{\mu}\pi_{0} - \sqrt{2}\partial_{\mu}\pi_{0}^{\ast}\partial^{\mu}\pi^{2} & 2\partial_{\mu}\pi^{+}\partial^{\mu}\pi^{-} + \partial_{\mu}\pi_{0}^{\ast}\partial^{\mu}\pi_{0}
+        \end{bmatrix}
+    \end{align*}
+
+Calculando o traço desta matriz:
+    \begin{align*}
+        \expval{\partial_{\mu}\Phi^{\dagger}\partial^{\mu}\Phi} &\eq \partial_{\mu}\pi_{0}^{\ast}\partial^{\mu}\pi_{0} + 
+        2\partial_{\mu}\pi^{-}\partial^{\mu}\pi^{+} + 
+        2\partial_{\mu}\pi^{+}\partial^{\mu}\pi^{-} + 
+        \partial_{\mu}\pi_{0}^{\ast}\partial^{\mu}\pi_{0} \\
+        &\eq 2\partial_{\mu}\pi_{0}^{\ast} \partial^{\mu}\pi_{0} + 
+        2\partial_{\mu}\pi^{-}\partial^{\mu}\pi^{+} + 
+        2\partial_{\mu}\pi^{+}\partial^{\mu}\pi^{-}
+    \end{align*}
+
+Fazendo o mesmo procedimento para $\Phi^{\dagger}\Phi$, temos
+    \begin{align*}
+        \Phi^{\dagger}\Phi &\eq 
+        \begin{bmatrix}
+            \pi_{0}^{\ast} & \sqrt{2}\pi^{-} \\
+            \sqrt{2}\pi^{+} & -\pi_{0}^{\ast}
+        \end{bmatrix}
+        \begin{bmatrix}
+            \pi_{0} & \sqrt{2} \pi^{-} \\
+            \sqrt{2} \pi^{+} & -\pi_{0}
+        \end{bmatrix} \\
+        &\eq 
+        \begin{bmatrix}
+            \pi_{0}^{\ast} \pi_{0} + 2 \pi^{-} \pi^{+} & 
+            \sqrt{2} \pi_{0}^{\ast} \pi^{-} - \sqrt{2} \pi^{-}\pi_{0} \\
+            \sqrt{2} \pi^{+} \pi_{0} - \sqrt{2}\pi_{0}^{\ast} \pi^{+} & 
+            2 \pi^{+} \pi^{-} + \pi_{0}^{\ast} \pi_{0}
+        \end{bmatrix}
+    \end{align*}
+
+Então
+    \begin{align*}
+        \expval{\Phi^{\dagger}\Phi} &\eq \pi_{0}^{\ast}\pi_{0} + 2\pi^{-}\pi^{+} + 2\pi^{+}\pi^{-} + \pi_{0}^{\ast}\pi_{0} \\
+        &\eq 2\pi_{0}^{\ast} \pi_{0} + 2\pi^{-}\pi^{+} + 2\pi^{+}\pi^{-}
+    \end{align*}
+
+A lagrangiana fica então
+    \begin{align*}
+        \mathcal{L} &\eq \dfrac{1}{4}\qty(
+            2\partial_{\mu}\pi_{0}^{\ast} \partial^{\mu}\pi_{0} + 
+            2\partial_{\mu}\pi^{-}\partial^{\mu}\pi^{+} + 
+            2\partial_{\mu}\pi^{+}\partial^{\mu}\pi^{-}
+        ) - \dfrac{m^2}{4}\qty(
+            2\pi_{0}^{\ast} \pi_{0} + 2\pi^{-}\pi^{+} + 2\pi^{+}\pi^{-}
+        ) \\
+        &\eq \qty[
+            \dfrac{1}{2}\partial_{\mu}\pi_{0}^{\ast} \partial^{\mu}\pi_{0} - 
+            \dfrac{m^2}{2} \pi_{0}^{\ast} \pi_{0}
+        ] + \qty[
+            \qty(
+                \dfrac{1}{2}\partial_{\mu}\pi^{-} \partial^{\mu}\pi^{+} +
+                \dfrac{1}{2}\partial_{\mu}\pi^{+} \partial^{\mu}\pi^{-}
+            ) -
+            \dfrac{m^2}{2} 
+            \qty( 
+                \pi^{-}\pi^{+} +
+                \pi^{+}\pi^{-}
+            )
+        ]
+    \end{align*}
+
+Sabendo que $\pi_{0}(x)$ é um campo real, temos que $\pi_{0}^{\ast} = \pi_{0}$, o que nos permite escrever o primeiro $[\cdots]$ da lagrangiana sob a forma de uma lagrangiana livre de um campo escalar neutro para $\pi_{0}$:
+    \begin{answer}\label{eq: free lagrangian of a neutral scalar field}
+        \mathcal{L}_{\pi_{0}} = \dfrac{1}{2}\partial_{\mu}\pi_{0}\partial^{\mu}\pi_{0} - \dfrac{1}{2}m^2\pi_{0}^2
+    \end{answer}
+
+No segundo $[\cdots]$, identificamos que $\partial_{\mu}\pi^{-}\partial^{\mu}\pi^{+} = \partial_{\mu}\pi^{+}\partial^{\mu}\pi^{-}$ e $\pi^{-}\pi^{+} = \pi^{+}\pi^{-}$, nos permitindo escrever uma lagrangiana de campo escalar carregado
+    \begin{answer}\label{eq: free lagrangian of a charged scalar field}
+        \mathcal{L}_{\pi^{\pm}} = \partial_{\mu}\pi^{+}\partial^{\mu}\pi^{-} - m^2 \pi^{+}\pi^{-}
+    \end{answer}
+	
+
+\noindent \textbf{(b)} A lagrangiana original pode ser reescrita após calcularmos os traços. O primeiro traço da lagrangiana fica, lembrando que $\Phi^{\dagger} = \Phi = \boldsymbol{\tau}\cdot\boldsymbol{\pi}$:
+    \begin{align*}
+        \expval{\partial_{\mu}\Phi^{\dagger} \partial^{\mu}\Phi} &\eq
+        \expval{\partial_{\mu}(\boldsymbol{\tau}\cdot\boldsymbol{\pi})\partial^{\mu}(\boldsymbol{\tau}\cdot\boldsymbol{\pi})} = 
+        \expval{\sum_{a,b}\partial_{\mu}(\tau_{a}\pi_{a})\partial^{\mu}(\tau_{b}\pi_{b})} \\
+        &\eq 
+        \expval{\sum_{a,b}\tau_{a}\tau_{b}(\partial_{\mu}\pi_{a})(\partial^{\mu}\pi_{b})} =
+        \sum_{a,b} \expval{\tau_{a}\tau_{b}} (\partial_{\mu}\pi_{a})(\partial^{\mu}\pi_{b})
+    \end{align*}
+As matrizes de Pauli satisfazem a propriedade $\expval{\tau_{a}\tau_{b}} = 2\delta_{ab}$, portanto
+    \begin{equation*}
+        \expval{\partial_{\mu}\Phi^{\dagger}\partial^{\mu}\Phi} = 
+        2\sum_{a,b} \delta_{ab} (\partial_{\mu}\pi_{a})(\partial^{\mu}\pi_{b}) =
+        2(\partial_{\mu}\pi_{a})(\partial^{\mu}\pi_{a}) = 2(\partial_{\mu}\boldsymbol{\pi})\cdot(\partial^{\mu}\boldsymbol{\pi})
+    \end{equation*}
+
+
+O segundo traço da lagrangiana fica
+    \begin{align*}
+        \expval{\Phi^{\dagger}\Phi} &\eq 
+        \expval{(\boldsymbol{\tau}\cdot\boldsymbol{\pi})(\boldsymbol{\tau}\cdot\boldsymbol{\pi})} = 
+        \expval{\sum_{a,b}\tau_{a}\pi_{a}\tau_{b}\pi_{b}} =
+        \sum_{a,b}\pi_{a}\pi_{b}\expval{\tau_{a}\tau_{b}} \\
+        &\eq
+        2\sum_{a,b}\pi_{a}\pi_{b}\delta_{ab} = 
+        2\pi_{a}\pi_{a} =
+        2(\boldsymbol{\pi}\cdot\boldsymbol{\pi})
+    \end{align*}
+
+A lagrangiana na representação cartesiana pode ser escrita então por
+    \begin{equation*}
+        \mathcal{L} = \dfrac{1}{2}(\partial_{\mu}\boldsymbol{\pi})\cdot(\partial^{\mu}\boldsymbol{\pi}) - 
+        \dfrac{m^2}{2}(\boldsymbol{\pi}\cdot\boldsymbol{\pi})
+    \end{equation*}
+
+Considerando uma transformação $U(\boldsymbol{\theta}) = \exp(-i\boldsymbol{\tau}\cdot\boldsymbol{\theta})$, com $\boldsymbol{\theta}$ um vetor de componentes infinitesimais no espaço de isospin, podemos aproximar
+    \begin{equation*}
+        U(\boldsymbol{\theta}) \approx \boldone_{2\times2} - i\boldsymbol{\tau}\cdot\boldsymbol{\theta}
+    \end{equation*}
+
+Sendo $\Phi$ uma matriz $2\times2$ hermitiana e de traço nulo, ele é um elemento da álgebra de Lie $\mathfrak{su}(2)$, cujos elementos se transformam como $A' = UAU^{-1}$, para uma transformação unitária $U$ em $\text{SU}(2)$, então como $U^{\dagger}(\boldsymbol{\theta}) = U^{-1}(\boldsymbol{\theta})$ e é um elemento de $\text{SU}(2)$, uma transformação equivalente à do enunciado que mantém o campo invariante é $\Phi' = U(\boldsymbol{\theta}) \Phi U^{\dagger}(\boldsymbol{\theta})$. Usar esta transformação ao invés de apenas $\Phi' = U(\boldsymbol{\theta})\Phi$ é possível, pois ambas vão gerar a mesma variação dos campos $\pi_{j}$ (basta utilizar a forma $\Phi = \boldsymbol{\tau}\cdot\boldsymbol{\pi}$ em $\delta\Phi$ e identificar a parte que representa a variação nos campos $\pi_{j}$) , a única diferença seria o fato de $U(\boldsymbol{\theta})\Phi$ não manter a hermiticidade e o traço nulo ao determinar $\delta\Phi$, logo, utilizo a transformação padrão de elementos de uma álgebra de Lie $\mathfrak{su}(2)$ apenas por buscar manter essas duas propriedades em $\delta\Phi$. Portanto
+    \begin{align*}
+        \Phi' = U(\boldsymbol{\theta})\Phi U^{\dagger}(\boldsymbol{\theta}) &\eq  
+        \qty[\Phi - i(\boldsymbol{\tau}\cdot\boldsymbol{\theta})\Phi]
+        \qty[\boldone_{2\times2} + i(\boldsymbol{\tau}\cdot\boldsymbol{\theta})] \\
+        &\eq
+        \Phi + i\Phi(\boldsymbol{\tau}\cdot\boldsymbol{\theta}) - 
+        i(\boldsymbol{\tau}\cdot\boldsymbol{\theta})\Phi + 
+        \mathcal{O}(\boldsymbol{\theta}^2) \\
+        &\eq \Phi + 
+        i[\Phi,(\boldsymbol{\tau}\cdot\boldsymbol{\theta})] + 
+        \mathcal{O}(\boldsymbol{\theta}^2)
+    \end{align*}
+
+Ignorando os termos quadráticos em $\boldsymbol{\theta}$ por ele ter componentes infinitesimais, temos que a variação do campo nos dá
+    \begin{equation*}
+        \delta\Phi = i\sum_{a}[\Phi, \tau_{a}]\theta_{a} = i\sum_{a,b} [\tau_{b},\tau_{a}]\theta_{a}\pi_{b}
+    \end{equation*}
+
+As matrizes de Pauli por serem geradores de uma álgebra de Lie satisfazem a relação de comutação
+    \begin{equation*}
+        [\tau_{a},\tau_{b}] = \sum_{c}2i\epsilon_{abc}\tau_{c}
+    \end{equation*}
+ou seja
+    \begin{equation*}
+        \delta\Phi = -2\sum_{a,b,c} \epsilon_{bac}\tau_{c}\theta_{a}\pi_{b} = 2\sum_{a,b,c}\epsilon_{abc}\tau_{c}\theta_{a}\pi_{b}
+    \end{equation*}
+
+Podemos considerar que 
+    \begin{equation*}
+        \delta\Phi = \delta\qty(\sum_{c}\tau_{c}\pi_{c}) = \sum_{c}\tau_{c} \delta\pi_{c} = 2\sum_{a,b,c}\epsilon_{abc}\tau_{c}\theta_{a}\pi_{b}
+    \end{equation*}
+
+Então a variação do campo fica
+    \begin{equation*}
+        \delta \pi_{c} = 2\sum_{a,b} \epsilon_{abc}\theta_{a}\pi_{b}
+    \end{equation*}
+
+Para obter a corrente de Noether, consideramos a simetria global em $\theta_{k}$, de tal forma que para $k=1,2,3$, temos
+    \begin{equation*}
+        J_{k}^{\mu} = \sum_{c}\fdv{\mathcal{L}}{(\partial_{\mu}\pi_{c})} \fdv{\pi_{c}}{\theta_{k}}
+    \end{equation*}
+
+O segundo termo é facilmente obtido, tal que
+    \begin{equation*}
+        \fdv{\pi_{c}}{\theta_{k}} = 2\sum_{a,b} \epsilon_{abc}\delta_{ak}\pi_{b} = 2\sum_{b} \epsilon_{kbc} \pi_{b}
+    \end{equation*}
+
+Já o primeiro
+    \begin{align*}
+        \fdv{\mathcal{L}}{(\partial_{\mu}\pi_{c})} &\eq \dfrac{1}{2}\fdv{}{(\partial_{\mu}\pi_{c})}\qty[
+            \sum_{d}\partial_{\nu}\pi_{d}\partial^{\nu}\pi_{d}
+        ] = \dfrac{1}{2}\sum_{d}\qty[
+            \fdv{(\partial_{\nu}\pi_{d})}{(\partial_{\mu}\pi_{c})} \partial^{\nu}\pi_{d} +
+            \partial_{\nu}\pi_{d} g^{\nu\beta} \fdv{(\partial_{\beta}\pi_{d})}{(\partial_{\mu}\pi_{c})}
+        ] \\
+        &\eq \dfrac{1}{2}\sum_{d}\qty[
+            \delta_{\nu}^{\mu}\delta_{cd} \partial^{\nu}\pi_{d} + 
+            \partial_{\nu}\pi_{d} g^{\nu\beta} \partial_{\beta}^{\mu}\delta_{cd}
+        ] = 
+        \dfrac{1}{2}\sum_{d}\qty[
+            \delta_{cd}\partial^{\mu}\pi_{d} + 
+            \partial^{\mu}\pi_{d}\delta_{cd}
+        ] \\
+        &\eq \dfrac{1}{2}\qty[\partial^{\mu}\pi_{c} + \partial^{\mu}\pi_{c}] = \partial^{\mu}\pi_{c}
+    \end{align*}
+
+Logo
+    \begin{equation*}
+        J_{k}^{\mu} = 2\sum_{c}\partial^{\mu}\pi_{c}\sum_{b}\epsilon_{kbc}\pi_{b} = 2\sum_{b,c} \epsilon_{kbc}\pi_{b}\partial^{\mu}\pi_{c}
+    \end{equation*}
+
+Juntando todas as componentes $k$, concluímos que a corrente de Noether é
+    \begin{answer}\label{eq: Noether current for a simple sigma model}
+        J^{\mu} = 2\boldsymbol{\pi}\times\partial^{\mu}\boldsymbol{\pi}
+    \end{answer}

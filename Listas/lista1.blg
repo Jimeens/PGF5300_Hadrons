@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'lista1.blg'
+[93] biber:340> INFO - === sáb out  4, 2025, 19:01:10
+[109] Biber.pm:419> INFO - Reading 'lista1.bcf'
+[182] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[196] bbl.pm:660> INFO - Writing 'lista1.bbl' with encoding 'UTF-8'
+[196] bbl.pm:763> INFO - Output to lista1.bbl
+[196] Biber.pm:131> WARN - The file 'lista1.bcf' does not contain any citations!
+[196] Biber.pm:133> INFO - WARNINGS: 1

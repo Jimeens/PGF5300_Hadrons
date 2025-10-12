@@ -1,0 +1,296 @@
+
+
+Antes de determinar os operadores de criação e aniquilação, podemos calcular o momento canonicamente conjugado $\pi_{0}(x)$ do campo livre $\phi_{0}(x)$:
+    \begin{equation*}
+        \pi_{0} = \fdv{\mathcal{L}_{0}}{\dot{\phi_{0}}} = \fdv{}{\dot{\phi_{0}}} \qty(\dfrac{1}{2}\partial_{\mu}\phi_{0}\partial^{\mu}\phi_{0} - \dfrac{1}{2}m^2\phi_{0}^2) = \dfrac{1}{2}\fdv{}{\dot{\phi_{0}}} \qty[
+            \dot{\phi}_{0}^2 - \nabla\phi_{0}\cdot\nabla\phi_{0} - m^2\phi_{0}^2
+        ] = \dot{\phi}_{0}
+    \end{equation*}
+
+Portanto
+    \begin{equation*}
+        \pi_{0}(x) = \int \dfrac{1}{(2\pi)^3} \qty[
+            a_{0}(\vb{k}) \partial_{0}f_{k}(x) +
+            a_{0}^{\dagger}(\vb{k}) \partial_{0} f_{k}^{\ast}(x)
+        ]\dd[3]{k}
+    \end{equation*}
+onde
+    \begin{align}
+        \pdv{f_{k}(x)}{t} &= \sqrt{2\omega_{\vb{k}}}\pdv{}{t}\qty(e^{-i\omega_{\vb{k}}t})e^{i\vb{k}\cdot\vb{x}} = -i\omega_{\vb{k}} \sqrt{2\omega_{\vb{k}}}e^{-i\omega_{\vb{k}}t+i\vb{k}\cdot\vb{x}} = -i\omega_{\vb{k}}f_{k}(x) \label{eq: derivative of f}\\
+        \pdv{f_{k}^{\ast}(x)}{t} &= \sqrt{2\omega_{\vb{k}}}\pdv{}{t}\qty(e^{+i\omega_{\vb{k}}t})e^{-i\vb{k}\cdot\vb{x}} = +i\omega_{\vb{k}} \sqrt{2\omega_{\vb{k}}}e^{i\omega_{\vb{k}}t-i\vb{k}\cdot\vb{x}} = +i\omega_{\vb{k}}f_{k}^{\ast}(x) \label{eq: derivative of f*}
+    \end{align}
+
+Concluindo que
+    \begin{equation*}
+        \pi_{0}(x) = \int \dfrac{i\omega_{\vb{k}}}{(2\pi)^3} \qty[
+            -a_{0}(\vb{k})f_{k}(x) +
+            a_{0}^{\dagger}(\vb{k})f_{k}^{\ast}(x)
+        ]\dd[3]{k}
+    \end{equation*}
+
+\noindent \textbf{(a)} Para determinar os operadores, podemos pensar em escrevê-los em função dos campos livres $\phi_{0}(x)$ e $\pi_{0}(x)$, onde para isso fazemos uma transformada de Fourier inversa no espaço nestes campos. No caso do campo $\phi_{0}(x)$, temos
+    \begin{equation*}
+        \int \phi_{0}(x)e^{-i\vb{k}\cdot\vb{x}}\dd[3]{x} = \int \qty{\int \dfrac{1}{(2\pi)^3}\qty[
+            a_{0}(\vb{k}')f_{k'}(x) + 
+            a_{0}^{\dagger}(\vb{k}')f_{k'}^{\ast}(x)
+        ]\dd[3]{k'}}e^{-i\vb{k}\cdot\vb{x}}\dd[3]{x}
+    \end{equation*}
+
+Expandindo $f_{k}(x)$, a expressão fica 
+    \begin{align*}
+        \int \phi_{0}(x) e^{-i\vb{k}\cdot\vb{x}}\dd[3]{x} 
+        &\eq \iint \dfrac{1}{(2\pi)^3 \sqrt{2\omega_{\vb{k}'}}} \qty[
+            a_{0}(\vb{k}') e^{-i\omega_{\vb{k}'}t + i\vb{k}'\cdot\vb{x}} + 
+            a_{0}^{\dagger}(\vb{k}') e^{i\omega_{\vb{k}'}t - i\vb{k}\cdot\vb{x}}
+        ] e^{-i\vb{k}\cdot\vb{x}} \dd[3]{k'}\dd[3]{x} \\
+        &\eq \iint \dfrac{e^{-i\omega_{\vb{k}'}t}}{(2\pi)^3\sqrt{2\omega_{\vb{k}'}}} \qty[
+            a_{0}(\vb{k}') e^{i(\vb{k}' - \vb{k})\cdot \vb{x}} + 
+            a_{0}^{\dagger}(\vb{k}') e^{2i\omega_{\vb{k}'}t} e^{-i(\vb{k}' + \vb{k})\cdot \vb{x}}
+        ] \dd[3]{x} \dd[3]{k'}
+    \end{align*}
+
+Podemos separar as integrais em $\dd[3]{x}$, de modo que
+    \begin{equation*}
+        \int \phi_{0}(x)e^{-i\vb{k}\cdot\vb{x}}\dd[3]{x} = \int \dfrac{e^{-i\omega_{\vb{k}'}t}}{(2\pi)^3 \sqrt{2\omega_{\vb{k}'}}} \qty[
+            a_{0}(\vb{k}') \int e^{i(\vb{k}' - \vb{k})\cdot\vb{x}}\dd[3]{x} + 
+            a_{0}^{\dagger}(\vb{k}') e^{2i\omega_{\vb{k}'}t} \int e^{-i(\vb{k}'+\vb{k})\cdot\vb{x}}\dd[3]{x}
+        ]\dd[3]{k'}
+    \end{equation*}
+
+Note então que as integrais em $\dd[3]{x}$ são, juntamente com o fator $1/(2\pi)^3$, distribuições delta de Dirac em 3 dimensões, tal que
+    \begin{align*}
+        \dfrac{1}{(2\pi)^3}\int e^{\pm i(\vb{k}' - \vb{k})\cdot\vb{x}}\dd[3]{x} &= \delta^3(\vb{k}' - \vb{k}) \\
+        \dfrac{1}{(2\pi)^3}\int e^{\pm i(\vb{k}' + \vb{k})\cdot\vb{x}} \dd[3]{x} &= \delta^3(\vb{k}' + \vb{k})
+    \end{align*}
+
+Sendo assim, obtemos
+    \begin{equation*}
+        \int \phi_{0}(x)e^{-i\vb{k}\cdot\vb{x}}\dd[3]{x} = \int \dfrac{e^{-i\omega_{\vb{k}'}t}}{\sqrt{2\omega_{\vb{k}'}}} \qty[
+            a_{0}(\vb{k}') \delta^3(\vb{k}' - \vb{k}) + 
+            a_{0}^{\dagger}(\vb{k}') e^{2i\omega_{\vb{k}'}t} \delta^3(\vb{k}' + \vb{k})
+        ]\dd[3]{k'}
+    \end{equation*}
+
+Podemos notar também que $\omega_{-\vb{k}} = \sqrt{\abs{-\vb{k}}^2 + m^2} = \omega_{\vb{k}}$, logo ao performar a integral obtemos
+    \begin{align*}
+        \int \phi_{0}(x) e^{-i\vb{k}\cdot\vb{x}}\dd[3]{x} &\eq \dfrac{e^{-i\omega_{\vb{k}}t}}{\sqrt{2\omega_{\vb{k}}}}\qty[
+            a_{0}(\vb{k}) +
+            a_{0}^{\dagger}(-\vb{k}) e^{2i\omega_{-\vb{k}}t}
+        ]\\ 
+        &\eq \dfrac{e^{-i\omega_{\vb{k}}t}}{\sqrt{2\omega_{\vb{k}}}} \qty[
+            a_{0}(\vb{k}) + 
+            a_{0}^{\dagger}(\vb{k}) e^{2i\omega_{\vb{k}}t}
+        ]
+    \end{align*}
+
+No caso do momento conjugado, temos
+    \begin{align*}
+        \int \pi_{0}(x) e^{-i\vb{k}\cdot\vb{x}}\dd[3]{x} &\eq \int \qty{
+            \int \dfrac{i\omega_{\vb{k}'}}{(2\pi)^3} \qty[
+                -a_{0}(\vb{k}')f_{k}(x) +
+                a_{0}^{\dagger}(\vb{k}')f_{k'}^{\ast}(x)
+            ]\dd[3]{k'}
+        }e^{-i\vb{k}\cdot\vb{x}}\dd[3]{x} \\
+        &\eq \iint \dfrac{i\omega_{\vb{k}'} e^{-i\omega_{\vb{k}'}t}}{(2\pi)^3\sqrt{2\omega_{\vb{k}'}}}\qty[
+            -a_{0}(\vb{k}') e^{i(\vb{k}'-\vb{k})\cdot\vb{x}} +
+            a_{0}^{\dagger}(\vb{k}') e^{2i\omega_{\vb{k}'}t} e^{-i(\vb{k}'+\vb{k})\cdot\vb{x}}
+        ]\dd[3]{x}\dd[3]{k'} \\
+        &\eq -i\int \sqrt{\dfrac{\omega_{\vb{k}'}}{2}} e^{-i\omega_{\vb{k}'}t} \qty[
+            a_{0}(\vb{k}') \delta^3(\vb{k}' - \vb{k}) -
+            a_{0}^{\dagger}(\vb{k}') e^{2i\omega_{\vb{k}'}t} \delta^3(\vb{k}' + \vb{k})
+        ] \dd[3]{k'} \\
+        &\eq -i\sqrt{\dfrac{\omega_{\vb{k}}}{2}} e^{-i\omega_{\vb{k}}t} \qty[
+            a_{0}(\vb{k}) -
+            a_{0}^{\dagger}(-\vb{k}) e^{2i\omega_{-\vb{k}}t}
+        ] \\
+        &\eq -i\sqrt{\dfrac{\omega_{\vb{k}}}{2}} e^{-i\omega_{\vb{k}}t} \qty[
+            a_{0}(\vb{k}) - 
+            a_{0}^{\dagger}(-\vb{k})e^{2i\omega_{\vb{k}}t}
+        ]
+    \end{align*}
+
+Com estes resultados, podemos obter as formas
+    \begin{equation*}
+        \sqrt{2\omega_{\vb{k}}} e^{i\omega_{\vb{k}}t} \int \phi_{0}(x) e^{-i\vb{k}\cdot\vb{x}}\dd[3]{x} = a_{0}(\vb{k}) + a_{0}^{\dagger}(-\vb{k}) e^{2i\omega_{\vb{k}}t}
+    \end{equation*}
+    \begin{equation*}
+        i\sqrt{\dfrac{2}{\omega_{\vb{k}}}} e^{i\omega_{\vb{k}}t} \int \pi_{0}(x) e^{-i\vb{k}\cdot\vb{x}}\dd[3]{x} = a_{0}(\vb{k}) - a_{0}^{\dagger}(-\vb{k}) e^{2i\omega_{\vb{k}}t}
+    \end{equation*}
+
+A exponencial $e^{i\omega_{\vb{k}}t}$ pode se juntar à $e^{-i\vb{k}\cdot\vb{x}}$ sob a forma $e^{ikx}$, pois a integral está sendo feita apenas em $\dd[3]{x}$, de modo que as equações ficam
+    \begin{equation*}
+        \sqrt{2\omega_{\vb{k}}} \int \phi_{0}(x) e^{ikx}\dd[3]{x} = a_{0}(\vb{k}) + a_{0}^{\dagger}(-\vb{k}) e^{2i\omega_{\vb{k}}t}
+    \end{equation*}
+    \begin{equation*}
+        i\sqrt{\dfrac{2}{\omega_{\vb{k}}}} \int \pi_{0}(x) e^{ikx}\dd[3]{x} = a_{0}(\vb{k}) - a_{0}^{\dagger}(-\vb{k}) e^{2i\omega_{\vb{k}}t}
+    \end{equation*}
+
+Somando as duas equações:
+    \begin{align*}
+        2a_{0}(\vb{k}) 
+        &= i\sqrt{\dfrac{2}{\omega_{\vb{k}}}} 
+            \int \pi_{0}(x) e^{ikx} \dd[3]{x} +
+        \sqrt{2\omega_{\vb{k}}} 
+            \int \phi_{0}(x) e^{ikx} \dd[3]{x}
+    \end{align*}
+
+Temos então
+    \begin{align*}
+        a_{0}(\vb{k}) 
+        &= \dfrac{i}{\sqrt{2\omega_{\vb{k}}}} \int \pi_{0}(x) e^{ikx} \dd[3]{x} + 
+        \sqrt{\dfrac{\omega_{\vb{k}}}{2}} \int \phi_{0}(x) e^{ikx} \dd[3]{x} 
+        \\
+        &= \dfrac{i}{\sqrt{2\omega_{\vb{k}}}} \int \partial_{0}\phi_{0}(x) e^{ikx} \dd[3]{x} +
+        \dfrac{\omega_{\vb{k}}}{\sqrt{2\omega_{\vb{k}}}} \int \phi_{0}(x) e^{ikx} \dd[3]{x} 
+        \\
+        &= i \int \partial_{0}\phi_{0}(x) f_{k}^{\ast}(x) \dd[3]{x} +
+        \omega_{\vb{k}} \int \phi_{0}(x) f_{k}^{\ast}(x) \dd[3]{x} 
+    \end{align*}
+
+Usando a \eqref{eq: derivative of f*},
+    \begin{equation*}
+        -i\partial_{0}f_{k}^{\ast}(x) = \omega_{\vb{k}}f_{k}^{\ast}(x)
+    \end{equation*}
+
+O que modifica a forma do operador na forma
+    \begin{align*}
+        a_{0}(\vb{k}) &\eq i\int \partial_{0}\phi_{0}(x) f_{k}^{\ast}(x) \dd[3]{x} - i\int \phi_{0}(x) \partial_{0}f_{k}^{\ast}(x) \dd[3]{x} \\ 
+        &\eq i\int \Big[f_{k}^{\ast}(x) \partial_{0}\phi_{0}(x) - \partial_{0}f_{k}^{\ast}(x) \phi_{0}(x) \Big] \dd[3]{x}
+    \end{align*}
+
+Pela notação
+    \begin{equation*}
+        A \overset{\leftrightarrow}{\partial_0} B = 
+        A (\partial_{0}B) - (\partial_{0}A) B
+    \end{equation*}
+
+Podemos concluir que o operador de aniquilação $a_{0}(\vb{k})$ admite ser escrito sob a forma
+    \begin{answer}\label{eq: annihilation operator}
+        a_{0}(\vb{k}) = i\int f_{k}^{\ast}(x) \overset{\leftrightarrow}{\partial_{0}}\phi_{0}(x) \dd[3]{x}
+    \end{answer}
+
+Como estamos considerando um campo $\phi_{0}(x)$ real, temos $\phi^{\dagger}_{0}(x) = \phi_{0}(x)$, portanto ao calcular $a_{0}^{\dagger}(\vb{k})$, trocaremos $i \mapsto -i$ e $f_{k}^{\ast}(x) \mapsto f_{k}(x)$, concluindo que
+    \begin{answer}\label{eq: creation operator}
+        a_{0}^{\dagger}(\vb{k}) = -i\int f_{k}(x) \overset{\leftrightarrow}{\partial_{0}}\phi(x)\dd[3]{x}
+    \end{answer}
+
+\noindent \textbf{(b)} Calculando a derivada de $a_{0}(\vb{k})$ em relação ao tempo, temos que como a integral é feita apenas nas coordenadas espaciais, a derivação pode comutar com a integral, de modo que
+    \begin{align*}
+        \partial_{0}a_{0}(\vb{k}) &\eq i\int \partial_{0}\qty[
+            f_{k}^{\ast}(x) \overset{\leftrightarrow}{\partial_{0}} \phi_{0}(x)
+        ] \dd[3]{x} \\
+        &\eq i\int \partial_{0}\Big[
+            f_{k}^{\ast}(x) \partial_{0}\phi_{0}(x) -
+            \partial_{0}f_{k}^{\ast}(x) \phi_{0}(x)
+        \Big] \dd[3]{x} \\
+        &\eq i\int \Big[
+            \partial_{0}f_{k}^{\ast}(x) \partial_{0}\phi_{0}(x) +
+            f_{k}^{\ast}(x) \partial_{0}^{2}\phi_{0}(x) - 
+            \partial_{0}^2f_{k}^{\ast}(x) \phi_{0}(x) -
+            \partial_{0}f_{k}^{\ast}(x) \partial_{0}\phi_{0}(x)
+        \Big] \dd[3]{x} \\
+        &\eq i\int \Big[
+            f_{k}^{\ast}(x) \partial_{0}^2\phi_{0}(x) - 
+            \partial_{0}^2f_{k}^{\ast}(x) \phi_{0}(x)
+        \Big] \dd[3]{x}
+    \end{align*}
+
+A derivada temporal de segunda ordem em $f_{k}^{\ast}$ explicitamente fica
+    \begin{equation}\label{eq: second derivative of f*}
+        \partial_{0}^2 f_{k}^{\ast}(x) = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}} \partial_{0}^2 e^{ikx} = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}} (i\omega_{\vb{k}})^2 e^{ikx} = -\omega_{\vb{k}}^2 f_{k}^{\ast}(x)
+    \end{equation}
+    
+ou seja
+    \begin{equation*}
+        \partial_{0} a_{0}(\vb{k}) = i \int 
+            f_{k}^{\ast}(x) \qty(\partial_{0}^2 + \omega_{\vb{k}}^2) \phi_{0}(x)
+        \dd[3]{x}
+    \end{equation*}
+
+Como $\omega_{\vb{k}}^2 = \abs{\vb{k}}^2 + m^2$, reescrevemos
+    \begin{equation*}
+        \partial_{0} a_{0}(\vb{k}) = i \int 
+            f_{k}^{\ast}(x) \qty(\partial_{0}^2 + \abs{\vb{k}}^2 + m^2) \phi_{0}(x)
+        \dd[3]{x}
+    \end{equation*}
+
+Note que
+    \begin{align*}
+        \nabla \cdot \qty[f_{k}^{\ast}(x) \overset{\leftrightarrow}{\nabla} \phi_{0}(x)] &\eq \nabla\cdot\Big[
+            f_{k}^{\ast}(x) \nabla \phi_{0}(x) - 
+            \nabla f_{k}^{\ast}(x) \phi_{0}(x)
+        \Big] \\
+        &\eq \nabla f_{k}^{\ast}(x) \cdot \nabla\phi_{0}(x) + 
+            f_{k}^{\ast}(x) \nabla^2\phi_{0}(x) - 
+            \nabla^2f_{k}^{\ast}(x) \phi_{0}(x) -
+            \nabla f_{k}^{\ast}(x) \cdot \nabla\phi_{0}(x) \\
+        &\eq f_{k}^{\ast}(x) \nabla^2\phi_{0}(x) - \nabla^2f_{k}^{\ast}(x) \phi_{0}(x)
+    \end{align*}
+onde 
+    \begin{equation*}
+        \nabla^2 f_{k}^{\ast}(x) = 
+        \dfrac{1}{\sqrt{2\omega_{\vb{k}}}} \nabla^2e^{ikx} = 
+        \dfrac{1}{\sqrt{2\omega_{\vb{k}}}} (-i\vb{k})\cdot(-i\vb{k}) e^{ikx} =
+        -\abs{\vb{k}}^2 f_{k}^{\ast}(x)
+    \end{equation*}
+
+Portanto
+    \begin{equation*}
+        \nabla \cdot \qty[f_{k}^{\ast}(x) \overset{\leftrightarrow}{\nabla} \phi_{0}(x)] = f_{k}^{\ast}(x) \nabla^2\phi_{0}(x) + \abs{\vb{k}}^2 f_{k}^{\ast}(x)\phi_{0}(x)
+    \end{equation*}
+
+Como o lado esquerdo desta equação é uma derivada total no espaço, temos que dentro de uma integral em $\dd[3]{x}$ esse termo vai pra zero pela hipótese do campo desaparecer nos limites asssintóticos, de modo que podemos fazer a substituição
+    \begin{equation*}
+        \abs{\vb{k}}^2 f_{k}^{\ast}(x)\phi_{0}(x) \mapsto -f_{k}^{\ast}(x) \nabla^2\phi_{0}(x)
+    \end{equation*}
+dentro da integral em $\partial_{0}a_{0}(\vb{k})$, logo
+    \begin{align*}
+        \partial_{0}a_{0}(\vb{k}) &\eq i\int 
+            f_{k}^{\ast}(x) 
+            \qty(
+                \partial_{0}^2 -
+                \nabla^2 +
+                m^2
+            )
+            \phi_{0}(x) 
+        \dd[3]{x} \\
+        &\eq i\int 
+            f_{k}^{\ast}(x)
+            \qty(
+                \partial_{\mu}\partial^{\mu} + 
+                m^2
+            )
+            \phi_{0}(x)
+        \dd[3]{x}
+    \end{align*}
+
+E como $\phi_{0}(x)$ é um campo livre, equação de Klein-Gordon é satisfeita, $(\partial_{\mu}\partial^{\mu} + m^2)\phi_{0}(x) = 0$, concluindo que
+    \begin{answer}\label{eq: creation operator is time-independent}
+        \partial_{0}a_{0}(\vb{k}) = 0 \Rightarrow a_{0}(\vb{k})~\text{é independente do tempo}
+    \end{answer}
+
+O raciocínio para $a_{0}^{\dagger}(\vb{k})$ é idêntico, de modo que a alteração pode ser visualizada por
+    \begin{align*}
+        \partial_{0} a_{0}(\vb{k}) &\mapsto \partial_{0} a_{0}^{\dagger}(\vb{k}) \\
+        i\int 
+            f_{k}^{\ast}(x)
+            \qty(
+                \partial_{\mu}\partial^{\mu} + 
+                m^2
+            )
+            \phi_{0}(x)
+        \dd[3]{x} &\mapsto 
+        -i\int 
+            f_{k}(x)
+            \qty(
+                \partial_{\mu}\partial^{\mu} + 
+                m^2
+            )
+            \phi_{0}(x)
+        \dd[3]{x}
+    \end{align*}
+
+Portanto 
+    \begin{answer}\label{eq: annihilation operator is time-independent}
+        \partial_{0}a_{0}^{\dagger}(\vb{k}) = 0 \Rightarrow a_{0}^{\dagger}(\vb{k})~\text{é independente do tempo}
+    \end{answer}

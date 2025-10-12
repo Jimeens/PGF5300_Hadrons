@@ -1,0 +1,33 @@
+\begin{itemize}
+    \item Os diagramas de 1 loop do propagador do quark (esquerda) de do elétron (direita) são
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{feynman}
+                    \vertex (i1);
+                    \vertex [right=1cm of i1, dot] (i2) {};
+                    \vertex [right=2cm of i2, dot] (i3) {};
+                    \vertex [right=1cm of i3] (i4);
+
+                    \diagram* {
+                        (i1) -- (i2) -- [fermion] (i3) -- (i4),
+                        (i2) -- [gluon, half left, looseness=1.5] (i3),
+                    };
+                \end{feynman}
+            \end{tikzpicture}
+            \hspace{2cm}
+            \begin{tikzpicture}
+                \begin{feynman}
+                    \vertex (i1);
+                    \vertex [right=1cm of i1, dot] (i2) {};
+                    \vertex [right=2cm of i2, dot] (i3) {};
+                    \vertex [right=1cm of i3] (i4);
+
+                    \diagram* {
+                        (i1) -- (i2) -- (i3) -- (i4),
+                        (i2) -- [boson, half left, looseness=1.5] (i3),
+                    };
+                \end{feynman}
+            \end{tikzpicture}
+        \end{center}
+    \item O fato de não precisar calcular a integração de loop indica que existe algum truque pra obter a resposta.
+\end{itemize}

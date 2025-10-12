@@ -1,0 +1,146 @@
+
+
+\noindent\textbf{(a)} Considerando a lagrangiana livre de uma partícula escalar neutra de massa $m$, podemos escrever que
+    \begin{equation*}
+        \partial_{\mu}(\phi_{0}\partial^{\mu}\phi_{0}) = \partial_{\mu}\phi_{0} \partial^{\mu}\phi_{0} + \phi_{0} \partial_{\mu}\partial^{\mu}\phi_{0}
+    \end{equation*}
+ou seja
+    \begin{align*}
+        \mathcal{L}_{0} &\eq \dfrac{1}{2}\partial_{\mu}(\phi_{0}\partial^{\mu}\phi_{0}) - \dfrac{1}{2}\phi_{0}\partial_{\mu}\partial^{\mu}\phi_{0} - \dfrac{1}{2}\phi_{0}m^2\phi_{0} \\
+        &\eq \dfrac{1}{2}\partial_{\mu}(\phi_{0}\partial^{\mu}\phi_{0}) + \dfrac{1}{2}\phi_{0}(-\partial_{\mu}\partial^{\mu} - m^2)\phi_{0}
+    \end{align*}
+
+Como o primeiro termo é uma derivada total, ao calcularmos a ação com $\mathcal{L}_{0}$, vamos ter a integral em todo o espaço-tempo de uma derivada total, e como sempre assumimos que um campo desaparece nos infinitos, esta integração vai se anular, de tal forma que
+    \begin{equation*}
+        S_{0} = \int \dfrac{1}{2}\phi_{0}(-\partial_{\mu}\partial^{\mu} - m^2)\phi_{0}\dd[4]{x}
+    \end{equation*}
+
+Temos então uma lagrangiana equivalente à $\mathcal{L}_{0}$ da forma
+    \begin{equation*}
+        \mathcal{L}_{0}' = \dfrac{1}{2}\phi_{0}(-\partial_{\mu}\partial^{\mu}-m^2)\phi_{0}
+    \end{equation*}
+
+Sendo $(-\partial_{\mu}\partial^{\mu} - m^2)$ um operador dentro da lagrangiana, o propagador associado a ele, $\Delta(x-y)$, vai ser uma função de Green de dois pontos desse operador, ou seja, satisfaz a equação
+    \begin{equation*}
+        (-\partial_{\mu}\partial^{\mu}-m^2)\Delta(x-y) = \delta^4(x-y)
+    \end{equation*}
+
+Considerando uma transformada de Fourier no propagador, temos
+    \begin{equation*}
+        \Delta(x-y) = \int \dfrac{1}{(2\pi)^4}\tilde{\Delta}(k) e^{-ik(x-y)}\dd[4]{k}
+    \end{equation*}
+
+Então
+    \begin{align*}
+        (-\partial_{\mu}\partial^{\mu}-m^2)\int \dfrac{1}{(2\pi)^4}\tilde{\Delta}(k)e^{-ik(x-y)}\dd[4]{k} &\eq \delta^{4}(x-y) \\
+        \int \dfrac{1}{(2\pi)^4}\tilde{\Delta}(k)[\partial_{\mu}\partial^{\mu}e^{-ik(x-y)} - m^2e^{-ik(x-y)}]\dd[4]{k} &\eq \int \dfrac{1}{(2\pi)^4}e^{-ik(x-y)}\dd[4]{k} \\
+        \int \dfrac{1}{(2\pi)^4}\tilde{\Delta}(k)(k^2 - m^2)e^{-ik(x-y)}\dd[4]{k} &\eq
+    \end{align*}
+
+Comparando os dois lados da equação, obtemos que
+    \begin{equation*}
+        \tilde{\Delta}(k) = \dfrac{1}{k^2 - m^2}
+    \end{equation*}
+
+Porém, possuimos 2 singularidades nesta expressão, que ocorrem quando $k^2 = m^2$, que equivale a $k_{0}^2 - \abs{\vb{k}}^2 = m^2$, ou seja $k_{0} = \pm \sqrt{\abs{\vb{k}}^2 + m^2} = \pm\omega_{\vb{k}}$. Pela existência dessas singularidades que ocorrem no eixo real, adicionamos ao denominador uma quantidade no eixo imaginário $+i\varepsilon$ para regularizar a função, em que $\varepsilon>0$ e $\epsilon\to0$, concluindo que
+    \begin{answer}\label{eq: propagator in momentum space}
+        \tilde{\Delta}(k) = \dfrac{1}{k^2 - m^2 + i\varepsilon}
+    \end{answer}
+
+\noindent \textbf{(b)} Sabendo a forma do propagador no espaço de coordenadas, podemos separar a parte espacial da temporal de modo que
+    \begin{equation*}
+        i\Delta(x-y) = i\int \dfrac{1}{(2\pi)^3}e^{i\vb{k}\cdot(\vb{x}-\vb{y})}\dd[3]{k} \int_{-\infty}^{\infty} \dfrac{1}{2\pi} \dfrac{e^{-ik_{0}(x_{0}-y_{0})}}{k^2 - m^2 + i\varepsilon}\dd{k_{0}}
+    \end{equation*}
+
+Podemos modificar o denominador da segunda integral de modo que $k^2 - m^2 = k_{0}^2 - \abs{\vb{k}}^2 - m^2 = k_{0}^2 - \omega_{\vb{k}}^2$ e denotar por $z_{0} \coloneqq x_{0}-y_{0}$, resultando então em
+    \begin{equation*}
+        i\Delta(x-y) = i\int \dfrac{1}{(2\pi)^3}e^{i\vb{k}\cdot(\vb{x}-\vb{y})}\dd[3]{k} \int_{-\infty}^{\infty} \dfrac{1}{2\pi} \dfrac{e^{-ik_{0}z_{0}}}{k_{0}^2 - \omega_{\vb{k}}^2 + i\varepsilon}  \dd{k_{0}}
+    \end{equation*}
+
+Nesta forma, temos que os polos se encontram em $k_{0} = \pm \sqrt{\omega_{\vb{k}}^2 - i\varepsilon}$, que como $\varepsilon$ é muito pequeno, podemos aproximar
+    \begin{equation*}
+        k_{0} \approx \pm\qty(\omega_{\vb{k}} - \dfrac{i\varepsilon}{2\omega_{\vb{k}}})
+    \end{equation*}
+
+No plano complexo, o polo em $k_{0} = \omega_{\vb{k}} - \dfrac{i\varepsilon}{2\omega_{\vb{k}}} = \kappa_{1}$ pertence ao semiplano inferior $\mathfrak{Im}[k_{0}] < 0$ e o polo $k_{0} = -\omega_{\vb{k}} + \dfrac{i\varepsilon}{2\omega_{\vb{k}}} = \kappa_{2}$ pertence ao semiplano superior $\mathfrak{Im}[k_{0}] > 0$. Ao considerarmos que a integração está sendo feita no plano complexo, temos que $k_{0}$ possui parte real e imaginária, portanto
+    \begin{equation*}
+        k_{0} = \mathfrak{Re}[k_{0}] + i\mathfrak{Im}[k_{0}]
+    \end{equation*}
+
+Com isso, a exponencial $e^{-ik_{0}z_{0}}$ é da forma
+    \begin{equation*}
+        e^{-ik_{0}z_{0}} = e^{-i(\mathfrak{Re}[k_{0}] - i\mathfrak{Im}[k_{0}])z_{0}}
+    \end{equation*}
+implicando que para $z_{0}>0$ a exponencial decai no semiplano inferior e para $z_{0}<0$ decai no semiplano superior. Definindo a função
+    \begin{equation*}
+        f(k_{0}) = \dfrac{e^{-ik_{0}z_{0}}}{k_{0}^2-\omega_{\vb{k}}^2 + i\varepsilon} = \dfrac{e^{-ik_{0}z_{0}}}{(k_{0}-\kappa_{1})(k_{0}-\kappa_{2})}
+    \end{equation*}
+temos que o resíduo de $f(k_{0})$ no polo $k_{0} = \kappa_{1}$ ($z_{0}>0$)
+    \begin{equation*}
+        \text{Res}(f,\kappa_{1}) = \lim_{k_{0}\to\kappa_{1}} (k_{0}-\kappa_{1})f(k_{0}) = \dfrac{e^{-i\kappa_{1}z_{0}}}{\kappa_{1}-\kappa_{2}} = \dfrac{e^{-i\qty(\omega_{\vb{k}}-\frac{i\varepsilon}{2\omega_{\vb{k}}})z_{0}}}{2\omega_{\vb{k}}} = \dfrac{e^{-i\omega_{\vb{k}}z_{0}}}{2\omega_{\vb{k}}}e^{-\frac{\varepsilon z_{0}}{2\omega_{\vb{k}}}}
+    \end{equation*}
+
+Como $\varepsilon\to0$, podemos aproximar a segunda exponencial para $1$, de modo que
+    \begin{equation*}
+        \text{Res}(f,\kappa_{1}) \approx \dfrac{e^{-i\omega_{\vb{k}}z_{0}}}{2\omega_{\vb{k}}}
+    \end{equation*}
+
+Calculado o resíduo, temos para $z_{0}>0$, ao orientar a integral no sentido horário, que
+    \begin{equation*}
+        \int_{-\infty}^{\infty} \dfrac{e^{-ik_{0}z_{0}}}{k_{0}^2-\omega_{\vb{k}}^2+i\varepsilon} \dd{k_{0}} = -2\pi i \cdot \text{Res}(f,\kappa_{1}) = -\dfrac{2\pi i}{2\omega_{\vb{k}}}e^{-i\omega_{\vb{k}}z_{0}}
+    \end{equation*}
+
+Já no polo $k_{0} = \kappa_{2}$ ($z_{0}<0$):
+    \begin{equation*}
+        \text{Res}(f,\kappa_{2}) = \lim_{k_{0}\to\kappa_{2}}(k_{0}-\kappa_{2})f(k_{0}) = \dfrac{e^{-i\kappa_{2}z_{0}}}{\kappa_{2} - \kappa_{1}} = \dfrac{e^{-i\qty(-\omega_{\vb{k}} + \frac{i\varepsilon}{2\omega_{\vb{k}}})z_{0}}}{-2\omega_{\vb{k}}} = -\dfrac{e^{i\omega_{\vb{k}}z_{0}}}{2\omega_{\vb{k}}}e^{\frac{\varepsilon z_{0}}{2\omega_{\vb{k}}}}
+    \end{equation*}
+em que podemos tomar novamente $\varepsilon\to 0$ e aproximar
+    \begin{equation*}
+        \text{Res}(f,\kappa_{2}) \approx -\dfrac{e^{i\omega_{\vb{K}}z_{0}}}{2\omega_{\vb{k}}}
+    \end{equation*}
+
+Então para $z_{0}<0$
+    \begin{equation*}
+        \int_{-\infty}^{\infty} \dfrac{e^{-ik_{0}z_{0}}}{k_{0}^2-\omega_{\vb{k}}^2+i\varepsilon}\dd{k_{0}} = 2\pi i \cdot \text{Res}(f,\kappa_{2}) = -\dfrac{2\pi i}{2\omega_{\vb{k}}}e^{i\omega_{\vb{k}}z_{0}}
+    \end{equation*}
+
+Para considerar tanto $z_{0}>0$ quanto $z_{0}<0$ na integração, adicionamos a cada parte uma função de Heaviside: $\Theta(z_{0})$ para $z_{0}>0$ e $\Theta(-z_{0})$ para $z_{0}<0$, concluindo que
+    \begin{answer}\label{eq: Heaviside}
+        \int \dfrac{1}{2\pi} \dfrac{e^{-ik_{0}z_{0}}}{k_{0}^2 - \omega_{\vb{k}}^2 + i\varepsilon} \dd{k_{0}} = -i\Theta(z_{0})\dfrac{e^{-i\omega_{\vb{k}}z_{0}}}{2\omega_{\vb{k}}} - i\Theta(-z_{0})\dfrac{e^{i\omega_{\vb{k}}z_{0}}}{2\omega_{\vb{k}}}
+    \end{answer}
+
+\noindent \textbf{(c)} Com o resultado \eqref{eq: Heaviside}, podemos escrever o propagador sob a forma
+    \begin{equation*}
+        i\Delta(x-y) = i\int \dfrac{1}{(2\pi)^3} e^{i\vb{k}\cdot(\vb{x}-\vb{y})}\dd[3]{k}\qty[-i\Theta(z_{0})\dfrac{e^{-i\omega_{\vb{k}}z_{0}}}{2\omega_{\vb{k}}} - i\Theta(-z_{0})\dfrac{e^{i\omega_{\vb{k}}z_{0}}}{2\omega_{\vb{k}}}]
+    \end{equation*}
+em que como $z_{0} = x_{0} - y_{0}$ e não há dependência em $\vb{k}$, podemos inserir o termo entre colchetes $[\cdots]$ dentro da integral tal que
+    \begin{align*}
+        i\Delta(x-y) &\eq \int \dfrac{1}{(2\pi)^3}\qty[
+            \Theta(x_{0}-y_{0}) \dfrac{e^{-i\omega_{\vb{k}}(x_{0}-y_{0}) + i\vb{k}\cdot(\vb{x}-\vb{y})}}{2\omega_{\vb{k}}} +
+            \Theta(y_{0}-x_{0}) \dfrac{e^{i\omega_{\vb{k}}(x_{0}-y_{0}) + i\vb{k}\cdot(\vb{x}-\vb{y})}}{2\omega_{\vb{k}}}
+        ]\dd[3]{k} \\
+        &\eq \int \dfrac{1}{(2\pi)^3}\qty[
+            \Theta(x_{0}-y_{0}) \dfrac{e^{-i\omega_{\vb{k}}(x_{0}-y_{0}) + i\vb{k}\cdot(\vb{x}-\vb{y})}}{2\omega_{\vb{k}}} +
+            \Theta(y_{0}-x_{0}) \dfrac{e^{-i\omega_{\vb{k}}(y_{0}-x_{0}) + i\vb{k}\cdot(\vb{x}-\vb{y})}}{2\omega_{\vb{k}}}
+        ]\dd[3]{k}
+    \end{align*}
+
+Fazendo a mudança $\vb{k}\mapsto -\vb{k}$ no segundo termo (essa transformação mantém a integral invariante), temos
+    \begin{align*}
+        i\Delta(x-y) &\eq \int \dfrac{1}{(2\pi)^3}\qty[
+            \Theta(x_{0}-y_{0}) \dfrac{e^{-i\omega_{\vb{k}}(x_{0}-y_{0}) + i\vb{k}\cdot(\vb{x}-\vb{y})}}{2\omega_{\vb{k}}} +
+            \Theta(y_{0}-x_{0}) \dfrac{e^{-i\omega_{\vb{k}}(y_{0}-x_{0}) + i\vb{k}\cdot(\vb{y}-\vb{x})}}{2\omega_{\vb{k}}}
+        ]\dd[3]{k} \\
+        &\eq \int \dfrac{1}{(2\pi)^3}\qty[
+            \Theta(x_{0}-y_{0}) \dfrac{e^{-i\omega_{\vb{k}}x_{0} + i\vb{k}\cdot\vb{x}}}{\sqrt{2\omega_{\vb{k}}}} \dfrac{e^{i\omega_{\vb{k}}y_{0} - i\vb{k}\cdot\vb{y}}}{\sqrt{2\omega_{\vb{k}}}} +
+            \Theta(y_{0}-x_{0}) \dfrac{e^{-i\omega_{\vb{k}}y_{0} + i\vb{k}\cdot\vb{y}}}{\sqrt{2\omega_{\vb{k}}}} \dfrac{e^{i\omega_{\vb{k}}x_{0} - i\vb{k}\cdot\vb{x}}}{\sqrt{2\omega_{\vb{k}}}}
+        ]\dd[3]{k} 
+    \end{align*}
+
+Concluindo que
+    \begin{answer}\label{eq: propagator}
+        i\Delta(x-y) = \int \dfrac{1}{(2\pi)^3}\qty[
+            \Theta(x_{0} - y_{0}) f_{k}(x) f_{k}^{\ast}(y) +
+            \Theta(y_{0} - x_{0}) f_{k}(y) f_{k}^{\ast}(x)
+        ]\dd[3]{k}
+    \end{answer}

@@ -1,0 +1,190 @@
+\RequirePackage{pdfmanagement-testphase} % tranparent package doesn't work without this
+\DeclareDocumentMetadata{} % and this
+\documentclass[a4paper, 11pt, oneside]{impression}
+
+\hwnumber{2} % Homework number in the cover page
+\title{Lista de Exercícios} % Title
+\subtitle{Introdução a Física de Hádrons} % Subtitle
+\author{Lucas R. Ximenes} % Author
+\extra{11917239} % Extra information
+
+\begin{document}
+
+\maketitle
+
+\chapter{Funcional gerador de um campo escalar livre}\label{quest: one}
+
+\begin{exercise}{}
+    O funcional gerador de um campo escalar livre é escrito como
+        \begin{equation*}
+            Z_{0}[J] = N \int \exp\qty{
+                i \int \qty[
+                    \dfrac{1}{2}\qty(
+                        \xi\vec{K}_{x}\xi +
+                        \xi J +
+                        \bar{\phi}\vec{K}_{x}\xi + 
+                        \bar{\phi}J
+                    ) + 
+                    J\bar{\phi} + 
+                    J\xi
+                ]\dd[4]{x}
+            }[D\xi]
+        \end{equation*}
+    após uma expansão do campo original $\phi$ em torno de sua configuração clássica $\bar{\phi}$ e sua correspondente flutuação $\xi$, $\phi = \bar{\phi} + \xi$. O operador $\vec{K}_{x}$ é o de Klein-Gordon, $\vec{K}_{x} = (\partial^{2} + m^{2})_{x}$. Obtenha
+        \begin{equation*}
+            Z_{0}[J] = N'\exp\qty[
+                -\dfrac{i}{2}\int J(x)\Delta(x-y)J(y)\dd[4]{x}\dd[4]{y}
+            ]
+        \end{equation*}
+\end{exercise}
+
+\input{Solutions/Solutions2/ex1}
+
+\chapter{Integração com números de Grassman}\label{quest: two}
+
+\begin{exercise}{}
+    A integral de trajetória para férmions envolve o cálculo, no limite do contínuo, da integral discretizada
+        \begin{equation*}
+            I(A) = \int \prod_{i=1}^{N} \exp\qty(\sum_{j,k=1}^{N}\bar{\theta}_{j}A_{jk}\theta_{k})\dd{\theta_{i}}\dd{\bar{\theta}_{i}} = \text{det}(A)
+        \end{equation*}
+    Mostre explicitamente o resultado acima para $N = 3$, e depois, generalize para um $N$ arbitrário.
+\end{exercise}
+
+\input{Solutions/Solutions2/ex2}
+
+\chapter{Relações de campos de gauges não-abelianos}\label{quest: three}
+
+\begin{exercise}{}
+    No caso de um campo de gauge não-abeliano, mostre explicitamente que
+    \begin{enumerate}[(a)]
+        \item $[D_{\mu}, D_{\nu}]\Phi = -igF_{\mu\nu}\Phi$.
+        \item $F_{\mu\nu}' \Phi' = UF_{\mu\nu}\Phi$.
+    \end{enumerate}
+    em que $\Phi$ é um vetor coluna de campos de bósons escalares que satisfaz a simetria de gauge do grupo, e $U = \exp[T_{a}\theta_{a}(x)]$, sendo $T_{a}$ os geradores do grupo.
+\end{exercise}
+
+\input{Solutions/Solutions2/ex3}
+
+\chapter{Teoria $\lambda\phi^{4}$}\label{quest: four}
+
+\begin{exercise}{}
+    \begin{multicols}{2}
+        Na teoria $\lambda\phi^{4}$ calcule, em regularização dimensional, com todos os detalhes necessários (incluindo a expansão em torno de $\epsilon\to0$, com $D = 4-2\epsilon$), a integral do diagrama de Feynman da figura ao lado.
+        
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{feynman}
+                    \vertex (i1);
+                    \vertex [below right=1.5cm and 2cm of i1, dot] (i2) {};
+                    \vertex [above right=1.5cm and 2cm of i2] (i3);
+                    
+                    \vertex [below=6cm of i1] (i4);
+                    \vertex [above right=1.5cm and 2cm of i4, dot] (i5) {};
+                    \vertex [below right=1.5cm and 2cm of i5] (i6);
+
+                    \diagram* {
+                        (i1) -- [plain, momentum={[arrow shorten=0.7]$p_{3}$}] (i2) -- [plain, rmomentum={[arrow shorten=0.7]$p_{4}$}] (i3),
+                        (i2) -- [plain, half left, looseness=1.5] (i5),
+                        (i5) -- [plain, half left, looseness=1.5] (i2),
+                        (i4) -- [plain, rmomentum={[arrow shorten=0.7]$p_{1}$}] (i5) -- [plain, momentum={[arrow shorten=0.7]$p_{2}$}] (i6),
+                    };
+                \end{feynman}
+            \end{tikzpicture}
+        \end{center}
+        
+        
+    \end{multicols}
+\end{exercise}
+
+\input{Solutions/Solutions2/ex4}
+
+\chapter{Regras de Feynman da QCD}\label{quest: five}
+
+\begin{exercise}{}
+    Utilizando as regras de Feynman da QCD, mostre que o diagrama de 1 loop (auto-energia) do propagador do quark difere do correspondente ao elétron na QED por um fator multiplicativo $C_{F} = \displaystyle\sum_{a}T_{a}^{2}$. Obs: não é necessário calcular a integração de loop.
+\end{exercise}
+
+\input{Solutions/Solutions2/ex5}
+
+\chapter{Espalhamento elástico elétron-múon}\label{quest: six}
+
+\begin{exercise}{}
+    Calcule explicitamente a contração $L^{\alpha\beta}W_{\alpha\beta}$ no espalhamento elástico elétron-múon. Obs: despreze a massa do elétron comparada a outras escalas de energia, assumidas muito maiores.
+\end{exercise}
+
+\input{Solutions/Solutions2/ex6}
+
+\chapter{Amplitude DVCS}\label{quest: seven}
+
+\begin{exercise}{}
+    Vimos que a amplitude DVCS (deeply-virtual Compton scattering) é dada por
+        \begin{equation*}
+            T_{\mu\nu} = i\int e^{iqz}\bra{p}T\{J_{\mu}(z)J_{\nu}(0)\}\ket{p}\dd[4]{z}
+        \end{equation*}
+    \begin{enumerate}[(a)]
+        \item Partindo da expressão acima, mostre que $\text{Im}[T_{\alpha\beta}] = \pi W_{\alpha\beta}$, ou seja, que a parte imaginária da amplitude DVCS é proporcional ao tensor hadrônico do espalhamento inélástico profundo.
+        \item Usando um conjunto completo de estados intermediários entre as correntes eletromagnéticas, argumente por quê
+            \begin{equation*}
+                \int e^{iqz} \bra{p}J_{\mu}(0)J_{\nu}(z)\ket{p}
+            \end{equation*}
+        é igual a zero. \textbf{Dica:} obtenha uma função delta de Dirac e conservação do quadri-momento total.
+    \end{enumerate}
+\end{exercise}
+
+\input{Solutions/Solutions2/ex7.tex}
+
+\chapter{Cálculo de diagramas de Feynman}\label{quest: eight}
+
+\begin{exercise}{}
+    Utilizando as regras de Feynman da QCD (aula 13), calcule os diagramas de Feynman abaixo, que contribuem para o processo $e^{+}(k_{1})e^{-}(k_{2}) \to \bar{q}(p_{1})q(p_{2})$. No segundo diagrama, o glúon emitido possui momento muito baixo (\textit{soft glúon}). Mostre que os dois diagramas são infinitos, explique a origem desses infinitos, e como lidar com eles para obter um resultado físico consistente.
+
+    \noindent\begin{tikzpicture}
+        \begin{feynman}
+            \vertex (i1) {$e^{+}$};
+            \vertex [below right=1.5cm and 2cm of i1] (i2);
+            \vertex [below left=1.25cm and 1.75cm of i2] (i3) {$e^{-}$};
+
+            \vertex [right=6cm of i1] (i4) {$\bar{q}$};
+            \vertex [below left=1.5cm and 2cm of i4] (i5);
+            \vertex [below right=1.25cm and 1.75cm of i5] (i6) {$q$};
+
+            \vertex [below left=0.375cm and 0.5cm of i4] (g1);
+            \vertex [below=2.25cm of g1] (g2);
+
+            \diagram*{
+                (i3) -- [fermion] (i2) -- [fermion] (i1),
+                (i2) -- [boson] (i5),
+                (i4) -- [fermion] (i5) -- [fermion] (i6),
+                (g1) -- [gluon, half left, looseness=1] (g2)
+            };
+
+        \end{feynman}
+    \end{tikzpicture}
+    \hfill
+    \begin{tikzpicture}
+        \begin{feynman}
+            \vertex (i1) {$e^{+}$};
+            \vertex [below right=1.5cm and 2cm of i1] (i2);
+            \vertex [below left=1.25cm and 1.75cm of i2] (i3) {$e^{-}$};
+
+            \vertex [right=6cm of i1] (i4) {$\bar{q}$};
+            \vertex [below left=1.5cm and 2cm of i4] (i5);
+            \vertex [below right=1.25cm and 1.75cm of i5] (i6) {$q$};
+
+            \vertex [below left=0.375cm and 0.5cm of i4] (g1);
+            \vertex [below right=0.5cm and 0.5cm of g1] (g2);
+
+            \diagram*{
+                (i3) -- [fermion] (i2) -- [fermion] (i1),
+                (i2) -- [boson] (i5),
+                (i4) -- [fermion] (i5) -- [fermion] (i6),
+                (g1) -- [gluon] (g2)
+            };
+
+        \end{feynman}
+    \end{tikzpicture}
+\end{exercise}
+
+% \makefinal
+
+\end{document}

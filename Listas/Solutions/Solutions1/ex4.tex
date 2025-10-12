@@ -1,0 +1,240 @@
+
+
+Partindo da hamiltoniana de uma partícula livre, podemos separá-la em 3 integrais, de modo que
+    \begin{equation*}
+        H = \dfrac{1}{2}\qty[\int \pi_{0}^2 \dd[3]{x} + \int (\nabla\phi_{0})^2\dd[3]{x} + \int m^2\phi^2\dd[3]{x}] = \dfrac{1}{2}(I_{1} + I_{2} + I_{3})
+    \end{equation*}
+
+O primeiro termo vai ficar
+    \begin{align*}
+        I_{1}
+        &\eq -\iiint \dfrac{\omega_{\vb{k}}\omega_{\vb{k}'}}{(2\pi)^6}
+            \qty[
+                a_{0}(\vb{k})f_{k}(x) - a_{0}^{\dagger}(\vb{k})f_{k}^{\ast}(x)
+            ]\qty[
+                a_{0}(\vb{k}')f_{k'}(x) - a_{0}^{\dagger}(\vb{k}')f_{k'}^{\ast}(x)
+            ]\dd[3]{k}\dd[3]{k'}
+        \dd[3]{x} \\
+        &\eq -\iiint \dfrac{\omega_{\vb{k}}\omega_{\vb{k}'}}{(2\pi)^6}
+        \Big[
+            a_{0}(\vb{k})a_{0}(\vb{k}')f_{k}(x)f_{k'}(x) - a_{0}(\vb{k})a_{0}^{\dagger}(\vb{k}')f_{k}(x)f_{k'}^{\ast}(x) - \\
+        &\noeq - a_{0}^{\dagger}(\vb{k})a_{0}(\vb{k}')f_{k}^{\ast}(x)f_{k'}(x) + a_{0}^{\dagger}(\vb{k})a_{0}^{\dagger}(\vb{k}')f_{k}^{\ast}(x)f_{k'}^{\ast}(x)
+        \Big]\dd[3]{k}\dd[3]{k'}\dd[3]{x}
+    \end{align*}
+
+Lembrando da forma de $f_{k}(x)$, temos que os produtos entre estas funções são
+    \begin{equation*}
+        f_{k}(x)f_{k'}(x) 
+        = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+            e^{-i\omega_{\vb{k}}t + i\vb{k}\cdot\vb{x}} 
+            e^{-i\omega_{\vb{k}'}t + i\vb{k}'\cdot\vb{x}} 
+        = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+            e^{-i(\omega_{\vb{k}} + \omega_{\vb{k}'})t} 
+            e^{i(\vb{k}+\vb{k}')\cdot\vb{x}}
+    \end{equation*}
+    \begin{equation*}
+        f_{k}(x)f_{k'}^{\ast}(x) 
+        = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+            e^{-i\omega_{\vb{k}}t + i\vb{k}\cdot\vb{x}} 
+            e^{i\omega_{\vb{k'}}t - i\vb{k}'\cdot\vb{x}} 
+        = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+            e^{-i(\omega_{\vb{k}} - \omega_{\vb{k}'})t} 
+            e^{i(\vb{k} - \vb{k}')\cdot\vb{x}}
+    \end{equation*}
+    \begin{equation*}
+        f_{k}^{\ast}(x)f_{k'}(x) 
+        = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+            e^{i\omega_{\vb{k}}t - i\vb{k}\cdot\vb{x}} 
+            e^{-i\omega_{\vb{k}'}t + i\vb{k}'\cdot\vb{x}} 
+        = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+            e^{i(\omega_{\vb{k}} - \omega_{\vb{k}'})t} 
+            e^{-i(\vb{k} - \vb{k}')\cdot\vb{x}}
+    \end{equation*}
+    \begin{equation*}
+        f_{k}^{\ast}(x)f_{k'}^{\ast}(x) 
+        = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+            e^{i\omega_{\vb{k}}t - i\vb{k}\cdot\vb{x}} 
+            e^{i\omega_{\vb{k}'}t - i\vb{k}'\cdot\vb{x}} 
+        = \dfrac{1}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+            e^{i(\omega_{\vb{k}} + \omega_{\vb{k}'})t} 
+            e^{-i(\vb{k} + \vb{k}')\cdot\vb{x}}
+    \end{equation*}
+
+Note então que as integrais em $\dd[3]{x}$ podem ser feitas apenas nos produtos de $f_{k}(x)$, pois os operadores de criação e aniquilação independem de $\vb{x}$, logo, junto com um fator $1/(2\pi)^3$, temos
+    \begin{equation*}
+        \dfrac{1}{(2\pi)^3}\int f_{k}(x)f_{k'}(x)\dd[3]{x} 
+        = \dfrac{e^{-i(\omega_{\vb{k}} + \omega_{\vb{k}'})t}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} 
+        \int \dfrac{1}{(2\pi)^3} e^{i(\vb{k} + \vb{k}')\cdot\vb{x}}\dd[3]{x} 
+        = \dfrac{e^{-i(\omega_{\vb{k}} + \omega_{\vb{k}'})t}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} \delta^3(\vb{k} + \vb{k}')
+    \end{equation*}
+    \begin{equation*}
+        \dfrac{1}{(2\pi)^3}\int f_{k}(x)f_{k'}^{\ast}(x) \dd[3]{x}
+        = \dfrac{e^{-i(\omega_{\vb{k}}-\omega_{\vb{k}'})t}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} \int \dfrac{1}{(2\pi)^3} e^{i(\vb{k}-\vb{k}')\cdot\vb{x}}\dd[3]{x}
+        = \dfrac{e^{-i(\omega_{\vb{k}}-\omega_{\vb{k}'})t}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} \delta^3(\vb{k} - \vb{k}')
+    \end{equation*}
+    \begin{equation*}
+        \dfrac{1}{(2\pi)^3}\int f_{k}^{\ast}(x) f_{k'}(x)\dd[3]{x} 
+        = \dfrac{e^{i(\omega_{\vb{k}} - \omega_{\vb{k}'})t}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} \int \dfrac{1}{(2\pi)^3}e^{-i(\vb{k}-\vb{k}')\cdot\vb{x}}\dd[3]{x} 
+        = \dfrac{e^{i(\omega_{\vb{k}} - \omega_{\vb{k}'})t}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} \delta^3(\vb{k} - \vb{k}')
+    \end{equation*}
+    \begin{equation*}
+        \dfrac{1}{(2\pi)^3}\int f_{k}^{\ast}(x) f_{k'}^{\ast}(x)\dd[3]{x} 
+        = \dfrac{e^{i(\omega_{\vb{k}} + \omega_{\vb{k}'})t}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} \int\dfrac{1}{(2\pi)^3}e^{-i(\vb{k} + \vb{k}')\cdot\vb{x}}\dd[3]{x} 
+        = \dfrac{e^{i(\omega_{\vb{k}} + \omega_{\vb{k}'})t}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} \delta^3(\vb{k} + \vb{k}')
+    \end{equation*}
+
+Então a integral de $\pi_{0}^2$ fica
+    \begin{align*}
+        I_{1}  &\eq -\iint \dfrac{1}{(2\pi)^3}\dfrac{\omega_{\vb{k}}\omega_{\vb{k}'}}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} \Big[
+            a_{0}(\vb{k}) a_{0}(\vb{k}') e^{-i(\omega_{\vb{k}}+\omega_{\vb{k}'})t} \delta^3(\vb{k}+\vb{k}') - \\
+        &\noeq -
+            a_{0}(\vb{k}) a_{0}^{\dagger}(\vb{k}') e^{-i(\omega_{\vb{k}} - \omega_{\vb{k}'})t} \delta^3(\vb{k}-\vb{k}') - 
+            a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k}') e^{i(\omega_{\vb{k}} - \omega_{\vb{k}'})t} \delta^3(\vb{k} - \vb{k}') + \\
+        &\noeq +
+            a_{0}^{\dagger}(\vb{k}) a_{0}^{\dagger}(\vb{k}') e^{i(\omega_{\vb{k}} + \omega_{\vb{k}'})t} \delta^3(\vb{k} + \vb{k}')
+        \Big] \dd[3]{k}\dd[3]{k}'
+    \end{align*}
+
+Realizando a integração em $\dd[3]{k'}$, e usando que $\omega_{\vb{k}} = \omega_{-\vb{k}}$ por construção, temos
+    \begin{equation*}
+        I_{1} = -\int \dfrac{1}{(2\pi)^3}\dfrac{\omega_{\vb{k}}}{2} \qty[
+            a_{0}(\vb{k}) a_{0}(-\vb{k}) e^{-2i\omega_{\vb{k}}t} -
+            a_{0}(\vb{k}) a_{0}^{\dagger}(\vb{k}) - 
+            a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k}) +
+            a_{0}^{\dagger}(\vb{k}) a_{0}^{\dagger}(-\vb{k}) e^{2i\omega_{\vb{k}}t}
+        ] \dd[3]{k}
+    \end{equation*}
+
+Antes de performar a segunda integral da hamiltoniana, temos
+    \begin{align*}
+        \nabla\phi_{0} &\eq \int \dfrac{1}{(2\pi)^3}\qty[
+            a_{0}(\vb{k}) \dfrac{e^{-i\omega_{\vb{k}}}}{\sqrt{2\omega_{\vb{k}}}} \nabla(e^{i\vb{k}\cdot\vb{x}}) + 
+            a_{0}^{\dagger}(\vb{k}) \dfrac{e^{i\omega_{\vb{k}}t}}{\sqrt{2\omega_{\vb{k}}}} \nabla(e^{-i\vb{k}\cdot\vb{x}})
+        ]\dd[3]{k} \\
+        &\eq \int \dfrac{i\vb{k}}{(2\pi)^3}\qty[
+            a_{0}(\vb{k}) f_{k}(x) - 
+            a_{0}^{\dagger}(\vb{k}) f_{k}^{\ast}(x)
+        ]\dd[3]{k}
+    \end{align*}
+
+Sendo assim
+    \begin{align*}
+        I_{2} &\eq \iiint \dfrac{-\vb{k}\cdot\vb{k}'}{(2\pi)^6} \qty[
+            a_{0}(\vb{k}) f_{k}(x) - 
+            a_{0}^{\dagger}(\vb{k}) f_{k}^{\ast}(x)
+        ]\qty[
+            a_{0}(\vb{k'}) f_{k'}(x) - 
+            a_{0}^{\dagger}(\vb{k'}) f_{k'}^{\ast}(x)
+        ] \dd[3]{k} \dd[3]{k'} \dd[3]{x} \\
+        &\eq \iiint \dfrac{-\vb{k}\cdot\vb{k}'}{(2\pi)^6} \Big[
+            a_{0}(\vb{k}) a_{0}(\vb{k}') f_{k}(x) f_{k'}(x) - 
+            a_{0}(\vb{k}) a_{0}^{\dagger}(\vb{k}') f_{k}(x) f_{k'}^{\ast}(x) - \\
+        &\noeq- 
+            a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k}') f_{k}^{\ast}(x) f_{k'}(x) +
+            a_{0}^{\dagger}(\vb{k}) a_{0}^{\dagger}(\vb{k}') f_{k}^{\ast}(x) f_{k'}^{\ast}(x)
+        \Big] \dd[3]{k} \dd[3]{k'} \dd[3]{x} \\
+        &\eq \iint \dfrac{1}{(2\pi)^3} \dfrac{-\vb{k}\cdot\vb{k}'}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} \Big[
+            a_{0}(\vb{k}) a_{0}(\vb{k}') e^{-i(\omega_{\vb{k}}+\omega_{\vb{k}'})t} \delta^3(\vb{k}+\vb{k}') - \\
+        &\noeq -
+            a_{0}(\vb{k}) a_{0}^{\dagger}(\vb{k}') e^{-i(\omega_{\vb{k}} - \omega_{\vb{k}'})t} \delta^3(\vb{k}-\vb{k}') - 
+            a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k}') e^{i(\omega_{\vb{k}} - \omega_{\vb{k}'})t} \delta^3(\vb{k} - \vb{k}') + \\
+        &\noeq +
+            a_{0}^{\dagger}(\vb{k}) a_{0}^{\dagger}(\vb{k}') e^{i(\omega_{\vb{k}} + \omega_{\vb{k}'})t} \delta^3(\vb{k} + \vb{k}')
+        \Big] \dd[3]{k}\dd[3]{k}'
+    \end{align*}
+
+Fazendo então a integral em $\dd[3]{k'}$, temos que as duas distribuições $\delta^3(\vb{k}+\vb{k}')$ que ocorrem vão mudar o sinal do produto escalar $\vb{k}\cdot\vb{k}'$, deixando todos os termos dentro dos colchetes $[\cdots]$ negativos e com isso cancelando o sinal negativo fora dos colchetes, tal que
+    \begin{equation*}
+        I_{2} = \int \dfrac{1}{(2\pi)^3}\dfrac{\abs{\vb{k}}^2}{2\omega_{\vb{k}}} \qty[
+            a_{0}(\vb{k}) a_{0}(-\vb{k}) e^{-2i\omega_{\vb{k}}t} +
+            a_{0}(\vb{k}) a_{0}^{\dagger}(\vb{k}) + 
+            a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k}) +
+            a_{0}^{\dagger}(\vb{k}) a_{0}^{\dagger}(-\vb{k}) e^{2i\omega_{\vb{k}}t}
+        ] \dd[3]{k}
+    \end{equation*}
+
+Por fim, o último termo da hamiltoniana vai se desenvolver por
+    \begin{align*}
+        I_{3} &\eq \iiint \dfrac{m^2}{(2\pi)^6}\qty[
+            a_{0}(\vb{k}) f_{k}(x) +
+            a_{0}^{\dagger}(\vb{k}) f_{k}^{\ast}(x)
+        ]\qty[
+            a_{0}(\vb{k}') f_{k'}(x) +
+            a_{0}^{\dagger}(\vb{k}') f_{k'}^{\ast}(x)
+        ]\dd[3]{k} \dd[3]{k}' \dd[3]{x} \\
+        &\eq \iiint \dfrac{m^2}{(2\pi)^6} \Big[
+            a_{0}(\vb{k}) a_{0}(\vb{k}') f_{k}(x) f_{k'}(x) + 
+            a_{0}(\vb{k}) a_{0}^{\dagger}(\vb{k}') f_{k}(x) f_{k'}^{\ast}(x) + \\
+        &\noeq + 
+            a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k}') f_{k}^{\ast}(x) f_{k'}(x) +
+            a_{0}^{\dagger}(\vb{k}) a_{0}^{\dagger}(\vb{k}') f_{k}^{\ast}(x) f_{k'}^{\ast}(x)
+        \Big] \dd[3]{k} \dd[3]{k'} \dd[3]{x} \\
+        &\eq \iint \dfrac{1}{(2\pi)^3} \dfrac{m^2}{\sqrt{2\omega_{\vb{k}}}\sqrt{2\omega_{\vb{k}'}}} \Big[
+            a_{0}(\vb{k}) a_{0}(\vb{k}') e^{-i(\omega_{\vb{k}}+\omega_{\vb{k}'})t} \delta^3(\vb{k}+\vb{k}') + \\
+        &\noeq +
+            a_{0}(\vb{k}) a_{0}^{\dagger}(\vb{k}') e^{-i(\omega_{\vb{k}} - \omega_{\vb{k}'})t} \delta^3(\vb{k}-\vb{k}') + 
+            a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k}') e^{i(\omega_{\vb{k}} - \omega_{\vb{k}'})t} \delta^3(\vb{k} - \vb{k}') + \\
+        &\noeq +
+            a_{0}^{\dagger}(\vb{k}) a_{0}^{\dagger}(\vb{k}') e^{i(\omega_{\vb{k}} + \omega_{\vb{k}'})t} \delta^3(\vb{k} + \vb{k}')
+        \Big] \dd[3]{k}\dd[3]{k}'
+    \end{align*}
+
+Concluindo que
+    \begin{equation*}
+        I_{3} = \int \dfrac{1}{(2\pi)^3} \dfrac{m^2}{2\omega_{\vb{k}}}\qty[
+            a_{0}(\vb{k}) a_{0}(-\vb{k}) e^{-2i\omega_{\vb{k}}t} +
+            a_{0}(\vb{k}) a_{0}^{\dagger}(\vb{k}) + 
+            a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k}) +
+            a_{0}^{\dagger}(\vb{k}) a_{0}^{\dagger}(-\vb{k}) e^{2i\omega_{\vb{k}}t}
+        ] \dd[3]{k}
+    \end{equation*}
+
+Podemos perceber que em $I_{2}$ e $I_{3}$ a única diferença está nas constantes que acompanham os operadores, de modo que 
+    \begin{equation*}
+        I_{2} + I_{3} = \int \dfrac{1}{(2\pi)^3} \dfrac{\abs{\vb{k}}^2 + m^2}{2\omega_{\vb{k}}}[\cdots]\dd[3]{k}
+    \end{equation*}
+
+Mas sabemos que $\omega_{\vb{k}}^2 = \abs{\vb{k}}^2 + m^2$, portanto
+    \begin{equation*}
+        I_{2} + I_{3} = \int \dfrac{1}{(2\pi)^3} \dfrac{\omega_{\vb{k}}}{2}[\cdots]\dd[3]{k}
+    \end{equation*}
+
+Logo a hamiltoniana pode ser reescrita por
+    \begin{align*}
+        H &\eq \dfrac{1}{2} \int \dfrac{1}{(2\pi)^3}\dfrac{\omega_{\vb{k}}}{2} \Big[
+            -a_{0}(\vb{k}) a_{0}(-\vb{k}) e^{-2i\omega_{\vb{k}}t} +
+            a_{0}(\vb{k}) a_{0}^{\dagger}(\vb{k}) +
+            a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k}) -
+            a_{0}^{\dagger}(\vb{k}) a_{0}^{\dagger}(-\vb{k})e^{2i\omega_{\vb{k}}t} + \\
+        &\noeq + 
+            a_{0}(\vb{k}) a_{0}(-\vb{k}) e^{-2i\omega_{\vb{k}}t} +
+            a_{0}(\vb{k}) a_{0}^{\dagger}(\vb{k}) +
+            a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k}) +
+            a_{0}^{\dagger}(\vb{k}) a_{0}^{\dagger}(-\vb{k})e^{2i\omega_{\vb{k}}t}
+        \Big] \dd[3]{k} \\
+        &\eq \dfrac{1}{2} \int \dfrac{1}{(2\pi)^3} \omega_{\vb{k}} \qty[
+            a_{0}(\vb{k}) a_{0}^{\dagger}(\vb{k}) +
+            a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k})
+        ] \dd[3]{k}
+    \end{align*}
+
+O que nos dá a forma
+    \begin{equation*}
+        H = \int \dfrac{1}{(2\pi)^3} \dfrac{\omega_{\vb{k}}}{2} \qty[
+            a_{0}(\vb{k}) a_{0}^{\dagger}(\vb{k}) +
+            a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k})
+        ] \dd[3]{k}
+    \end{equation*}
+
+Sabendo que o comutador $[a_{0}(\vb{k}),a_{0}^{\dagger}(\vb{k}')] = (2\pi)^3 \delta^3(\vb{k} - \vb{k}')$, usamos isso para reescrever a hamiltoniana sob a forma
+    \begin{align*}
+        H &= \int \dfrac{1}{(2\pi)^3} \dfrac{\omega_{\vb{k}}}{2} \qty[
+            (2\pi)^3 \delta^3(\vb{k} - \vb{k}) + 2a_{0}^{\dagger}(\vb{k})a_{0}(\vb{k})
+        ]\dd[3]{k} \\
+        &= \int \dfrac{1}{(2\pi)^3}\omega_{\vb{k}} a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k}) \dd[3]{k} + \int \dfrac{\omega_{\vb{k}}}{2} \delta^3(0) \dd[3]{k}
+    \end{align*}
+
+O segundo termo é infinito, de modo que para contornar este problema e manter apenas o termo convergente, impomos na hamiltoniana o ordenamento normal que vai fazer com que todos os operadores de criação de partículas estejam à esquerda dos operadores de aniquilação, eliminando por consequência as divergências indesejadas, ou seja
+    \begin{answer}\label{eq: normal-ordered hamiltonian}
+        \normord{H} = \int \dfrac{1}{(2\pi)^3} \omega_{\vb{k}} a_{0}^{\dagger}(\vb{k}) a_{0}(\vb{k}) \dd[3]{k}
+    \end{answer}
