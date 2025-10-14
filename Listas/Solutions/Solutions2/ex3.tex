@@ -1,5 +1,116 @@
-\begin{itemize}
-    \item Utilizar o gauge $D_{\mu}\Phi = \qty(\partial_{\mu} - ig\dfrac{\sigma_{a}}{2}A_{\mu}^{a})\Phi$ e lembrar que $F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}$
-    \item No item (b), preciso confirmar se $F_{\mu\nu}' = UF_{\mu\nu}$ e $\Phi' = U\Phi$ pra tentar abrir as contas
-    \item Parece faltar um fator $i$ na definição de $U$
-\end{itemize}
+\noindent\textbf{(a)}
+
+\noindent\textbf{(b)} Por estarmos em uma teoria de gauge não-abeliana, o potencial vetor $\vb{A}_{\mu}$ se transforma como
+    \begin{equation*}
+        \vb{A}_{\mu}' = U\vb{A}_{\mu}U^{-1} - \dfrac{i}{g}(\partial_{\mu}U)U^{-1}
+    \end{equation*}
+e o tensor eletromagnético da teoria é dado por
+    \begin{equation*}
+        F_{\mu\nu} = \partial_{\mu}\vb{A}_{\nu} - \partial_{\nu}\vb{A}_{\mu} - ig[\vb{A}_{\mu},\vb{A}_{\nu}]
+    \end{equation*}
+
+Portanto, transformar esse tensor vai ser
+    \begin{align*}
+        F_{\mu\nu}' &\eq \partial_{\mu}\vb{A}_{\nu}' - \partial_{\nu}\vb{A}_{\mu}' - ig[\vb{A}_{\mu}',\vb{A}_{\nu}'] \\
+        &\eq \underbrace{\partial_{\mu}\qty[U\vb{A}_{\nu}U^{-1} - \dfrac{i}{g}(\partial_{\nu}U)U^{-1}]}_{\mathds{J}_{\mu\nu}} - 
+        \underbrace{\partial_{\nu}\qty[U\vb{A}_{\mu}U^{-1} - \dfrac{i}{g}(\partial_{\mu}U)U^{-1}]}_{\mathds{K}_{\mu\nu}} - 
+        \underbrace{ig(\vb{A}_{\mu}'\vb{A}_{\nu}' - \vb{A}_{\nu}\vb{A}_{\mu}')}_{\mathds{L}_{\mu\nu}} \\
+        &\eq \mathds{J}_{\mu\nu} - \mathds{K}_{\mu\nu} - \mathds{L}_{\mu\nu}
+    \end{align*}
+
+Expandindo cada termo separadamente, temos
+    \begin{align*}
+        \mathds{J}_{\mu\nu} &\eq \partial_{\mu}(U\vb{A}_{\nu}U^{-1}) - \dfrac{i}{g}\partial_{\mu}[(\partial_{\nu}U)U^{-1}] \\
+        &\eq (\partial_{\mu}U)\vb{A}_{\nu}U^{-1} + 
+        U(\partial_{\mu}\vb{A}_{\nu})U^{-1} + 
+        U\vb{A}_{\nu}(\partial_{\mu}U^{-1}) - 
+        \dfrac{i}{g}(\partial_{\mu}\partial_{\nu}U)U^{-1} - 
+        \dfrac{i}{g}(\partial_{\nu}U)(\partial_{\mu}U^{-1})
+    \end{align*}
+
+Podemos substituir a derivada $\partial_{\mu}U^{-1}$ a partir do seguinte raciocínio: sabendo que $U^{-1}U = \mathds{1}$, podemos derivar ambos os lados da equação, de modo que
+    \begin{align*}
+        \partial_{\mu}(U^{-1}U) &\eq \partial_{\mu}\mathds{1} \\
+        (\partial_{\mu}U^{-1})U + U^{-1}(\partial_{\mu}U) &\eq 0 \\
+        (\partial_{\mu}U^{-1})U &\eq -U^{-1}(\partial_{\mu}U) \\
+        \partial_{\mu}U^{-1} &\eq -U^{-1}(\partial_{\mu}U)U^{-1}
+    \end{align*}
+
+Portanto, podemos reescrever $\mathds{J}_{\mu\nu}$ como
+    \begin{align*}
+        \mathds{J}_{\mu\nu} &\eq (\partial_{\mu}U)\vb{A}_{\nu}U^{-1} + 
+        U(\partial_{\mu}\vb{A}_{\nu})U^{-1} - 
+        U\vb{A}_{\nu}U^{-1}(\partial_{\mu}U)U^{-1} - 
+        \dfrac{i}{g}(\partial_{\mu}\partial_{\nu}U)U^{-1} + \\
+        &\noeq +\dfrac{i}{g}(\partial_{\nu}U)U^{-1}(\partial_{\mu}U)U^{-1}
+    \end{align*}
+
+No caso de $\mathds{K}_{\mu\nu}$, basta substituir $\mu\leftrightarrow\nu$ em $\mathds{J}_{\mu\nu}$, ou seja,
+    \begin{align*}
+        \mathds{K}_{\mu\nu} &\eq (\partial_{\nu}U)\vb{A}_{\mu}U^{-1} + 
+        U(\partial_{\nu}\vb{A}_{\mu})U^{-1} - 
+        U\vb{A}_{\mu}U^{-1}(\partial_{\nu}U)U^{-1} - 
+        \dfrac{i}{g}(\partial_{\nu}\partial_{\mu}U)U^{-1} + \\
+        &\noeq +\dfrac{i}{g}(\partial_{\mu}U)U^{-1}(\partial_{\nu}U)U^{-1}
+    \end{align*}
+
+Por fim, no caso de $\mathds{L}_{\mu\nu}$, temos
+    \begin{align*}
+        \mathds{L}_{\mu\nu} &\eq ig\qty[
+            U\vb{A}_{\mu}U^{-1} - \dfrac{i}{g}(\partial_{\mu}U)U^{-1}
+        ]\qty[
+            U\vb{A}_{\nu}U^{-1} - \dfrac{i}{g}(\partial_{\nu}U)U^{-1}
+        ] - ig\qty[
+            U\vb{A}_{\nu}U^{-1} - \dfrac{i}{g}(\partial_{\nu}U)U^{-1}
+        ]\times \\
+        &\noeq \times \qty[
+            U\vb{A}_{\mu}U^{-1} - \dfrac{i}{g}(\partial_{\mu}U)U^{-1}
+        ] \\
+        &\eq ig\qty[
+            U\vb{A}_{\mu}\vb{A}_{\nu}U^{-1} - 
+            \dfrac{i}{g}U\vb{A}_{\mu}U^{-1}(\partial_{\nu}U)U^{-1} - 
+            \dfrac{i}{g}(\partial_{\mu}U)\vb{A}_{\nu}U^{-1} - 
+            \dfrac{1}{g^2}(\partial_{\mu}U)U^{-1}(\partial_{\nu}U)U^{-1}
+        ] - \\
+        &\noeq -ig\qty[
+            U\vb{A}_{\nu}\vb{A}_{\mu}U^{-1} - 
+            \dfrac{i}{g}U\vb{A}_{\nu}U^{-1}(\partial_{\mu}U)U^{-1} - 
+            \dfrac{i}{g}(\partial_{\nu}U)\vb{A}_{\mu}U^{-1} - 
+            \dfrac{1}{g^2}(\partial_{\nu}U)U^{-1}(\partial_{\mu}U)U^{-1}
+        ]
+    \end{align*}
+
+Colocando tudo junto, temos
+    \begin{align*}
+        F_{\mu\nu}' &\eq 
+            {\color{orange}(\partial_{\mu}U)\vb{A}_{\nu}U^{-1}} + 
+            U(\partial_{\mu}\vb{A}_{\nu})U^{-1} - 
+            {\color{red!70!black}U\vb{A}_{\nu}U^{-1}(\partial_{\mu}U)U^{-1}} - 
+            {\color{blue!70!black}\dfrac{i}{g}(\partial_{\mu}\partial_{\nu}U)U^{-1}} + \\
+        &\noeq +
+            {\color{green!70!black}\dfrac{i}{g}(\partial_{\nu}U)U^{-1}(\partial_{\mu}U)U^{-1}} - 
+            {\color{magenta}(\partial_{\nu}U)\vb{A}_{\mu}U^{-1}} - 
+            U(\partial_{\nu}\vb{A}_{\mu})U^{-1} + 
+            {\color{yellow!70!black}U\vb{A}_{\mu}U^{-1}(\partial_{\nu}U)U^{-1}} + \\
+        &\noeq +
+            {\color{blue!70!black}\dfrac{i}{g}(\partial_{\nu}\partial_{\mu}U)U^{-1}} - 
+            {\color{cyan}\dfrac{i}{g}(\partial_{\mu}U)U^{-1}(\partial_{\nu}U)U^{-1}} - 
+            igU\vb{A}_{\mu}\vb{A}_{\nu}U^{-1} - 
+            {\color{yellow!70!black}U\vb{A}_{\mu}U^{-1}(\partial_{\nu}U)U^{-1}} - \\
+        &\noeq -
+            {\color{orange}(\partial_{\mu}U)\vb{A}_{\nu}U^{-1}} + 
+            {\color{cyan}\dfrac{i}{g}(\partial_{\mu}U)U^{-1}(\partial_{\nu}U)U^{-1}} + 
+            igU\vb{A}_{\nu}\vb{A}_{\mu}U^{-1} +
+            {\color{red!70!black}U\vb{A}_{\nu}U^{-1}(\partial_{\mu}U)U^{-1}} + \\
+        &\noeq +
+            {\color{magenta}(\partial_{\nu}U)\vb{A}_{\mu}U^{-1}} - 
+            {\color{green!70!black}\dfrac{i}{g}(\partial_{\nu}U)U^{-1}(\partial_{\mu}U)U^{-1}} \\
+        &\eq U(\partial_{\mu}\vb{A}_{\nu})U^{-1} - U(\partial_{\nu}\vb{A}_{\mu})U^{-1} - igU(\vb{A}_{\mu}\vb{A}_{\nu} - \vb{A}_{\nu}\vb{A}_{\mu})U^{-1} \\
+        &\eq U\qty(\partial_{\mu}\vb{A}_{\nu} - \partial_{\nu}\vb{A}_{\mu} - ig[\vb{A}_{\mu},\vb{A}_{\nu}])U^{-1} \\
+        &\eq UF_{\mu\nu}U^{-1}
+    \end{align*}
+
+Portanto, como $\Phi' = U\Phi$ e $U^{-1}U = \mathds{1}$, temos
+    \begin{answer}\label{eq: answer 3b}
+        F_{\mu\nu}'\Phi' = UF_{\mu\nu}U^{-1}U\Phi = UF_{\mu\nu}\Phi
+    \end{answer}

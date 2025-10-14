@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  11 OCT 2025 00:19
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  14 OCT 2025 17:28
  system commands enabled.
  file:line:error style messages enabled.
-**"/home/jimeens/Downloads/Atividade1/Hádrons - PGF5300/Listas/lista2.tex"
-("/home/jimeens/Downloads/Atividade1/Hádrons - PGF5300/Listas/lista2.tex"
+**/home/jimeens/Documentos/PGF5300_Hadrons-1/Listas/lista2.tex
+(/home/jimeens/Documentos/PGF5300_Hadrons-1/Listas/lista2.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 Lua module: luaotfload 2023-08-31 3.26 Lua based OpenType font support
@@ -2806,7 +2806,39 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 
 
-<./Figures/vanilla.png>]) (./Solutions/Solutions2/ex3.tex)
+<./Figures/vanilla.png>]) (./Solutions/Solutions2/ex3.tex
+LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
+(Font)              scaled to size 8.22913pt on input line 3.
+LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
+(Font)              scaled to size 6.17184pt on input line 3.
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 19.
+ (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/10.95'
+(microtype)             (new value: 10.95pt) on input line 19.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/8'
+(microtype)             (new value: 8.0pt) on input line 19.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/6'
+(microtype)             (new value: 6.0pt) on input line 19.
+File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
+<use Figures/Impression, soleil levant - Claude Monet.png>
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 37.
+(luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
+File: Figures/vanilla.png Graphic file (type png)
+<use Figures/vanilla.png>
+Package luatex.def Info: Figures/vanilla.png  used on input line 37.
+(luatex.def)             Requested size: 71.12491pt x 71.13188pt.
+ [2]
+File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
+<use Figures/Impression, soleil levant - Claude Monet.png>
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 111.
+(luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
+File: Figures/vanilla.png Graphic file (type png)
+<use Figures/vanilla.png>
+Package luatex.def Info: Figures/vanilla.png  used on input line 111.
+(luatex.def)             Requested size: 71.12491pt x 71.13188pt.
+ [3])
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 68.
@@ -2827,15 +2859,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 68.
 
-
-Overfull \vbox (43.95592pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (43.95592pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (43.95592pt too high) has occurred while \output is active []
-
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 96.
@@ -2844,7 +2867,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 96.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [2] (./Solutions/Solutions2/ex4.tex) (./Solutions/Solutions2/ex5.tex) (./Solutions/Solutions2/ex6.tex)
+[4] (./Solutions/Solutions2/ex4.tex) (./Solutions/Solutions2/ex5.tex) (./Solutions/Solutions2/ex6.tex)
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 123.
@@ -2853,7 +2876,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 123.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [3] (./Solutions/Solutions2/ex7.tex)
+ [5] (./Solutions/Solutions2/ex7.tex)
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/m/it' will be
 (Font)              scaled to size 11.79861pt on input line 139.
 Package microtype Info: Character `156' is missing
@@ -2869,7 +2892,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 190.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
-[4]
+[6]
 \c@pagesLTS.arabic.1.local.count=\count580
  
 AED: pageslts setting VeryLastPage via AfterLastShipout 
@@ -2891,19 +2914,19 @@ Package logreq Info: Writing requests to 'lista2.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 55114 strings out of 476553
+ 55240 strings out of 476553
  100000,2848258 words of node,token memory allocated
- 1379 words of node memory still in use:
-   9 hlist, 2 vlist, 2 rule, 1 local_par, 7 glue, 4 kern, 1 penalty, 3 glyph, 28 attribute, 200 glue_spec, 16 attribute_list, 3 write nodes
-   avail lists: 1:10,2:4819,3:1464,4:96,5:257,6:51,7:4451,8:57,9:742,10:9,11:268
- 75694 multiletter control sequences out of 65536+600000
- 66 fonts using 14249447 bytes
- 167i,13n,152p,1213b,3301s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Italic.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Bold.otf></usr/share/fonts/opentype/ebgaramond/EBGaramond12-Regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on lista2.pdf (5 pages, 4057897 bytes).
+ 1372 words of node memory still in use:
+   9 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 33 attribute, 200 glue_spec, 18 attribute_list, 3 write nodes
+   avail lists: 1:10,2:4819,3:1464,4:111,5:455,6:51,7:4434,8:76,9:1492,10:9,11:268
+ 75800 multiletter control sequences out of 65536+600000
+ 71 fonts using 15419383 bytes
+ 167i,19n,152p,1200b,3301s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Italic.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Bold.otf></usr/share/fonts/opentype/ebgaramond/EBGaramond12-Regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb>
+Output written on lista2.pdf (7 pages, 4082996 bytes).
 
-PDF statistics: 121 PDF objects out of 1000 (max. 8388607)
- 20 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 131072)
+PDF statistics: 142 PDF objects out of 1000 (max. 8388607)
+ 27 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 131072)
  80 words of extra memory for PDF output out of 10000 (max. 100000000)
 
