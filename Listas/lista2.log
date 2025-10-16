@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  16 OCT 2025 15:41
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  16 OCT 2025 17:55
  system commands enabled.
  file:line:error style messages enabled.
 **/home/jimeens/Documentos/PGF5300_Hadrons-2/Listas/lista2.tex
@@ -2792,25 +2792,43 @@ Package microtype Info: Character `₡' is missing
 (microtype)             in font `TU/EBGaramond(0)/m/n/45'.
 (microtype)             Ignoring protrusion settings for this character.
  (./Solutions/Solutions2/ex1.tex) (./Solutions/Solutions2/ex2.tex
+LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
+(Font)              scaled to size 8.22913pt on input line 4.
+LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
+(Font)              scaled to size 6.17184pt on input line 4.
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 3.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 4.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 <Figures/vanilla.png, id=15, 513.92pt x 513.92pt>
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 3.
+Package luatex.def Info: Figures/vanilla.png  used on input line 4.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 
 
-<./Figures/vanilla.png>]) (./Solutions/Solutions2/ex3.tex
-LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
-(Font)              scaled to size 8.22913pt on input line 1.
-LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
-(Font)              scaled to size 6.17184pt on input line 1.
+<./Figures/vanilla.png>]
+File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
+<use Figures/Impression, soleil levant - Claude Monet.png>
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 34.
+(luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
+File: Figures/vanilla.png Graphic file (type png)
+<use Figures/vanilla.png>
+Package luatex.def Info: Figures/vanilla.png  used on input line 34.
+(luatex.def)             Requested size: 71.12491pt x 71.13188pt.
+ [2])
+File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
+<use Figures/Impression, soleil levant - Claude Monet.png>
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 54.
+(luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
+File: Figures/vanilla.png Graphic file (type png)
+<use Figures/vanilla.png>
+Package luatex.def Info: Figures/vanilla.png  used on input line 54.
+(luatex.def)             Requested size: 71.12491pt x 71.13188pt.
+ [3] (./Solutions/Solutions2/ex3.tex
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 30.
@@ -2819,7 +2837,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 30.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [2]
+ [4]
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 39.
  (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
@@ -2838,7 +2856,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 101.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [3])
+ [5])
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 68.
@@ -2867,7 +2885,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 72.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
-[4] (./Solutions/Solutions2/ex4.tex) (./Solutions/Solutions2/ex5.tex)
+[6] (./Solutions/Solutions2/ex4.tex) (./Solutions/Solutions2/ex5.tex)
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 109.
@@ -2876,7 +2894,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 109.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [5] (./Solutions/Solutions2/ex6.tex) (./Solutions/Solutions2/ex7.tex)
+ [7] (./Solutions/Solutions2/ex6.tex) (./Solutions/Solutions2/ex7.tex)
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/m/it' will be
 (Font)              scaled to size 11.79861pt on input line 139.
 Package microtype Info: Character `156' is missing
@@ -2890,7 +2908,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 186.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [6] 
+ [8] 
 AED: pageslts setting LastPage 
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
@@ -2900,7 +2918,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 190.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
-[7]
+[9]
 \c@pagesLTS.arabic.1.local.count=\count580
  
 AED: pageslts setting VeryLastPage via AfterLastShipout 
@@ -2922,19 +2940,19 @@ Package logreq Info: Writing requests to 'lista2.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 55285 strings out of 476553
+ 55317 strings out of 476553
  100000,2848258 words of node,token memory allocated
- 1378 words of node memory still in use:
-   9 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 35 attribute, 200 glue_spec, 19 attribute_list, 3 write nodes
-   avail lists: 1:10,2:4960,3:1356,4:97,5:457,6:50,7:4044,8:76,9:1541,10:9,11:268
- 75837 multiletter control sequences out of 65536+600000
+ 1402 words of node memory still in use:
+   9 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 43 attribute, 200 glue_spec, 23 attribute_list, 3 write nodes
+   avail lists: 1:10,2:4960,3:1356,4:96,5:437,6:50,7:5167,8:81,9:2152,10:9,11:303
+ 75854 multiletter control sequences out of 65536+600000
  71 fonts using 15419383 bytes
  167i,19n,152p,1200b,3301s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Italic.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Bold.otf></usr/share/fonts/opentype/ebgaramond/EBGaramond12-Regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb>
-Output written on lista2.pdf (8 pages, 4085981 bytes).
+Output written on lista2.pdf (10 pages, 4103664 bytes).
 
-PDF statistics: 147 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 131072)
+PDF statistics: 156 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
+ 25 named destinations out of 1000 (max. 131072)
  80 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -1,4 +1,97 @@
-\begin{itemize}
-    \item Usar $N=3$ dá diretamente o resultado, só fazer as contas certinho considerando as propriedades dos números de Grassman
-    \item Assumindo que vale pra $N$, provar que vale pra $N+1$ pode ser o procedimento mais simples de se fazer
-\end{itemize}
+Para $N=3$, temos diretaamente que
+    \begin{align*}
+        I(\vb{A}) &\eq \int \exp\qty(\sum_{j,k=1}^{3}\bar{\theta}_{j}A_{jk}\theta_{k})\prod_{i=1}^{3}\dd{\theta_{i}} \dd{\bar{\theta}_{i}} \\
+    \end{align*}
+
+Abrindo a exponencial em uma série de Taylor, temos
+    \begin{align*}
+        I(\vb{A}) &\eq \int \qty[
+            1 + \sum_{j,k=1}^{3}\bar{\theta}_{j}A_{jk}\theta_{k} + 
+            \dfrac{1}{2!}\qty(\sum_{j,k=1}^{3}\bar{\theta}_{j}A_{jk}\theta_{k})^{2} + 
+            \dfrac{1}{3!}\qty(\sum_{j,k=1}^{3}\bar{\theta}_{j}A_{jk}\theta_{k})^{3} + \cdots
+        ]\prod_{i=1}^{3}\dd{\theta_{i}}\dd{\bar{\theta}_{i}} \\
+        &\eq \int \prod_{i=1}^{3}\dd{\theta_{i}}\dd{\bar{\theta}_{i}} + 
+        \int \sum_{j,k=1}^{3}\bar{\theta}_{j}A_{jk}\theta_{k}\prod_{i=1}^{3}\dd{\theta_{i}}\dd{\bar{\theta}_{i}} + \dfrac{1}{2!}\int \qty(\sum_{j,k=1}^{3}\bar{\theta}_{j}A_{jk}\theta_{k})^{2}\prod_{i=1}^{3}\dd{\theta_{i}}\dd{\bar{\theta}_{i}} + \\
+        &\noeq + \dfrac{1}{3!}\int \qty(\sum_{j,k=1}^{3}\bar{\theta}_{j}A_{jk}\theta_{k})^{3}\prod_{i=1}^{3}\dd{\theta_{i}}\dd{\bar{\theta}_{i}} + \cdots
+    \end{align*}
+
+O primeiro termo é claramente nulo, pois não há variáveis de Grassman para integrar. O segundo termo também é nulo, pois cada termo da soma possui apenas um $\theta$ e um $\bar{\theta}$, e portanto, ao integrar sobre as outras variáveis, o resultado será zero. O terceiro termo também é nulo, pois cada termo da soma ao quadrado terá no máximo dois $\theta$ e dois $\bar{\theta}$, e portanto, ao integrar sobre as outras variáveis, o resultado será zero. Restando apenas o quarto termo, onde também podemos levar em conta que qualquer termo subsequente da expansão de Taylor será nulo, pois terá mais de três $\theta$ ou $\bar{\theta}$. 
+
+O quarto termo pode ser escrito como
+    \begin{align*}
+        I(\vb{A}) &\eq \dfrac{1}{3!}\int \sum_{j,k,\ell,m,n,p=1}^{3}\bar{\theta}_{j}A_{jk}\theta_{k}\bar{\theta}_{\ell}A_{\ell m}\theta_{m}\bar{\theta}_{n}A_{np}\theta_{p}\prod_{i=1}^{3}\dd{\theta_{i}}\dd{\bar{\theta}_{i}}
+    \end{align*}
+
+Note que, para que a integral não seja nula, é necessário que $j \neq \ell \neq n$, assim como $k \neq m \neq p$. Um ponto a se notar é que temos essencialmente $9^{3}$ termos dentro dessa integral, mas muitos deles são idênticos, pois a ordem dos fatores não importa. Por exemplo, o termo com $j=1$, $\ell=2$, $n=3$, $k=1$, $m=2$ e $p=3$
+    \begin{equation*}
+        \bar{\theta}_{1}A_{11}\theta_{1}\bar{\theta}_{2}A_{22}\theta_{2}\bar{\theta}_{3}A_{33}\theta_{3}
+    \end{equation*}
+é idêntico ao termo com $j=2$, $\ell=1$, $n=3$, $k=2$, $m=1$ e $p=3$
+    \begin{equation*}
+        \bar{\theta}_{2}A_{22}\theta_{2}\bar{\theta}_{1}A_{11}\theta_{1}\bar{\theta}_{3}A_{33}\theta_{3}
+    \end{equation*}
+pois levando em conta a anticomutatividade dos números de Grassmann, faremos 4 trocas de posição para chegar de um termo ao outro, o que é equivalente a multiplicar por $(-1)^{4} = 1$. Isto faz com que muitos termos sejam idênticos, e portanto, possamos considerar apenas um representante de cada conjunto de termos idênticos. Note que, para cada conjunto de termos idênticos, há exatamente $3! = 6$ termos, pois há $3!$ maneiras de ordenar os índices $j$, $\ell$ e $n$, e outras $3!$ maneiras de ordenar os índices $k$, $m$ e $p$. Portanto, podemos eliminar o fator $1/3!$ que está na frente da integral. Os representantes não-nulos formam então o seguinte resultado
+    \begin{align*}
+        I(\vb{A}) &\eq \int (
+            \bar{\theta}_{1}A_{11}\theta_{1}\bar{\theta}_{2}A_{22}\theta_{2}\bar{\theta}_{3}A_{33}\theta_{3} + 
+            \bar{\theta}_{1}A_{11}\theta_{1}\bar{\theta}_{2}A_{23}\theta_{3}\bar{\theta}_{3}A_{32}\theta_{2} + 
+            \bar{\theta}_{1}A_{12}\theta_{2}\bar{\theta}_{2}A_{21}\theta_{1}\bar{\theta}_{3}A_{33}\theta_{3} + \\
+            &\noeq + 
+            \bar{\theta}_{1}A_{12}\theta_{2}\bar{\theta}_{2}A_{23}\theta_{3}\bar{\theta}_{3}A_{31}\theta_{1} + 
+            \bar{\theta}_{1}A_{13}\theta_{3}\bar{\theta}_{2}A_{21}\theta_{1}\bar{\theta}_{3}A_{32}\theta_{2} + 
+            \bar{\theta}_{1}A_{13}\theta_{3}\bar{\theta}_{2}A_{22}\theta_{2}\bar{\theta}_{3}A_{31}\theta_{1}
+        ) \times \\
+        &\noeq \times 
+            \dd{\theta_{1}} \dd{\bar{\theta}_{1}} \dd{\theta_{2}} \dd{\bar{\theta}_{2}} \dd{\theta_{3}} \dd{\bar{\theta}_{3}} \\
+        &\eq 
+        \int 
+            \bar{\theta}_{1}\theta_{1}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{3}\theta_{3}(A_{11}A_{22}A_{33}) 
+            \dd{\theta_{1}} \dd{\bar{\theta}_{1}} \dd{\theta_{2}} \dd{\bar{\theta}_{2}} \dd{\theta_{3}} \dd{\bar{\theta}_{3}} + 
+        \int 
+            \bar{\theta}_{1}\theta_{1}\bar{\theta}_{2}\theta_{3}\bar{\theta}_{3}\theta_{2}(A_{11}A_{23}A_{32})\times \\
+        &\noeq \times 
+            \dd{\theta_{1}} \dd{\bar{\theta}_{1}} \dd{\theta_{2}} \dd{\bar{\theta}_{2}} \dd{\theta_{3}} \dd{\bar{\theta}_{3}} + 
+        \int 
+            \bar{\theta}_{1}\theta_{2}\bar{\theta}_{2}\theta_{1}\bar{\theta}_{3}\theta_{3}(A_{12}A_{21}A_{33}) 
+            \dd{\theta_{1}} \dd{\bar{\theta}_{1}} \dd{\theta_{2}} \dd{\bar{\theta}_{2}} \dd{\theta_{3}} \dd{\bar{\theta}_{3}} + \\
+        &\noeq + 
+        \int 
+            \bar{\theta}_{1}\theta_{2}\bar{\theta}_{2}\theta_{3}\bar{\theta}_{3}\theta_{1}(A_{12}A_{23}A_{31}) 
+            \dd{\theta_{1}} \dd{\bar{\theta}_{1}} \dd{\theta_{2}} \dd{\bar{\theta}_{2}} \dd{\theta_{3}} \dd{\bar{\theta}_{3}} + 
+        \int 
+            \bar{\theta}_{1}\theta_{3}\bar{\theta}_{2}\theta_{1}\bar{\theta}_{3}\theta_{2}(A_{13}A_{21}A_{32}) \times \\
+        &\noeq \times 
+            \dd{\theta_{1}} \dd{\bar{\theta}_{1}} \dd{\theta}_{2} \dd{\bar{\theta}_{2}} \dd{\theta}_{3} \dd{\bar{\theta}_{3}} + 
+        \int 
+            \bar{\theta}_{1}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{3}\theta_{1}(A_{13}A_{22}A_{31}) 
+            \dd{\theta_{1}} \dd{\bar{\theta}_{1}} \dd{\theta_{2}} \dd{\bar{\theta}_{2}} \dd{\theta}_{3} \dd{\bar{\theta}_{3}}
+    \end{align*}
+
+Aqui precisamos levar em conta que a ordem da integração importa, portanto é necessário que a ordem dos fatores dentro da integral seja a mesma que a ordem de integração, que é
+    \begin{equation*}
+        \dd{\theta_{1}} \to \dd{\bar{\theta}_{1}} \to \dd{\theta_{2}} \to \dd{\bar{\theta}_{2}} \to \dd{\theta_{3}} \to \dd{\bar{\theta}_{3}}
+    \end{equation*}
+
+Sendo assim, os termos ficam:
+    \begin{align*}
+        \bar{\theta}_{1}\theta_{1}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{3}\theta_{3} &= (-1)^{12} \bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1} = \bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1} \\
+        \bar{\theta}_{1}\theta_{1}\bar{\theta}_{2}\theta_{3}\bar{\theta}_{3}\theta_{2} &= (-1)^{11}\bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1} = -\bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1}\\
+        \bar{\theta}_{1}\theta_{2}\bar{\theta}_{2}\theta_{1}\bar{\theta}_{3}\theta_{3} &= (-1)^{11}\bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1} = -\bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1}\\
+        \bar{\theta}_{1}\theta_{2}\bar{\theta}_{2}\theta_{3}\bar{\theta}_{3}\theta_{1} &= (-1)^{10}\bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1} = \bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1}\\
+        \bar{\theta}_{1}\theta_{3}\bar{\theta}_{2}\theta_{1}\bar{\theta}_{3}\theta_{2} &= (-1)^{8}\bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1} = \bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1}\\
+        \bar{\theta}_{1}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{3}\theta_{1} &= (-1)^{7}\bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1} = -\bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1}
+    \end{align*}
+
+Essa ordenação é interessante, pois ao integrarmos, todos terão o mesmo valor a menos de um sinal. Este valor é
+    \begin{equation*}
+        \int \bar{\theta}_{3}\theta_{3}\bar{\theta}_{2}\theta_{2}\bar{\theta}_{1}\theta_{1} \dd{\theta_{1}} \dd{\bar{\theta}_{1}} \dd{\theta_{2}} \dd{\bar{\theta}_{2}} \dd{\theta}_{3} \dd{\bar{\theta}_{3}} = 1
+    \end{equation*}
+
+Portanto, $I(\vb{A})$ pode ser escrito como
+    \begin{align*}
+        I(\vb{A}) &\eq A_{11}A_{22}A_{33} - A_{11}A_{23}A_{32} - A_{12}A_{21}A_{33} + A_{12}A_{23}A_{31} + A_{13}A_{21}A_{32} - A_{13}A_{22}A_{31}
+    \end{align*}
+que é exatamente a definição de $\text{det}(\vb{A})$ para uma matriz $\vb{A}$ de $\text{dim}(\vb{A}) = 3$. Mostrando então que
+    \begin{answer}\label{eq: answer 2 pt 1}
+        I(\vb{A}) = \int \exp\qty(\sum_{j,k=1}^{3}\bar{\theta}_{j}A_{jk}\theta_{k})\prod_{i=1}^{3}\dd{\theta_{i}}\dd{\bar{\theta}_{i}} = \text{det}(\vb{A})
+    \end{answer}
