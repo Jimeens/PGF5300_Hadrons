@@ -1,6 +1,26 @@
-\noindent\textbf{(a)}
+\noindent\textbf{(a)} Usando o gauge $D_{\mu}\Phi = \qty(\partial_{\mu} - ig\vb{A}_{\mu})\Phi$, onde $\vb{A}_{\mu} = A_{\mu}^{a}T^{a}$ e $T^{a}$ são os geradores do grupo, temos
+    \begin{align*}
+        [D_{\mu}, D_{\nu}]\Phi &\eq D_{\mu}(D_{\nu}\Phi) - D_{\nu}(D_{\mu}\Phi) \\
+        &\eq D_{\mu}\qty(\partial_{\nu}\Phi - ig\vb{A}_{\nu}\Phi) - D_{\nu}\qty(\partial_{\mu}\Phi - ig\vb{A}_{\mu}\Phi) \\
+        &\eq \qty(\partial_{\mu} - ig\vb{A}_{\mu})\qty(\partial_{\nu}\Phi - ig\vb{A}_{\nu}\Phi) - \qty(\partial_{\nu} - ig\vb{A}_{\nu})\qty(\partial_{\mu}\Phi - ig\vb{A}_{\mu}\Phi) \\
+        &\eq {\color{orange}\partial_{\mu}\partial_{\nu}\Phi} - ig\vb{A}_{\mu}(\partial_{\nu}\Phi) - ig\partial_{\mu}(\vb{A}_{\nu}\Phi) - g^{2}\vb{A}_{\mu}\vb{A}_{\nu}\Phi - {\color{orange}\partial_{\nu}\partial_{\mu}\Phi} + ig\vb{A}_{\nu}(\partial_{\mu}\Phi) + \\
+        &\noeq + ig\partial_{\nu}(\vb{A}_{\mu}\Phi) + g^{2}\vb{A}_{\nu}\vb{A}_{\mu}\Phi \\
+        &\eq -{\color{orange} ig\vb{A}_{\mu}(\partial_{\nu}\Phi)} - ig(\partial_{\mu}\vb{A}_{\nu})\Phi - {\color{red!70!black} ig\vb{A}_{\nu}(\partial_{\mu}\Phi)} - g^{2}\vb{A}_{\mu}\vb{A}_{\nu}\Phi + {\color{red!70!black} ig\vb{A}_{\nu}(\partial_{\mu}\Phi)} +ig(\partial_{\nu}\vb{A}_{\mu})\Phi + \\
+        &\noeq + {\color{orange} ig\vb{A}_{\mu}(\partial_{\nu}\Phi)} + g^{2}\vb{A}_{\nu}\vb{A}_{\mu}\Phi \\
+        &\eq -ig\qty(\partial_{\mu}\vb{A}_{\nu} - \partial_{\nu}\vb{A}_{\mu})\Phi - g^{2}(\vb{A}_{\mu}\vb{A}_{\nu} - \vb{A}_{\nu}\vb{A}_{\mu})\Phi \\
+        &\eq -ig\qty(\partial_{\mu}\vb{A}_{\nu} - \partial_{\nu}\vb{A}_{\mu} - ig[\vb{A}_{\mu},\vb{A}_{\nu}])\Phi
+    \end{align*}
 
-\noindent\textbf{(b)} Por estarmos em uma teoria de gauge não-abeliana, o potencial vetor $\vb{A}_{\mu}$ se transforma como
+Como na teoria de gauge não-abeliana o tensor eletromagnético é dado por
+    \begin{equation*}
+        F_{\mu\nu} = \partial_{\mu}\vb{A}_{\nu} - \partial_{\nu}\vb{A}_{\mu} - ig[\vb{A}_{\mu},\vb{A}_{\nu}]
+    \end{equation*}
+temos
+    \begin{answer}\label{eq: answer 3a}
+        [D_{\mu}, D_{\nu}]\Phi = -igF_{\mu\nu}\Phi
+    \end{answer}
+
+\noindent\textbf{(b)} Por estarmos em uma teoria de gauge não-abeliana, $\vb{A}_{\mu}$ se transforma como
     \begin{equation*}
         \vb{A}_{\mu}' = U\vb{A}_{\mu}U^{-1} - \dfrac{i}{g}(\partial_{\mu}U)U^{-1}
     \end{equation*}
