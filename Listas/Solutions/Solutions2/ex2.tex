@@ -95,3 +95,69 @@ que é exatamente a definição de $\text{det}(\vb{A})$ para uma matriz $\vb{A}$
     \begin{answer}\label{eq: answer 2 pt 1}
         I(\vb{A}) = \int \exp\qty(\sum_{j,k=1}^{3}\bar{\theta}_{j}A_{jk}\theta_{k})\prod_{i=1}^{3}\dd{\theta_{i}}\dd{\bar{\theta}_{i}} = \text{det}(\vb{A})
     \end{answer}
+
+Para generalizar para um $N$ arbitrário, podemos reconsiderar a oredem de integração, isto é, podemos mudar 
+    \begin{equation*}
+        \prod_{i=1}^{N}\dd{\theta_{i}}\dd{\bar{\theta}_{i}} = (-1)^{\frac{N(N-1)}{2}}\prod_{i=1}^{N}\dd{\theta_{i}}\prod_{\ell=1}^{N}\dd{\bar{\theta}_{\ell}}
+    \end{equation*}
+onde o fator $(-1)^{\frac{N(N-1)}{2}}$ surge do número de trocas necessárias para colocar todas as variáveis $\theta$ juntas e todas as variáveis $\bar{\theta}$ juntas, pela propriedade anticomutativa dos números de Grassmann. O expoente pode ser interpretado como sendo feita  $N-1$ trocas em $N$ termos, porém isto consideraria uma troca tanto dos termos $\dd{\theta}$ quanto dos termos $\dd{\bar{\theta}}$, por isso dividimos por 2 para considerar apenas a troca de ordem de um dos conjuntos de termos. Com isso e considerando que ao expandirmos a exponencial em série de Taylor, o único termo que não será nulo é o termo de ordem $N$, temos
+    \begin{align*}
+        I(\vb{A}) &\eq \int \exp\qty(\sum_{j,k=1}^{N}\bar{\theta}_{j}A_{jk}\theta_{k})\prod_{i=1}^{N}\dd{\theta_{i}}\dd{\bar{\theta}_{i}} \\
+        &\eq \dfrac{(-1)^{\frac{N(N-1)}{2}}}{N!}\int \qty(\sum_{j,k=1}^{N}\bar{\theta}_{j}A_{jk}\theta_{k})^{N}\prod_{i=1}^{N}\dd{\theta_{i}}\prod_{\ell=1}^{N}\dd{\bar{\theta}_{\ell}} \\
+        &\eq \dfrac{(-1)^{\frac{N(N-1)}{2}}}{N!}\int 
+            \bar{\theta}_{j_{1}}\theta_{k_{1}}
+            \bar{\theta}_{j_{2}}\theta_{k_{2}} \cdots
+            \bar{\theta}_{j_{N}}\theta_{k_{N}}
+            A_{j_{1}k_{1}}A_{j_{2}k_{2}} \cdots A_{j_{N}k_{N}}
+        \prod_{i=1}^{N}\dd{\theta_{i}}\prod_{\ell=1}^{N}\dd{\bar{\theta}_{\ell}}
+    \end{align*}
+
+Estamos considerando uma ordem de integração específica, então o argumento dentro da integral deve ser rearranjado para satisfazer esta ordem, então o que fazemos inicialmente é colocar todos os $\bar{\theta}_{i}$ à esquerda e todos os $\theta_{i}$ à direita, o que requer $N(N+1)/2$ trocas, ou seja
+    \begin{equation*}
+        \bar{\theta}_{j_{1}}\theta_{k_{1}}
+        \bar{\theta}_{j_{2}}\theta_{k_{2}} \cdots
+        \bar{\theta}_{j_{N}}\theta_{k_{N}} = (-1)^{\frac{N(N+1)}{2}}\bar{\theta}_{j_{1}}\bar{\theta}_{j_{2}} \cdots \bar{\theta}_{j_{N}}\theta_{k_{1}}\theta_{k_{2}} \cdots \theta_{k_{N}}
+    \end{equation*}
+
+Feita esta troca, precisamos nos ater às possíveis permutações entre os indices, o que sugere o uso de dois tensores de Levi-Civita, uma para considerar as permutações de $j_{i}$ e outro para as permutação de $k_{i}$, resultando então em
+    \begin{align*}
+        \bar{\theta}_{j_{1}} \theta_{k_{1}}
+        \bar{\theta}_{j_{2}} \theta_{k_{2}} \cdots
+        \bar{\theta}_{j_{N}} \theta_{k_{N}} &\eq (-1)^{\frac{N(N+1)}{2}}
+        \epsilon_{j_{1}j_{2} \cdots j_{N}}
+        \epsilon_{k_{1}k_{2} \cdots k_{N}}
+        \bar{\theta}_{1} \bar{\theta}_{2} \cdots 
+        \bar{\theta}_{N} \theta_{1} 
+        \theta_{2} \cdots \theta_{N} \\
+        &\eq (-1)^{\frac{N(N+1)}{2}} \epsilon_{j_{1}j_{2} \cdots j_{N}} \epsilon_{k_{1}k_{2} \cdots k_{N}} \prod_{j=1}^{N}\bar{\theta}_{j}\prod_{k=1}^{N}\theta_{k}
+    \end{align*}
+
+Então a integral que precisamos calcular é
+    \begin{equation*}
+        \int \prod_{j=1}^{N}\bar{\theta}_{j}\prod_{k=1}^{N}\theta_{k}\prod_{i=1}^{N}\dd{\theta_{i}}\prod_{\ell=1}^{N}\dd{\bar{\theta}_{\ell}}
+    \end{equation*}
+
+Que é facilmente determinada como sendo igual a 1. Um possível problema seria se perguntar se dependendo do valor de $N$ (sendo par ou ímpar), se ocorreria alguma troca de sinal, já que para realiar a integração na ordem proposta ainda é necessário inverter os índices do produtório em $k$ e do produtório em $k$, no entanto, se fizermos $N$ trocas com $\theta_{k}$, precisamos também fazer $N$ trocas com $\bar{\theta_{j}}$, o que resultaria em $2N$ operações, que se traduz em $(-1)^{2N} = 1,\ \forall\ n\in\mathbb{N}$. Portanto
+    \begin{align*}
+        I(A) &\eq \dfrac{(-1)^{\frac{N(N-1)}{2}}(-1)^{\frac{N(N+1)}{2}}}{N!}
+            \epsilon_{j_{1}j_{2} \cdots j_{N}}
+            \epsilon_{k_{1}k_{2} \cdots k_{N}}
+            A_{j_{1}k_{1}}A_{j_{2}k_{2}} \cdots A_{j_{N}k_{N}} \\
+        &\eq \dfrac{(-1)^{N^{2}}}{N!}
+            \epsilon_{j_{1}j_{2} \cdots j_{N}}
+            \epsilon_{k_{1}k_{2} \cdots k_{N}}
+            A_{j_{1}k_{1}}A_{j_{2}k_{2}} \cdots A_{j_{N}k_{N}} \\
+    \end{align*}
+
+Como $N^{2}$ é par $\forall\ N\in\mathbb{N}$, então $(-1)^{N^{2}} = 1$, e portanto
+    \begin{align*}
+        I(A) &\eq \dfrac{1}{N!}
+            \epsilon_{j_{1}j_{2} \cdots j_{N}}
+            \epsilon_{k_{1}k_{2} \cdots k_{N}}
+            A_{j_{1}k_{1}}A_{j_{2}k_{2}} \cdots A_{j_{N}k_{N}}
+    \end{align*}
+
+que é justamente a definição de determinante de uma matriz $\vb{A}$ de $\text{dim}(\vb{A}) = N$. Portanto, mostramos que
+    \begin{answer}\label{eq: answer 2 pt 2}
+        I(A) = \int \exp\qty(\sum_{j,k=1}^{N}\bar{\theta}_{j}A_{jk}\theta_{k})\prod_{i=1}^{N}\dd{\theta_{i}}\dd{\bar{\theta}_{i}} = \text{det}(A)
+    \end{answer}
