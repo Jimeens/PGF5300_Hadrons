@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber lista2"] 1760643096.58007 "lista2.bcf" "lista2.bbl" "lista2" 1760672652.87149 0
-  "lista2.bcf" 1760672652.47673 107347 af847953bd3bd7db0bedd57c639b4360 "lualatex"
+["biber lista2"] 1760643096.58007 "lista2.bcf" "lista2.bbl" "lista2" 1760673085.52951 0
+  "lista2.bcf" 1760673085.13118 107347 af847953bd3bd7db0bedd57c639b4360 "lualatex"
   (generated)
   "lista2.bbl"
   "lista2.blg"
   (rewritten before read)
-["lualatex"] 1760672645.3527 "/home/jimeens/Documentos/PGF5300_Hadrons-2/Listas/lista2.tex" "lista2.pdf" "lista2" 1760672652.87181 0
+["lualatex"] 1760673077.91434 "/home/jimeens/Documentos/PGF5300_Hadrons-2/Listas/lista2.tex" "lista2.pdf" "lista2" 1760673085.52984 0
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-bold.luc" 1759403390.68597 775384 a27328b6c86b82947b2132521a8acadc ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-bolditalic.luc" 1759402757.19556 651856 315f97ab3f506fab2134d517c2854827 ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-italic.luc" 1759403389.03896 529275 7718281912aea2e86fe25759d886cd74 ""
@@ -19,7 +19,7 @@
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-regular.luc" 1759402755.06353 127942 8773e750671a876188ce154763cc70e4 ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1760408619.99804 17809 462c5525fccc094d1b8839522a08465f ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1759402754.78653 403740 1645b4019bc05bba6fc67f9f56ae15eb ""
-  "/home/jimeens/Documentos/PGF5300_Hadrons-2/Listas/lista2.tex" 1760651146.11542 8074 934cffa11c7344b0e723e312429126d7 ""
+  "/home/jimeens/Documentos/PGF5300_Hadrons-2/Listas/lista2.tex" 1760673077.57522 8084 a5078088f216ed26fbca792050c2d509 ""
   "/usr/share/fonts/opentype/ebgaramond/EBGaramond12-Regular.otf" 1643918790 422280 3e124cea480748c9eebdb3f1ce139a43 ""
   "/usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Bold.otf" 1679344195 417272 fb7ec21239c27e80f50d20401aeda1da ""
   "/usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Italic.otf" 1679344195 306080 fa38657c318818be95501a485967b47e ""
@@ -487,10 +487,10 @@
   "Solutions/Solutions2/ex6.tex" 1760627806.84129 106 be5002903921140bdda24f03d5a91683 ""
   "Solutions/Solutions2/ex7.tex" 1760627806.84129 0 d41d8cd98f00b204e9800998ecf8427e ""
   "impression.cls" 1760627806.84129 5842 18593c3ae87300ce419a26a4b9f96377 ""
-  "lista2.aux" 1760672652.45873 9907 0d2442357a3e24e4e88ea69277742e58 "lualatex"
+  "lista2.aux" 1760673085.11218 9907 0d2442357a3e24e4e88ea69277742e58 "lualatex"
   "lista2.bbl" 1760643098.65291 466 ee04f40f768daeed26442158e95aba61 "biber lista2"
-  "lista2.run.xml" 1760672652.47904 2350 5aa1c18c5b55dd05e315fad12ce5da91 "lualatex"
-  "lista2.tex" 1760651146.11542 8074 934cffa11c7344b0e723e312429126d7 ""
+  "lista2.run.xml" 1760673085.13291 2350 5aa1c18c5b55dd05e315fad12ce5da91 "lualatex"
+  "lista2.tex" 1760673077.57522 8084 a5078088f216ed26fbca792050c2d509 ""
   "mypackages.sty" 1760627806.86577 2276 49a797eed214d5adb00296da5bbf3033 ""
   (generated)
   "lista2.aux"
