@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  17 OCT 2025 00:51
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  20 OCT 2025 20:48
  system commands enabled.
  file:line:error style messages enabled.
-**/home/jimeens/Documentos/PGF5300_Hadrons-2/Listas/lista2.tex
-(/home/jimeens/Documentos/PGF5300_Hadrons-2/Listas/lista2.tex
+**/home/jimeens/PGF5300_Hadrons/Listas/lista2.tex
+(/home/jimeens/PGF5300_Hadrons/Listas/lista2.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 Lua module: luaotfload 2023-08-31 3.26 Lua based OpenType font support
@@ -2938,9 +2938,9 @@ Here is how much of LuaTeX's memory you used:
    avail lists: 1:10,2:4819,3:1464,4:107,5:503,6:51,7:5320,8:81,9:2152,10:9,11:378
  75871 multiletter control sequences out of 65536+600000
  71 fonts using 15419383 bytes
- 167i,19n,152p,1200b,3301s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 167i,19n,152p,1187b,3301s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Italic.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Bold.otf></usr/share/fonts/opentype/ebgaramond/EBGaramond12-Regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lista2.pdf (11 pages, 4132398 bytes).
+Output written on lista2.pdf (11 pages, 4132428 bytes).
 
 PDF statistics: 175 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
