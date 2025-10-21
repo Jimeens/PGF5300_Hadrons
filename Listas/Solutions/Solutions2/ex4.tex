@@ -1,4 +1,217 @@
-\begin{itemize}
-    \item Aula 6 + Aula 11, o diagrama é do canal-t, bem determinado então
-    \item O diagrama depende dos momentos externos apenas através da variável t
-\end{itemize}
+Na função de 4-pontos $i\Gamma^{(4)}$, temos que as 4 primeiras contribuições são
+
+\begin{tikzpicture}
+    \begin{feynman}
+        \vertex [below=0.7cm] (i1);
+        \vertex [below right=0.5*1.5cm and 0.5*2cm of i1, dot] (i2) {};
+        \vertex [above right=0.5*1.5cm and 0.5*2cm of i2] (i3);
+        
+        \vertex [below=0.5*3cm of i1] (i4);
+        \vertex [below right=0.5*1.5cm and 0.5*2cm of i2] (i6);
+
+        \diagram* {
+            (i1) -- [plain, rmomentum={[arrow shorten=0.7]$p_{1}$}] (i2) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{3}$}] (i3),
+            (i4) -- [plain, rmomentum={[arrow shorten=0.7]$p_{2}$}] (i2) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{4}$}] (i6),
+        };
+    \end{feynman}
+    \hspace{1.5cm}
+    \node at (1,-1.5) {$+$};
+    \hspace{1.5cm}
+    \begin{feynman}
+        \vertex [below=0.7cm] (i1);
+        \vertex [below right=0.5*1.5cm and 0.5*2cm of i1, dot] (i2) {};
+        \vertex [below left=0.5*1.5cm and 0.5*2cm of i2] (i3);
+        
+        \vertex [right=3.5cm of i1] (i4);
+        \vertex [right=1.5cm of i2, dot] (i5) {};
+        \vertex [right=3.5cm of i3] (i6);
+
+        \diagram* {
+            (i1) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{1}$}] (i2) -- [plain, momentum'={[arrow shorten=0.7]$p_{2}$}] (i3),
+            (i2) -- [plain, half left, looseness=1.25] (i5),
+            (i5) -- [plain, half left, looseness=1.25] (i2),
+            (i4) -- [plain, momentum={[arrow shorten=0.7]$p_{3}$}] (i5) -- [plain, rmomentum={[arrow shorten=0.7]$p_{4}$}] (i6),
+        };
+    \end{feynman}
+    \hspace{3cm}
+    \node at (1,-1.5) {$+$};
+    \hspace{1.5cm}
+    \begin{feynman}
+        \vertex (i1);
+        \vertex [below right=0.5*1.5cm and 0.5*2cm of i1, dot] (i2) {};
+        \vertex [above right=0.5*1.5cm and 0.5*2cm of i2] (i3);
+        
+        \vertex [below=0.5*6cm of i1] (i4);
+        \vertex [above right=0.5*1.5cm and 0.5*2cm of i4, dot] (i5) {};
+        \vertex [below right=0.5*1.5cm and 0.5*2cm of i5] (i6);
+
+        \diagram* {
+            (i1) -- [plain, momentum={[arrow shorten=0.7]$p_{3}$}] (i2) -- [plain, rmomentum={[arrow shorten=0.7]$p_{4}$}] (i3),
+            (i2) -- [plain, half left, looseness=1.5] (i5),
+            (i5) -- [plain, half left, looseness=1.5] (i2),
+            (i4) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{1}$}] (i5) -- [plain, momentum'={[arrow shorten=0.7]$p_{2}$}] (i6),
+        };
+    \end{feynman}
+    \hspace{1.5cm}
+    \node at (1,-1.5) {$+$};
+    \hspace{1.5cm}
+    \begin{feynman}
+        \vertex (i1);
+        \vertex [below right=0.5*3cm and 0.5*2cm of i1, dot] (i2) {};
+        \vertex [below left=0.5*1.5cm and 0.5*2cm of i2] (i3);
+        
+        \vertex [right=3.5cm of i1] (i4);
+        \vertex [right=1.5cm of i2, dot] (i5) {};
+        \vertex [right=3.5cm of i3] (i6);
+
+        \diagram* {
+            (i1) -- [plain, half left, looseness=0.425, rmomentum'={[arrow shorten=0.45]$p_{3}$}] (i5) -- [plain, rmomentum={[arrow shorten=0.7]$p_{4}$}] (i6),
+            (i2) -- [plain, half left, looseness=1.25] (i5),
+            (i5) -- [plain, half left, looseness=1.25] (i2),
+            (i4) -- [plain, half right, looseness=0.425, momentum={[arrow shorten=0.45]$p_{1}$}] (i2) -- [plain, momentum'={[arrow shorten=0.7]$p_{2}$}] (i3),
+        };
+    \end{feynman}
+\end{tikzpicture}
+
+Então em expansão de $i\lambda$ (representando a quantidade de vértices), temos
+    \begin{equation*}
+        i\Gamma^{(4)} = (-i\lambda) + \dfrac{(-i\lambda)^{2}}{2}\qty(J_{1} + J_{2} +  J_{3}) + \mathcal{O}(\lambda^{3})
+    \end{equation*}
+
+Então o diagrama que estamos buscando é o terceiro da lista acima, que representa a contribuição
+    \begin{equation*}
+        \mathbb{J}_{2} \coloneqq \dfrac{(-i\lambda)^{2}}{2}J_{2}
+    \end{equation*}
+
+Utilizando as regras de Feynman para o modelo $\lambda\phi^{4}$, o diagrama representado por $\mathbb{J}_{2}$ em regularização dimensional é dado por
+    \begin{equation*}
+        \mathbb{J}_{2} = -\dfrac{\lambda^{2}}{2} \mu^{4-\mathsf{D}} \int 
+        \dfrac{1}{(2\pi)^{\mathsf{D}}}
+        \dfrac{i}{(-p_{3}+k)^{2} - m^{2} + i\varepsilon}
+        \dfrac{i}{(p_{1}-k)^{2} - m^{2} + i\varepsilon}
+        \dd[\mathsf{D}]{k}
+    \end{equation*}
+
+Fazendo uma mudança de variável $k \mapsto k + p_{3}$, que mantém a integral invariante, temos
+    \begin{equation*}
+        \mathbb{J}_{2} = \dfrac{\lambda^{2}}{2} \mu^{4-\mathsf{D}} \int 
+        \dfrac{1}{(2\pi)^{\mathsf{D}}}
+        \dfrac{1}{k^{2} - m^{2} + i\varepsilon}
+        \dfrac{1}{(p_{1} - k - p_{3})^{2} - m^{2} + i\varepsilon}
+        \dd[\mathsf{D}]{k}
+    \end{equation*}
+
+Sendo então $D_{1} \coloneqq k^{2} - m^{2} + i\varepsilon$ e $D_{2} \coloneqq (p_{1} - k - p_{3})^{2} - m^{2} + i\varepsilon$, obtemos
+    \begin{equation*}
+        \mathbb{J}_{2} = \dfrac{\lambda^{2}}{2} \mu^{4-\mathsf{D}} \int 
+        \dfrac{1}{(2\pi)^{\mathsf{D}}}
+        \dfrac{1}{D_{1}D_{2}}
+        \dd[\mathsf{D}]{k}
+    \end{equation*}
+
+O que nos permite utilizar a parametrização de Feynman
+    \begin{equation*}
+        \dfrac{1}{A B} = \int_{0}^{1} \dfrac{1}{\qty[(1-a) A + aB]^{2}} \dd{a}
+    \end{equation*}
+para reescrever a integral como
+    \begin{align*}
+        \mathbb{J}_{2} &\eq \dfrac{\lambda^{2}}{2} \mu^{4-\mathsf{D}} \int_{0}^{1} \int 
+        \dfrac{1}{(2\pi)^{\mathsf{D}}}
+        \dfrac{1}{\qty[(1-a)D_{1} + aD_{2}]^{2}}
+        \dd[\mathsf{D}]{k}\dd{a} \\
+        &\eq \dfrac{\lambda^{2}}{2} \mu^{4-\mathsf{D}} \int_{0}^{1} \int 
+        \dfrac{1}{(2\pi)^{\mathsf{D}}}
+        \dfrac{1}{D_{T}^{2}}
+        \dd[\mathsf{D}]{k}\dd{a}
+    \end{align*}
+onde definimos $D_{T} \coloneqq (1-a)D_{1} + aD_{2}$. Desenvolvendo $D_{T}$, obtemos
+    \begin{align*}
+        D_{T} &\eq (1-a)(k^{2} - m^{2} + i\varepsilon) + a\qty[(p_{1} - k - p_{3})^{2} - m^{2} + i\varepsilon] \\
+        &\eq k^{2} - m^{2} + i \varepsilon - ak^{2} + {\color{orange}am^{2}} - {\color{red!70!black}ia\varepsilon} + a(p_{1} - k - p_{3})^{2} - {\color{orange}am^{2}} + {\color{red!70!black}ia\varepsilon} \\
+        &\eq k^{2} - m^{2} + i \varepsilon - {\color{orange}ak^{2}} + ap_{1}^{2} - 2akp_{1} + {\color{orange}ak^{2}} - 2ap_{1}p_{3} + 2akp_{3} + ap_{3}^{2} \\
+        &\eq k^{2} - m^{2} + i \varepsilon - 2ak(p_{1} - p_{3}) + a(p_{1}^{2} - 2p_{1}p_{3} + p_{3}^{2}) \\
+        &\eq k^{2} - m^{2} + i \varepsilon - 2ak(p_{1} - p_{3}) + a(p_{1} - p_{3})^{2}
+    \end{align*}
+
+Podemos identificar então a variável de Mandelstam $t = (p_{1} - p_{3})^{2}$, então somando e subtraindo $a^{2}(p_{1} - p_{3})^{2}$, obtemos
+    \begin{align*}
+        D_{T} &\eq k^{2} - m^{2} + i \varepsilon + a^{2}(p_{1} - p_{3})^{2} - m^{2} + i \varepsilon + a t - a^{2} (p_{1} - p_{3})^{2} \\
+        &\eq \qty[k^{2} - a(p_{1} - p_{3})]^{2} - m^{2} + i\varepsilon + a(1-a)t
+    \end{align*}
+
+Fazendo a mudança de variável $k \mapsto k - a(p_{1} - p_{3})$, que mantém novamente a integral invariante, e definindo $X^{2} \coloneqq m^{2} - a(1-a)t$, temos que
+    \begin{equation*}
+        D_{T} = k^{2} - X^{2} + i\varepsilon
+    \end{equation*}
+
+Portanto
+    \begin{equation*}
+        \mathbb{J}_{2} = \dfrac{\lambda^{2}}{2} \mu^{4-\mathsf{D}} \int_{0}^{1} \int 
+        \dfrac{1}{(2\pi)^{\mathsf{D}}}
+        \dfrac{1}{\qty(k^{2} - X^{2} + i\varepsilon)^{2}}
+        \dd[\mathsf{D}]{k}\dd{a}
+    \end{equation*}
+
+Conforme mostrado na Aula 11, vale a igualdade
+    \begin{equation*}
+        \int \dfrac{1}{(2\pi)^{\mathsf{D}}} \dfrac{i(k^{2})^{\alpha}}{(k^{2} - m^{2} + i\varepsilon)^{\beta}} \dd[\mathsf{D}]{k} = (-1)^{\alpha + \beta + 1} \dfrac{(m^{2})^{\alpha + \frac{\mathsf{D}}{2} - \beta}}{(4\pi)^{\frac{\mathsf{D}}{2}}\Gamma\qty(\frac{\mathsf{D}}{2})} \dfrac{\Gamma\qty(\alpha + \frac{\mathsf{D}}{2}) \Gamma\qty(\beta - \alpha - \frac{\mathsf{D}}{2})}{\Gamma(\beta)}
+    \end{equation*}
+
+Multiplicando ambos os lados desta igualdade por $-i$, fazendo $\alpha = 0$ e $\beta = 2$, sabendo que $\Gamma(2) = 1$ e $m^{2} \mapsto X^{2}$, obtemos
+    \begin{align*}
+        \int \dfrac{1}{(2\pi)^{\mathsf{D}}} \dfrac{1}{(k^{2} - X^{2} + i\varepsilon)^{2}} \dd[\mathsf{D}]{k} &\eq i \dfrac{(X^{2})^{\frac{\mathsf{D}}{2} - 2}}{(4\pi)^{\frac{\mathsf{D}}{2}}\Gamma\qty(\frac{\mathsf{D}}{2})} \Gamma\qty(\frac{\mathsf{D}}{2}) \Gamma\qty(2 - \frac{\mathsf{D}}{2}) \\
+        &\eq i (X^{2})^{\frac{\mathsf{D}}{2} - 2} (4\pi)^{-\frac{\mathsf{D}}{2}} \Gamma\qty(\dfrac{4 - \mathsf{D}}{2})
+    \end{align*}
+
+Podemos deixar os expoentes desta expressão iguais utilizando que
+    \begin{equation*}
+        (X^{2})^{\frac{\mathsf{D}}{2} - 2} = \qty(\dfrac{1}{X^{2}})^{\frac{4 - \mathsf{D}}{2}} \qquad \& \qquad 
+        (4\pi)^{-\frac{\mathsf{D}}{2}} = \dfrac{1}{(4\pi)^{2}} (4\pi)^{\frac{4 - \mathsf{D}}{2}}
+    \end{equation*}
+
+Reescrevendo também $\mu^{4-\mathsf{D}} = (\mu^{2})^{\frac{4-\mathsf{D}}{2}}$ e multiplicando a expressão acima por este fator, temos
+    \begin{equation*}
+        \mu^{4-\mathsf{D}}\int \dfrac{1}{(2\pi)^{\mathsf{D}}} \dfrac{1}{(k^{2} - X^{2} + i\varepsilon)^{2}} \dd[\mathsf{D}]{k} = 
+        \dfrac{i}{(4\pi)^{2}} \Gamma\qty(\dfrac{4 - \mathsf{D}}{2}) \qty(\dfrac{4\pi \mu^{2}}{X^{2}})^{\frac{4 - \mathsf{D}}{2}}
+    \end{equation*}
+
+Portanto
+    \begin{equation*}
+        \mathbb{J}_{2} = \dfrac{i\lambda^{2}}{2(4\pi)^{2}} \Gamma\qty(\dfrac{4 - \mathsf{D}}{2}) \int_{0}^{1} \qty(\dfrac{4\pi \mu^{2}}{X^{2}})^{\frac{4 - \mathsf{D}}{2}} \dd{a}
+    \end{equation*}
+
+Esta expressão é convergente para todo $\mathsf{D} < 3$, possuindo divergências apenas para $\mathsf{D} \geqslant 4$. Sendo então $\mathsf{D} = 4 - 2\epsilon$, temos
+    \begin{equation*}
+        \mathbb{J}_{2} = \dfrac{i\lambda^{2}}{32\pi^{2}} \Gamma(\epsilon) \int_{0}^{1} \qty(\dfrac{4\pi \mu^{2}}{X^{2}})^{\epsilon} \dd{a}
+    \end{equation*}
+o que nos mostra que as divergências aparecem como pólos na função gama em $\epsilon = 0$, portanto,  utilizamos uma expansão em torno de $\epsilon \to 0$ e desprezamos termos de ordem $\mathcal{O}(\epsilon)$. Sabendo então que:
+    \begin{equation*}
+        \Gamma(\epsilon) = \dfrac{1}{\epsilon} - \gamma_{EM} + \mathcal{O}(\epsilon)
+    \end{equation*}
+e que
+    \begin{equation*}
+        \lim_{\epsilon \to 0} (A)^{\epsilon} = 1 + \epsilon \ln(A) + \mathcal{O}(\epsilon^{2})
+    \end{equation*}
+
+A expressão para $\mathbb{J}_{2}$ fica:
+    \begin{align*}
+        \mathbb{J}_{2} &\eq \dfrac{i\lambda^{2}}{32\pi^{2}} \qty[\dfrac{1}{\epsilon} - \gamma_{EM} + \mathcal{O}(\epsilon)] \int_{0}^{1} \qty[1 + \epsilon\ln\qty(\dfrac{4\pi \mu^{2}}{X^{2}}) + \mathcal{O}(\epsilon^{2})] \dd{a} \\
+        &\eq \dfrac{i\lambda^{2}}{32\pi^{2}} \qty[\dfrac{1}{\epsilon} - \gamma_{EM} + \mathcal{O}(\epsilon)]\qty[1 + \epsilon \int_{0}^{1} \ln\qty(\dfrac{4\pi \mu^{2}}{X^{2}}) \dd{a} + \mathcal{O}(\epsilon^{2})] \\
+        &\eq \dfrac{i\lambda^{2}}{32\pi^{2}} \qty[
+            \dfrac{1}{\epsilon} - \gamma_{EM} + \int_{0}^{1} \ln\qty(\dfrac{4\pi \mu^{2}}{X^{2}}) \dd{a} + \mathcal{O}(\epsilon)
+        ]
+    \end{align*}
+
+Com $\ln(AB) = \ln(A) + \ln(B)$, podemos reescrever a integral como
+    \begin{equation*}
+        \mathbb{J}_{2} = \dfrac{i\lambda^{2}}{32\pi^{2}} \qty[
+            \dfrac{1}{\epsilon} - \gamma_{EM} + \ln(4\pi) - \int_{0}^{1} \ln(\dfrac{\mu^{2}}{X^{2}}) \dd{a}
+        ]
+    \end{equation*}
+
+Expandindo a variável $X^{2}$, concluímos que
+    \begin{answer}\label{eq: answer 4}
+        \mathbb{J}_{2} = \dfrac{i\lambda^{2}}{32\pi^{2}} \qty{
+            \dfrac{1}{\epsilon} - \gamma_{EM} + \ln(4\pi) - \int_{0}^{1} \ln\qty[\dfrac{\mu^{2}}{m^{2} - a(1-a)t}] \dd{a}
+        }
+    \end{answer}

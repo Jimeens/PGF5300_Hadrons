@@ -1,6 +1,6 @@
-PWD /home/jimeens/PGF5300_Hadrons/Listas
+PWD /home/jimeens/PGF5300_Hadrons-1/Listas
 INPUT /var/lib/texmf/web2c/luahbtex/lualatex.fmt
-INPUT /home/jimeens/PGF5300_Hadrons/Listas/lista2.tex
+INPUT /home/jimeens/PGF5300_Hadrons-1/Listas/lista2.tex
 OUTPUT lista2.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tex-ini-files/lualatexquotejobname.lua
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ltluatex.lua
@@ -521,14 +521,20 @@ INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
+INPUT ./Solutions/Solutions2/ex4.tex
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
-INPUT ./Solutions/Solutions2/ex4.tex
+INPUT ./Figures/Impression, soleil levant - Claude Monet.png
+INPUT ./Figures/vanilla.png
+INPUT ./Figures/Impression, soleil levant - Claude Monet.png
+INPUT ./Figures/vanilla.png
+INPUT ./Figures/Impression, soleil levant - Claude Monet.png
+INPUT ./Figures/vanilla.png
 INPUT ./Solutions/Solutions2/ex5.tex
 INPUT ./Solutions/Solutions2/ex6.tex
+INPUT ./Solutions/Solutions2/ex7.tex
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
-INPUT ./Solutions/Solutions2/ex7.tex
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./lista2.aux
@@ -546,4 +552,5 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
