@@ -513,6 +513,8 @@ INPUT ./Figures/vanilla.png
 INPUT ./Solutions/Solutions2/ex3.tex
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
+INPUT ./Figures/Impression, soleil levant - Claude Monet.png
+INPUT ./Figures/vanilla.png
 INPUT /usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/doublestroke/dsrom10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
@@ -522,8 +524,6 @@ INPUT ./Figures/vanilla.png
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Solutions/Solutions2/ex4.tex
-INPUT ./Figures/Impression, soleil levant - Claude Monet.png
-INPUT ./Figures/vanilla.png
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png

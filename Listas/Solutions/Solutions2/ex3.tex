@@ -19,7 +19,29 @@ temos
         [D_{\mu}, D_{\nu}]\Phi = -igF_{\mu\nu}\Phi
     \end{answer}
 
-\noindent\textbf{(b)} Por estarmos em uma teoria de gauge não-abeliana, $\vb{A}_{\mu}$ se transforma como
+\noindent\textbf{(b)} Utilizando a derivada covariante do item (a), podemos assumir que $D_{\mu}\Phi$ se transforma da mesma forma que um campo, ou seja, $\Phi = U\Phi$, o que implica em
+    \begin{align*}
+        D_{\mu}\Phi &\eq UD_{\mu}\Phi \\
+        (\partial_{\mu} - ig\vb{A}_{\mu})\Phi &\eq U(\partial_{\mu} - ig\vb{A}_{\mu})\Phi \\
+        (\partial_{\mu} - ig\vb{A}_{\mu})U\Phi &\eq U\partial_{\mu}\Phi - igU\vb{A}_{\mu}\Phi \\
+        \partial_{\mu}(U\Phi) - ig\vb{A}_{\mu}U\Phi &\eq U\partial_{\mu}\Phi - igU\vb{A}_{\mu}\Phi
+    \end{align*}
+
+Multiplicando os dois lados por $U^{-1}$ pela direita:
+    \begin{align*}
+        \partial_{\mu}(U\Phi)U^{-1} - ig\vb{A}_{\mu}U\Phi U^{-1} &\eq U(\partial_{\mu}\Phi) U^{-1} - ig U\vb{A}_{\mu}\Phi U^{-1} \\
+        (\partial_{\mu}U)\Phi U^{-1} + {\color{orange}U(\partial_{\mu}\Phi)U^{-1}} - ig\vb{A}_{\mu}U\Phi U^{-1} &\eq {\color{orange}U(\partial_{\mu}\Phi)U^{-1}} - igU\vb{A}_{\mu}\Phi U^{-1} \\
+        (\partial_{\mu}U)\Phi U^{-1} - ig\vb{A}_{\mu}U\Phi U^{-1} &\eq -igU\vb{A}_{\mu}\Phi U^{-1} \\ 
+        (\partial_{\mu}U)U^{-1}U\Phi U^{-1} - ig\vb{A}_{\mu}U\Phi U^{-1} &\eq -ig U\vb{A}_{\mu}U^{-1}U\Phi U^{-1} \\
+        [(\partial_{\mu}U)U^{-1} - ig\vb{A}_{\mu}]U\Phi U^{-1} &\eq [-igU\vb{A}_{\mu}U^{-1}]U\Phi U^{-1}
+    \end{align*}
+
+Segue que os termos entre colchetes devem ser iguais, ou seja
+    \begin{align*}
+        ig\vb{A}_{\mu} &\eq igU\vb{A}_{\mu}U^{-1} + (\partial_{\mu}U)U^{-1}
+    \end{align*}
+
+Portanto $\vb{A}_{\mu}$ se transforma como
     \begin{equation*}
         \vb{A}_{\mu}' = U\vb{A}_{\mu}U^{-1} - \dfrac{i}{g}(\partial_{\mu}U)U^{-1}
     \end{equation*}
