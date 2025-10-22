@@ -1,3 +1,373 @@
-\begin{itemize}
-    \item Aparentemente é só abrir as contas com as expressões da aula 15
-\end{itemize}
+Considerando o espalhamento elástico elétron-múon, os tensores leptônico e hadrônico são dados por
+    \begin{equation*}
+        L^{\alpha\beta} = \dfrac{1}{2} \sum_{s,s'} 
+        \bar{u}_{e}(k',s') \gamma^{\alpha} u_{e}(k,s)
+        \bar{u}_{e}(k,s) \gamma^{\beta} u_{e}(k',s')
+    \end{equation*}
+e
+    \begin{equation*}
+        W_{\alpha\beta} = \dfrac{1}{2} \qty[\sum_{S,S'} 
+        \bar{u}_{\mu}(p',S') \gamma_{\alpha} u_{\mu}(p,S)
+        \bar{u}_{\mu}(p,S) \gamma_{\beta} u_{\mu}(p',S')]\delta^{4}(2p\cdot q + q^{2})
+    \end{equation*}
+
+Aqui consideramos $\bar{u}_{e}$ e $u_{e}$ como os espinores do elétron, $\bar{u}_{\mu}$ e $u_{\mu}$ os espinores do múon, $k$ e $k'$ os momentos iniciais e finais do elétron, $p$ e $p'$ os momentos iniciais e finais do múon, $q$ o momento transferido (como um fóton virtual), e $s,s',S,S'$ os índices de spin. O diagrama abaixo descreve o espalhamento em questão:
+\begin{center}
+    \begin{tikzpicture}
+        \begin{feynman}
+            \vertex (i1) {$e$};
+            \vertex [right=3cm of i1, dot] (i2);
+            \vertex [above right=1cm and 2.7cm of i2] (i3) {$e$};
+
+            \vertex [below right=3cm and 1.5cm of i1] (i4) {$\mu$};
+            \vertex [above right=1cm and 3cm of i4, dot] (i5);
+            \vertex [right=3cm of i5] (i6) {$\mu$};
+
+            \diagram*{
+                (i1) -- [fermion, rmomentum'={[arrow shorten=0.7]$k,s$}] (i2) -- [fermion, rmomentum'={[arrow shorten=0.7]$k',s'$}] (i3),
+                (i2) -- [boson, rmomentum'={[arrow shorten=0.7]$q$}] (i5),
+                (i4) -- [fermion, rmomentum'={[arrow shorten=0.7]$p,S$}] (i5) -- [fermion, rmomentum'={[arrow shorten=0.7]$p',S'$}] (i6),
+            };
+        \end{feynman}
+    \end{tikzpicture}
+\end{center}
+
+Fica claro então, por conservação de momento, que $q = k - k' = p' - p$. É visível que os tensores $L^{\alpha\beta}$ e $W_{\alpha\beta}$ possuem uma estrutura semelhante, então tratar somente uma delas é o suficiente para o cálculo da contração $L^{\alpha\beta}W_{\alpha\beta}$. A estrutura em questão é dada por
+    \begin{equation*}
+        \dfrac{1}{2} \sum_{s,s'} 
+        \bar{u}(k',s') \gamma^{\alpha} u(k,s)
+        \bar{u}(k,s) \gamma^{\beta} u(k',s')
+    \end{equation*}
+onde, para simplificar a notação, os índices $e$ e $\mu$ foram removidos. A expressão acima pode ser reescrita em componentes, isto é
+    \begin{equation*}
+        \dfrac{1}{2} \sum_{s,s'} \sum_{\tau,\sigma,\rho,\eta} 
+        \bar{u}_{\tau}(k',s') (\gamma^{\alpha})_{\tau\sigma} u_{\sigma}(k,s)
+        \bar{u}_{\rho}(k,s) (\gamma^{\beta})_{\rho\eta} u_{\eta}(k',s')
+    \end{equation*}
+
+No exercício 5.(b) da Lista 1, mostramos que
+    \begin{equation*}
+        \sum_{s} u_{\sigma}(k,s) \bar{u}_{\rho}(k,s) = (\slashed{k} + m)_{\sigma\rho}
+    \end{equation*}
+
+Portanto a soma em $s$ pode ser feita de modo a obtermos
+    \begin{equation*}
+        \dfrac{1}{2} \sum_{s'} \sum_{\tau,\sigma,\rho,\eta} 
+        \bar{u}_{\tau}(k',s') (\gamma^{\alpha})_{\tau\sigma} 
+        (\slashed{k} + m)_{\sigma\rho}
+        (\gamma^{\beta})_{\rho\eta} u_{\eta}(k',s')
+    \end{equation*}
+
+Tratando-se de componentes matriciais, os termos podem ser rearranjados arbitrariamente, em particular a troca
+    \begin{equation*}
+        \dfrac{1}{2} \sum_{s'} \sum_{\tau,\sigma,\rho,\eta} 
+        u_{\eta}(k',s') \bar{u}_{\tau}(k',s') 
+        (\gamma^{\alpha})_{\tau\sigma} 
+        (\slashed{k} + m)_{\sigma\rho}
+        (\gamma^{\beta})_{\rho\eta}
+    \end{equation*}
+
+Performando então a soma em $s'$, obtemos
+    \begin{equation*}
+        \dfrac{1}{2} \sum_{\tau,\sigma,\rho,\eta} 
+        (\slashed{k}' + m)_{\eta\tau} 
+        (\gamma^{\alpha})_{\tau\sigma} 
+        (\slashed{k} + m)_{\sigma\rho}
+        (\gamma^{\beta})_{\rho\eta}
+    \end{equation*}
+
+Sabendo então que $\displaystyle\sum_{a,b}A_{ab}B_{ba} = \text{Tr}(AB)$, é imediato escrever
+    \begin{equation*}
+        \dfrac{1}{2} \sum_{\tau,\sigma,\rho,\eta} 
+        (\slashed{k}' + m)_{\eta\tau} 
+        (\gamma^{\alpha})_{\tau\sigma} 
+        (\slashed{k} + m)_{\sigma\rho}
+        (\gamma^{\beta})_{\rho\eta} = 
+        \dfrac{1}{2}\text{Tr}\qty[
+            (\slashed{k}' + m) 
+            \gamma^{\alpha}
+            (\slashed{k} + m)
+            \gamma^{\beta}
+        ]
+    \end{equation*}
+
+Sendo então $m$ a massa do elétron e $M$ a massa do múon, os tensores podem ser escritos sob a forma
+    \begin{equation*}
+        L^{\alpha\beta} = \dfrac{1}{2} \text{Tr}\qty[
+            (\slashed{k}' + m)
+            \gamma^{\alpha}
+            (\slashed{k} + m)
+            \gamma^{\beta}
+        ]
+    \end{equation*}
+e
+    \begin{equation*}
+        W_{\alpha\beta} = \dfrac{1}{2} \text{Tr}\qty[
+            (\slashed{p}' + M)
+            \gamma_{\alpha}
+            (\slashed{p} + M)
+            \gamma_{\beta}
+        ]\delta^{4}(2p\cdot q + q^{2})
+    \end{equation*}
+
+Tratando apenas o tensor leptônico, temos
+    \begin{align*}
+        L^{\alpha\beta} &\eq \dfrac{1}{2} \text{Tr}\qty[
+            (\gamma^{\mu}k_{\mu}' + m)
+            \gamma^{\alpha}
+            (\gamma^{\nu}k_{\nu} + m)
+            \gamma^{\beta}
+        ] \\
+        &\eq \dfrac{1}{2} \text{Tr}\qty[
+            (\gamma^{\mu}\gamma^{\alpha}k_{\mu}' + \gamma^{\alpha}m)
+            (\gamma^{\nu}\gamma^{\beta}k_{\nu} + \gamma^{\beta}m)
+        ] \\
+        &\eq \dfrac{1}{2} \text{Tr}\qty(
+            \gamma^{\mu}\gamma^{\alpha}\gamma^{\nu}\gamma^{\beta} k_{\mu}'k_{\nu} +
+            m\gamma^{\mu}\gamma^{\alpha}\gamma^{\beta} k_{\mu}' +
+            m\gamma^{\alpha}\gamma^{\nu}\gamma^{\beta} k_{\nu} +
+            m^{2}\gamma^{\alpha}\gamma^{\beta}
+         ) \\
+        &\eq \dfrac{1}{2} \qty[
+            \text{Tr}(\gamma^{\mu}\gamma^{\alpha}\gamma^{\nu}\gamma^{\beta}) k_{\mu}'k_{\nu} + 
+            m\text{Tr}(\gamma^{\mu}\gamma^{\alpha}\gamma^{\beta}) k_{\mu}' + 
+            m\text{Tr}(\gamma^{\alpha}\gamma^{\nu}\gamma^{\beta}) k_{\nu} + 
+            m^{2}\text{Tr}(\gamma^{\alpha}\gamma^{\beta}) 
+        ]
+    \end{align*}
+
+Utilizando as propriedades do traço:
+    \begin{align*}
+        &\text{Tr}(\gamma^{\mu}\gamma^{\alpha}\gamma^{\nu}\gamma^{\beta}) = 4(g^{\mu\alpha}g^{\nu\beta} - g^{\mu\nu}g^{\alpha\beta} + g^{\mu\beta}g^{\alpha\nu}) \\
+        &\text{Tr}(\gamma^{\mu}\gamma^{\alpha}\gamma^{\beta}) = \text{Tr}(\gamma^{\alpha}\gamma^{\nu}\gamma^{\beta}) = 0 \\
+        &\text{Tr}(\gamma^{\alpha}\gamma^{\beta}) = 4g^{\alpha\beta}
+    \end{align*}
+
+Reduzimos a expressão a
+    \begin{align*}
+        L^{\alpha\beta} &\eq 2(g^{\mu\alpha}g^{\nu\beta} - g^{\mu\nu}g^{\alpha\beta} + g^{\mu\beta}g^{\alpha\nu}) k_{\mu}'k_{\nu} + 2 m^{2} g^{\alpha\beta} \\
+        &\eq 2[k^{\prime\alpha}k^{\beta} - g^{\alpha\beta}(k'\cdot k) + k^{\prime\beta}k^{\alpha}] + 2 m^{2} g^{\alpha\beta} \\
+        &\eq 2\qty{
+            k^{\prime\alpha}k^{\beta} +
+            k^{\prime\beta}k^{\alpha} - 
+            g^{\alpha\beta}\qty[
+                (k'\cdot k) - m^{2}
+            ]
+        }
+    \end{align*}
+
+Segue que o tensor hadrônico fica
+    \begin{equation*}
+        W_{\alpha\beta} = 2\Big\{
+            p_{\alpha}'p_{\beta} +
+            p_{\beta}'p_{\alpha} - 
+            g_{\alpha\beta}\qty[
+                (p'\cdot p) - M^{2}
+            ]
+        \Big\}\delta^{4}(2p\cdot q + q^{2})
+    \end{equation*}
+
+Tendo então estas formas, a contração pode ser feita:
+    \begin{align*}
+        L^{\alpha\beta}W_{\alpha\beta} &\eq 4\qty{
+            k^{\prime\alpha}k^{\beta} +
+            k^{\prime\beta}k^{\alpha} - 
+            g^{\alpha\beta}\qty[
+                (k'\cdot k) - m^{2}
+            ]
+        }\Big\{
+            p_{\alpha}'p_{\beta} +
+            p_{\beta}'p_{\alpha} - 
+            g_{\alpha\beta}\qty[
+                (p'\cdot p) - M^{2}
+            ]
+        \Big\} \times \\
+        &\noeq \times \delta^{4}(2p\cdot q + q^{2}) \\
+        &\eq 4 \Big\{
+            (k'\cdot p')(k\cdot p) +
+            (k'\cdot p)(k\cdot p') -
+            (k'\cdot k)\qty[
+                (p'\cdot p) - M^{2}
+            ] +
+            (k'\cdot p)(k\cdot p') + \\
+        &\noeq 
+            (k'\cdot p')(k\cdot p) -
+            (k'\cdot k)\qty[
+                (p'\cdot p) - M^{2}
+            ] -
+            (p'\cdot p)\qty[
+                (k'\cdot k) - m^{2}
+            ] -
+            (p'\cdot p)\qty[
+                (k'\cdot k) - m^{2}
+            ] + \\
+        &\noeq 
+            4\qty[
+                (k'\cdot k) - m^{2}
+            ]\qty[
+                (p'\cdot p) - M^{2}
+            ]
+        \Big\}\delta^{4}(2p\cdot q + q^{2}) \\
+        &\eq 4\Big\{ 
+            2 (k'\cdot p')(k\cdot p) + 
+            2 (k'\cdot p)(k\cdot p') -
+            2 (k'\cdot k)\qty[
+                (p'\cdot p) - M^{2}
+            ] -
+            2 (p'\cdot p)\qty[
+                (k'\cdot k) - m^{2}
+            ] + \\
+        &\noeq +
+            4 (k'\cdot k)\qty[
+                (p'\cdot p) - M^{2}
+            ] - 
+            4 m^{2}\qty[
+                (p'\cdot p) - M^{2}
+            ]
+        \Big\}\delta^{4}(2p\cdot q + q^{2}) \\
+        &\eq 4\Big\{ 
+            2 (k'\cdot p')(k\cdot p) + 
+            2 (k'\cdot p)(k\cdot p') +
+            2 (k'\cdot k)\qty[
+                (p'\cdot p) - M^{2}
+            ] -
+            2 (p'\cdot p)\qty[
+                (k'\cdot k) - m^{2}
+            ] + \\
+        &\noeq -
+            4 m^{2}\qty[
+                (p'\cdot p) - M^{2}
+            ]
+        \Big\}\delta^{4}(2p\cdot q + q^{2}) \\
+        &\eq 4\Big[
+            2(k'\cdot p')(k\cdot p) +
+            2(k'\cdot p)(k\cdot p') +
+            2(k'\cdot k)(p'\cdot p) - 
+            2M^{2}(k'\cdot k) - 
+            2(k'\cdot k)(p'\cdot p) + \\
+        &\noeq +
+            2m^{2}(p'\cdot p) - 
+            4m^{2}(p'\cdot p) + 
+            4m^{2}M^{2}
+        \Big]\delta(2p\cdot q + q^{2}) \\
+        &\eq 8\qty[
+            (k'\cdot p')(k\cdot p) +
+            (k'\cdot p)(k\cdot p') -
+            M^{2}(k'\cdot k) -
+            m^{2}(p'\cdot p) +
+            2m^{2}M^{2}
+        ]\delta(2p\cdot q + q^{2}) 
+    \end{align*}
+
+Partindo pra física do problema, ao considerarmos o referencial do laboratório (múon em repouso no estado inicial), podemos escrever
+    \begin{equation*}
+        k^{\mu} = (E,\vb{k}) \qquad 
+        k^{\prime\mu} = (E',\vb{k}') \qquad 
+        p^{\mu} = (M,\vb{0}) \qquad 
+        p^{\prime\mu} = (\mathcal{E},\vb{p}')
+    \end{equation*}
+
+Como estamos em altas energias ($E,E'\gg m$), a massa do elétron pode ser desconsiderada e pela relação de energia-momento, valem as igualdades $\abs{\vb{k}} = E$ e $\abs{\vb{k}'} = E'$. Então desconsiderando qualquer termo que envolva a massa do elétron, a contração tensorial fica
+    \begin{equation*}
+        L^{\alpha\beta}W_{\alpha\beta} = 8\qty[
+            (k'\cdot p')(k\cdot p) +
+            (k'\cdot p)(k\cdot p') -
+            M^{2}(k'\cdot k)
+        ]\delta(2p\cdot q + q^{2}) 
+    \end{equation*}
+
+Na conservação de momento, $p' = p + q$ e $q = k - k'$, então
+    \begin{align*}
+        k'\cdot p' = k'\cdot (p + q) &=  k'\cdot p + k'\cdot q &
+        k\cdot p' = k\cdot (p + q) &= k\cdot p + k\cdot q \\
+        &= k'\cdot p + k'\cdot(k - k') & &= k\cdot p + k\cdot (k - k') \\
+        &= k'\cdot p + k'\cdot k - (k')^{2} & &= k\cdot p + k^{2} - k\cdot k'
+    \end{align*}
+
+Por estamos desconsiderando a massa do elétron, $k^{2} = (k')^{2} = m^{2} \approx 0$, então temos
+    \begin{align*}
+        k'\cdot p' &= k'\cdot p + k'\cdot k & k\cdot p' = k\cdot p - k'\cdot k
+    \end{align*}
+
+Além disso, podemos ver que
+    \begin{equation*}
+        q^{2} = (k - k')^{2} = k^{2} + (k')^{2} - 2(k'\cdot k) \approx -2(k'\cdot k)
+    \end{equation*}
+
+Segue que
+    \begin{align*}
+        L^{\alpha\beta}W_{\alpha\beta} &\eq 8\qty[
+            \qty(k'\cdot p - \dfrac{q^{2}}{2}) (k\cdot p) +
+            (k'\cdot p)\qty(k\cdot p + \dfrac{q^{2}}{2}) + 
+            \dfrac{M^{2}q^{2}}{2}
+        ]\delta^{4}(2p\cdot q + q^{2}) \\
+        &\eq 8\qty[
+            (k'\cdot p)(k\cdot p) -
+            \dfrac{q^{2}}{2}(k\cdot p) +
+            (k'\cdot p)(k\cdot p) +
+            \dfrac{q^{2}}{2}(k'\cdot p) +
+            \dfrac{M^{2}q^{2}}{2}
+        ]\delta^{4}(2p\cdot q + q^{2}) \\
+        &\eq 8\qty[
+            2(k'\cdot p)(k\cdot p) - 
+            \dfrac{q^{2}}{2}(k\cdot p - k'\cdot p) +
+            \dfrac{M^{2}q^{2}}{2}
+        ]\delta^{4}(2p\cdot q + q^{2})
+    \end{align*}
+
+
+No referencial do laboratório, temos
+    \begin{align*}
+        (k'\cdot p) &= (E',\vb{k}')\cdot(M,\vb{0}) = ME' &
+        (k\cdot p) &= (E,\vb{k})\cdot(M,\vb{0}) = ME
+    \end{align*}
+
+Então
+    \begin{align*}
+        L^{\alpha\beta}W_{\alpha\beta} &\eq 8\qty[
+            2M^{2}E'E - 
+            \dfrac{Mq^{2}}{2}(E - E') +
+            \dfrac{M^{2}q^{2}}{2}
+        ]\delta^{4}(2p\cdot q + q^{2})
+    \end{align*}
+
+Note que $q^{2}$ pode ser reescrito em termos de um ângulo $\theta$ formado pelos vetores $\vb{k}$ e $\vb{k}'$, isto é
+    \begin{align*}
+        q^{2} &\eq -2(k'\cdot k) \\
+        &\eq -2(E'E - \vb{k}'\cdot\vb{k}) \\
+        &\eq -2\qty(E'E - \abs{\vb{k}'}\abs{\vb{k}}\cos\theta) \\
+        &\eq -2\qty(E'E - E'E\cos\theta) \\
+        &\eq -2E'E(1 - \cos\theta) \\
+        &\eq -4E'E\sin^{2}\qty(\dfrac{\theta}{2})
+    \end{align*}
+
+Portanto
+    \begin{align*}
+        L^{\alpha\beta}W_{\alpha\beta} &\eq 8\qty[
+            2M^{2}E'E + 
+            2ME'E(E-E')\sin^{2}\qty(\dfrac{\theta}{2}) -
+            2M^{2}E'E\sin^{2}\qty(\dfrac{\theta}{2})
+        ]\delta^{2}(2p\cdot q + q^{2}) \\
+        &\eq 16 M^{2}E'E\qty[
+            1 -
+            \sin^{2}\qty(\dfrac{\theta}{2}) +
+            \dfrac{(E - E')}{M}\sin^{2}\qty(\dfrac{\theta}{2})
+        ]\delta^{2}(2p\cdot q + q^{2}) \\
+        &\eq 16 M^{2}E'E\qty[
+            \cos^{2}\qty(\dfrac{\theta}{2}) +
+            \dfrac{(E - E')}{M}\sin^{2}\qty(\dfrac{\theta}{2})
+        ]\delta^{4}(2p\cdot q + q^{2})
+    \end{align*}
+
+Podemos escrever
+    \begin{align*}
+        E - E' = \dfrac{1}{M}(ME - ME') = \dfrac{1}{M}(p\cdot k - p\cdot k') = \dfrac{1}{M}p\cdot(k - k') = \dfrac{p\cdot q}{M}
+    \end{align*}
+
+Então definindo $\nu \coloneqq \dfrac{p\cdot q}{M} = E - E'$ e $q^{2} \equiv -Q^{2}$, concluímos que a contração entre os tensores, no referencial do laboratório, assume a forma
+\begin{answer}\label{eq: answer 6}
+    L^{\alpha\beta}W_{\alpha\beta} = 16M^{2}E'E\qty[
+        \cos^{2}\qty(\dfrac{\theta}{2}) + 
+        \dfrac{\nu}{M}\sin^{2}\qty(\dfrac{\theta}{2})
+    ]\delta^{4}(2M\nu - Q^{2})
+\end{answer}
