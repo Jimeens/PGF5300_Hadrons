@@ -140,7 +140,10 @@
 
 \newcommand*{\boldone}{\mathds{1}}
 
+
+
 \newcommand*\eqlineset{\pgfqkeys{/eqlines}}
+
 \eqlineset{
   picture/.style={baseline, remember picture},
   line/.style={thick, draw=MyOrange, line cap=round},
@@ -148,7 +151,9 @@
     minimum size=+0pt, inner sep=+0pt, outer ysep=+.3333em, anchor=base,
     name=tma\thetikzmarkalign},
 }
+
 \newcounter{tikzmarkalign}
+
 \makeatletter
 \AtBeginEnvironment{align}{%
   \setcounter{tikzmarkalign}{0}%

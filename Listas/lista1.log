@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  4 OCT 2025 19:01
- restricted system commands enabled.
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  22 OCT 2025 09:17
+ system commands enabled.
  file:line:error style messages enabled.
-**"/home/jimeens/Downloads/Atividade1/Hádrons - PGF5300/Listas/lista1.tex"
-("/home/jimeens/Downloads/Atividade1/Hádrons - PGF5300/Listas/lista1.tex"
+**/home/jimeens/PGF5300_Hadrons-1/Listas/lista1.tex
+(/home/jimeens/PGF5300_Hadrons-1/Listas/lista1.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 Lua module: luaotfload 2023-08-31 3.26 Lua based OpenType font support
@@ -448,7 +448,7 @@ File: svgnam.def 2023/11/15 v3.01 Predefined colors according to SVG 1.1 (UK)
 Package: standalone 2022/10/10 v1.3b Package to include TeX sub-files with preambles
  (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 ) (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
@@ -1693,7 +1693,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
 ) (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen361
 \pgffor@skip=\dimen362
@@ -1731,15 +1731,66 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count564
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))
-\c@tikzmarkalign=\count565
+))) (/usr/share/texlive/texmf-dist/tex/latex/tikz-feynman/tikz-feynman.sty
+Package: tikz-feynman 2016/02/05v1.1.0Feynman diagrams with TikZ
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks81
+\pgfopts@list@add@b@toks=\toks82
+) (/usr/share/texlive/texmf-dist/tex/latex/tikz-feynman/tikzlibraryfeynman.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen372
+\pgfarrowlength=\dimen373
+\pgfarrowwidth=\dimen374
+\pgfarrowlinewidth=\dimen375
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen376
+\pgfdecoratedremainingdistance=\dimen377
+\pgfdecoratedinputsegmentcompleteddistance=\dimen378
+\pgfdecoratedinputsegmentremainingdistance=\dimen379
+\pgf@decorate@distancetomove=\dimen380
+\pgf@decorate@repeatstate=\count565
+\pgfdecorationsegmentamplitude=\dimen381
+\pgfdecorationsegmentlength=\dimen382
+)
+\tikz@lib@dec@box=\box139
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.code.tex
+File: tikzlibrarygraphs.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\tikz@lib@auto@number=\count566
+\tikz@qnode@count=\count567
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex
+File: tikzlibrarygraphdrawing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/graphdrawing/tex/pgflibrarygraphdrawing.code.tex
+File: pgflibrarygraphdrawing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@gd@parameter@stack@height=\count568
+\pgf@gd@node@box=\box140
+\pgf@gd@edge@box=\box141
+\pgf@gd@prekind@box=\box142
+\pgf@gd@postkind@box=\box143
+)) (/usr/share/texlive/texmf-dist/tex/latex/tikz-feynman/tikzfeynman.keys.code.tex))))
+\c@tikzmarkalign=\count569
+\c@tikzmarkaligns=\count570
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'portuguese'.
  (./lista1.aux
-\c@pagesLTS.arabic.1.local.cnt=\count566
+\c@pagesLTS.arabic.1.local.cnt=\count571
 )
 \openout1 = lista1.aux
 
@@ -1775,17 +1826,17 @@ File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 LaTeX Font Info:    ... okay on input line 11.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count567
-\scratchdimen=\dimen372
-\scratchbox=\box139
-\nofMPsegments=\count568
-\nofMParguments=\count569
-\everyMPshowfont=\toks81
-\MPscratchCnt=\count570
-\MPscratchDim=\dimen373
-\MPnumerator=\count571
-\makeMPintoPDFobject=\count572
-\everyMPtoPDFconversion=\toks82
+\scratchcounter=\count572
+\scratchdimen=\dimen383
+\scratchbox=\box144
+\nofMPsegments=\count573
+\nofMParguments=\count574
+\everyMPshowfont=\toks83
+\MPscratchCnt=\count575
+\MPscratchDim=\dimen384
+\MPnumerator=\count576
+\makeMPintoPDFobject=\count577
+\everyMPtoPDFconversion=\toks84
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1994,9 +2045,9 @@ Package biblatex Info: ... file 'lista1.bbl' found.
 Package biblatex Info: Reference section=0 on input line 11.
 Package biblatex Info: Reference segment=0 on input line 11.
 Package hyperref Info: Link coloring ON on input line 11.
-\c@pagesLTS.pnc.arabic=\count573
-\c@pagesLTS.double.arabic=\count574
-\c@pagesLTS.current.local.arabic=\count575
+\c@pagesLTS.pnc.arabic=\count578
+\c@pagesLTS.double.arabic=\count579
+\c@pagesLTS.current.local.arabic=\count580
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: luatex
 * paper: a4paper
@@ -3533,7 +3584,7 @@ File: Figures/vanilla.png Graphic file (type png)
 Package luatex.def Info: Figures/vanilla.png  used on input line 274.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
 [40]
-\c@pagesLTS.arabic.1.local.count=\count576
+\c@pagesLTS.arabic.1.local.count=\count581
  
 AED: pageslts setting VeryLastPage via AfterLastShipout 
 
@@ -3554,16 +3605,16 @@ Package logreq Info: Writing requests to 'lista1.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51449 strings out of 476553
- 125081,2373549 words of node,token memory allocated
+ 55357 strings out of 476553
+ 100000,2848258 words of node,token memory allocated
  3119 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 14 sub_mlist, 1 margin_kern, 3 glyph, 603 attribute, 200 glue_spec, 303 attribute_list, 3 write nodes
-   avail lists: 1:1,2:5009,3:862,4:100,5:659,6:44,7:5736,8:393,9:2357,10:9,11:308
- 71863 multiletter control sequences out of 65536+600000
+   avail lists: 1:10,2:5009,3:862,4:100,5:659,6:44,7:5736,8:393,9:2357,10:9,11:308
+ 75616 multiletter control sequences out of 65536+600000
  109 fonts using 19656711 bytes
- 167i,29n,152p,1512b,1644s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 167i,29n,152p,1488b,1644s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/fonts/opentype/ebgaramond/EBGaramond08-Regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Bold.otf></usr/share/fonts/opentype/ebgaramond/EBGaramond12-Regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb>
-Output written on lista1.pdf (41 pages, 4339706 bytes).
+Output written on lista1.pdf (41 pages, 4339530 bytes).
 
 PDF statistics: 360 PDF objects out of 1000 (max. 8388607)
  176 compressed objects within 2 object streams

@@ -147,98 +147,98 @@ Reduzimos a expressão a
     \begin{align*}
         L^{\alpha\beta} &\eq 2(g^{\mu\alpha}g^{\nu\beta} - g^{\mu\nu}g^{\alpha\beta} + g^{\mu\beta}g^{\alpha\nu}) k_{\mu}'k_{\nu} + 2 m^{2} g^{\alpha\beta} \\
         &\eq 2[k^{\prime\alpha}k^{\beta} - g^{\alpha\beta}(k'\cdot k) + k^{\prime\beta}k^{\alpha}] + 2 m^{2} g^{\alpha\beta} \\
-        &\eq 2\qty{
+        &\eq 2\qty[
             k^{\prime\alpha}k^{\beta} +
             k^{\prime\beta}k^{\alpha} - 
-            g^{\alpha\beta}\qty[
-                (k'\cdot k) - m^{2}
-            ]
-        }
+            g^{\alpha\beta}\qty(
+                k'\cdot k - m^{2}
+            )
+        ]
     \end{align*}
 
 Segue que o tensor hadrônico fica
     \begin{equation*}
-        W_{\alpha\beta} = 2\Big\{
+        W_{\alpha\beta} = 2\Big[
             p_{\alpha}'p_{\beta} +
             p_{\beta}'p_{\alpha} - 
-            g_{\alpha\beta}\qty[
-                (p'\cdot p) - M^{2}
-            ]
-        \Big\}\delta^{4}(2p\cdot q + q^{2})
+            g_{\alpha\beta}\qty(
+                p'\cdot p - M^{2}
+            )
+        \Big]\delta^{4}(2p\cdot q + q^{2})
     \end{equation*}
 
 Tendo então estas formas, a contração pode ser feita:
     \begin{align*}
-        L^{\alpha\beta}W_{\alpha\beta} &\eq 4\qty{
+        L^{\alpha\beta}W_{\alpha\beta} &\eq 4\qty[
             k^{\prime\alpha}k^{\beta} +
             k^{\prime\beta}k^{\alpha} - 
-            g^{\alpha\beta}\qty[
-                (k'\cdot k) - m^{2}
-            ]
-        }\Big\{
+            g^{\alpha\beta}\qty(
+                k'\cdot k - m^{2}
+            )
+        ]\Big[
             p_{\alpha}'p_{\beta} +
             p_{\beta}'p_{\alpha} - 
-            g_{\alpha\beta}\qty[
-                (p'\cdot p) - M^{2}
-            ]
-        \Big\} \times \\
+            g_{\alpha\beta}\qty(
+                p'\cdot p - M^{2}
+            )
+        \Big] \times \\
         &\noeq \times \delta^{4}(2p\cdot q + q^{2}) \\
-        &\eq 4 \Big\{
+        &\eq 4 \Big[
             (k'\cdot p')(k\cdot p) +
             (k'\cdot p)(k\cdot p') -
-            (k'\cdot k)\qty[
-                (p'\cdot p) - M^{2}
-            ] +
+            (k'\cdot k)\qty(
+                p'\cdot p - M^{2}
+            ) +
             (k'\cdot p)(k\cdot p') + \\
         &\noeq 
             (k'\cdot p')(k\cdot p) -
-            (k'\cdot k)\qty[
-                (p'\cdot p) - M^{2}
-            ] -
-            (p'\cdot p)\qty[
-                (k'\cdot k) - m^{2}
-            ] -
-            (p'\cdot p)\qty[
-                (k'\cdot k) - m^{2}
-            ] + \\
+            (k'\cdot k)\qty(
+                p'\cdot p - M^{2}
+            ) -
+            (p'\cdot p)\qty(
+                k'\cdot k - m^{2}
+            ) -
+            (p'\cdot p)\qty(
+                k'\cdot k - m^{2}
+            ) + \\
         &\noeq 
-            4\qty[
-                (k'\cdot k) - m^{2}
-            ]\qty[
-                (p'\cdot p) - M^{2}
-            ]
-        \Big\}\delta^{4}(2p\cdot q + q^{2}) \\
-        &\eq 4\Big\{ 
+            4\qty(
+                k'\cdot k - m^{2}
+            )\qty(
+                p'\cdot p - M^{2}
+            )
+        \Big]\delta^{4}(2p\cdot q + q^{2}) \\
+        &\eq 4\Big[
             2 (k'\cdot p')(k\cdot p) + 
             2 (k'\cdot p)(k\cdot p') -
-            2 (k'\cdot k)\qty[
-                (p'\cdot p) - M^{2}
-            ] -
-            2 (p'\cdot p)\qty[
-                (k'\cdot k) - m^{2}
-            ] + \\
+            2 (k'\cdot k)\qty(
+                p'\cdot p - M^{2}
+            ) -
+            2 (p'\cdot p)\qty(
+                k'\cdot k - m^{2}
+            ) + \\
         &\noeq +
-            4 (k'\cdot k)\qty[
-                (p'\cdot p) - M^{2}
-            ] - 
-            4 m^{2}\qty[
-                (p'\cdot p) - M^{2}
-            ]
-        \Big\}\delta^{4}(2p\cdot q + q^{2}) \\
-        &\eq 4\Big\{ 
+            4 (k'\cdot k)\qty(
+                p'\cdot p - M^{2}
+            ) - 
+            4 m^{2}\qty(
+                p'\cdot p - M^{2}
+            )
+        \Big]\delta^{4}(2p\cdot q + q^{2}) \\
+        &\eq 4\Big[
             2 (k'\cdot p')(k\cdot p) + 
             2 (k'\cdot p)(k\cdot p') +
-            2 (k'\cdot k)\qty[
-                (p'\cdot p) - M^{2}
-            ] -
-            2 (p'\cdot p)\qty[
-                (k'\cdot k) - m^{2}
-            ] + \\
+            2 (k'\cdot k)\qty(
+                p'\cdot p - M^{2}
+            ) -
+            2 (p'\cdot p)\qty(
+                k'\cdot k - m^{2}
+            ) + \\
         &\noeq -
-            4 m^{2}\qty[
-                (p'\cdot p) - M^{2}
-            ]
-        \Big\}\delta^{4}(2p\cdot q + q^{2}) \\
+            4 m^{2}\qty(
+                p'\cdot p - M^{2}
+            )
+        \Big]\delta^{4}(2p\cdot q + q^{2}) \\
         &\eq 4\Big[
             2(k'\cdot p')(k\cdot p) +
             2(k'\cdot p)(k\cdot p') +
@@ -278,7 +278,7 @@ Como estamos em altas energias ($E,E'\gg m$), a massa do elétron pode ser desco
 
 Na conservação de momento, $p' = p + q$ e $q = k - k'$, então
     \begin{align*}
-        k'\cdot p' = k'\cdot (p + q) &=  k'\cdot p + k'\cdot q &
+        k'\cdot p' = k'\cdot (p + q) &= k'\cdot p + k'\cdot q &
         k\cdot p' = k\cdot (p + q) &= k\cdot p + k\cdot q \\
         &= k'\cdot p + k'\cdot(k - k') & &= k\cdot p + k\cdot (k - k') \\
         &= k'\cdot p + k'\cdot k - (k')^{2} & &= k\cdot p + k^{2} - k\cdot k'
@@ -361,7 +361,7 @@ Portanto
 
 Podemos escrever
     \begin{align*}
-        E - E' = \dfrac{1}{M}(ME - ME') = \dfrac{1}{M}(p\cdot k - p\cdot k') = \dfrac{1}{M}p\cdot(k - k') = \dfrac{p\cdot q}{M}
+        E - E' = \dfrac{1}{M}(ME - ME') = \dfrac{1}{M}(p\cdot k - p\cdot k') = \dfrac{p\cdot(k - k')}{M} = \dfrac{p\cdot q}{M}
     \end{align*}
 
 Então definindo $\nu \coloneqq \dfrac{p\cdot q}{M} = E - E'$ e $q^{2} \equiv -Q^{2}$ (momento transferido), concluímos que a contração entre os tensores, no referencial do laboratório, assume a forma
