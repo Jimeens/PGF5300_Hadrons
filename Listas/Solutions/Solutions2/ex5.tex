@@ -1,33 +1,105 @@
-\begin{itemize}
-    \item Os diagramas de 1 loop do propagador do quark (esquerda) de do elétron (direita) são
-        \begin{center}
-            \begin{tikzpicture}
-                \begin{feynman}
-                    \vertex (i1);
-                    \vertex [right=1cm of i1, dot] (i2) {};
-                    \vertex [right=2cm of i2, dot] (i3) {};
-                    \vertex [right=1cm of i3] (i4);
+O diagrama de 1 loop do propagador do elétron assume a forma
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{feynman}
+                \vertex (i1);
+                \vertex [right=2cm of i1, dot] (i2) {};
+                \vertex [right=2cm of i2, dot] (i3) {};
+                \vertex [right=2cm of i3] (i4);
 
-                    \diagram* {
-                        (i1) -- (i2) -- [fermion] (i3) -- (i4),
-                        (i2) -- [gluon, half left, looseness=1.5] (i3),
-                    };
-                \end{feynman}
-            \end{tikzpicture}
-            \hspace{2cm}
-            \begin{tikzpicture}
-                \begin{feynman}
-                    \vertex (i1);
-                    \vertex [right=1cm of i1, dot] (i2) {};
-                    \vertex [right=2cm of i2, dot] (i3) {};
-                    \vertex [right=1cm of i3] (i4);
+                \diagram* {
+                    (i1) -- [fermion, edge label' = $p$] (i2) -- [fermion, edge label' = $k$] (i3) -- [fermion, edge label' = $p$] (i4),
+                    (i2) -- [boson, half left, looseness=1.5, edge label = $p-k$] (i3),
+                };
+            \end{feynman}
+            \node at (8.2,0){$= iS(p)\qty[i\Sigma_{2}^{\text{QED}}(p)]iS(p)$};
+        \end{tikzpicture}
+    \end{center}
+onde $iS(p)$ é simplesmente o propagador do elétron. Buscamos então determinar $i\Sigma_{2}^{\text{QED}}(p)$, que pelas regras de Feynman da QED pode ser determinada facilmente, pois
+    \begin{itemize}
+        \item 1 loop $\Rightarrow$ 1 integral em $\dd[4]{k}$;
+        \item 2 vértices de interação elétron-fóton $\Rightarrow$ dois termos do tipo $-ie\gamma_{\mu}$;
+        \item 1 linha de elétron $\Rightarrow$ 1 propagador $iS(k) = \dfrac{i(\slashed{k}+m)}{k^{2} - m^{2} + i\varepsilon}$;
+        \item 1 linha de fóton $\Rightarrow$ 1 propagador $i\Delta_{\mu\nu}(p-k) = \dfrac{-ig_{\mu\nu}}{(p - k)^{2} + i\varepsilon}$.
+    \end{itemize}
 
-                    \diagram* {
-                        (i1) -- (i2) -- (i3) -- (i4),
-                        (i2) -- [boson, half left, looseness=1.5] (i3),
-                    };
-                \end{feynman}
-            \end{tikzpicture}
-        \end{center}
-    \item O fato de não precisar calcular a integração de loop indica que existe algum truque pra obter a resposta.
-\end{itemize}
+Então
+    \begin{align*}
+        i\Sigma_{2}^{\text{QED}}(p) &\eq \int \dfrac{1}{(2\pi)^{4}}
+        \qty[-ie\gamma_{\mu}]
+        \qty[\dfrac{i(\slashed{k} + m)}{k^{2} - m^{2} + i\varepsilon}]
+        \qty[-ie\gamma^{\nu}]
+        \qty[\dfrac{-ig_{\mu\nu}}{(p - k)^{2} + i\varepsilon}] \dd[4]{k} \\
+        &\eq -e^{2}\int \dfrac{1}{(2\pi)^{4}} 
+        \gamma_{\mu}
+        \dfrac{i(\slashed{k} + m)}{k^{2} - m^{2} + i\varepsilon}
+        \gamma_{\mu}
+        \dfrac{-i}{(p-k)^{2} + i\varepsilon}
+        \dd[4]{k}
+    \end{align*}
+
+No caso do diagrama de 1 loop do propagador do quark, temos a forma
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{feynman}
+                \vertex (i1);
+                \vertex [right=2cm of i1, dot] (i2) {};
+                \vertex [right=2cm of i2, dot] (i3) {};
+                \vertex [right=2cm of i3] (i4);
+
+                \diagram* {
+                    (i1) -- [fermion, edge label' = $p$] (i2) -- [fermion, edge label' = $k$] (i3) -- [fermion, edge label' = $p$] (i4),
+                    (i2) -- [gluon, half left, looseness=1.5, edge label = $p-k$] (i3),
+                };
+            \end{feynman}
+            \node at (8.2,0){$= iS(p)\qty[i\Sigma_{2}^{\text{QCD}}(p)]iS(p)$};
+        \end{tikzpicture}
+    \end{center}
+
+Utilizando então as regras de Feynman da QCD, temos
+    \begin{itemize}
+        \item 1 loop $\Rightarrow$ 1 integral em $\dd[4]{k}$;
+        \item 2 vértices de interação quark-gluon $\Rightarrow$ dois termos do tipo $ig\gamma_{\mu}T_{a}$;
+        \item 1 linha de quark $\Rightarrow$ 1 propagador $iS(k) = \dfrac{i(\slashed{k}+m)}{k^{2} - m^{2} + i\varepsilon}$;
+        \item 1 linha de glúon $\Rightarrow$ 1 propagador $i\Delta_{\mu\nu,ab}(p-k) = \dfrac{-ig_{\mu\nu} + (1-\xi)\frac{(p-k)_{\mu}(p-k)_{\nu}}{(p-k)^{2}}}{(p - k)^{2} + i\varepsilon}\delta_{ab}$.
+    \end{itemize}
+
+Trabalhando então do gauge de Feynman-'t Hooft ($\xi = 1$), o propagador do glúon se reduz o propagador do glúon a
+    \begin{equation*}
+        i\Delta_{\mu\nu,ab}(p-k) = \dfrac{-ig_{\mu\nu}}{(p -k)^{2} + i\varepsilon}\delta_{ab}
+    \end{equation*}
+
+Portanto
+    \begin{align*}
+        i\Sigma_{2}^{\text{QCD}}(p) &\eq \int \dfrac{1}{(2\pi)^{4}}
+        \qty[ig\gamma_{\mu}T_{a}]
+        \qty[\dfrac{i(\slashed{k} + m)}{k^{2} - m^{2} + i\varepsilon}]
+        \qty[ig\gamma^{\nu}T_{b}]
+        \qty[\dfrac{-ig_{\mu\nu}}{(p-k)^{2} + i\varepsilon}\delta_{ab}]
+        \dd[4]{k} \\
+        &\eq -g^{2}T_{a}T_{b}\delta_{ab}\int\dfrac{1}{(2\pi)^{4}}
+        \gamma_{\mu}
+        \dfrac{i(\slashed{k} + m)}{k^{2} - m^{2} + i\varepsilon}
+        \gamma_{\mu}
+        \dfrac{-i}{(p - k)^{2} + i\varepsilon}
+        \dd[4]{k}
+    \end{align*}
+
+Como o glúon é um estado intermediário no diagrama, precisamos somar sobre todas as cores de glúons, o que é fazer uma soma em $a$ e $b$, ou seja, definindo 
+    \begin{equation*}
+        C_{F} \coloneqq \sum_{a,b}T_{a}T_{b}\delta_{ab} = \sum_{a} T_{a}^{2}
+    \end{equation*}
+ficamos com
+    \begin{equation*}
+        i\Sigma_{2}^{\text{QCD}}(p) = -g^{2}C_{F}\int\dfrac{1}{(2\pi)^{4}}
+        \gamma_{\mu}
+        \dfrac{i(\slashed{k} + m)}{k^{2} - m^{2} + i\varepsilon}
+        \gamma_{\mu}
+        \dfrac{-i}{(p - k)^{2} + i\varepsilon}
+        \dd[4]{k}
+    \end{equation*}
+
+Então podemos estabelecer uma relação de igualdade entre os diagramas, pois a única diferença entre eles vão ser as constantes de acoplamento $e$ e $g$ e o fator $C_{F}$ no diagrama de quark, então 
+    \begin{answer}\label{eq: answer 5}
+        \dfrac{1}{g^{2}}\qty[i\Sigma_{2}^{\text{QCD}}(p)] = \dfrac{C_{F}}{e^{2}}\qty[i\Sigma_{2}^{\text{QED}}(p)]
+    \end{answer}
