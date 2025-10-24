@@ -17,10 +17,10 @@ O diagrama de 1 loop do propagador do elétron assume a forma
     \end{center}
 onde $iS(p)$ é simplesmente o propagador do elétron. Buscamos então determinar $i\Sigma_{2}^{\text{QED}}(p)$, que pelas regras de Feynman da QED pode ser determinada facilmente, pois
     \begin{itemize}
-        \item 1 loop $\Rightarrow$ 1 integral em $\dd[4]{k}$;
+        \item 1 loop $\Rightarrow$ 1 integral $\displaystyle\int \dfrac{1}{(2\pi)^{4}}[\phantom{\cdots}]\dd[4]{k}$;
         \item 2 vértices de interação elétron-fóton $\Rightarrow$ dois termos do tipo $-ie\gamma_{\mu}$;
         \item 1 linha de elétron $\Rightarrow$ 1 propagador $iS(k) = \dfrac{i(\slashed{k}+m)}{k^{2} - m^{2} + i\varepsilon}$;
-        \item 1 linha de fóton $\Rightarrow$ 1 propagador $i\Delta_{\mu\nu}(p-k) = \dfrac{-ig_{\mu\nu}}{(p - k)^{2} + i\varepsilon}$.
+        \item 1 linha de fóton $\Rightarrow$ 1 propagador $i\Delta^{\mu\nu}(p-k) = \dfrac{-ig^{\mu\nu}}{(p - k)^{2} + i\varepsilon}$.
     \end{itemize}
 
 Então
@@ -28,12 +28,12 @@ Então
         i\Sigma_{2}^{\text{QED}}(p) &\eq \int \dfrac{1}{(2\pi)^{4}}
         \qty[-ie\gamma_{\mu}]
         \qty[\dfrac{i(\slashed{k} + m)}{k^{2} - m^{2} + i\varepsilon}]
-        \qty[-ie\gamma^{\nu}]
-        \qty[\dfrac{-ig_{\mu\nu}}{(p - k)^{2} + i\varepsilon}] \dd[4]{k} \\
+        \qty[-ie\gamma_{\nu}]
+        \qty[\dfrac{-ig^{\mu\nu}}{(p - k)^{2} + i\varepsilon}] \dd[4]{k} \\
         &\eq -e^{2}\int \dfrac{1}{(2\pi)^{4}} 
         \gamma_{\mu}
         \dfrac{i(\slashed{k} + m)}{k^{2} - m^{2} + i\varepsilon}
-        \gamma_{\mu}
+        \gamma^{\mu}
         \dfrac{-i}{(p-k)^{2} + i\varepsilon}
         \dd[4]{k}
     \end{align*}
@@ -58,15 +58,15 @@ No caso do diagrama de 1 loop do propagador do quark, temos a forma
 
 Utilizando então as regras de Feynman da QCD, temos
     \begin{itemize}
-        \item 1 loop $\Rightarrow$ 1 integral em $\dd[4]{k}$;
+        \item 1 loop $\Rightarrow$ 1 integral em $\displaystyle\int\dfrac{1}{(2\pi)^{4}}[\phantom{\cdots}]\dd[4]{k}$;
         \item 2 vértices de interação quark-gluon $\Rightarrow$ dois termos do tipo $ig\gamma_{\mu}T_{a}$;
         \item 1 linha de quark $\Rightarrow$ 1 propagador $iS(k) = \dfrac{i(\slashed{k}+m)}{k^{2} - m^{2} + i\varepsilon}$;
-        \item 1 linha de glúon $\Rightarrow$ 1 propagador $i\Delta_{\mu\nu,ab}(p-k) = \dfrac{-ig_{\mu\nu} + (1-\xi)\frac{(p-k)_{\mu}(p-k)_{\nu}}{(p-k)^{2}}}{(p - k)^{2} + i\varepsilon}\delta_{ab}$.
+        \item 1 linha de glúon $\Rightarrow$ 1 propagador $i\Delta_{ab}^{\mu\nu}(p-k) = \dfrac{-ig^{\mu\nu} + (1-\xi)\frac{(p-k)^{\mu}(p-k)^{\nu}}{(p-k)^{2}}}{(p - k)^{2} + i\varepsilon}\delta_{ab}$.
     \end{itemize}
 
 Trabalhando então do gauge de Feynman-'t Hooft ($\xi = 1$), o propagador do glúon se reduz o propagador do glúon a
     \begin{equation*}
-        i\Delta_{\mu\nu,ab}(p-k) = \dfrac{-ig_{\mu\nu}}{(p -k)^{2} + i\varepsilon}\delta_{ab}
+        i\Delta_{ab}^{\mu\nu}(p-k) = \dfrac{-ig^{\mu\nu}}{(p -k)^{2} + i\varepsilon}\delta_{ab}
     \end{equation*}
 
 Portanto
@@ -74,13 +74,13 @@ Portanto
         i\Sigma_{2}^{\text{QCD}}(p) &\eq \int \dfrac{1}{(2\pi)^{4}}
         \qty[ig\gamma_{\mu}T_{a}]
         \qty[\dfrac{i(\slashed{k} + m)}{k^{2} - m^{2} + i\varepsilon}]
-        \qty[ig\gamma^{\nu}T_{b}]
-        \qty[\dfrac{-ig_{\mu\nu}}{(p-k)^{2} + i\varepsilon}\delta_{ab}]
+        \qty[ig\gamma_{\nu}T_{b}]
+        \qty[\dfrac{-ig^{\mu\nu}}{(p-k)^{2} + i\varepsilon}\delta_{ab}]
         \dd[4]{k} \\
         &\eq -g^{2}T_{a}T_{b}\delta_{ab}\int\dfrac{1}{(2\pi)^{4}}
         \gamma_{\mu}
         \dfrac{i(\slashed{k} + m)}{k^{2} - m^{2} + i\varepsilon}
-        \gamma_{\mu}
+        \gamma^{\mu}
         \dfrac{-i}{(p - k)^{2} + i\varepsilon}
         \dd[4]{k}
     \end{align*}
@@ -94,7 +94,7 @@ ficamos com
         i\Sigma_{2}^{\text{QCD}}(p) = -g^{2}C_{F}\int\dfrac{1}{(2\pi)^{4}}
         \gamma_{\mu}
         \dfrac{i(\slashed{k} + m)}{k^{2} - m^{2} + i\varepsilon}
-        \gamma_{\mu}
+        \gamma^{\mu}
         \dfrac{-i}{(p - k)^{2} + i\varepsilon}
         \dd[4]{k}
     \end{equation*}

@@ -46,10 +46,10 @@ Na função de 4-pontos $i\Gamma^{(4)}$, temos que as 4 primeiras contribuiçõe
         \vertex [below right=0.5*1.5cm and 0.5*2cm of i5] (i6);
 
         \diagram* {
-            (i1) -- [plain, momentum={[arrow shorten=0.7]$p_{3}$}] (i2) -- [plain, rmomentum={[arrow shorten=0.7]$p_{4}$}] (i3),
+            (i1) -- [plain, rmomentum={[arrow shorten=0.7]$p_{1}$}] (i2) -- [plain, rmomentum={[arrow shorten=0.7]$p_{3}$}] (i3),
             (i2) -- [plain, half left, looseness=1.5] (i5),
             (i5) -- [plain, half left, looseness=1.5] (i2),
-            (i4) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{1}$}] (i5) -- [plain, momentum'={[arrow shorten=0.7]$p_{2}$}] (i6),
+            (i4) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{2}$}] (i5) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{4}$}] (i6),
         };
     \end{feynman}
     \hspace{1.5cm}
@@ -57,51 +57,72 @@ Na função de 4-pontos $i\Gamma^{(4)}$, temos que as 4 primeiras contribuiçõe
     \hspace{1.5cm}
     \begin{feynman}
         \vertex (i1);
-        \vertex [below right=0.5*3cm and 0.5*2cm of i1, dot] (i2) {};
-        \vertex [below left=0.5*1.5cm and 0.5*2cm of i2] (i3);
+        \vertex [below right=0.5*1.5cm and 0.5*2cm of i1, dot] (i2) {};
+        \vertex [above right=0.5*1.5cm and 0.5*5cm of i2] (i3);
         
-        \vertex [right=3.5cm of i1] (i4);
-        \vertex [right=1.5cm of i2, dot] (i5) {};
-        \vertex [right=3.5cm of i3] (i6);
+        \vertex [below=0.5*6cm of i1] (i4);
+        \vertex [above right=0.5*1.5cm and 0.5*2cm of i4, dot] (i5) {};
+        \vertex [below right=0.5*1.5cm and 0.5*5cm of i5] (i6);
 
         \diagram* {
-            (i1) -- [plain, half left, looseness=0.425, rmomentum'={[arrow shorten=0.45]$p_{3}$}] (i5) -- [plain, rmomentum={[arrow shorten=0.7]$p_{4}$}] (i6),
-            (i2) -- [plain, half left, looseness=1.25] (i5),
-            (i5) -- [plain, half left, looseness=1.25] (i2),
-            (i4) -- [plain, half right, looseness=0.425, momentum={[arrow shorten=0.45]$p_{1}$}] (i2) -- [plain, momentum'={[arrow shorten=0.7]$p_{2}$}] (i3),
+            (i1) -- [plain, rmomentum={[arrow shorten=0.7]$p_{1}$}] (i2) -- [plain, half left, looseness=0.8, rmomentum'={[arrow shorten=0.55]$p_{4}$}] (i6),
+            (i2) -- [plain, half left, looseness=1.5] (i5),
+            (i5) -- [plain, half left, looseness=1.5] (i2),
+            (i4) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{2}$}] (i5) -- [plain, half right, looseness=0.8, rmomentum={[arrow shorten=0.55]$p_{3}$}] (i3),
         };
     \end{feynman}
 \end{tikzpicture}
 
-Então em expansão de $i\lambda$ (representando a quantidade de vértices), temos
+Que pode ser representado em uma expansão de $i\lambda$ (representando a quantidade de vértices), ou seja
     \begin{equation*}
         i\Gamma^{(4)} = (-i\lambda) + \dfrac{(-i\lambda)^{2}}{2}\qty(J_{1} + J_{2} +  J_{3}) + \mathcal{O}(\lambda^{3})
     \end{equation*}
 
 Então o diagrama que estamos buscando é o terceiro da lista acima, que representa a contribuição
-    \begin{equation*}
-        \mathbb{J}_{2} \coloneqq \dfrac{(-i\lambda)^{2}}{2}J_{2}
-    \end{equation*}
+    \begin{center}
+        \begin{tikzpicture}
+            \node at (-1,-2.25) {$\mathbb{J}_{2} \coloneqq \dfrac{(-i\lambda)^{2}}{2}J_{2} =$};
+            \hspace{1.5cm}
+            \begin{feynman}
+                \vertex (i1);
+                \vertex [below right=0.75*1.5cm and 0.75*2cm of i1, dot] (i2) {};
+                \vertex [above right=0.75*1.5cm and 0.75*2cm of i2] (i3);
+                
+                \vertex [below=0.75*6cm of i1] (i4);
+                \vertex [above right=0.75*1.5cm and 0.75*2cm of i4, dot] (i5) {};
+                \vertex [below right=0.75*1.5cm and 0.75*2cm of i5] (i6);
 
-Utilizando as regras de Feynman para o modelo $\lambda\phi^{4}$, o diagrama representado por $\mathbb{J}_{2}$ em regularização dimensional é dado por
-    \begin{equation*}
-        \mathbb{J}_{2} = -\dfrac{\lambda^{2}}{2} \mu^{4-\mathsf{D}} \int 
+                \diagram* {
+                    (i1) -- [plain, rmomentum={[arrow shorten=0.7]$p_{1}$}] (i2) -- [plain, rmomentum={[arrow shorten=0.7]$p_{3}$}] (i3),
+                    (i2) -- [plain, half left, looseness=1.5, rmomentum'={[arrow shorten=0.7]$k$}] (i5),
+                    (i5) -- [plain, half left, looseness=1.5, rmomentum'={[arrow shorten=0.7]$p-k$}] (i2),
+                    (i4) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{2}$}] (i5) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{4}$}] (i6),
+                };
+            \end{feynman}
+        \end{tikzpicture}
+    \end{center}    
+
+Neste diagrama em questão, a conservação do momento nos vértices nos dá as relações
+    \begin{align*}
+        p_{2} - (p-k) &= p_{4} + k & 
+        p_{1} + (p-k) &= p_{3} - k 
+    \end{align*}
+
+Então $p = p_{1} - p_{3} = p_{4} - p_{2}$. Utilizando as regras de Feynman para o modelo $\lambda\phi^{4}$, o diagrama representado por $\mathbb{J}_{2}$ em regularização dimensional é dado por
+    \begin{align*}
+        \mathbb{J}_{2} &\eq -\dfrac{\lambda^{2}}{2} \mu^{4-\mathsf{D}} \int 
         \dfrac{1}{(2\pi)^{\mathsf{D}}}
-        \dfrac{i}{(-p_{3}+k)^{2} - m^{2} + i\varepsilon}
-        \dfrac{i}{(p_{1}-k)^{2} - m^{2} + i\varepsilon}
-        \dd[\mathsf{D}]{k}
-    \end{equation*}
-
-Fazendo uma mudança de variável $k \mapsto k + p_{3}$, que mantém a integral invariante, temos
-    \begin{equation*}
-        \mathbb{J}_{2} = \dfrac{\lambda^{2}}{2} \mu^{4-\mathsf{D}} \int 
+        \dfrac{i}{k^{2} - m^{2} + i\varepsilon}
+        \dfrac{i}{(p-k)^{2} - m^{2} + i\varepsilon}
+        \dd[\mathsf{D}]{k} \\
+        &\eq \dfrac{\lambda^{2}}{2} \mu^{4-\mathsf{D}} \int 
         \dfrac{1}{(2\pi)^{\mathsf{D}}}
         \dfrac{1}{k^{2} - m^{2} + i\varepsilon}
-        \dfrac{1}{(p_{1} - k - p_{3})^{2} - m^{2} + i\varepsilon}
+        \dfrac{1}{(p_{1} - p_{3} - k)^{2} - m^{2} + i\varepsilon}
         \dd[\mathsf{D}]{k}
-    \end{equation*}
+    \end{align*}
 
-Sendo então $D_{1} \coloneqq k^{2} - m^{2} + i\varepsilon$ e $D_{2} \coloneqq (p_{1} - k - p_{3})^{2} - m^{2} + i\varepsilon$, obtemos
+Sendo então $D_{1} \coloneqq k^{2} - m^{2} + i\varepsilon$ e $D_{2} \coloneqq (p_{1} - p_{3} - k)^{2} - m^{2} + i\varepsilon$, obtemos
     \begin{equation*}
         \mathbb{J}_{2} = \dfrac{\lambda^{2}}{2} \mu^{4-\mathsf{D}} \int 
         \dfrac{1}{(2\pi)^{\mathsf{D}}}
@@ -126,8 +147,8 @@ para reescrever a integral como
     \end{align*}
 onde definimos $D_{T} \coloneqq (1-a)D_{1} + aD_{2}$. Desenvolvendo $D_{T}$, obtemos
     \begin{align*}
-        D_{T} &\eq (1-a)(k^{2} - m^{2} + i\varepsilon) + a\qty[(p_{1} - k - p_{3})^{2} - m^{2} + i\varepsilon] \\
-        &\eq k^{2} - m^{2} + i \varepsilon - ak^{2} + {\color{orange}am^{2}} - {\color{red!70!black}ia\varepsilon} + a(p_{1} - k - p_{3})^{2} - {\color{orange}am^{2}} + {\color{red!70!black}ia\varepsilon} \\
+        D_{T} &\eq (1-a)(k^{2} - m^{2} + i\varepsilon) + a\qty[(p_{1}- p_{3} - k)^{2} - m^{2} + i\varepsilon] \\
+        &\eq k^{2} - m^{2} + i \varepsilon - ak^{2} + {\color{orange}am^{2}} - {\color{red!70!black}ia\varepsilon} + a(p_{1}- p_{3} - k)^{2} - {\color{orange}am^{2}} + {\color{red!70!black}ia\varepsilon} \\
         &\eq k^{2} - m^{2} + i \varepsilon - {\color{orange}ak^{2}} + ap_{1}^{2} - 2akp_{1} + {\color{orange}ak^{2}} - 2ap_{1}p_{3} + 2akp_{3} + ap_{3}^{2} \\
         &\eq k^{2} - m^{2} + i \varepsilon - 2ak(p_{1} - p_{3}) + a(p_{1}^{2} - 2p_{1}p_{3} + p_{3}^{2}) \\
         &\eq k^{2} - m^{2} + i \varepsilon - 2ak(p_{1} - p_{3}) + a(p_{1} - p_{3})^{2}
@@ -188,12 +209,11 @@ o que nos mostra que as divergências aparecem como pólos na função gama em $
     \begin{equation*}
         \Gamma(\epsilon) = \dfrac{1}{\epsilon} - \gamma_{EM} + \mathcal{O}(\epsilon)
     \end{equation*}
-e que
+com $\gamma_{EM}$ sendo a constante de Euler-Mascheroni e que
     \begin{equation*}
         \lim_{\epsilon \to 0} (A)^{\epsilon} = 1 + \epsilon \ln(A) + \mathcal{O}(\epsilon^{2})
     \end{equation*}
-
-A expressão para $\mathbb{J}_{2}$ fica:
+a expressão para $\mathbb{J}_{2}$ fica:
     \begin{align*}
         \mathbb{J}_{2} &\eq \dfrac{i\lambda^{2}}{32\pi^{2}} \qty[\dfrac{1}{\epsilon} - \gamma_{EM} + \mathcal{O}(\epsilon)] \int_{0}^{1} \qty[1 + \epsilon\ln\qty(\dfrac{4\pi \mu^{2}}{X^{2}}) + \mathcal{O}(\epsilon^{2})] \dd{a} \\
         &\eq \dfrac{i\lambda^{2}}{32\pi^{2}} \qty[\dfrac{1}{\epsilon} - \gamma_{EM} + \mathcal{O}(\epsilon)]\qty[1 + \epsilon \int_{0}^{1} \ln\qty(\dfrac{4\pi \mu^{2}}{X^{2}}) \dd{a} + \mathcal{O}(\epsilon^{2})] \\

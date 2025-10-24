@@ -1,0 +1,86 @@
+Para calcular o primeiro diagrama, podemos explicitar os momentos que devem ser considerados e depois aplicar as regras de Feynman da QCD. O diagrama é então
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{feynman}
+                \vertex (i1) {$e^{+}$};
+                \vertex [below right=1.5cm and 2cm of i1] (i2);
+                \vertex [below left=1.25cm and 1.75cm of i2] (i3) {$e^{-}$};
+
+                \vertex [right=6cm of i1] (i4) {$q$};
+                \vertex [below left=0.75cm and 1cm of i4] (vg1); % gluon vertex 1
+                \vertex [below left=1.5cm and 2cm of i4] (i5);
+                \vertex [below right=0.75 and 1cm of i5] (vg2); % gluon vertex 2
+                \vertex [below right=1.25cm and 1.75cm of i5] (i6) {$\bar{q}$};
+
+                \vertex [below left=0.375cm and 0.5cm of i4] (g1);
+                \vertex [below=2.25cm of g1] (g2);
+
+                \diagram*{
+                    (i3) -- [fermion, rmomentum={[arrow shorten=0.7]$k_{2}$}] (i2) -- [fermion, momentum={[arrow shorten=0.7]$k_{1}$}] (i1),
+                    (i2) -- [boson, rmomentum={[arrow shorten=0.7]$Q$}] (i5),
+                    (i6) -- [fermion, momentum'={[arrow shorten=0.7]$p_{1}$}] (vg2) -- [fermion, momentum'={[arrow shorten=0.7]$p_{1}+k$}] (i5) -- [fermion, rmomentum'={[arrow shorten=0.7]$p_{2}-k$}] (vg1) -- [fermion, rmomentum'={[arrow shorten=0.7]$p_{2}$}] (i4),
+                    (vg1) -- [gluon, half left, looseness=1, momentum'={[arrow shorten=0.7]$k$}] (vg2)
+                };
+
+            \end{feynman}
+        \end{tikzpicture}
+    \end{center}
+
+Pelas regras de Feynman, temos:
+    \begin{itemize}
+        \item 4 espinores ($u$, $\bar{u}$, $v$ e $\bar{v}$) para as linhas de elétron, pósitron, quark e antiquark que se propagam livremente;
+        \item 2 vériteces de interação elétron-fóton $\Rightarrow$ 2 termos do tipo $-ie\gamma_{\mu}$;
+        \item 1 linha de fóton $\Rightarrow$ 1 propagador $i\Delta^{\mu\nu}(Q) = \dfrac{-ig^{\mu\nu}}{Q^{2}}$;
+        \item 1 loop $\Rightarrow$ 1 integral $\displaystyle\int \dfrac{1}{(2\pi)^{4}}[\phantom{\cdots}]\dd[4]{k}$;
+        \item 2 linhas de quarks dentro do loop $\Rightarrow$ 2 propagadores do tipo $iS(p) = \dfrac{i(\slashed{p}+m)}{p^{2} - m^{2} + i\varepsilon}$;
+        \item 2 vértices de interação quark-glúon $\Rightarrow$ 2 termos do tipo $ig\gamma_{\mu}T_{a}$;
+        \item 1 linha de glúon $\Rightarrow$ 1 propagador $i\Delta_{ab}^{\mu\nu}(k) = \dfrac{-ig^{\mu\nu}}{k^{2} + i\varepsilon}\delta_{ab}$ (na parametrização de Feynman-'t Hooft)
+    \end{itemize}
+
+Sendo então $i\mathcal{M}$ a representação do diagrama, temos
+    \begin{align*}
+        i\mathcal{M} &\eq \int \dfrac{1}{(2\pi)^{4}}
+        [\bar{v}(k_{1})]
+        [-ie\gamma_{\mu}]
+        [u(k_{2})]
+        \qty[\dfrac{-ig^{\mu\nu}}{Q^{2}}]
+        [\bar{u}(p_{1})]
+        [ig\gamma_{\alpha}T_{a}]
+        \qty[\dfrac{i(\slashed{p}_{1} + \slashed{k} + m)}{(p_{1} + k)^{2} - m^{2} + i\varepsilon}]
+        [-ie\gamma_{\nu}] \times \\
+        &\noeq \times 
+        \qty[\dfrac{i(\slashed{p}_{2} - \slashed{k} + m)}{(p_{2} - k)^{2} - m^{2} + i\varepsilon}]
+        [ig\gamma_{\beta}T_{b}]
+        \qty[\dfrac{-ig^{\alpha\beta}}{k^{2}+i\varepsilon}\delta_{ab}]
+        [v(p_{2})]
+        \dd[4]{k} \\
+        &\eq \dfrac{e^{2}}{Q^{2}}\bar{v}(k_{1})\gamma_{\mu}u(k_{2})
+        \bar{u}(p_{1})
+        \Bigg[
+            (ig)^{2} T_{a} T_{b} \delta_{ab} 
+            \int \dfrac{1}{(2\pi)^{4}}
+                \gamma_{\alpha}
+                \dfrac{i(\slashed{p}_{1} + \slashed{k} + m)}{(p_{1} + k)^{2} - m^{2} + i\varepsilon}
+                \gamma^{\mu} \times \\
+        &\noeq 
+                \dfrac{i(\slashed{p}_{2} - \slashed{k} + m)}{(p_{2} - k)^{2} - m^{2} + i\varepsilon}
+                \gamma^{\alpha}\dfrac{1}{k^{2} + i\varepsilon}
+            \dd[4]{k}
+        \Bigg]v(p_{2})
+    \end{align*}
+
+
+O termo entre colchetes vai ser essencialmente a correção do vértice, que definirei por $i\Gamma^{\mu}$. Sendo o glúon um estado intermediário no diagrama, é necessário somar sobre todas as cores, então podemos utilizar a mesma definição do exercício 5, onde $C_{F}$ aparece. Portanto
+    \begin{equation*}
+        i\Gamma^{\mu} \coloneqq -g^{2}C_{F} \int \dfrac{1}{(2\pi)^{4}} 
+        \gamma_{\alpha} \dfrac{i(\slashed{p}_{1} + \slashed{k} + m)}{(p_{1} + k)^{2} - m^{2} + i\varepsilon}\gamma^{\mu}\dfrac{i(\slashed{p}_{2} - \slashed{k} + m)}{(p_{2} - k)^{2} - m^{2} + i\varepsilon}\gamma^{\alpha}\dfrac{1}{k^{2}+i\varepsilon}\dd[4]{k}
+    \end{equation*}
+o que faz com que o diagrama inteiro seja escrito como sendo
+    \begin{equation*}
+        i\mathcal{M} = i\dfrac{e^{2}}{Q^{2}}\bar{v}(k_{1}) 
+        \gamma_{\mu} 
+        u(k_{2})
+        \bar{u}(p_{1})
+        \Gamma^{\mu}
+        v(p_{2})
+    \end{equation*}
