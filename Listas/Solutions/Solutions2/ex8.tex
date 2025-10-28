@@ -29,7 +29,7 @@ Para calcular o primeiro diagrama, podemos explicitar os momentos que devem ser 
 Pelas regras de Feynman, temos:
     \begin{itemize}
         \item 4 espinores ($u$, $\bar{u}$) para as linhas de elétron, pósitron, quark e antiquark que se propagam livremente;
-        \item 2 vériteces de interação elétron-fóton $\Rightarrow$ 2 termos do tipo $-ie\gamma_{\mu}$;
+        \item 2 vériteces de interação elétron-fóton $\Rightarrow$ 2 termos do tipo $-ie\gamma_{\mu}$, mas no vértice dos quarks devemos considerar uma carga $Q_{f}$ do férmion;
         \item 1 linha de fóton $\Rightarrow$ 1 propagador $i\Delta^{\mu\nu}(Q) = \dfrac{-ig^{\mu\nu}}{Q^{2}}$;
         \item 1 loop $\Rightarrow$ 1 integral $\displaystyle\int \dfrac{1}{(2\pi)^{4}}[\phantom{\cdots}]\dd[4]{k}$;
         \item 2 linhas de quarks dentro do loop $\Rightarrow$ 2 propagadores do tipo $iS(p) = \dfrac{i(\slashed{p}+m)}{p^{2} - m^{2} + i\varepsilon}$;
@@ -37,9 +37,9 @@ Pelas regras de Feynman, temos:
         \item 1 linha de glúon $\Rightarrow$ 1 propagador $i\Delta_{ab}^{\mu\nu}(k) = \dfrac{-ig^{\mu\nu}}{k^{2} + i\varepsilon}\delta_{ab}$ (na parametrização de Feynman-'t Hooft)
     \end{itemize}
 
-Sendo então $i\mathcal{M}_{\text{vc}}$ a representação do diagrama (correção do vértice), temos
+Sendo então $i\mathcal{M}_{\text{v}}$ a representação do diagrama (correção do vértice), temos
     \begin{align*}
-        i\mathcal{M}_{\text{vc}} &\eq \int \dfrac{1}{(2\pi)^{4}}
+        i\mathcal{M}_{\text{v}} &\eq \int \dfrac{1}{(2\pi)^{4}}
         [\bar{u}(k_{1})]
         [-ie\gamma_{\mu}]
         [u(k_{2})]
@@ -47,7 +47,7 @@ Sendo então $i\mathcal{M}_{\text{vc}}$ a representação do diagrama (correçã
         [\bar{u}(p_{1})]
         [ig\gamma_{\alpha}T_{a}]
         \qty[\dfrac{i(\slashed{p}_{1} + \slashed{k} + m)}{(p_{1} + k)^{2} - m^{2} + i\varepsilon}]
-        [-ie\gamma_{\nu}] \times \\
+        [-ieQ_{f}\gamma_{\nu}] \times \\
         &\noeq \times 
         \qty[\dfrac{i(\slashed{p}_{2} - \slashed{k} + m)}{(p_{2} - k)^{2} - m^{2} + i\varepsilon}]
         [ig\gamma_{\beta}T_{b}]
@@ -56,7 +56,7 @@ Sendo então $i\mathcal{M}_{\text{vc}}$ a representação do diagrama (correçã
         \dd[4]{k} \\
         &\eq \dfrac{-ie}{Q^{2}}\bar{u}(k_{1})\gamma_{\mu}u(k_{2})
         \Bigg[
-            (-ie)(ig)^{2} T_{a} T_{b} \delta_{ab} 
+            (-ieQ_{f})(ig)^{2} T_{a} T_{b} \delta_{ab} 
             \int \dfrac{1}{(2\pi)^{4}}
                 \bar{u}(p_{1})
                 \gamma_{\alpha}
@@ -71,22 +71,22 @@ Sendo então $i\mathcal{M}_{\text{vc}}$ a representação do diagrama (correçã
     \end{align*}
 
 
-O termo entre colchetes vai ser essencialmente a correção do vértice, que definirei por $\Gamma_{\text{vc}}^{\mu}$. Sendo o glúon um estado intermediário no diagrama, é necessário somar sobre todas as cores, então podemos utilizar a mesma definição do exercício 5, onde $C_{F}$ aparece. Portanto
+O termo entre colchetes vai ser essencialmente a correção do vértice devido à emissão de um glúon virtual, que definirei por $\Gamma_{\text{v}}^{\mu}$. Sendo o glúon um estado intermediário no diagrama, é necessário somar sobre todas as cores, então podemos utilizar a mesma definição do exercício 5, onde $C_{F}$ aparece. Portanto
     \begin{equation*}
-        \Gamma_{\text{vc}}^{\mu} \coloneqq -eg^{2}C_{F} \int 
+        \Gamma_{\text{v}}^{\mu} \coloneqq -eg^{2}Q_{f}C_{F} \int 
         \dfrac{1}{(2\pi)^{4}}
         \dfrac{\bar{u}(p_{1}) \gamma_{\alpha} (\slashed{p}_{1} + \slashed{k} + m) \gamma^{\mu} (\slashed{p}_{2} - \slashed{k} + m) \gamma_{\alpha} u(p_{2})}{\qty[(p_{1} + k)^{2} - m^{2} + i\varepsilon]\qty[(p_{2} - k)^{2} - m^{2} + i\varepsilon]\qty(k^{2}+i\varepsilon)} 
         \dd[4]{k}
     \end{equation*}
 o que faz com que o diagrama inteiro seja resumido em
     \begin{equation*}
-        i\mathcal{M}_{\text{vc}} = \dfrac{-ie}{Q^{2}}\bar{u}(k_{1}) 
+        i\mathcal{M}_{\text{v}} = \dfrac{-ie}{Q^{2}}\bar{u}(k_{1}) 
         \gamma_{\mu} 
         u(k_{2})
-        \Gamma_{\text{vc}}^{\mu}
+        \Gamma_{\text{v}}^{\mu}
     \end{equation*}
 
-Resolvendo então a integral de $\Gamma_{\text{vc}}^{\mu}$, podemos analizar inicialmente o denominador. Tendo 3 termos multiplicando, definimos
+Resolvendo então a integral de $\Gamma_{\text{v}}^{\mu}$, podemos analizar inicialmente o denominador. Tendo 3 termos multiplicando, definimos
     \begin{align*}
         D_{1} &\coloneqq (p_{1}+k)^{2} - m^{2} + i\varepsilon & 
         D_{2} &\coloneqq (p_{2}-k)^{2} - m^{2} + i\varepsilon & 
@@ -153,7 +153,7 @@ e fazendo uma mudança de variável $k \mapsto k - (1-a)p_{1} - a(1-b)p_{2}$ na 
     \end{equation*}
 e portanto
     \begin{equation*}
-        \Gamma_{\text{vc}}^{\mu} = -eg^{2} C_{F} \Gamma(3) \int_{0}^{1} \int_{0}^{1}
+        \Gamma_{\text{v}}^{\mu} = -eg^{2}Q_{f} C_{F} \Gamma(3) \int_{0}^{1} \int_{0}^{1}
         \dfrac{a}{(2\pi)^{4}} \dfrac{\bar{u}(p_{1}) \gamma_{\alpha} (\slashed{p}_{1} + \slashed{k} + m) \gamma^{\mu} (\slashed{p}_{2} - \slashed{k} + m) \gamma_{\alpha} u(p_{2})}{(k^{2} - X^{2} + i\varepsilon)^{3}} \dd[4]{k} \dd{a} \dd{b} 
     \end{equation*}
 
@@ -253,15 +253,15 @@ e portanto vão restar apenas os termos
 
 A correção do vértice fica então, em regularização dimensional
     \begin{equation*}
-        \Gamma_{\text{vc}}^{\mu} = -eg^{2}C_{F} \mu^{4-\mathsf{D}} \Gamma(3) \int_{0}^{1} \int_{0}^{1} \int 
+        \Gamma_{\text{v}}^{\mu} = -eg^{2} Q_{f}C_{F} \mu^{4-\mathsf{D}} \Gamma(3) \int_{0}^{1} \int_{0}^{1} \int 
         \dfrac{a}{(2\pi)^{\mathsf{D}}}
         \dfrac{\bar{u}(p_{1}) (2p_{1\alpha} + \gamma_{\alpha}\slashed{k})\gamma^{\mu}(2p_{2}^{\alpha} - \slashed{k}\gamma^{\alpha}) u(p_{2})}{(k^{2} - X^{2} + i\varepsilon)^{3}}
         \dd[\mathsf{D}]{k}\dd{a}\dd{b}
     \end{equation*}
 
-Para verificar as possíveis divergências dessa integral podemos verificar duas regiões de $k$, o primeiro onde $k\to\infty$ (gluon altamente energético) e o segundo onde $k\to0$ (\textit{soft gluon}). No primeiro caso, temos
+Para verificar as possíveis divergências dessa integral podemos verificar duas regiões de $k$, o primeiro onde $k\to\infty$ (Ultravioleta) e o segundo onde $k\to0$ (Infravermelho). No primeiro caso, temos
     \begin{equation*}
-        \lim_{k\to\infty}\Gamma_{\text{vc}}^{\mu} = eg^{2}C_{F}\mu^{4-\mathsf{D}}\Gamma(3) \int_{0}^{1} \int_{0}^{1} \int
+        \lim_{k\to\infty}\Gamma_{\text{v}}^{\mu} = eg^{2}Q_{f}C_{F}\mu^{4-\mathsf{D}}\Gamma(3) \int_{0}^{1} \int_{0}^{1} \int
         \dfrac{a}{(2\pi)^{\mathsf{D}}}
         \dfrac{\bar{u}(p_{1})\gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha}u(p_{2})}{(k^{2} - X^{2} + i\varepsilon)^{3}} \dd[\mathsf{D}]{k}\dd{a}\dd{b}
     \end{equation*}
@@ -278,7 +278,7 @@ O numerador pode ainda ser reescrito sob a forma
 
 Então
     \begin{equation*}
-        \lim_{k\to\infty}\Gamma_{\text{vc}}^{\mu} = 4eg^{2}C_{F}\bar{u}(p_{1})\gamma^{\mu}u(p_{2}) \mu^{4-\mathsf{D}}\Gamma(3) \int_{0}^{1} \int_{0}^{1} \int \dfrac{a}{(2\pi)^{\mathsf{D}}} \dfrac{k^{2}}{(k^{2} - X^{2} + i\varepsilon)^{3}}\dd[\mathsf{D}]{k}\dd{a}\dd{b} 
+        \lim_{k\to\infty}\Gamma_{\text{v}}^{\mu} = 4eg^{2}Q_{f}C_{F}\bar{u}(p_{1})\gamma^{\mu}u(p_{2}) \mu^{4-\mathsf{D}}\Gamma(3) \int_{0}^{1} \int_{0}^{1} \int \dfrac{a}{(2\pi)^{\mathsf{D}}} \dfrac{k^{2}}{(k^{2} - X^{2} + i\varepsilon)^{3}}\dd[\mathsf{D}]{k}\dd{a}\dd{b} 
     \end{equation*}
 
 Pela equação \eqref{eq: integral dimreg}, podemos escrever diretamente que
@@ -294,12 +294,12 @@ Usando então as formas
     \end{align*}
 e sendo $\epsilon \coloneqq \dfrac{4 - \mathsf{D}}{2}$, temos
     \begin{equation*}
-        \lim_{k\to\infty}\Gamma_{\text{vc}}^{\mu} = \dfrac{ieg^{2}}{4\pi^{2}} C_{F}\bar{u}(p_{1}) \gamma^{\mu} u(p_{2}) \dfrac{\Gamma(3-\epsilon)\Gamma(\epsilon)}{\Gamma(2-\epsilon)} \int_{0}^{1}\int_{0}^{1} a\qty(\dfrac{4\pi\mu^{2}}{X^{2}})^{\epsilon}\dd{a}\dd{b}
+        \lim_{k\to\infty}\Gamma_{\text{v}}^{\mu} = \dfrac{ieg^{2}}{4\pi^{2}} Q_{f}C_{F}\bar{u}(p_{1}) \gamma^{\mu} u(p_{2}) \dfrac{\Gamma(3-\epsilon)\Gamma(\epsilon)}{\Gamma(2-\epsilon)} \int_{0}^{1}\int_{0}^{1} a\qty(\dfrac{4\pi\mu^{2}}{X^{2}})^{\epsilon}\dd{a}\dd{b}
     \end{equation*}
 
 E pela propriedade $\Gamma(z+1) = z\Gamma(z)$, a correção do vérice é 
     \begin{equation*}
-        \lim_{k\to\infty}\Gamma_{\text{vc}}^{\mu} = \dfrac{ieg^{2}}{4\pi^{2}} C_{F}\bar{u}(p_{1}) \gamma^{\mu} u(p_{2}) (2-\epsilon)\Gamma(\epsilon) \int_{0}^{1}\int_{0}^{1} a\qty(\dfrac{4\pi\mu^{2}}{X^{2}})^{\epsilon}\dd{a}\dd{b}
+        \lim_{k\to\infty}\Gamma_{\text{v}}^{\mu} = \dfrac{ieg^{2}}{4\pi^{2}} Q_{f}C_{F}\bar{u}(p_{1}) \gamma^{\mu} u(p_{2}) (2-\epsilon)\Gamma(\epsilon) \int_{0}^{1}\int_{0}^{1} a\qty(\dfrac{4\pi\mu^{2}}{X^{2}})^{\epsilon}\dd{a}\dd{b}
     \end{equation*}
 
 Então teremos pólos no limite de $\epsilon\to0$ na função $\Gamma(\epsilon)$. Utilizando as expansões 
@@ -310,7 +310,7 @@ Então teremos pólos no limite de $\epsilon\to0$ na função $\Gamma(\epsilon)$
 
 Concluímos que 
     \begin{equation*}
-        \lim_{k\to\infty}\Gamma_{\text{vc}}^{2} = \dfrac{ieg^{2}}{4\pi^{2}}C_{F}\bar{u}(p_{1})\gamma^{\mu}u(p_{2})\qty[
+        \lim_{k\to\infty}\Gamma_{\text{v}}^{2} = \dfrac{ieg^{2}}{4\pi^{2}}Q_{f}C_{F}\bar{u}(p_{1})\gamma^{\mu}u(p_{2})\qty[
             \dfrac{1}{\epsilon} - 
             \gamma_{EM} - 
             \dfrac{1}{2} + 
@@ -321,7 +321,7 @@ Concluímos que
 
 O que mostra a divergência para altos valores de momento do glúon. No caso da região de \textit{soft gluon}, a correção do vértice pode ser escrita, sem utilizar regularização dimensional e a parametrização por
     \begin{align*}
-        \lim_{k\to0}\Gamma_{\text{vc}}^{\mu} &\eq -eg^{2}C_{F} \int \dfrac{1}{(2\pi)^{4}}\dfrac{\bar{u}(p_{1})4\gamma^{\mu}(p_{1}\cdot p_{2})u(p_{2})}{[(p_{1}+k)^{2}-m^{2}+i\varepsilon][(p_{2}-k)^{2}-m^{2}+i\varepsilon](k^{2}+i\varepsilon)}\dd[4]{k} 
+        \lim_{k\to0}\Gamma_{\text{v}}^{\mu} &\eq -eg^{2}Q_{f}C_{F} \int \dfrac{1}{(2\pi)^{4}}\dfrac{\bar{u}(p_{1})4\gamma^{\mu}(p_{1}\cdot p_{2})u(p_{2})}{[(p_{1}+k)^{2}-m^{2}+i\varepsilon][(p_{2}-k)^{2}-m^{2}+i\varepsilon](k^{2}+i\varepsilon)}\dd[4]{k} 
     \end{align*}
 
 Neste caso, podemos considerar o fato de estarmos na camada de massa, de modo que $p_{1}^{2} = m^{2}$ e $p_{2}^{2} = m^{2}$, portanto o denominador fica
@@ -331,7 +331,60 @@ Neste caso, podemos considerar o fato de estarmos na camada de massa, de modo qu
 
 Com este produto, podemos juntar todos os termos que possuem ordem em $i\varepsilon$ em $i\varepsilon$, pois em essência nós consideramos o limite de $\varepsilon\to 0$, logo é razoável escrever
     \begin{equation*}
-        \lim_{k\to0}\Gamma_{\text{vc}}^{\mu} = 4eg^{2}C_{F}\bar{u}(p_{1})\gamma^{\mu}(p_{1}\cdot p_{2})u(p_{2}) \int \dfrac{1}{(2\pi)^{4}} \dfrac{1}{(2p_{1}\cdot k + k^{2})(2p_{2}\cdot k - k^{2})k^{2} + i\varepsilon}\dd[4]{k}
+        \lim_{k\to0}\Gamma_{\text{v}}^{\mu} = 4eg^{2}Q_{f}C_{F}\bar{u}(p_{1})\gamma^{\mu}(p_{1}\cdot p_{2})u(p_{2}) \int \dfrac{1}{(2\pi)^{4}} \dfrac{1}{(2p_{1}\cdot k + k^{2})(2p_{2}\cdot k - k^{2})k^{2} + i\varepsilon}\dd[4]{k}
     \end{equation*}
 
-Vemos então que a integral vai ser divergente, pois o argumento da integral vai como $\sim\dfrac{1}{k^6}$, de modo que como estamos considerando o limite de $k\to 0$, a integral diverge sempre. Podemos argumentar que essa divergência aparece devido ao fato de que o glúon é um bóson escalar sem massa.
+Vemos então que a integral vai ser divergente, pois o argumento da integral vai como $\sim\dfrac{1}{k^6}$, de modo que como estamos considerando o limite de $k\to 0$, a integral diverge sempre. Portanto:
+    \begin{answer}\label{eq: answer 8 a}
+        i\mathcal{M}_{\text{v}} \to \infty\quad (\text{Divergência no Infravermelho e no Ultravioleta})
+    \end{answer}
+
+Podemos argumentar que essa divergência aparece devido ao fato de que o glúon é um bóson escalar sem massa. Logo, para lidar com esse infinito, podemos assumir que existe um massa $m_{g}$ pro glúon, fazendo com que a divergência logaritmica desapareça.
+
+No caso do segundo diagrama, que consiste de uma emissão real de glúon, temos que 
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{feynman}
+                \vertex (i1) {$e^{+}$};
+                \vertex [below right=1.5cm and 2cm of i1] (i2);
+                \vertex [below left=1.25cm and 1.75cm of i2] (i3) {$e^{-}$};
+
+                \vertex [right=6cm of i1] (i4) {$q$};
+                \vertex [below left=0.75cm and 1cm of i4] (vg1); % gluon vertex 1
+                \vertex [below left=1.5cm and 2cm of i4] (i5);
+                \vertex [right= 1.75cm of i5] (vg2) {$g$}; % gluon vertex 2
+                \vertex [below right=1.25cm and 1.75cm of i5] (i6) {$\bar{q}$};
+
+                \vertex [below left=0.375cm and 0.5cm of i4] (g1);
+                \vertex [below=2.25cm of g1] (g2);
+
+                \diagram*{
+                    (i3) -- [fermion, rmomentum={[arrow shorten=0.7]$k_{2}$}] (i2) -- [fermion, momentum={[arrow shorten=0.7]$k_{1}$}] (i1),
+                    (i2) -- [boson, rmomentum={[arrow shorten=0.7]$Q$}] (i5),
+                    (i6) -- [fermion, momentum'={[arrow shorten=0.7]$p_{1}$}] (i5) -- [fermion, rmomentum'={[arrow shorten=0.7]$p_{2}+k$}] (vg1) -- [fermion, rmomentum'={[arrow shorten=0.7]$p_{2}$}] (i4),
+                    (vg1) -- [gluon, rmomentum'={[arrow shorten=0.7]$k$}] (vg2)
+                };
+
+            \end{feynman}
+        \end{tikzpicture}
+    \end{center}
+
+Chamando esse diagrama de $i\mathcal{M}_{\text{r}}$, pelas regras de Feynman temos
+    \begin{align*}
+        i\mathcal{M}_{\text{r}} &\eq [\bar{u}(k_{1})][-ie\gamma_{\mu}][u(k_{2})]\qty[\dfrac{-ig^{\mu\nu}}{Q^{2}}][\bar{u}(p_{1})][-ieQ_{f}\gamma_{\nu}]\qty[\dfrac{i(\slashed{p}_{2}+\slashed{k}+m)}{(p_{2} + k)^{2} - m^{2}}][ig\gamma_{\alpha}T_{a}]\qty[\dfrac{-ig^{\alpha\beta}}{k^{2}}\delta_{ab}]u(p_{2}) \\
+        &\eq \dfrac{e^{2}g}{Q^{2}} T_{a}\delta_{ab} \bar{u}(k_{1})\gamma_{\mu}u(k_{2})\bar{u}(p_{1})\gamma^{\mu} \dfrac{(\slashed{p}_{2} + \slashed{k} + m)}{(p_{2} + k)^{2} - m^{2}}\gamma^{\beta}\dfrac{1}{k^{2}}u(p_{2})
+    \end{align*}
+
+Considerando novamente que estamos na camada de massa, $p_{2}^{2} = m^{2}$, o denominador pode ser substituído por $2p_{2}\cdot k + k^{2}$ e portanto
+    \begin{equation*}
+        i\mathcal{M}_{\text{r}} = \dfrac{e^{2}g}{Q^{2}}Q_{f}T_{a}\delta_{ab}\bar{u}(k_{1})\gamma_{\mu}u(k_{2})\bar{u}(p_{1})\gamma^{\mu}\dfrac{(\slashed{p}_{2} + \slashed{k} + m)}{(2p_{2}\cdot k + k^{2})k^{2}}\gamma^{\beta} u(p_{2})
+    \end{equation*}
+
+Aqui temos que todos os termos no denominador dependem de $k$, então na região de \textit{soft gluon}, onde $k\to0$, esse diagrama diverge. Então
+    \begin{answer}\label{eq: answer 8 b}
+        i\mathcal{M}_{\text{r}} \to \infty \quad (\text{Divergência do infravermelho})
+    \end{answer}
+
+Para lidar com essa divergência, podemos utilizar o mesmo argumento do utilizado para $i\mathcal{M}_{\text{v}}$ na região de $k\to 0$, onde dizemos que existe uma massa $m_{g}$ para o glúon e fazemos as contas.
+
+O argumento de utilizar uma massa $m_{g}$ é possível, pois quando calculamos a seção de choque total da aniquilação elétron-pósitron, essas correções do glúon vão se cancelar quando somarmos as contribuições de glúon virtual e de emissão real.

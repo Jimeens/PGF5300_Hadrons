@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  27 OCT 2025 13:36
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  28 OCT 2025 00:58
  system commands enabled.
  file:line:error style messages enabled.
 **/home/jimeens/PGF5300_Hadrons-1/Listas/lista2.tex
@@ -2791,7 +2791,22 @@ Package microtype Info: Unknown slot number of character
 Package microtype Info: Character `₡' is missing
 (microtype)             in font `TU/EBGaramond(0)/m/n/45'.
 (microtype)             Ignoring protrusion settings for this character.
- (./Solutions/Solutions2/ex1.tex)
+ (./Solutions/Solutions2/ex1.tex
+File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
+<use Figures/Impression, soleil levant - Claude Monet.png>
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 32.
+(luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
+<Figures/vanilla.png, id=15, 513.92pt x 513.92pt>
+File: Figures/vanilla.png Graphic file (type png)
+<use Figures/vanilla.png>
+Package luatex.def Info: Figures/vanilla.png  used on input line 32.
+(luatex.def)             Requested size: 71.12491pt x 71.13188pt.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
+[1
+
+
+<./Figures/vanilla.png>])
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
 (Font)              scaled to size 8.22913pt on input line 48.
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
@@ -2801,35 +2816,29 @@ File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type pn
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 4.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
-<Figures/vanilla.png, id=15, 513.92pt x 513.92pt>
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 4.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
-
-warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
-[1
-
-
-<./Figures/vanilla.png>]
-File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
-<use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 34.
-(luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
-File: Figures/vanilla.png Graphic file (type png)
-<use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 34.
-(luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [2]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 98.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 68.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 98.
+Package luatex.def Info: Figures/vanilla.png  used on input line 68.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [3]
+File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
+<use Figures/Impression, soleil levant - Claude Monet.png>
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 100.
+(luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
+File: Figures/vanilla.png Graphic file (type png)
+<use Figures/vanilla.png>
+Package luatex.def Info: Figures/vanilla.png  used on input line 100.
+(luatex.def)             Requested size: 71.12491pt x 71.13188pt.
+ [4]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 141.
@@ -2838,7 +2847,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 141.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [4]) (./Solutions/Solutions2/ex3.tex
+ [5]) (./Solutions/Solutions2/ex3.tex
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 12.
@@ -2847,7 +2856,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 12.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [5]
+ [6]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 51.
@@ -2856,7 +2865,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 51.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [6]
+ [7]
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 60.
  (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
@@ -2875,7 +2884,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 122.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [7])
+ [8])
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 72.
@@ -2884,7 +2893,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 72.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [8] (./Solutions/Solutions2/ex4.tex
+ [9] (./Solutions/Solutions2/ex4.tex
 LaTeX Font Info:    Font shape `TU/LibertinusSans(0)/m/n' will be
 (Font)              scaled to size 10.2596pt on input line 123.
 Package microtype Info: Loading generic protrusion settings for font family
@@ -2903,7 +2912,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 131.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [9]
+ [10]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 185.
@@ -2912,7 +2921,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 185.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [10]
+ [11]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 237.
@@ -2921,7 +2930,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 237.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [11]) (./Solutions/Solutions2/ex5.tex
+ [12]) (./Solutions/Solutions2/ex5.tex
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 39.
@@ -2930,7 +2939,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 39.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [12])
+ [13])
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 108.
@@ -2939,7 +2948,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 108.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [13] (./Solutions/Solutions2/ex6.tex
+ [14] (./Solutions/Solutions2/ex6.tex
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 40.
@@ -2948,7 +2957,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 40.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [14]
+ [15]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 137.
@@ -2957,7 +2966,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 137.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [15]
+ [16]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 260.
@@ -2966,7 +2975,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 260.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [16]
+ [17]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 316.
@@ -2975,7 +2984,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 316.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [17])
+ [18])
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 117.
@@ -2984,7 +2993,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 117.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [18] (./Solutions/Solutions2/ex7.tex)
+ [19] (./Solutions/Solutions2/ex7.tex)
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/m/it' will be
 (Font)              scaled to size 11.79861pt on input line 139.
 Package microtype Info: Character `156' is missing
@@ -2999,7 +3008,11 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 2.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [19]
+ [20]
+Overfull \hbox (0.96234pt too wide) detected at line 71
+[]
+ []
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 75.
@@ -3008,7 +3021,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 75.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [20]
+[21]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 175.
@@ -3017,7 +3030,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 175.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [21]
+ [22]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 263.
@@ -3026,7 +3039,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 263.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [22]
+ [23]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 323.
@@ -3035,7 +3048,20 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 323.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [23]) 
+ [24]
+Overfull \hbox (10.63727pt too wide) detected at line 376
+[]
+ []
+
+File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
+<use Figures/Impression, soleil levant - Claude Monet.png>
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 381.
+(luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
+File: Figures/vanilla.png Graphic file (type png)
+<use Figures/vanilla.png>
+Package luatex.def Info: Figures/vanilla.png  used on input line 381.
+(luatex.def)             Requested size: 71.12491pt x 71.13188pt.
+[25]) 
 AED: pageslts setting LastPage 
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
@@ -3045,7 +3071,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 192.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
-[24]
+[26]
 \c@pagesLTS.arabic.1.local.count=\count580
  
 AED: pageslts setting VeryLastPage via AfterLastShipout 
@@ -3067,19 +3093,19 @@ Package logreq Info: Writing requests to 'lista2.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 56219 strings out of 476553
- 156263,2848258 words of node,token memory allocated
- 1857 words of node memory still in use:
-   9 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 2 glyph, 197 attribute, 200 glue_spec, 100 attribute_list, 3 write nodes
-   avail lists: 1:37,2:13081,3:3612,4:94,5:872,6:49,7:8243,8:138,9:3102,10:9,11:378
- 76640 multiletter control sequences out of 65536+600000
+ 56267 strings out of 476553
+ 156258,2848258 words of node,token memory allocated
+ 2054 words of node memory still in use:
+   9 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 1 margin_kern, 3 glyph, 259 attribute, 200 glue_spec, 131 attribute_list, 3 write nodes
+   avail lists: 1:49,2:13078,3:3611,4:92,5:872,6:46,7:8244,8:139,9:3104,10:9,11:378
+ 76671 multiletter control sequences out of 65536+600000
  74 fonts using 16577711 bytes
  167i,19n,152p,1189b,3185s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Italic.otf></usr/share/fonts/opentype/ebgaramond/EBGaramond08-Regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSans-Regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Bold.otf></usr/share/fonts/opentype/ebgaramond/EBGaramond12-Regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lista2.pdf (25 pages, 4251949 bytes).
+Output written on lista2.pdf (27 pages, 4267185 bytes).
 
-PDF statistics: 258 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
- 45 named destinations out of 1000 (max. 131072)
+PDF statistics: 270 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 131072)
  80 words of extra memory for PDF output out of 10000 (max. 100000000)
 

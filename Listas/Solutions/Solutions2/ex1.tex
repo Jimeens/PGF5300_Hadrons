@@ -1,8 +1,59 @@
-Na expressão original do problema, podemos identificar que o termo $\dfrac{1}{2}\xi\vec{K}_{x}\xi$ é um termo quadrático em $\xi$, a soma dos termos $\dfrac{1}{2}\xi J + \dfrac{1}{2}\bar{\phi}\vec{K}_{x}\xi + J\xi$ é um termo linear em $\xi$ e os termos restantes independem dessa variável, o que sugere uma integração gaussiana em $\xi$.
+Partindo da expressão dada para o funcional gerador de um campo escalar livre, como $\bar{\phi}$ é a configuração clássica do campo, ela pode ser escrita em termos do propagador $\Delta(x-y)$, pois como $J = \vec{K}_{x}\bar{\phi}$ e $\vec{K}_{x}[i\Delta(x-y)] = i\delta^{4}(x-y)$ (equação de Green), o campo será dado por
+    \begin{equation*}
+        \bar{\phi} = -\int \Delta(x-y)J(y)\dd[4]{y}
+    \end{equation*}
+conforme a Aula 8. Com isso o funcional gerador pode ser reescrito sob a forma
+    \begin{align*}
+        Z_{0}[J] &\eq N\int \exp\bigg\{i\int \bigg[-\dfrac{1}{2}\bigg(
+            \xi\vec{K}_{x}\xi + \xi J - \int \Delta(x-y)J(y)\vec{K}_{x}\xi\dd[4]{y} - \int \Delta(x-y)J(y)\times \\
+        &\noeq \times J(x)\dd[4]{y}\bigg) 
+        -\int J(x)\Delta(x-y)J(y)\dd[4]{y} + J\xi
+        \bigg]\dd[4]{x}\bigg\}[D\xi]
+    \end{align*}
 
-\begin{itemize}
-    \item Assumir que $\vec{K}_{x}$ é uma matriz diagonal
-    \item Discretizar os campos pra usar a expressão da aula 7/8 (eu acho)
-    \item Fazer uma mudança de variável conveniente
-    \item Integrar em $[D\xi]$
-\end{itemize}
+O terceiro termo da exponencial pode ser reescrito levando em conta que o integrando pode ser visto com parte de uma ``derivada total'' (as áspas são para enfatizar que não é de fato uma derivada total, mas sim a aplicação de um operador), ou seja
+    \begin{align*}
+        \vec{K}_{x}[i\Delta(x-y)J(y)\xi] &\eq \vec{K}_{x}[i\Delta(x-y)J(y)]\xi + i\Delta(x-y)J(y)\vec{K}_{x}\xi \\
+        &\eq \vec{K}_{x}[i\Delta(x-y)]J(y)\xi + i\Delta(x-y)J(y)\vec{K}_{x}\xi \\
+        &\eq i\delta^4(x-y)J(y)\xi + i\Delta(x-y)J(y)\vec{K}_{x}\xi
+    \end{align*}
+
+Portanto
+    \begin{align*}
+        i\Delta(x-y)J(y)\vec{K}_{x}\xi = \vec{K}_{x}[i\Delta(x-y)J(y)\xi] - i\delta^{4}(x-y)J(y)\xi
+    \end{align*}
+
+Integrando ambos os lados em $\dd[4]{y}$ e multiplicando por $i$, obtemos
+    \begin{align*}
+        -\int\Delta(x-y)J(y)\vec{K}_{x}\xi \dd[4]{y} &\eq i\int\vec{K}_{x}[i\Delta(x-y)J(y)\xi]\dd[4]{y} - i^{2}\int \delta^{4}(x-y)J(y)\xi\dd[4]{y}
+    \end{align*}
+
+O primeiro termo vai ser um termo de superfície que desaparece nos infinitos e a segunda vai restar apenas $J(x)\xi(x)$ após a integração em $\dd[4]{y}$, logo
+    \begin{align*}
+        -\int\Delta(x-y)J(y)\vec{K}_{x}\xi = J\xi
+    \end{align*}
+
+O funcional gerador fica então
+    \begin{align*}
+        Z_{0}[J] &\eq N\int\exp\bigg\{i\int\bigg[
+            -\dfrac{1}{2}\xi\vec{K}_{x}\xi -
+            \dfrac{1}{2}\xi J -
+            \dfrac{1}{2}J \xi +
+            \dfrac{1}{2}\int J(x)\Delta(x-y)J(y) \dd[4]{y} - \\
+        &\noeq -
+            \int J(x)\Delta(x-y)J(y)\dd[4]{y} + J\xi
+        \bigg]\dd[4]{x}\bigg\}[D\xi] \\
+        &\eq N\int\exp\bigg\{i\int\bigg[
+            -\dfrac{1}{2}\xi\vec{K}_{x}\xi - \dfrac{1}{2}\int J(x)\Delta(x-y)J(y)\dd[4]{y}
+        \bigg]\dd[4]{x}\bigg\}[D\xi] \\
+        &\eq N\int\exp\qty(-\dfrac{i}{2}\int\xi\vec{K}_{x}\xi\dd[4]{x})[D\xi]\exp\qty[-\dfrac{i}{2}\iint J(x)\Delta(x-y)J(y)\dd[4]{y}\dd[4]{x}]
+    \end{align*}
+
+Podemos então identificar
+    \begin{equation*}
+        Z_{0}[0] = N\int\exp\qty(-\dfrac{i}{2}\int\xi\vec{K}_{x}\xi\dd[4]{x})[D\xi]
+    \end{equation*}
+e definir $N' \coloneqq Z_{0}[0]$, concluindo que
+    \begin{answer}\label{eq: answer 1}
+        Z_{0}[J] = N'\exp\qty[-\dfrac{i}{2}\iint J(x)\Delta(x-y)J(y)\dd[4]{y}\dd[4]{x}]
+    \end{answer}
