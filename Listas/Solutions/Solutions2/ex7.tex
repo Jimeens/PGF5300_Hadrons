@@ -1,0 +1,87 @@
+\noindent \textbf{(a)} Como visto no exercício 3.(c) da Lista 1, o operador de ordenamento temporal pode ser expandido em termos de duas funções Theta de Heaviside $\Theta$, uma pra quando $x_{0}>y_{0}$ e outra pra quando $y_{0}>x_{0}$. No caso da amplitude do DVCS, temos que $x_{0}\mapsto z_{0}$ e $y_{0}\mapsto0$, ou seja
+    \begin{align*}
+        T_{\mu\nu} &\eq 
+        i\int e^{iqz}\bra{p}\Theta(z_{0})J_{\mu}(z)J_{\nu}(0)\ket{X}\dd[4]{z} + i\int e^{iqz}\bra{X}\Theta(-z_{0})J_{\nu}(0)J_{\mu}(z)\ket{p}\dd[4]{z}
+    \end{align*}
+
+Adicinando um elemento unitário relacionado aos estados intermediários $\ket{X}$ entre $J_{\mu}(z)J_{\nu}(0)$, temos
+    \begin{align*}
+        \bra{p}J_{\mu}(z)J_{\nu}(0)\ket{p} &\eq \bra{p}J_{\mu}(z)\qty(\sum_{X}\ket{X}\bra{X})J_{\nu}(0)\ket{p} \\
+        &\eq \sum_{X}\bra{p}J_{\mu}(z)\ket{X}\bra{X}J_{\nu}(0)\ket{p}
+    \end{align*}
+
+Podemos ainda reescrever 
+    \begin{equation*}
+        \bra{p}J_{\mu}(z)\ket{X} = \bra{p}e^{i\hat{p}z}J_{\mu}(0)e^{-i\hat{p}z}\ket{X} = \bra{p}e^{ipz}J_{\mu}(0)e^{-ip_{X}z}\ket{X} = e^{i(p-p_{X})z}\bra{p}J_{\mu}(0)\ket{X}
+    \end{equation*}
+e como $J_{\mu}$ é hermitiano, o mesmo vale pro caso $\bra{X}J_{\mu}(z)\ket{p}$. Logo a amplitude do DVCS fica
+    \begin{align*}
+        T_{\mu\nu} &\eq i\int e^{iqz}\Theta(z_{0})\sum_{X}e^{i(p-p_{X})z}\bra{p}J_{\mu}(0)\ket{X}\bra{X}J_{\nu}(0)\ket{p}\dd[4]{z} + \\
+        &\noeq +i\int e^{iqz}\Theta(-z_{0})\sum_{X}e^{i(p_{X}-p)z}\bra{p}J_{\nu}(0)\ket{X}\bra{X}J_{\mu}(0)\ket{p}\dd[4]{z} \\
+        &\eq i\sum_{X}\bra{p}J_{\mu}(0)\ket{X}\bra{X}J_{\nu}(0)\ket{p}\int \Theta(z_{0})e^{i(q+p-p_{X})z}\dd[4]{z} + \\
+        &\noeq + i\sum_{X}\bra{p}J_{\nu}(0)\ket{X}\bra{X}J_{\mu}(0)\ket{p}\int \Theta(-z_{0})e^{i(q+p_{X}-p)z}\dd[4]{z}
+    \end{align*}
+
+Seja a integral do primeiro termo $I_{1}$, que se escreve por
+    \begin{align*}
+        I_{1} &\eq \int_{-\infty}^{\infty}\Theta(z_{0})e^{i(q+p-p_{X})z}\dd[4]{z}\\ 
+        &\eq \int_{0}^{\infty}e^{i(q_{0}+p_{0}-p_{X0})z_{0}}\dd{z_{0}}\int_{-\infty}^{\infty} e^{-i(\vb{q}+\vb{p}-\vb{p}_{X})\cdot \vb{z}}\dd[3]{z} \\
+        &\eq \int_{0}^{\infty}e^{i(q_{0} + p_{0} - p_{X0})z_{0}}\dd{z_{0}}(2\pi)^{3}\delta^{3}(\vb{q}+\vb{p}-\vb{p}_{X})
+    \end{align*}
+
+A integral restante nesta expressão não converge no sentido usual, mas sim no sentido de distribuições, de modo que seu resultado é dado por
+    \begin{align*}
+        \int_{-\infty}^{\infty}\Theta(z_{0})e^{i(q+p-p_{X})z}\dd[4]{z} &\eq \pi\delta(q_{0} + p_{0} - p_{X0}) + i\mathsf{VP}\qty(\dfrac{1}{q_{0} + p_{0} - p_{X0}})
+    \end{align*}
+
+Onde $\mathsf{VP}(\cdots)$ é o valor principal de Cauchy. Logo
+    \begin{equation*}
+        I_{1} = \pi(2\pi)^{3}\delta^{4}(q + p - p_{X}) + i(2\pi)^{3}\mathsf{VP}\qty(\dfrac{1}{q_{0} + p_{0} - p_{X0}})\delta^{3}(\vb{q} + \vb{p} - \vb{p}_{X})
+    \end{equation*}
+
+No caso da segunda integral, $I_{2}$, (com a Heaviside em $-z_{0}$), teremos
+    \begin{align*}
+        I_{2} &\eq \int \Theta(-z_{0})e^{-i(q+p_{X}-p)z}\dd[4]{z}\\ 
+        &\eq \int_{-\infty}^{0}e^{i(-q_{0}-p_{X0}+p_{0})z_{0}}\dd{z_{0}}\int_{-\infty}^{\infty}e^{i(-\vb{q}-\vb{p}_{X}+\vb{p})\cdot\vb{z}}\dd[3]{z} \\
+        &\eq \pi(2\pi)^{3}\delta^{4}(-q - p_{X} + p) + i(2\pi)^{3}\mathsf{VP}\qty(\dfrac{1}{-q_{0} - p_{X0} + p_{0}})\delta^{3}(-\vb{q} - \vb{p}_{X} + \vb{p})
+    \end{align*}
+
+Segue que
+    \begin{align*}
+        T_{\mu\nu} &\eq i(2\pi)^{3}\sum_{X}\bigg\{
+            \bra{p}J_{\mu}(0)\ket{X}\bra{X}J_{\nu}(0)\ket{p}\bigg[
+                \pi\delta^{4}(q + p - p_{X}) +
+                i\mathsf{VP}\qty(\dfrac{1}{q_{0}+p_{0}-p_{X0}})\times \\
+        &\noeq \times 
+                \delta^{3}(\vb{q} + \vb{p} - \vb{p}_{X})
+            \bigg] + \bra{p}J_{\nu}(0)\ket{X}\bra{X}J_{\mu}(0)\ket{p}\bigg[
+                \pi\delta^{4}(-q - p_{X} + p) +  \\
+        &\noeq +
+                i\mathsf{VP}\qty(\dfrac{1}{-q_{0} - p_{X0} + p_{0}})\delta^{3}(-\vb{q}-\vb{p}_{X}+\vb{p})\bigg]
+        \bigg\}
+    \end{align*}
+
+Dado que $p_{X0} > p_{0}$, o segundo termo não apresenta um pólo quando $q_{0}>0$, de modo que sua contribuição vai ser completamente na parte real de $T_{\mu\nu}$. A parte imaginária de $T_{\mu\nu}$ vai ser então apenas o termo com o $\delta^{4}(q + p - p_{X})$, pois o termo de valor principal de Cauchy está acompanhado de um fator $i$ e como por definição a amplitude já possui outro fator $i$, portanto
+    \begin{equation*}
+        \text{Im}[T_{\mu\nu}] = \pi(2\pi)^{3}\sum_{X}\bra{p}J_{\mu}(0)\ket{X}\bra{X}J_{\nu}(0)\ket{p}\delta^{4}(q + p - p_{X})
+    \end{equation*}
+
+O termo da direita pode ser identificado como o tensor hadrônico $W_{\mu\nu}$ apresentado na Aula 17 (a menos de um fator $\pi$), concluindo que
+    \begin{answer}\label{eq: answer 7 a}
+        \text{Im}[T_{\mu\nu}] = \pi W_{\mu\nu}
+    \end{answer}
+
+\noindent \textbf{(b)} Ao interirmos um conjunto completo de estados intermediários $\ket{X}$ entre as correntes eletromagnéticas, temos
+    \begin{align*}
+        \int e^{iqz}\bra{p}J_{\mu}(0)J_{\nu}(z)\ket{p}\dd[4]{z} &\eq 
+        \sum_{X} \int e^{iqz} \bra{p} J_{\mu}(0)\ket{X}\bra{X}J_{\nu}(z)\ket{p} \dd[4]{z} \\
+        &\eq \sum_{X} \int e^{iqz} \bra{p} J_{\mu}(0)\ket{X}\bra{X} e^{i\hat{p}z} J_{\nu}(0) e^{-i\hat{p}z}\ket{p} \dd[4]{z} \\
+        &\eq \sum_{X} \int e^{iqz} \bra{p} J_{\mu}(0)\ket{X}\bra{X} e^{ip_{X}z} J_{\nu}(0) e^{-ipz}\ket{p} \dd[4]{z} \\
+        &\eq \sum_{X}\bra{p}J_{\mu}(0)\ket{X}\bra{X}J_{\nu}\ket{p} \int e^{i(q + p_{X} - p)z} \dd[4]{z} \\
+        &\eq (2\pi)^{3}\sum_{X} \bra{p} J_{\mu}(0)\ket{X}\bra{X} J_{\nu} \ket{p} \delta^{4}(q + p_{X} - p)
+    \end{align*}
+
+Analizando a delta de Dirac de conservação de momento, temos pela conservação do 4-momento, vale a igualdade $p_{X} = p + q$. No argumento da Delta, vai ficar então
+    \begin{equation*}
+        \delta^{4}(q + p_{X} - p) = \delta^{4}(2q)
+    \end{equation*}
