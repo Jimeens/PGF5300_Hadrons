@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber lista2"] 1761618620.5485 "lista2.bcf" "lista2.bbl" "lista2" 1761780789.64486 0
-  "lista2.bcf" 1761780789.15732 107347 af847953bd3bd7db0bedd57c639b4360 "lualatex"
+["biber lista2"] 1761618620.5485 "lista2.bcf" "lista2.bbl" "lista2" 1761868342.42557 0
+  "lista2.bcf" 1761868341.95924 107347 af847953bd3bd7db0bedd57c639b4360 "lualatex"
   (generated)
   "lista2.bbl"
   "lista2.blg"
   (rewritten before read)
-["lualatex"] 1761780775.60173 "/home/jimeens/PGF5300_Hadrons-1/Listas/lista2.tex" "lista2.pdf" "lista2" 1761780789.64518 0
+["lualatex"] 1761868328.94382 "/home/jimeens/PGF5300_Hadrons-1/Listas/lista2.tex" "lista2.pdf" "lista2" 1761868342.42593 0
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-bold.luc" 1759403390.68597 775384 a27328b6c86b82947b2132521a8acadc ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-bolditalic.luc" 1759402757.19556 651856 315f97ab3f506fab2134d517c2854827 ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-italic.luc" 1759403389.03896 529275 7718281912aea2e86fe25759d886cd74 ""
@@ -482,18 +482,18 @@
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1759385855 12241594 67a45b03fb4ccdb111b8fce7cf2b8d9f ""
   "Figures/Impression, soleil levant - Claude Monet.png" 1761007108.84144 2524230 0e450d5187cab6b96f30bfa739e6ad7e ""
   "Figures/vanilla.png" 1761007108.84144 13277 f1466bbec7dd343744da270f97c7475e ""
-  "Solutions/Solutions2/ex1.tex" 1761623887.52124 3133 06ab60015990298353ccd5aaef04a859 ""
+  "Solutions/Solutions2/ex1.tex" 1761863597.10626 3136 0950d2023d37c8f6bd5b6e4fc3654662 ""
   "Solutions/Solutions2/ex2.tex" 1761007108.844 14006 0dd29b0d2140090bebe49a26e0858cf5 ""
-  "Solutions/Solutions2/ex3.tex" 1761174249.641 9421 949427e848485d2e10aeb4b9fc007f76 ""
-  "Solutions/Solutions2/ex4.tex" 1761573797.85717 12896 72ae115358c73d8927cfe2c8811199ad ""
+  "Solutions/Solutions2/ex3.tex" 1761865081.07776 9254 d6036537e98d8bf957611aa07883980f ""
+  "Solutions/Solutions2/ex4.tex" 1761865492.58811 12897 c1a1cf8db4428503200ca69be9e02026 ""
   "Solutions/Solutions2/ex5.tex" 1761329001.51957 5197 bdb643987e72571f03995e10e0d26f20 ""
   "Solutions/Solutions2/ex6.tex" 1761135653.20288 14480 1128b07f526a4b9872d03aff394978f3 ""
-  "Solutions/Solutions2/ex7.tex" 1761780760.03504 5941 7c0c7938a3bdaa827b399471ddcc51bc ""
-  "Solutions/Solutions2/ex8.tex" 1761758138.94905 24048 98df78ae9953ea0f1e44b746442528c9 ""
-  "impression.cls" 1761135623.89129 5847 87a3838eec02c4244c20ee34af0234d0 ""
-  "lista2.aux" 1761780789.13832 15263 ba1ae688baa9a08d225a59384f234876 "lualatex"
+  "Solutions/Solutions2/ex7.tex" 1761863511.18106 6528 bfdc11ecc06bbba8d1d7bcaf1147c361 ""
+  "Solutions/Solutions2/ex8.tex" 1761867949.91301 24048 98df78ae9953ea0f1e44b746442528c9 ""
+  "impression.cls" 1761868328.6242 5849 76ff2e1574d1c217e3ab16886d7d2000 ""
+  "lista2.aux" 1761868341.94324 15328 540fd1ad26fc020e866be2169a800777 "lualatex"
   "lista2.bbl" 1761618622.98203 466 ee04f40f768daeed26442158e95aba61 "biber lista2"
-  "lista2.run.xml" 1761780789.15932 2350 5aa1c18c5b55dd05e315fad12ce5da91 "lualatex"
+  "lista2.run.xml" 1761868341.96153 2350 5aa1c18c5b55dd05e315fad12ce5da91 "lualatex"
   "lista2.tex" 1761769962.48127 8170 34f5e121ba1226a5f203fc3ae5c86b97 ""
   "mypackages.sty" 1761007108.87844 2276 49a797eed214d5adb00296da5bbf3033 ""
   (generated)

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  22 OCT 2025 09:17
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  30 OCT 2025 20:42
  system commands enabled.
  file:line:error style messages enabled.
 **/home/jimeens/PGF5300_Hadrons-1/Listas/lista1.tex
@@ -1783,15 +1783,45 @@ File: pgflibrarygraphdrawing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@gd@postkind@box=\box143
 )) (/usr/share/texlive/texmf-dist/tex/latex/tikz-feynman/tikzfeynman.keys.code.tex))))
 \c@tikzmarkalign=\count569
-\c@tikzmarkaligns=\count570
+
+./impression.cls:222: Undefined control sequence.
+<argument> \feynhandarrowsize 
+                   
+l.222 \setlength{\feynhandarrowsize}{3pt}
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 )
+/home/jimeens/PGF5300_Hadrons-1/Listas/lista1.tex:4: Missing number, treated as zero.
+<to be read again> 
+\__kernel_tl_set:Nx 
+l.4 
+  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+/home/jimeens/PGF5300_Hadrons-1/Listas/lista1.tex:4: Illegal unit of measure (pt inserted).
+<to be read again> 
+\__kernel_tl_set:Nx 
+l.4 
+  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'portuguese'.
- (./lista1.aux
-\c@pagesLTS.arabic.1.local.cnt=\count571
-)
+(./lista1.aux)
 \openout1 = lista1.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1826,16 +1856,16 @@ File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 LaTeX Font Info:    ... okay on input line 11.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count572
+\scratchcounter=\count570
 \scratchdimen=\dimen383
 \scratchbox=\box144
-\nofMPsegments=\count573
-\nofMParguments=\count574
+\nofMPsegments=\count571
+\nofMParguments=\count572
 \everyMPshowfont=\toks83
-\MPscratchCnt=\count575
+\MPscratchCnt=\count573
 \MPscratchDim=\dimen384
-\MPnumerator=\count576
-\makeMPintoPDFobject=\count577
+\MPnumerator=\count574
+\makeMPintoPDFobject=\count575
 \everyMPtoPDFconversion=\toks84
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -2045,9 +2075,9 @@ Package biblatex Info: ... file 'lista1.bbl' found.
 Package biblatex Info: Reference section=0 on input line 11.
 Package biblatex Info: Reference segment=0 on input line 11.
 Package hyperref Info: Link coloring ON on input line 11.
-\c@pagesLTS.pnc.arabic=\count578
-\c@pagesLTS.double.arabic=\count579
-\c@pagesLTS.current.local.arabic=\count580
+\c@pagesLTS.pnc.arabic=\count576
+\c@pagesLTS.double.arabic=\count577
+\c@pagesLTS.current.local.arabic=\count578
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: luatex
 * paper: a4paper
@@ -2793,6 +2823,12 @@ Package microtype Info: Character `₡' is missing
 (microtype)             in font `TU/EBGaramond(0)/m/n/45'.
 (microtype)             Ignoring protrusion settings for this character.
  (./Solutions/Solutions1/ex1.tex
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 55.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 55.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 69.
@@ -2807,7 +2843,20 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 
 
-<./Figures/vanilla.png>])
+<./Figures/vanilla.png>]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 94.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 94.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 121.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 121.
+
+)
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 31.
@@ -2822,6 +2871,12 @@ LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
 (Font)              scaled to size 6.17184pt on input line 36.
  (./Solutions/Solutions1/ex2.tex
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 50.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 50.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 50.
@@ -2830,10 +2885,40 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 50.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [3]
+[3]
 Overfull \hbox (1.70512pt too wide) detected at line 58
 [] \OML/cmm/m/it/10.95 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 e[] [] \OT1/cmr/m/n/10.95 = [] [][] []
  []
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 84.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 84.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 110.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 110.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 110.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 110.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 110.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma3''? on input line 110.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma3''? on input line 110.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma4''? on input line 110.
 
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
@@ -2844,6 +2929,15 @@ File: Figures/vanilla.png Graphic file (type png)
 Package luatex.def Info: Figures/vanilla.png  used on input line 118.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
 [4]
+
+LaTeX Warning: Reference `eq: derivative of f*' on page 5 undefined on input line 150.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 159.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 159.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 176.
@@ -2852,7 +2946,37 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 176.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [5]
+[5]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 196.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 196.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 196.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 196.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 196.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma3''? on input line 196.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 228.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 228.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 228.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 228.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 245.
@@ -2861,7 +2985,14 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 245.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [6])
+[6]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 265.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 265.
+
+)
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 57.
@@ -3261,6 +3392,12 @@ LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
 (Font)              scaled to size 5.1432pt on input line 93.
  (./Solutions/Solutions1/ex3.tex
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 11.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 11.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 11.
@@ -3269,7 +3406,19 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 11.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [8]
+[8]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 38.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 38.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 38.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 38.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 53.
@@ -3278,7 +3427,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 53.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [9]
+[9]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 65.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -3294,6 +3443,22 @@ File: Figures/vanilla.png Graphic file (type png)
 Package luatex.def Info: Figures/vanilla.png  used on input line 96.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [10]
+
+LaTeX Warning: Reference `eq: Heaviside' on page 11 undefined on input line 112.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 126.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 126.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 138.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 138.
+
+
 Overfull \hbox (8.75128pt too wide) detected at line 138
 []
  []
@@ -3317,6 +3482,12 @@ File: Figures/vanilla.png Graphic file (type png)
 Package luatex.def Info: Figures/vanilla.png  used on input line 108.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [12] (./Solutions/Solutions1/ex4.tex
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 23.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 23.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 52.
@@ -3325,7 +3496,25 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 52.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [13]
+[13]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 118.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 118.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 144.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 144.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 144.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 144.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 144.
@@ -3334,7 +3523,25 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 144.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [14]
+[14]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 180.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 180.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 180.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 180.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 219.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 219.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 219.
@@ -3343,7 +3550,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 219.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [15])
+[15])
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 133.
@@ -3363,6 +3570,25 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/8'
 (microtype)             (new value: 8.0pt) on input line 56.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/6'
 (microtype)             (new value: 6.0pt) on input line 56.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 56.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 56.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 56.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 56.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 56.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma3''? on input line 56.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 56.
@@ -3371,7 +3597,49 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 56.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [17]
+[17]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 71.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 71.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 71.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 71.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 97.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 97.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 97.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 97.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 97.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma3''? on input line 97.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 123.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 123.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 123.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 123.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 123.
@@ -3380,7 +3648,73 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 123.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [18]
+[18]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 176.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 176.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 176.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 176.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 196.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 196.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 196.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 196.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma3''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma3''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma4''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma4''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma5''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma5''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma6''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma6''? on input line 253.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma7''? on input line 253.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 253.
@@ -3389,7 +3723,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 253.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [19])
+[19])
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 159.
@@ -3399,6 +3733,12 @@ File: Figures/vanilla.png Graphic file (type png)
 Package luatex.def Info: Figures/vanilla.png  used on input line 159.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [20] (./Solutions/Solutions1/ex6.tex
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 39.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 39.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 39.
@@ -3407,7 +3747,43 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 39.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [21]
+[21]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 71.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 71.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 71.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 71.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 71.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma3''? on input line 71.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 82.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 82.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 82.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 82.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 93.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 93.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 93.
@@ -3416,7 +3792,13 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 93.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [22]
+[22]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 130.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 130.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 147.
@@ -3425,7 +3807,32 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 147.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [23])
+[23]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 165.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 165.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 165.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 165.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 165.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma3''? on input line 165.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 177.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 177.
+
+)
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 186.
@@ -3435,6 +3842,30 @@ File: Figures/vanilla.png Graphic file (type png)
 Package luatex.def Info: Figures/vanilla.png  used on input line 186.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [24] (./Solutions/Solutions1/ex7.tex
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 54.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 54.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 54.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 54.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 54.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma3''? on input line 54.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma3''? on input line 54.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma4''? on input line 54.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 72.
@@ -3443,7 +3874,43 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 72.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [25]
+[25]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 90.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 90.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 101.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 101.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 121.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 121.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 127.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 127.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 152.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 152.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 173.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 173.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 173.
@@ -3452,7 +3919,25 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 173.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [26]
+[26]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 192.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 192.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 217.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 217.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 217.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 217.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 222.
@@ -3461,7 +3946,20 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 222.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [27])
+[27]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 270.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 270.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 270.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 270.
+
+)
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 205.
@@ -3480,6 +3978,13 @@ File: Figures/vanilla.png Graphic file (type png)
 Package luatex.def Info: Figures/vanilla.png  used on input line 57.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [29]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 71.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 71.
+
+
 Overfull \hbox (7.0201pt too wide) detected at line 151
 \OML/cmm/m/it/10.95 Z[] [] [] [][] a\OT1/cmr/m/n/10.95 (\TU/EBGaramond(0)/b/n/10.95 p[]\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95 ) [][] = \OML/cmm/m/it/10.95 Z[][] [][] a\OT1/cmr/m/n/10.95 (\TU/EBGaramond(0)/b/n/10.95 p[]\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95 ) [][]
  []
@@ -3511,6 +4016,9 @@ File: Figures/vanilla.png Graphic file (type png)
 Package luatex.def Info: Figures/vanilla.png  used on input line 220.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [32] (./Solutions/Solutions1/ex9.tex
+
+LaTeX Warning: Reference `eq: annihilation operator for particle fermion' on page 33 undefined on input line 40.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 43.
@@ -3519,7 +4027,25 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 43.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [33]
+[33]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 64.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 64.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 84.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 84.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 84.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 84.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 118.
@@ -3528,7 +4054,34 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 118.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [34]
+[34]
+
+LaTeX Warning: Reference `eq: annihilation operator for antiparticle fermion' on page 35 undefined on input line 165.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 201.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 201.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 201.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 201.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 226.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 226.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 226.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 226.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 226.
@@ -3537,7 +4090,7 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 226.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [35]
+[35]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 322.
@@ -3546,7 +4099,11 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 322.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [36])
+ [36]
+
+LaTeX Warning: Reference `eq: annihilation operator for antiparticle fermion' on page 37 undefined on input line 324.
+
+)
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 251.
@@ -3556,6 +4113,36 @@ File: Figures/vanilla.png Graphic file (type png)
 Package luatex.def Info: Figures/vanilla.png  used on input line 251.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [37] (./Solutions/Solutions1/ex10.tex
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 11.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 11.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 39.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 39.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 39.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 39.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 47.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 47.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 47.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 47.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 47.
@@ -3564,7 +4151,43 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 47.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [38]
+[38]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 57.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 57.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 57.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 57.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 66.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 66.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 66.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 66.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma2''? on input line 66.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma3''? on input line 66.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma0''? on input line 88.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tma1''? on input line 88.
+
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 112.
@@ -3573,7 +4196,11 @@ File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
 Package luatex.def Info: Figures/vanilla.png  used on input line 112.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
- [39]) 
+[39]
+
+LaTeX Warning: Reference `eq: hamiltonian relation' on page 40 undefined on input line 118.
+
+) 
 AED: pageslts setting LastPage 
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
@@ -3584,7 +4211,7 @@ File: Figures/vanilla.png Graphic file (type png)
 Package luatex.def Info: Figures/vanilla.png  used on input line 274.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
 [40]
-\c@pagesLTS.arabic.1.local.count=\count581
+\c@pagesLTS.arabic.1.local.count=\count579
  
 AED: pageslts setting VeryLastPage via AfterLastShipout 
 
@@ -3594,30 +4221,47 @@ AED: pageslts setting LastPages via AfterLastShipout
 Package pageslts Info: Total number of pages is odd.
 
 
-(./lista1.aux)
+
+LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (1 not 41).
+               Rerun to correct this.
+
+(./lista1.aux
+\c@pagesLTS.arabic.1.local.cnt=\count580
+)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                lista1
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'lista1.run.xml'.
 
 \openout1 = lista1.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 55357 strings out of 476553
+ 55347 strings out of 476553
  100000,2848258 words of node,token memory allocated
  3119 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 14 sub_mlist, 1 margin_kern, 3 glyph, 603 attribute, 200 glue_spec, 303 attribute_list, 3 write nodes
-   avail lists: 1:10,2:5009,3:862,4:100,5:659,6:44,7:5736,8:393,9:2357,10:9,11:308
- 75616 multiletter control sequences out of 65536+600000
+   avail lists: 1:10,2:5087,3:862,4:100,5:659,6:44,7:5774,8:393,9:2357,10:9,11:308
+ 75606 multiletter control sequences out of 65536+600000
  109 fonts using 19656711 bytes
- 167i,29n,152p,1488b,1644s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 167i,29n,152p,1488b,2025s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/fonts/opentype/ebgaramond/EBGaramond08-Regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Bold.otf></usr/share/fonts/opentype/ebgaramond/EBGaramond12-Regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb>
-Output written on lista1.pdf (41 pages, 4339530 bytes).
+Output written on lista1.pdf (41 pages, 4356478 bytes).
 
-PDF statistics: 360 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
+PDF statistics: 346 PDF objects out of 1000 (max. 8388607)
  89 named destinations out of 1000 (max. 131072)
  96 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber lista1"] 1759615269.99914 "lista1.bcf" "lista1.bbl" "lista1" 1761135447.41842 0
-  "lista1.bcf" 1761135446.88765 107347 af847953bd3bd7db0bedd57c639b4360 "lualatex"
+["biber lista1"] 1759615269.99914 "lista1.bcf" "lista1.bbl" "lista1" 1761867740.28911 0
+  "lista1.bcf" 1761867739.68036 107347 af847953bd3bd7db0bedd57c639b4360 "lualatex"
   (generated)
   "lista1.bbl"
   "lista1.blg"
   (rewritten before read)
-["lualatex"] 1761135432.55703 "/home/jimeens/PGF5300_Hadrons-1/Listas/lista1.tex" "lista1.pdf" "lista1" 1761135447.41873 0
+["lualatex"] 1761867723.72845 "/home/jimeens/PGF5300_Hadrons-1/Listas/lista1.tex" "lista1.pdf" "lista1" 1761867740.28947 2
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-bold.luc" 1759403390.68597 775384 a27328b6c86b82947b2132521a8acadc ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-bolditalic.luc" 1759402757.19556 651856 315f97ab3f506fab2134d517c2854827 ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-italic.luc" 1759403389.03896 529275 7718281912aea2e86fe25759d886cd74 ""
@@ -17,7 +17,7 @@
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1759402755.44054 128392 cc9893d1631ce94f31c1896bb041be89 ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1759402754.91053 127309 677951b359b90ddbfa3eb54f696122f6 ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-regular.luc" 1759402755.06353 127942 8773e750671a876188ce154763cc70e4 ""
-  "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1761023881.42341 18336 29e85fa3f0a290c2a5344e2322668e89 ""
+  "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1761604134.22198 18452 48653afe18efb386f072a3d0b012b17e ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1759402754.78653 403740 1645b4019bc05bba6fc67f9f56ae15eb ""
   "/home/jimeens/PGF5300_Hadrons-1/Listas/lista1.tex" 1761007108.86944 13331 a12f86b094ef5e97d18d5c5c72ddad60 ""
   "/usr/share/fonts/opentype/ebgaramond/EBGaramond08-Regular.otf" 1643918790 259856 9b86b0ffdaa12243cd2d37653b05413d ""
@@ -513,10 +513,9 @@
   "Solutions/Solutions1/ex7.tex" 1761007108.84305 13433 eaab9c2932d58c1b2c76b5b81e3d01cf ""
   "Solutions/Solutions1/ex8.tex" 1761007108.84305 13540 05fb35295066b08c00f9f77e92f790a4 ""
   "Solutions/Solutions1/ex9.tex" 1761007108.84344 19803 71224c80d1ea35194df14d176fa49e49 ""
-  "impression.cls" 1761135432.23655 7454 dfb0c4a9064df0af03ebc490afd246d5 ""
-  "lista1.aux" 1761135446.86965 19552 e066d5796600ee80d78417995750a978 "lualatex"
+  "impression.cls" 1761867705.13414 6356 86d460d5ad7d83ac30e73b7f9dee124d ""
+  "lista1.aux" 1761867739.66036 19549 87b9640d5280a46a8c1dcee7003f7de5 "lualatex"
   "lista1.bbl" 1761007108.844 466 ee04f40f768daeed26442158e95aba61 "biber lista1"
-  "lista1.run.xml" 1761135446.89036 2350 547623133b6f98806518c144a8a2c47a "lualatex"
   "lista1.tex" 1761007108.86944 13331 a12f86b094ef5e97d18d5c5c72ddad60 ""
   "mypackages.sty" 1761007108.87844 2276 49a797eed214d5adb00296da5bbf3033 ""
   (generated)

@@ -81,9 +81,19 @@ O termo da direita pode ser identificado como o tensor hadrônico $W_{\mu\nu}$ a
         &\eq (2\pi)^{3}\sum_{X} \bra{p} J_{\mu}(0)\ket{X}\bra{X} J_{\nu} \ket{p} \delta^{4}(q + p_{X} - p)
     \end{align*}
 
-A delta de Dirac dessa expressão impõe que a conservação do 4-momento é $p_{X} = p - q$. Sendo então $\nu = \dfrac{p\cdot q}{m}$ e $q^{2} = -Q^{2}$ sendo o momento transferido, temos
+A delta de Dirac dessa expressão impõe que a conservação do 4-momento é $p_{X} = p - q$. Sendo então $\nu = \dfrac{p\cdot q}{m}$ e $q^{2} = -Q^{2}$, com $Q>0$ sendo o momento transferido, temos
     \begin{align*}
         p_{X}^{2} = (p - q)^{2}
         = p^{2} - 2p\cdot q + q^{2}
         = m^{2} - 2m\nu - Q^{2}
     \end{align*}
+
+Considerando a variável de Bjorken $x = \dfrac{Q^{2}}{2m\nu}$, que é definida no intervalo $0<x<1$, escrevemos
+    \begin{equation*}
+        p_{X}^{2} = m^{2} - Q^{2}\qty(1 + \dfrac{1}{x})
+    \end{equation*}
+
+No regime do DIS, o momento transferido $Q^{2} \to \infty$, o que faria com que $p_{X}^{2} < 0$, portanto não deve existir estados hadrônicos intermediários na camada de massa, implicando em $\delta^{4}(q + p_{X} - p) = 0$ e concluindo que
+    \begin{answer}\label{answer 8}
+        \int e^{iqz}\bra{p}J_{\mu}(0)J_{\nu}(z)\ket{p}\dd[4]{z} = 0
+    \end{answer}

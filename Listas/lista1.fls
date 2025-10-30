@@ -630,7 +630,6 @@ INPUT ./Figures/vanilla.png
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./lista1.aux
-INPUT ./lista1.run.xml
 OUTPUT lista1.run.xml
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
