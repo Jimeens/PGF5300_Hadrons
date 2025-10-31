@@ -61,7 +61,27 @@ Segue que
         \bigg\}
     \end{align*}
 
-Dado que $p_{X0} > p_{0}$, o segundo termo não apresenta um pólo quando $q_{0}>0$, de modo que sua contribuição vai ser completamente na parte real de $T_{\mu\nu}$. A parte imaginária de $T_{\mu\nu}$ vai ser então apenas o termo com o $\delta^{4}(q + p - p_{X})$, pois o termo de valor principal de Cauchy está acompanhado de um fator $i$ e como por definição a amplitude já possui outro fator $i$, portanto
+Considerando apenas a parte imaginária da amplitude, temos
+    \begin{equation*}
+        \text{Im}(T_{\mu\nu}) = \pi(2\pi)^{3}\sum_{X}\bra{p}J_{\mu}(0)\ket{X}\bra{X}J_{\nu}(0)\ket{p}\qty[
+            \delta^{4}(q + p - p_{X}) + 
+            \delta^{4}(-q - p_{X} + p)
+        ]
+    \end{equation*}
+
+A delta segunda de Dirac dessa expressão impõe que a conservação do 4-momento é $p_{X} = p - q$. Sendo então $\nu = \dfrac{p\cdot q}{m}$ e $q^{2} = -Q^{2}$, com $Q>0$ sendo o momento transferido, temos
+    \begin{align*}
+        p_{X}^{2} = (p - q)^{2}
+        = p^{2} - 2p\cdot q + q^{2}
+        = m^{2} - 2m\nu - Q^{2}
+    \end{align*}
+
+Considerando a variável de Bjorken $x = \dfrac{Q^{2}}{2m\nu}$, que é definida no intervalo $0<x<1$, escrevemos
+    \begin{equation*}
+        p_{X}^{2} = m^{2} - Q^{2}\qty(1 + \dfrac{1}{x})
+    \end{equation*}
+
+No regime do DIS, o momento transferido $Q^{2} \to \infty$, o que faria com que $p_{X}^{2} < 0$, portanto não devem existir estados intermediários na camada de massa, implicando em $\delta^{4}(-q - p_{X} + p) = 0$. Portanto
     \begin{equation*}
         \text{Im}[T_{\mu\nu}] = \pi(2\pi)^{3}\sum_{X}\bra{p}J_{\mu}(0)\ket{X}\bra{X}J_{\nu}(0)\ket{p}\delta^{4}(q + p - p_{X})
     \end{equation*}
@@ -77,23 +97,11 @@ O termo da direita pode ser identificado como o tensor hadrônico $W_{\mu\nu}$ a
         \sum_{X} \int e^{iqz} \bra{p} J_{\mu}(0)\ket{X}\bra{X}J_{\nu}(z)\ket{p} \dd[4]{z} \\
         &\eq \sum_{X} \int e^{iqz} \bra{p} J_{\mu}(0)\ket{X}\bra{X} e^{i\hat{p}z} J_{\nu}(0) e^{-i\hat{p}z}\ket{p} \dd[4]{z} \\
         &\eq \sum_{X} \int e^{iqz} \bra{p} J_{\mu}(0)\ket{X}\bra{X} e^{ip_{X}z} J_{\nu}(0) e^{-ipz}\ket{p} \dd[4]{z} \\
-        &\eq \sum_{X}\bra{p}J_{\mu}(0)\ket{X}\bra{X}J_{\nu}\ket{p} \int e^{i(q + p_{X} - p)z} \dd[4]{z} \\
+        &\eq \sum_{X}\bra{p}J_{\mu}(0)\ket{X}\bra{X}J_{\nu}(0)\ket{p} \int e^{i(q + p_{X} - p)z} \dd[4]{z} \\
         &\eq (2\pi)^{3}\sum_{X} \bra{p} J_{\mu}(0)\ket{X}\bra{X} J_{\nu} \ket{p} \delta^{4}(q + p_{X} - p)
     \end{align*}
 
-A delta de Dirac dessa expressão impõe que a conservação do 4-momento é $p_{X} = p - q$. Sendo então $\nu = \dfrac{p\cdot q}{m}$ e $q^{2} = -Q^{2}$, com $Q>0$ sendo o momento transferido, temos
-    \begin{align*}
-        p_{X}^{2} = (p - q)^{2}
-        = p^{2} - 2p\cdot q + q^{2}
-        = m^{2} - 2m\nu - Q^{2}
-    \end{align*}
-
-Considerando a variável de Bjorken $x = \dfrac{Q^{2}}{2m\nu}$, que é definida no intervalo $0<x<1$, escrevemos
-    \begin{equation*}
-        p_{X}^{2} = m^{2} - Q^{2}\qty(1 + \dfrac{1}{x})
-    \end{equation*}
-
-No regime do DIS, o momento transferido $Q^{2} \to \infty$, o que faria com que $p_{X}^{2} < 0$, portanto não deve existir estados hadrônicos intermediários na camada de massa, implicando em $\delta^{4}(q + p_{X} - p) = 0$ e concluindo que
+Como a delta de Dirac é par, $\delta^{4}(q + p_{X} - p) = \delta^{4}(-q - p_{X} + p)$, então pelo mesmo argumento do item (a), essa quantidade é nula, concluindo que
     \begin{answer}\label{answer 8}
         \int e^{iqz}\bra{p}J_{\mu}(0)J_{\nu}(z)\ket{p}\dd[4]{z} = 0
     \end{answer}
