@@ -453,6 +453,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/tree
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/trees.lua
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/trees/ReingoldTilford1981.lua
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tikz-feynman/tikzfeynman.keys.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgfornament/pgfornament.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgfornament/pgflibraryvectorian.code.tex
 INPUT ./lista2.aux
 OUTPUT lista2.aux
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
@@ -503,6 +505,9 @@ INPUT ./Solutions/Solutions2/ex1.tex
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Figures/vanilla.png
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian80.pgf
+INPUT ./Figures/Impression, soleil levant - Claude Monet.png
+INPUT ./Figures/vanilla.png
 INPUT ./Solutions/Solutions2/ex2.tex
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
@@ -510,6 +515,7 @@ INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian80.pgf
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Solutions/Solutions2/ex3.tex
@@ -521,8 +527,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
-INPUT ./Figures/Impression, soleil levant - Claude Monet.png
-INPUT ./Figures/vanilla.png
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian80.pgf
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Solutions/Solutions2/ex4.tex
@@ -532,9 +537,13 @@ INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian80.pgf
+INPUT ./Figures/Impression, soleil levant - Claude Monet.png
+INPUT ./Figures/vanilla.png
 INPUT ./Solutions/Solutions2/ex5.tex
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian80.pgf
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Solutions/Solutions2/ex6.tex
@@ -546,6 +555,7 @@ INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian80.pgf
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Solutions/Solutions2/ex7.tex
@@ -553,6 +563,9 @@ INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
+INPUT ./Figures/Impression, soleil levant - Claude Monet.png
+INPUT ./Figures/vanilla.png
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian80.pgf
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Solutions/Solutions2/ex8.tex
@@ -568,6 +581,7 @@ INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian80.pgf
 INPUT ./Figures/Impression, soleil levant - Claude Monet.png
 INPUT ./Figures/vanilla.png
 INPUT ./lista2.aux

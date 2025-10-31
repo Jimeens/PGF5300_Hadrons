@@ -199,3 +199,8 @@
 }
 \makeatother
 
+\def\endex{
+  \begin{center}
+    \pgfornament[width=3cm, opacity=0.1]{80}
+  \end{center}
+}
