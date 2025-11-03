@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber lista2"] 1761618620.5485 "lista2.bcf" "lista2.bbl" "lista2" 1762135649.8322 0
-  "lista2.bcf" 1762135649.31918 107347 af847953bd3bd7db0bedd57c639b4360 "lualatex"
+["biber lista2"] 1761618620.5485 "lista2.bcf" "lista2.bbl" "lista2" 1762140618.25715 0
+  "lista2.bcf" 1762140617.78978 107347 af847953bd3bd7db0bedd57c639b4360 "lualatex"
   (generated)
   "lista2.bbl"
   "lista2.blg"
   (rewritten before read)
-["lualatex"] 1762135633.53832 "/home/jimeens/PGF5300_Hadrons-1/Listas/lista2.tex" "lista2.pdf" "lista2" 1762135649.83259 0
+["lualatex"] 1762140605.24438 "/home/jimeens/PGF5300_Hadrons-1/Listas/lista2.tex" "lista2.pdf" "lista2" 1762140618.25756 0
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-bold.luc" 1759403390.68597 775384 a27328b6c86b82947b2132521a8acadc ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-bolditalic.luc" 1759402757.19556 651856 315f97ab3f506fab2134d517c2854827 ""
   "/home/jimeens/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-italic.luc" 1759403389.03896 529275 7718281912aea2e86fe25759d886cd74 ""
@@ -491,12 +491,12 @@
   "Solutions/Solutions2/ex4.tex" 1761870953.85548 12905 1d4230fc34e7953805484f744a348433 ""
   "Solutions/Solutions2/ex5.tex" 1761870953.85548 5205 0b29e2f7282b147acbfe5cb8f080ec8f ""
   "Solutions/Solutions2/ex6.tex" 1761870953.85486 14488 8ba5808e305eb6395493c0f58e2e010b ""
-  "Solutions/Solutions2/ex7.tex" 1761880269.83696 6581 cd2a9652d5639bca0ef2d4e06b1a3caa ""
+  "Solutions/Solutions2/ex7.tex" 1762140590.10399 6576 141954501d1923e6ab134a91819b98ca ""
   "Solutions/Solutions2/ex8.tex" 1761870953.76409 24056 b135be5a78d1bc1cb49c63ce1dcd0cf2 ""
   "impression.cls" 1761870881.87779 5939 c2164c82d3378a669fa2ba2b70bd7933 ""
-  "lista2.aux" 1762135649.29618 15328 db2c10eb1a3bcc5e22a62e9648e989e9 "lualatex"
+  "lista2.aux" 1762140617.77378 15328 5ef58b2a62086ca3a84922653c64f89e "lualatex"
   "lista2.bbl" 1761618622.98203 466 ee04f40f768daeed26442158e95aba61 "biber lista2"
-  "lista2.run.xml" 1762135649.32153 2350 5aa1c18c5b55dd05e315fad12ce5da91 "lualatex"
+  "lista2.run.xml" 1762140617.79229 2350 5aa1c18c5b55dd05e315fad12ce5da91 "lualatex"
   "lista2.tex" 1761868772.29958 8242 24b4db32bc99ff01b67efe6deb1aed41 ""
   "mypackages.sty" 1761869742.58483 2323 e6d674454714ea3f545f77fb2d7df40a ""
   (generated)
