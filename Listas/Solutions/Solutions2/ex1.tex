@@ -1,4 +1,4 @@
-Partindo da expressão dada para o funcional gerador de um campo escalar livre, como $\bar{\phi}$ é a configuração clássica do campo, ela pode ser escrita em termos do propagador $\Delta(x-y)$, pois como $J = \vec{K}_{x}\bar{\phi}$ e $\vec{K}_{x}[i\Delta(x-y)] = i\delta^{4}(x-y)$ (equação de Green), o campo será dado por
+Partindo da expressão dada para o funcional gerador de um campo escalar livre, como $\bar{\phi}$ é a configuração clássica do campo, ela pode ser escrita em termos do propagador $\Delta(x-y)$, pois como $J = \vec{K}_{x}\bar{\phi}$ e $\vec{K}_{x}[i\Delta(x-y)] = -i\delta^{4}(x-y)$ (equação de Green explicitada na Aula 6), o campo será dado por
     \begin{equation*}
         \bar{\phi} = -\int \Delta(x-y)J(y)\dd[4]{y}
     \end{equation*}
@@ -15,45 +15,45 @@ O terceiro termo da exponencial pode ser reescrito levando em conta que o integr
     \begin{align*}
         \vec{K}_{x}[i\Delta(x-y)J(y)\xi] &\eq \vec{K}_{x}[i\Delta(x-y)J(y)]\xi + i\Delta(x-y)J(y)\vec{K}_{x}\xi \\
         &\eq \vec{K}_{x}[i\Delta(x-y)]J(y)\xi + i\Delta(x-y)J(y)\vec{K}_{x}\xi \\
-        &\eq i\delta^4(x-y)J(y)\xi + i\Delta(x-y)J(y)\vec{K}_{x}\xi
+        &\eq -i\delta^4(x-y)J(y)\xi + i\Delta(x-y)J(y)\vec{K}_{x}\xi
     \end{align*}
 
 Portanto
     \begin{align*}
-        i\Delta(x-y)J(y)\vec{K}_{x}\xi = \vec{K}_{x}[i\Delta(x-y)J(y)\xi] - i\delta^{4}(x-y)J(y)\xi
+        i\Delta(x-y)J(y)\vec{K}_{x}\xi = \vec{K}_{x}[i\Delta(x-y)J(y)\xi] + i\delta^{4}(x-y)J(y)\xi
     \end{align*}
 
 Multiplicando por $i$ e integrando em $\dd[4]{y}$ de ambos os lados, obtemos
     \begin{align*}
-        -\int\Delta(x-y)J(y)\vec{K}_{x}\xi \dd[4]{y} &\eq i\int\vec{K}_{x}[i\Delta(x-y)J(y)\xi]\dd[4]{y} - i^{2}\int \delta^{4}(x-y)J(y)\xi\dd[4]{y}
+        i^{2}\int\Delta(x-y)J(y)\vec{K}_{x}\xi \dd[4]{y} &\eq i\int\vec{K}_{x}[i\Delta(x-y)J(y)\xi]\dd[4]{y} + i^{2}\int \delta^{4}(x-y)J(y)\xi\dd[4]{y}
     \end{align*}
 
 O primeiro termo vai ser um termo de superfície que desaparece nos infinitos e a segunda vai restar apenas $J(x)\xi(x)$ após a integração em $\dd[4]{y}$, logo
     \begin{align*}
-        -\int\Delta(x-y)J(y)\vec{K}_{x}\xi = J\xi
+        -\int\Delta(x-y)J(y)\vec{K}_{x}\xi = -J\xi
     \end{align*}
 
 O funcional gerador fica então
     \begin{align*}
         Z_{0}[J] &\eq N\int\exp\bigg\{i\int\bigg[
             -\dfrac{1}{2}\xi\vec{K}_{x}\xi -
-            \dfrac{1}{2}\xi J -
+            \dfrac{1}{2}\xi J +
             \dfrac{1}{2}J \xi +
             \dfrac{1}{2}\int J(x)\Delta(x-y)J(y) \dd[4]{y} - \\
         &\noeq -
             \int J(x)\Delta(x-y)J(y)\dd[4]{y} + J\xi
         \bigg]\dd[4]{x}\bigg\}[D\xi] \\
         &\eq N\int\exp\bigg\{i\int\bigg[
-            -\dfrac{1}{2}\xi\vec{K}_{x}\xi - \dfrac{1}{2}\int J(x)\Delta(x-y)J(y)\dd[4]{y}
+            -\dfrac{1}{2}\xi\vec{K}_{x}\xi + J\xi - \dfrac{1}{2}\int J(x)\Delta(x-y)J(y)\dd[4]{y}
         \bigg]\dd[4]{x}\bigg\}[D\xi] \\
-        &\eq N\int\exp\qty(-\dfrac{i}{2}\int\xi\vec{K}_{x}\xi\dd[4]{x})[D\xi]\exp\qty[-\dfrac{i}{2}\iint J(x)\Delta(x-y)J(y)\dd[4]{y}\dd[4]{x}]
+        &\eq N\int\exp\qty[i\int\qty(-\dfrac{1}{2}\xi\vec{K}_{x}\xi + J\xi)\dd[4]{x}][D\xi]\exp\qty[-\dfrac{i}{2}\iint J(x)\Delta(x-y)J(y)\dd[4]{y}\dd[4]{x}]
     \end{align*}
 
-Podemos então identificar
+Podemos então identificar que o primeiro termo pode ser considerado como uma constante, dado que a integração em $[D\xi]$ é bem definida, sendo ela uma integral gaussiana, portanto definindo
     \begin{equation*}
-        Z_{0}[0] = N\int\exp\qty(-\dfrac{i}{2}\int\xi\vec{K}_{x}\xi\dd[4]{x})[D\xi]
+        N' \coloneqq N\int\exp\qty[i\int\qty(-\dfrac{1}{2}\xi\vec{K}_{x}\xi + J\xi)\dd[4]{x}][D\xi]
     \end{equation*}
-e definir $N' \coloneqq Z_{0}[0]$, concluindo que
+concluímos que
     \begin{answer}\label{eq: answer 1}
         Z_{0}[J] = N'\exp\qty[-\dfrac{i}{2}\iint J(x)\Delta(x-y)J(y)\dd[4]{y}\dd[4]{x}]
     \end{answer}
