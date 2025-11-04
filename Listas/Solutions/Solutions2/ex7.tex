@@ -41,8 +41,9 @@ Onde $\mathsf{VP}(\cdots)$ é o valor principal de Cauchy. Logo
 
 No caso da segunda integral, $I_{2}$, (com a Heaviside em $-z_{0}$), teremos
     \begin{align*}
-        I_{2} &\eq \int \Theta(-z_{0})e^{-i(q+p_{X}-p)z}\dd[4]{z}\\ 
-        &\eq \int_{-\infty}^{0}e^{i(-q_{0}-p_{X0}+p_{0})z_{0}}\dd{z_{0}}\int_{-\infty}^{\infty}e^{i(-\vb{q}-\vb{p}_{X}+\vb{p})\cdot\vb{z}}\dd[3]{z} \\
+        I_{2} &\eq \int \Theta(-z_{0})e^{i(q+p_{X}-p)z}\dd[4]{z}\\ 
+        &\eq \int_{-\infty}^{0}e^{i(q_{0}+p_{X0}-p_{0})z_{0}}\dd{z_{0}}\int_{-\infty}^{\infty}e^{-i(\vb{q}+\vb{p}_{X}-\vb{p})\cdot\vb{z}}\dd[3]{z} \\
+        &\eq \int_{0}^{\infty}e^{i(-q_{0}-p_{X0}+p_{0})z_{0}}\dd{z_{0}}\int_{-\infty}^{\infty}e^{i(-\vb{q}-\vb{p}_{X}+\vb{p})\cdot\vb{z}}\dd[3]{z} \\
         &\eq \pi(2\pi)^{3}\delta^{4}(-q - p_{X} + p) + i(2\pi)^{3}\mathsf{VP}\qty(\dfrac{1}{-q_{0} - p_{X0} + p_{0}})\delta^{3}(-\vb{q} - \vb{p}_{X} + \vb{p})
     \end{align*}
 
