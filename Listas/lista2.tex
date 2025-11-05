@@ -81,18 +81,18 @@
             \begin{tikzpicture}
                 \begin{feynman}
                     \vertex (i1);
-                    \vertex [below right=0.5*1.5cm and 0.5*2cm of i1, dot] (i2) {};
-                    \vertex [above right=0.5*1.5cm and 0.5*2cm of i2] (i3);
+                    \vertex [below right=0.7*1.5cm and 0.7*2cm of i1, dot] (i2) {};
+                    \vertex [above right=0.7*1.5cm and 0.7*2cm of i2] (i3);
                     
-                    \vertex [below=0.5*6cm of i1] (i4);
-                    \vertex [above right=0.5*1.5cm and 0.5*2cm of i4, dot] (i5) {};
-                    \vertex [below right=0.5*1.5cm and 0.5*2cm of i5] (i6);
+                    \vertex [below=0.7*6cm of i1] (i4);
+                    \vertex [above right=0.7*1.5cm and 0.7*2cm of i4, dot] (i5) {};
+                    \vertex [below right=0.7*1.5cm and 0.7*2cm of i5] (i6);
 
                     \diagram* {
                         (i1) -- [plain, rmomentum={[arrow shorten=0.7]$p_{1}$}] (i2) -- [plain, rmomentum={[arrow shorten=0.7]$p_{3}$}] (i3),
                         (i2) -- [plain, half left, looseness=1.5] (i5),
                         (i5) -- [plain, half left, looseness=1.5] (i2),
-                        (i4) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{1}$}] (i5) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{4}$}] (i6),
+                        (i4) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{2}$}] (i5) -- [plain, rmomentum'={[arrow shorten=0.7]$p_{4}$}] (i6),
                     };
                 \end{feynman}
             \end{tikzpicture}
@@ -139,7 +139,7 @@
             \begin{equation*}
                 \int e^{iqz} \bra{p}J_{\mu}(0)J_{\nu}(z)\ket{p}\dd[4]{z}
             \end{equation*}
-        é igual a zero. \textbf{Dica:} obtenha uma função delta de Dirac e conservação do quadri-momento total.
+        é igual a zero. \textbf{\textsc{Dica:}} obtenha uma função delta de Dirac e conservação do quadri-momento total.
     \end{enumerate}
 \end{exercise}
 
