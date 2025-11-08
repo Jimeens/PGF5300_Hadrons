@@ -1,14 +1,10 @@
 Considerando o espalhamento elástico elétron-múon, os tensores leptônico e hadrônico são dados por
     \begin{equation*}
-        L^{\alpha\beta} = \dfrac{1}{2} \sum_{s,s'} 
-        \bar{u}_{e}(k',s') \gamma^{\alpha} u_{e}(k,s)
-        \bar{u}_{e}(k,s) \gamma^{\beta} u_{e}(k',s')
+        L^{\alpha\beta} = \dfrac{1}{2}\sum_{s,s'}\qty[\bar{u}_{e}(k,s)\gamma^{\alpha}u_{e}(k',s')]^{\ast}\bar{u}_{e}(k,s)\gamma^{\beta}u_{e}(k',s')
     \end{equation*}
 e
     \begin{equation*}
-        W_{\alpha\beta} = \dfrac{1}{2} \qty[\sum_{S,S'} 
-        \bar{u}_{\mu}(p',S') \gamma_{\alpha} u_{\mu}(p,S)
-        \bar{u}_{\mu}(p,S) \gamma_{\beta} u_{\mu}(p',S')]\delta^{4}(2p\cdot q + q^{2})
+        W_{\alpha\beta} = \dfrac{1}{2}\qty{\sum_{S,S'}\qty[\bar{u}_{\mu}(k',S')\gamma_{\alpha}u_{\mu}(k,S)]^{\ast}\bar{u}_{\mu}(k,S)\gamma_{\beta}u_{\mu}(k',S')}\delta^{4}(2p\cdot q + q^{2})
     \end{equation*}
 
 Aqui consideramos $\bar{u}_{e}$ e $u_{e}$ como os espinores do elétron, $\bar{u}_{\mu}$ e $u_{\mu}$ os espinores do múon, $k$ e $k'$ os momentos iniciais e finais do elétron, $p$ e $p'$ os momentos iniciais e finais do múon, $q$ o momento transferido (como um fóton virtual), e $s,s',S,S'$ os índices de spin. O diagrama abaixo descreve o espalhamento em questão:
@@ -32,13 +28,39 @@ Aqui consideramos $\bar{u}_{e}$ e $u_{e}$ como os espinores do elétron, $\bar{u
     \end{tikzpicture}
 \end{center}
 
-Fica claro então, por conservação de momento, que $q = k - k' = p' - p$. É visível que os tensores $L^{\alpha\beta}$ e $W_{\alpha\beta}$ possuem uma estrutura semelhante, então tratar somente uma delas é o suficiente para o cálculo da contração $L^{\alpha\beta}W_{\alpha\beta}$. A estrutura em questão é dada por
+Fica claro então, por conservação de momento, que $q = k - k' = p' - p$. Considerando a estrutura principal que ocorre nos dois tensores utilizando espinores arbitrários $u$ e $\bar{u}$, podemos notar que termos do tipo $\bar{u}\gamma^{\mu}u$ são números complexos, o que faz com que 
+    \begin{align*}
+        [\bar{u}(k,s)\gamma^{\mu}u(k',s')]^{\ast} &\eq [\bar{u}(k,s)\gamma^{\mu}u(k',s')]^{\dagger} \\
+        &\eq [u^{\dagger}(k,s) \gamma^{0} \gamma^{\mu} u(k',s')]^{\dagger} \\
+        &\eq u^{\dagger}(k',s') (\gamma^{\mu})^{\dagger} \gamma^{0} u(k,s)
+    \end{align*}
+
+Usando então que $(\gamma^{\mu})^{\dagger} = \gamma^{0}\gamma^{\mu}\gamma^{0}$ e $(\gamma^{0})^{2} = \mathds{1}$, obtemos
+    \begin{align*}
+        [\bar{u}(k,s)\gamma^{\mu}u(k',s')]^{\ast} &\eq u^{\dagger}(k',s')\gamma^{0} \gamma^{\mu} \gamma^{0} \gamma^{0} u(k,s) \\
+        &\eq \bar{u}(k',s') \gamma^{\mu} u(k,s)
+    \end{align*}
+
+Portanto os tensores podem ser escritos sob a forma
+    \begin{equation*}
+        L^{\alpha\beta} = \dfrac{1}{2} \sum_{s,s'} 
+        \bar{u}_{e}(k',s') \gamma^{\alpha} u_{e}(k,s)
+        \bar{u}_{e}(k,s) \gamma^{\beta} u_{e}(k',s')
+    \end{equation*}
+e
+    \begin{equation*}
+        W_{\alpha\beta} = \dfrac{1}{2} \qty[\sum_{S,S'} 
+        \bar{u}_{\mu}(p',S') \gamma_{\alpha} u_{\mu}(p,S)
+        \bar{u}_{\mu}(p,S) \gamma_{\beta} u_{\mu}(p',S')]\delta^{4}(2p\cdot q + q^{2})
+    \end{equation*}
+
+Os tensores ainda possuem uma estrutura semelhante, então tratar somente uma delas é o suficiente para o cálculo da contração $L^{\alpha\beta}W_{\alpha\beta}$. A estrutura em questão é dada por
     \begin{equation*}
         \dfrac{1}{2} \sum_{s,s'} 
         \bar{u}(k',s') \gamma^{\alpha} u(k,s)
         \bar{u}(k,s) \gamma^{\beta} u(k',s')
     \end{equation*}
-onde, para simplificar a notação, os índices $e$ e $\mu$ foram removidos. A expressão acima pode ser reescrita em componentes, isto é
+onde, para simplificar novamente a notação, os índices $e$ e $\mu$ foram removidos. A expressão acima pode ser reescrita em componentes, isto é
     \begin{equation*}
         \dfrac{1}{2} \sum_{s,s'} \sum_{\tau,\sigma,\rho,\eta} 
         \bar{u}_{\tau}(k',s') (\gamma^{\alpha})_{\tau\sigma} u_{\sigma}(k,s)
@@ -333,8 +355,7 @@ Então
 
 Note que $q^{2}$ pode ser reescrito em termos de um ângulo $\theta$ formado pelos vetores $\vb{k}$ e $\vb{k}'$, isto é
     \begin{align*}
-        q^{2} &\eq -2(k'\cdot k) \\
-        &\eq -2(E'E - \vb{k}'\cdot\vb{k}) \\
+        q^{2} = -2(k'\cdot k) &\eq -2(E'E - \vb{k}'\cdot\vb{k}) \\
         &\eq -2\qty(E'E - \abs{\vb{k}'}\abs{\vb{k}}\cos\theta) \\
         &\eq -2\qty(E'E - E'E\cos\theta) \\
         &\eq -2E'E(1 - \cos\theta) \\

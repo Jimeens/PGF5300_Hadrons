@@ -34,7 +34,7 @@ A integral restante nesta expressão não converge no sentido usual, mas sim no 
         \int_{0}^{\infty}e^{i(q_{0}+p_{0}-p_{X0})z_{0}}\dd{z_{0}} &\eq \pi\delta(q_{0} + p_{0} - p_{X0}) + i\mathsf{VP}\qty(\dfrac{1}{q_{0} + p_{0} - p_{X0}})
     \end{align*}
 
-Onde $\mathsf{VP}(\cdots)$ é o valor principal de Cauchy. Logo
+Onde $\mathsf{VP}(\cdots)$ é o valor principal de Cauchy\footnote{O valor principal de Cauchy pode não ser muito conhecido, porém na resolução deste exercício ele não vai precisar ser levado em conta, dado que eles vão ser relevantes apanas para contribuição da parte real da amplitude.}. Logo
     \begin{equation*}
         I_{1} = \pi(2\pi)^{3}\delta^{4}(q + p - p_{X}) + i(2\pi)^{3}\mathsf{VP}\qty(\dfrac{1}{q_{0} + p_{0} - p_{X0}})\delta^{3}(\vb{q} + \vb{p} - \vb{p}_{X})
     \end{equation*}
@@ -93,6 +93,7 @@ O termo da direita pode ser identificado como o tensor hadrônico $W_{\mu\nu}$ a
     \end{answer}
 
 \noindent \textbf{(b)} Ao interirmos um conjunto completo de estados intermediários $\ket{X}$ entre as correntes eletromagnéticas, temos
+
     \begin{align*}
         \int e^{iqz}\bra{p}J_{\mu}(0)J_{\nu}(z)\ket{p}\dd[4]{z} &\eq 
         \sum_{X} \int e^{iqz} \bra{p} J_{\mu}(0)\ket{X}\bra{X}J_{\nu}(z)\ket{p} \dd[4]{z} \\

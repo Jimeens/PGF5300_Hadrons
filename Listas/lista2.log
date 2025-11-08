@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  8 NOV 2025 17:02
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  8 NOV 2025 17:43
  system commands enabled.
  file:line:error style messages enabled.
 **/home/jimeens/PGF5300_Hadrons-2/Listas/lista2.tex
@@ -2971,38 +2971,38 @@ Package luatex.def Info: Figures/vanilla.png  used on input line 117.
  [15] (./Solutions/Solutions2/ex6.tex
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 46.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 42.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 46.
+Package luatex.def Info: Figures/vanilla.png  used on input line 42.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [16]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 144.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 124.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 144.
+Package luatex.def Info: Figures/vanilla.png  used on input line 124.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [17]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 285.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 282.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 285.
+Package luatex.def Info: Figures/vanilla.png  used on input line 282.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [18]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 360.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 338.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 360.
+Package luatex.def Info: Figures/vanilla.png  used on input line 338.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [19] (/usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian80.pgf))
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
@@ -3023,6 +3023,246 @@ File: Figures/vanilla.png Graphic file (type png)
 Package luatex.def Info: Figures/vanilla.png  used on input line 23.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [21]
+LaTeX Font Info:    Font shape `TU/EBGaramond(0)/m/n' will be
+(Font)              scaled to size 9.6975pt on input line 37.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/one.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/two.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/three.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/four.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/five.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/six.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/seven.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/eight.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/nine.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/one.lf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/two.lf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/four.lf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/seven.lf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/one.osf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/two.osf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/four.osf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/seven.osf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Character `₡' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/EBGaramond(0)/m/n' will be
+(Font)              scaled to size 5.3875pt on input line 37.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/one.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/two.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/three.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/four.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/five.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/six.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/seven.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/eight.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/nine.tosf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/one.lf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/two.lf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/four.lf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/seven.lf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/one.osf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/two.osf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/four.osf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/seven.osf'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Character `Ⅳ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `Ⅵ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `Ⅶ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `Ⅷ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `Ⅸ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `Ⅺ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `Ⅻ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `ⅳ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `ⅵ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `ⅶ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `ⅷ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `ⅸ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `ⅺ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `ⅻ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `˷' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `ƒ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₡' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `•' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Unknown slot number of character
+(microtype)             `/twodotenleader'
+(microtype)             in font encoding `TU' in protrusion list
+(microtype)             `EBGaramond-TU'.
+Package microtype Info: Character `℃' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `™' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `−' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `ϙ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `Ѱ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `Ѵ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `Ʌ' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `⑴' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `⒜' is missing
+(microtype)             in font `TU/EBGaramond(0)/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
+(Font)              scaled to size 9.25777pt on input line 37.
+LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
+(Font)              scaled to size 5.1432pt on input line 37.
+LaTeX Font Info:    Font shape `TU/LibertinusSans(0)/m/n' will be
+(Font)              scaled to size 8.43256pt on input line 37.
+LaTeX Font Info:    Font shape `TU/LibertinusSans(0)/m/n' will be
+(Font)              scaled to size 4.68475pt on input line 37.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/9'
+(microtype)             (new value: 9.0pt) on input line 37.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/5'
+(microtype)             (new value: 5.0pt) on input line 37.
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
 Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 63.
@@ -3034,11 +3274,11 @@ Package luatex.def Info: Figures/vanilla.png  used on input line 63.
  [22]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 103.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 104.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 103.
+Package luatex.def Info: Figures/vanilla.png  used on input line 104.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [23] (/usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian80.pgf))
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
@@ -3139,19 +3379,19 @@ Package logreq Info: Writing requests to 'lista2.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 56515 strings out of 476553
+ 56565 strings out of 476553
  125007,2848258 words of node,token memory allocated
- 2162 words of node memory still in use:
-   9 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 1 margin_kern, 3 glyph, 295 attribute, 200 glue_spec, 149 attribute_list, 3 write nodes
-   avail lists: 1:35,2:12563,3:3002,4:90,5:876,6:45,7:7077,8:139,9:2844,10:9,11:353
- 76832 multiletter control sequences out of 65536+600000
- 75 fonts using 17093079 bytes
+ 2187 words of node memory still in use:
+   9 hlist, 2 vlist, 2 rule, 1 local_par, 5 glue, 4 kern, 1 penalty, 1 margin_kern, 3 glyph, 301 attribute, 200 glue_spec, 152 attribute_list, 3 write nodes
+   avail lists: 1:35,2:12554,3:3002,4:90,5:876,6:45,7:7076,8:139,9:2844,10:9,11:353
+ 76881 multiletter control sequences out of 65536+600000
+ 97 fonts using 20670519 bytes
  167i,19n,152p,1189b,3185s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/fonts/opentype/ebgaramond/EBGaramond08-Regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSans-Regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Italic.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Bold.otf></usr/share/fonts/opentype/ebgaramond/EBGaramond12-Regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lista2.pdf (32 pages, 4293721 bytes).
+Output written on lista2.pdf (32 pages, 4298187 bytes).
 
-PDF statistics: 293 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
- 57 named destinations out of 1000 (max. 131072)
+PDF statistics: 296 PDF objects out of 1000 (max. 8388607)
+ 122 compressed objects within 2 object streams
+ 58 named destinations out of 1000 (max. 131072)
  80 words of extra memory for PDF output out of 10000 (max. 100000000)
 
