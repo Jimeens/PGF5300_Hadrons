@@ -28,7 +28,7 @@ Para calcular o primeiro diagrama, podemos explicitar os momentos que devem ser 
 
 Pelas regras de Feynman, temos:
     \begin{itemize}
-        \item 4 espinores ($u$, $\bar{u}$) para as linhas de elétron, pósitron, quark e antiquark que se propagam livremente;
+        \item 4 espinores ($u$, $\bar{u}$, $v$, $\bar{v}$) para as linhas de elétron ($u$), pósitron ($\bar{v}$), quark ($\bar{u}$) e antiquark ($v$) que se propagam livremente;
         \item 2 vériteces de interação elétron-fóton $\Rightarrow$ 2 termos do tipo $-ie\gamma_{\mu}$, mas no vértice dos quarks devemos considerar uma carga $Q_{f}$ do férmion;
         \item 1 linha de fóton $\Rightarrow$ 1 propagador $i\Delta^{\mu\nu}(Q) = \dfrac{-ig^{\mu\nu}}{Q^{2}}$;
         \item 1 loop $\Rightarrow$ 1 integral $\displaystyle\int \dfrac{1}{(2\pi)^{4}}[\phantom{\cdots}]\dd[4]{k}$;
@@ -40,32 +40,32 @@ Pelas regras de Feynman, temos:
 Sendo então $i\mathcal{M}_{\text{v}}$ a representação do diagrama (correção do vértice), temos
     \begin{align*}
         i\mathcal{M}_{\text{v}} &\eq \int \dfrac{1}{(2\pi)^{4}}
-        [\bar{u}(k_{1})]
+        [\bar{v}(k_{1})]
         [-ie\gamma_{\mu}]
         [u(k_{2})]
         \qty[\dfrac{-ig^{\mu\nu}}{Q^{2}}]
-        [\bar{u}(p_{1})]
+        [\bar{u}(p_{2})]
         [ig\gamma_{\alpha}T_{a}]
-        \qty[\dfrac{i(\slashed{p}_{1} + \slashed{k} + m)}{(p_{1} + k)^{2} - m^{2} + i\varepsilon}]
+        \qty[\dfrac{i(\slashed{p}_{2} - \slashed{k} + m)}{(p_{2} - k)^{2} - m^{2} + i\varepsilon}]
         [-ieQ_{f}\gamma_{\nu}] \times \\
         &\noeq \times 
-        \qty[\dfrac{i(\slashed{p}_{2} - \slashed{k} + m)}{(p_{2} - k)^{2} - m^{2} + i\varepsilon}]
+        \qty[\dfrac{i(\slashed{p}_{1} + \slashed{k} + m)}{(p_{1} + k)^{2} - m^{2} + i\varepsilon}]
         [ig\gamma_{\beta}T_{b}]
         \qty[\dfrac{-ig^{\alpha\beta}}{k^{2}+i\varepsilon}\delta_{ab}]
-        [u(p_{2})]
+        [v(p_{1})]
         \dd[4]{k} \\
-        &\eq \dfrac{-ie}{Q^{2}}\bar{u}(k_{1})\gamma_{\mu}u(k_{2})
+        &\eq \dfrac{-ie}{Q^{2}}\bar{v}(k_{1})\gamma_{\mu}u(k_{2})
         \Bigg[
             (-ieQ_{f})(ig)^{2} T_{a} T_{b} \delta_{ab} 
             \int \dfrac{1}{(2\pi)^{4}}
-                \bar{u}(p_{1})
+                \bar{u}(p_{2})
                 \gamma_{\alpha}
-                \dfrac{i(\slashed{p}_{1} + \slashed{k} + m)}{(p_{1} + k)^{2} - m^{2} + i\varepsilon}
+                \dfrac{i(\slashed{p}_{2} - \slashed{k} + m)}{(p_{2} - k)^{2} - m^{2} + i\varepsilon}
                 \gamma^{\mu} \times \\
         &\noeq 
-                \dfrac{i(\slashed{p}_{2} - \slashed{k} + m)}{(p_{2} - k)^{2} - m^{2} + i\varepsilon}
+                \dfrac{i(\slashed{p}_{1} + \slashed{k} + m)}{(p_{1} + k)^{2} - m^{2} + i\varepsilon}
                 \gamma^{\alpha}\dfrac{-i}{k^{2} + i\varepsilon}
-                u(p_{2})
+                v(p_{1})
             \dd[4]{k}
         \Bigg]
     \end{align*}
@@ -75,12 +75,12 @@ O termo entre colchetes vai ser essencialmente a correção do vértice devido �
     \begin{equation*}
         \Gamma_{\text{v}}^{\mu} \coloneqq -eg^{2}Q_{f}C_{F} \int 
         \dfrac{1}{(2\pi)^{4}}
-        \dfrac{\bar{u}(p_{1}) \gamma_{\alpha} (\slashed{p}_{1} + \slashed{k} + m) \gamma^{\mu} (\slashed{p}_{2} - \slashed{k} + m) \gamma_{\alpha} u(p_{2})}{\qty[(p_{1} + k)^{2} - m^{2} + i\varepsilon]\qty[(p_{2} - k)^{2} - m^{2} + i\varepsilon]\qty(k^{2}+i\varepsilon)} 
+        \dfrac{\bar{u}(p_{2}) \gamma_{\alpha} (\slashed{p}_{2} - \slashed{k} + m) \gamma^{\mu} (\slashed{p}_{1} + \slashed{k} + m) \gamma_{\alpha} v(p_{1})}{\qty[(p_{1} + k)^{2} - m^{2} + i\varepsilon]\qty[(p_{2} - k)^{2} - m^{2} + i\varepsilon]\qty(k^{2}+i\varepsilon)} 
         \dd[4]{k}
     \end{equation*}
 o que faz com que o diagrama inteiro seja resumido em
     \begin{equation*}
-        i\mathcal{M}_{\text{v}} = \dfrac{-ie}{Q^{2}}\bar{u}(k_{1}) 
+        i\mathcal{M}_{\text{v}} = \dfrac{-ie}{Q^{2}}\bar{v}(k_{1}) 
         \gamma_{\mu} 
         u(k_{2})
         \Gamma_{\text{v}}^{\mu}
@@ -154,24 +154,24 @@ e fazendo uma mudança de variável $k \mapsto k - (1-a)p_{1} - a(1-b)p_{2}$ na 
 e portanto
     \begin{equation*}
         \Gamma_{\text{v}}^{\mu} = -eg^{2}Q_{f} C_{F} \Gamma(3) \int_{0}^{1} \int_{0}^{1}
-        \dfrac{a}{(2\pi)^{4}} \dfrac{\bar{u}(p_{1}) \gamma_{\alpha} (\slashed{p}_{1} + \slashed{k} + m) \gamma^{\mu} (\slashed{p}_{2} - \slashed{k} + m) \gamma_{\alpha} u(p_{2})}{(k^{2} - X^{2} + i\varepsilon)^{3}} \dd[4]{k} \dd{a} \dd{b} 
+        \dfrac{a}{(2\pi)^{4}} \dfrac{\bar{u}(p_{2}) \gamma_{\alpha} (\slashed{p}_{2} - \slashed{k} + m) \gamma^{\mu} (\slashed{p}_{1} + \slashed{k} + m) \gamma_{\alpha} v(p_{1})}{(k^{2} - X^{2} + i\varepsilon)^{3}} \dd[4]{k} \dd{a} \dd{b} 
     \end{equation*}
 
 Seja então $N^{\mu}$ o numerador desta integral (sem considerar o $a$). Abrindo os termos ficamos com
     \begin{align*}
-        N^{\mu} &\eq \bar{u}(p_{1}) \gamma_{\alpha} (\slashed{p}_{1} + \slashed{k} + m) \gamma^{\mu} (\slashed{p}_{2} - \slashed{k} + m) \gamma_{\alpha} u(p_{2}) \\
+        N^{\mu} &\eq \bar{u}(p_{2}) \gamma_{\alpha} (\slashed{p}_{2} - \slashed{k} + m) \gamma^{\mu} (\slashed{p}_{1} + \slashed{k} + m) \gamma_{\alpha} v(p_{1}) \\
         &\eq 
-        \bar{u}(p_{1})\gamma_{\alpha}\slashed{p}_{1}\gamma^{\mu}\slashed{p}_{2}\gamma^{\alpha}u(p_{2}) +
-        \bar{u}(p_{1})\gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{p}_{2}\gamma^{\alpha}u(p_{2}) + 
-        \bar{u}(p_{1})\gamma_{\alpha}m\gamma^{\mu}\slashed{p}_{2}\gamma^{\alpha}u(p_{2}) - \\
-        &\noeq -
-        \bar{u}(p_{1})\gamma_{\alpha}\slashed{p}_{1}\gamma^{\mu}\slashed{k}\gamma^{\alpha}u(p_{2}) -
-        \bar{u}(p_{1})\gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha}u(p_{2}) - 
-        \bar{u}(p_{1})\gamma_{\alpha}m\gamma^{\mu}\slashed{k}\gamma^{\alpha}u(p_{2}) + \\
+        \bar{u}(p_{2})\gamma_{\alpha}\slashed{p}_{2}\gamma^{\mu}\slashed{p}_{1}\gamma^{\alpha}v(p_{1}) -
+        \bar{u}(p_{2})\gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{p}_{1}\gamma^{\alpha}v(p_{1}) + 
+        \bar{u}(p_{2})\gamma_{\alpha}m\gamma^{\mu}\slashed{p}_{1}\gamma^{\alpha}v(p_{1}) + \\
         &\noeq +
-        \bar{u}(p_{1})\gamma_{\alpha}\slashed{p}_{1}\gamma^{\mu}m\gamma^{\alpha}u(p_{2}) +
-        \bar{u}(p_{1})\gamma_{\alpha}\slashed{k}\gamma^{\mu}m\gamma^{\alpha}u(p_{2}) + 
-        \bar{u}(p_{1})\gamma_{\alpha}m\gamma^{\mu}m\gamma^{\alpha}u(p_{2})
+        \bar{u}(p_{2})\gamma_{\alpha}\slashed{p}_{2}\gamma^{\mu}\slashed{k}\gamma^{\alpha}v(p_{1}) -
+        \bar{u}(p_{2})\gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha}v(p_{1}) + 
+        \bar{u}(p_{2})\gamma_{\alpha}m\gamma^{\mu}\slashed{k}\gamma^{\alpha}v(p_{1}) + \\
+        &\noeq +
+        \bar{u}(p_{2})\gamma_{\alpha}\slashed{p}_{2}\gamma^{\mu}m\gamma^{\alpha}v(p_{1}) -
+        \bar{u}(p_{2})\gamma_{\alpha}\slashed{k}\gamma^{\mu}m\gamma^{\alpha}v(p_{1}) + 
+        \bar{u}(p_{2})\gamma_{\alpha}m\gamma^{\mu}m\gamma^{\alpha}v(p_{1})
     \end{align*}
 
 Usando uma das propriedades das matrizes de Dirac:
@@ -181,81 +181,83 @@ Usando uma das propriedades das matrizes de Dirac:
 podemos escrever
     \begin{align*}
         N^{\mu} &\eq 
-            \bar{u}(p_{1})(2p_{1\alpha }- \slashed{p}_{1}\gamma_{\alpha}) 
+            \bar{u}(p_{2})(2p_{2\alpha }- \slashed{p}_{2}\gamma_{\alpha}) 
             \gamma^{\mu} 
-            (2p_{2}^{\alpha} - \gamma^{\alpha}\slashed{p}_{2})u(p_{2}) +
-            \bar{u}(p_{1}) \gamma_{\alpha} \slashed{k} \gamma^{\mu}
-            (2p_{2}^{\alpha} - \gamma^{\alpha}\slashed{p}_{2})u(p_{2}) + \\
+            (2p_{1}^{\alpha} - \gamma^{\alpha}\slashed{p}_{1})v(p_{1}) -
+            \bar{u}(p_{2}) \gamma_{\alpha} \slashed{k} \gamma^{\mu}
+            (2p_{1}^{\alpha} - \gamma^{\alpha}\slashed{p}_{1})v(p_{1}) + \\
         &\noeq +
-            \bar{u}(p_{1})m \gamma_{\alpha} \gamma^{\mu} 
-            (2p_{2}^{\alpha} - \gamma^{\alpha}\slashed{p}_{2})u(p_{2}) - 
-            \bar{u}(p_{1}) (2p_{1\alpha} - \slashed{p}_{1}\gamma_{\alpha})
-            \gamma^{\mu} \slashed{k} \gamma^{\alpha} u(p_{2}) - \\
+            \bar{u}(p_{2})m \gamma_{\alpha} \gamma^{\mu} 
+            (2p_{1}^{\alpha} - \gamma^{\alpha}\slashed{p}_{1})v(p_{1}) + 
+            \bar{u}(p_{2}) (2p_{2\alpha} - \slashed{p}_{2}\gamma_{\alpha})
+            \gamma^{\mu} \slashed{k} \gamma^{\alpha} v(p_{1}) - \\
         &\noeq -
-            \bar{u}(p_{1}) \gamma_{\alpha} \slashed{k} \gamma^{\mu} \slashed{k} \gamma^{\alpha} u(p_{2}) -
-            \bar{u}(p_{1}) m \gamma_{\alpha} \gamma^{\mu} \gamma^{\alpha} u(p_{2}) + 
-            \bar{u}(p_{1}) m (2p_{1\alpha} - \slashed{p}_{1}\gamma_{\alpha})
-            \gamma^{\mu} \gamma^{\alpha} u(p_{2}) + \\
-        &\noeq +
-            \bar{u}(p_{1}) m \gamma_{\alpha} \slashed{k} \gamma^{\mu} \gamma^{\alpha} u(p_{2}) + 
-            \bar{u}(p_{1}) m^{2} \gamma_{\alpha} \gamma^{\mu} \gamma^{\alpha} u(p_{2}) \\
+            \bar{u}(p_{2}) \gamma_{\alpha} \slashed{k} \gamma^{\mu} \slashed{k} \gamma^{\alpha} v(p_{1}) +
+            \bar{u}(p_{2}) m \gamma_{\alpha} \gamma^{\mu} \slashed{k} \gamma^{\alpha} v(p_{1}) + 
+            \bar{u}(p_{2}) m (2p_{2\alpha} - \slashed{p}_{2}\gamma_{\alpha})
+            \gamma^{\mu} \gamma^{\alpha} v(p_{1}) - \\
+        &\noeq -
+            \bar{u}(p_{2}) m \gamma_{\alpha} \slashed{k} \gamma^{\mu} \gamma^{\alpha} v(p_{1}) + 
+            \bar{u}(p_{2}) m^{2} \gamma_{\alpha} \gamma^{\mu} \gamma^{\alpha} v(p_{1}) \\
         &\eq 
-            4\bar{u}(p_{1}) \gamma^{\mu}(p_{1}\cdot p_{2}) u(p_{2}) - 
-            2\bar{u}(p_{1}) \slashed{p}_{1}\slashed{p}_{2}\gamma^{\mu} u(p_{2}) -
-            2\bar{u}(p_{1}) \gamma^{\mu}\slashed{p}_{1} \slashed{p}_{2} u(p_{2}) + \\
+            4\bar{u}(p_{2}) \gamma^{\mu}(p_{1}\cdot p_{2}) v(p_{1}) - 
+            2\bar{u}(p_{2}) \slashed{p}_{2}\slashed{p}_{1}\gamma^{\mu} v(p_{1}) -
+            2\bar{u}(p_{2}) \gamma^{\mu}\slashed{p}_{2} \slashed{p}_{1} v(p_{1}) + \\
         &\noeq +
-            \bar{u}(p_{1}) \slashed{p}_{1}\gamma_{\alpha}\gamma^{\mu}\gamma^{\alpha}\slashed{p}_{2} u(p_{2}) +
-            2\bar{u}(p_{1}) \slashed{p}_{2}\slashed{k}\gamma^{\mu} u(p_{2}) - 
-            \bar{u}(p_{1}) \gamma_{\alpha}\slashed{k}\gamma^{\mu}\gamma^{\alpha}\slashed{p}_{2} u(p_{2}) + \\
+            \bar{u}(p_{2}) \slashed{p}_{2}\gamma_{\alpha}\gamma^{\mu}\gamma^{\alpha}\slashed{p}_{1} v(p_{1}) -
+            2\bar{u}(p_{2}) \slashed{p}_{1}\slashed{k}\gamma^{\mu} v(p_{1}) + 
+            \bar{u}(p_{2}) \gamma_{\alpha}\slashed{k}\gamma^{\mu}\gamma^{\alpha}\slashed{p}_{1} v(p_{1}) + \\
         &\noeq +
-            2\bar{u}(p_{1}) m\slashed{p}_{2}\gamma^{\mu} u(p_{2}) - 
-            \bar{u}(p_{1}) m\gamma_{\alpha}\gamma^{\mu}\gamma^{\alpha}\slashed{p}_{2} u(p_{2}) - 
-            2\bar{u}(p_{1}) \gamma^{\mu}\slashed{k}\slashed{p}_{1} u(p_{2}) + \\
+            2\bar{u}(p_{2}) m\slashed{p}_{1}\gamma^{\mu} v(p_{1}) - 
+            \bar{u}(p_{2}) m\gamma_{\alpha}\gamma^{\mu}\gamma^{\alpha}\slashed{p}_{1} v(p_{1}) + 
+            2\bar{u}(p_{2}) \gamma^{\mu}\slashed{k}\slashed{p}_{2} v(p_{1}) - \\
+        &\noeq -
+            \bar{u}(p_{2}) \slashed{p}_{2}\gamma_{\alpha}\gamma^{\mu}\slashed{k}\gamma^{\alpha} v(p_{1}) -
+            \bar{u}(p_{2}) \gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha} v(p_{1}) +
+            \bar{u}(p_{2}) m\gamma_{\alpha}\gamma^{\mu}\slashed{k}\gamma^{\alpha} v(p_{1}) + \\
         &\noeq +
-            \bar{u}(p_{1}) \slashed{p}_{1}\gamma_{\alpha}\gamma^{\mu}\slashed{k}\gamma^{\alpha} u(p_{2}) -
-            \bar{u}(p_{1}) \gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha} u(p_{2}) -
-            \bar{u}(p_{1}) m\gamma_{\alpha}\gamma^{\mu}\slashed{k}\gamma^{\alpha} u(p_{2}) + \\
+            2\bar{u}(p_{2}) m\gamma^{\mu}\slashed{p}_{2} v(p_{1}) - 
+            \bar{u}(p_{2}) m\slashed{p}_{2}\gamma_{\alpha}\gamma^{\mu}\gamma^{\alpha} v(p_{1}) -
+            \bar{u}(p_{2}) m\gamma_{\alpha}\slashed{k}\gamma^{\mu}\gamma^{\alpha} v(p_{1}) + \\
         &\noeq +
-            2\bar{u}(p_{1}) m\gamma^{\mu}\slashed{p}_{1} u(p_{2}) - 
-            \bar{u}(p_{1}) m\slashed{p}_{1}\gamma_{\alpha}\gamma^{\mu}\gamma^{\alpha} u(p_{2}) +
-            \bar{u}(p_{1}) m\gamma_{\alpha}\slashed{k}\gamma^{\mu}\gamma^{\alpha} u(p_{2}) + \\
-        &\noeq +
-            \bar{u}(p_{1}) m^{2}\gamma_{\alpha}\gamma^{\mu}\gamma^{\alpha} u(p_{2}) \\
+            \bar{u}(p_{2}) m^{2}\gamma_{\alpha}\gamma^{\mu}\gamma^{\alpha} v(p_{1}) \\
         &\eq 
-            4\bar{u}(p_{1}) \gamma^{\mu} (p_{1}\cdot p_{2}) u(p_{2}) - 
-            2\bar{u}(p_{1}) (\slashed{p}_{1} - m)\slashed{p}_{2}\gamma^{\mu} u(p_{2}) -
-            2\bar{u}(p_{1}) \gamma^{\mu}\slashed{p}_{1}(\slashed{p}_{2} - m) u(p_{2}) - \\
+            4\bar{u}(p_{2}) \gamma^{\mu} (p_{1}\cdot p_{2}) v(p_{1}) - 
+            2\bar{u}(p_{2}) (\slashed{p}_{2} - m)\slashed{p}_{1}\gamma^{\mu} v(p_{1}) -
+            2\bar{u}(p_{2}) \gamma^{\mu}\slashed{p}_{2}(\slashed{p}_{1} + m) v(p_{1}) - \\
         &\noeq -
-            2\bar{u}(p_{1}) (\slashed{p}_{1} - m)\gamma^{\mu}\slashed{p}_{2} u(p_{2}) +
-            2\bar{u}(p_{1}) \slashed{p}_{2}\slashed{k}\gamma^{\mu} u(p_{2}) - 
-            4\bar{u}(p_{1}) k^{\mu}(\slashed{p}_{2} - m) u(p_{2}) - \\
+            2\bar{u}(p_{2}) (\slashed{p}_{2} - m)\gamma^{\mu}\slashed{p}_{1} v(p_{1}) +
+            2\bar{u}(p_{2}) \slashed{p}_{2}\slashed{k}\gamma^{\mu} v(p_{1}) - 
+            4\bar{u}(p_{2}) k^{\mu}(\slashed{p}_{1} + m) v(p_{1}) - \\
         &\noeq -
-            2\bar{u}(p_{1}) \gamma^{\mu}\slashed{k}\slashed{p}_{1} u(p_{2}) -
-            2\bar{u}(p_{1}) (\slashed{p}_{1} - m)k^{\mu} u(p_{2}) - 
-            \bar{u}(p_{1}) \gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha} u(p_{2}) + \\
+            2\bar{u}(p_{2}) \gamma^{\mu}\slashed{k}\slashed{p}_{1} v(p_{1}) -
+            2\bar{u}(p_{2}) (\slashed{p}_{2} - m)k^{\mu} v(p_{1}) - 
+            \bar{u}(p_{2}) \gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha} v(p_{1}) + \\
         &\noeq +
-            2\bar{u}(p_{1}) (\slashed{p}_{1} - m)m\gamma^{\mu} u(p_{2})
+            2\bar{u}(p_{2}) (\slashed{p}_{2} - m)m\gamma^{\mu} v(p_{1})
     \end{align*}
 
 Como o numedor da integral está no espaço de momentos, as equações de Dirac são
     \begin{align*}
         (\slashed{p}_{i} - m)u(p_{i}) &= 0 & 
-        \bar{u}(p_{i})(\slashed{p}_{i} - m) &= 0
+        \bar{u}(p_{i})(\slashed{p}_{i} - m) &= 0 \\
+        (\slashed{p}_{i} + m)v(p_{i}) &= 0 & 
+        \bar{v}(p_{i})(\slashed{p}_{i} + m) &= 0
     \end{align*}
 e portanto vão restar apenas os termos
     \begin{align*}
         N^{\mu} &\eq 
-            4\bar{u}(p_{1}) \gamma^{\mu}(p_{1}\cdot p_{2}) + 
-            2\bar{u}(p_{1}) (\slashed{p}_{2}\slashed{k}\gamma^{\mu} - \gamma^{\mu}\slashed{k}\slashed{p}_{1})u(p_{2}) -
-            \bar{u}(p_{1}) \gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha} u(p_{2}) \\
-        &\eq \bar{u}(p_{1}) (2p_{1\alpha} + \gamma_{\alpha}\slashed{k})\gamma^{\mu}(2p_{2}^{\alpha} - \slashed{k}\gamma^{\alpha}) u(p_{2})
+            4\bar{u}(p_{2}) \gamma^{\mu}(p_{1}\cdot p_{2}) + 
+            2\bar{u}(p_{2}) (\slashed{p}_{2}\slashed{k}\gamma^{\mu} - \gamma^{\mu}\slashed{k}\slashed{p}_{1})v(p_{1}) -
+            \bar{u}(p_{2}) \gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha} v(p_{1}) \\
+        &\eq \bar{u}(p_{2}) (2p_{1\alpha} + \gamma_{\alpha}\slashed{k})\gamma^{\mu}(2p_{2}^{\alpha} - \slashed{k}\gamma^{\alpha}) v(p_{1})
     \end{align*}
 
 A correção do vértice fica então, em regularização dimensional
     \begin{equation*}
         \Gamma_{\text{v}}^{\mu} = -eg^{2} Q_{f}C_{F} \mu^{4-\mathsf{D}} \Gamma(3) \int_{0}^{1} \int_{0}^{1} \int 
         \dfrac{a}{(2\pi)^{\mathsf{D}}}
-        \dfrac{\bar{u}(p_{1}) (2p_{1\alpha} + \gamma_{\alpha}\slashed{k})\gamma^{\mu}(2p_{2}^{\alpha} - \slashed{k}\gamma^{\alpha}) u(p_{2})}{(k^{2} - X^{2} + i\varepsilon)^{3}}
+        \dfrac{\bar{u}(p_{2}) (2p_{1\alpha} + \gamma_{\alpha}\slashed{k})\gamma^{\mu}(2p_{2}^{\alpha} - \slashed{k}\gamma^{\alpha}) v(p_{1})}{(k^{2} - X^{2} + i\varepsilon)^{3}}
         \dd[\mathsf{D}]{k}\dd{a}\dd{b}
     \end{equation*}
 
@@ -263,22 +265,22 @@ Para verificar as possíveis divergências dessa integral podemos verificar duas
     \begin{equation*}
         \lim_{k\to\infty}\Gamma_{\text{v}}^{\mu} = eg^{2}Q_{f}C_{F}\mu^{4-\mathsf{D}}\Gamma(3) \int_{0}^{1} \int_{0}^{1} \int
         \dfrac{a}{(2\pi)^{\mathsf{D}}}
-        \dfrac{\bar{u}(p_{1})\gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha}u(p_{2})}{(k^{2} - X^{2} + i\varepsilon)^{3}} \dd[\mathsf{D}]{k}\dd{a}\dd{b}
+        \dfrac{\bar{u}(p_{2})\gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha}v(p_{1})}{(k^{2} - X^{2} + i\varepsilon)^{3}} \dd[\mathsf{D}]{k}\dd{a}\dd{b}
     \end{equation*}
 
 O numerador pode ainda ser reescrito sob a forma
     \begin{align*}
-        \bar{u}(p_{1})\gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha} u(p_{2}) &\eq 
-        -2\bar{u}(p_{1}) \slashed{k}\gamma^{\mu}\slashed{k} u(p_{2}) \\
-        &\eq -2\bar{u}(p_{1}) \gamma^{\nu}\gamma^{\mu}\gamma^{\sigma}k_{\nu}k_{\sigma} u(p_{2}) \\
-        &\eq -2\bar{u}(p_{1}) \gamma^{\nu}\gamma^{\mu}\gamma^{\sigma}g_{\nu\sigma}k^{2} u(p_{2}) \\
-        &\eq -2\bar{u}(p_{1}) \gamma^{\nu}\gamma^{\mu}\gamma_{\nu}k^{2} u(p_{2}) \\
-        &\eq 4\bar{u}(p_{1}) \gamma^{\mu} k^{2} u(p_{2})
+        \bar{u}(p_{2})\gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha} v(p_{1}) &\eq 
+        -2\bar{u}(p_{2}) \slashed{k}\gamma^{\mu}\slashed{k} v(p_{1}) \\
+        &\eq -2\bar{u}(p_{2}) \gamma^{\nu}\gamma^{\mu}\gamma^{\sigma}k_{\nu}k_{\sigma} v(p_{1}) \\
+        &\eq -2\bar{u}(p_{2}) \gamma^{\nu}\gamma^{\mu}\gamma^{\sigma}g_{\nu\sigma}k^{2} v(p_{1}) \\
+        &\eq -2\bar{u}(p_{2}) \gamma^{\nu}\gamma^{\mu}\gamma_{\nu}k^{2} v(p_{1}) \\
+        &\eq 4\bar{u}(p_{2}) \gamma^{\mu} k^{2} v(p_{1})
     \end{align*}
 
 Então
     \begin{equation*}
-        \lim_{k\to\infty}\Gamma_{\text{v}}^{\mu} = 4eg^{2}Q_{f}C_{F}\bar{u}(p_{1})\gamma^{\mu}u(p_{2}) \mu^{4-\mathsf{D}}\Gamma(3) \int_{0}^{1} \int_{0}^{1} \int \dfrac{a}{(2\pi)^{\mathsf{D}}} \dfrac{k^{2}}{(k^{2} - X^{2} + i\varepsilon)^{3}}\dd[\mathsf{D}]{k}\dd{a}\dd{b} 
+        \lim_{k\to\infty}\Gamma_{\text{v}}^{\mu} = 4eg^{2}Q_{f}C_{F}\bar{u}(p_{2})\gamma^{\mu}v(p_{1}) \mu^{4-\mathsf{D}}\Gamma(3) \int_{0}^{1} \int_{0}^{1} \int \dfrac{a}{(2\pi)^{\mathsf{D}}} \dfrac{k^{2}}{(k^{2} - X^{2} + i\varepsilon)^{3}}\dd[\mathsf{D}]{k}\dd{a}\dd{b} 
     \end{equation*}
 
 Pela equação \eqref{eq: integral dimreg}, podemos escrever diretamente que
@@ -294,12 +296,12 @@ Usando então as formas
     \end{align*}
 e sendo $\epsilon \coloneqq \dfrac{4 - \mathsf{D}}{2}$, temos
     \begin{equation*}
-        \lim_{k\to\infty}\Gamma_{\text{v}}^{\mu} = \dfrac{ieg^{2}}{4\pi^{2}} Q_{f}C_{F}\bar{u}(p_{1}) \gamma^{\mu} u(p_{2}) \dfrac{\Gamma(3-\epsilon)\Gamma(\epsilon)}{\Gamma(2-\epsilon)} \int_{0}^{1}\int_{0}^{1} a\qty(\dfrac{4\pi\mu^{2}}{X^{2}})^{\epsilon}\dd{a}\dd{b}
+        \lim_{k\to\infty}\Gamma_{\text{v}}^{\mu} = \dfrac{ieg^{2}}{4\pi^{2}} Q_{f}C_{F}\bar{u}(p_{2}) \gamma^{\mu} v(p_{1}) \dfrac{\Gamma(3-\epsilon)\Gamma(\epsilon)}{\Gamma(2-\epsilon)} \int_{0}^{1}\int_{0}^{1} a\qty(\dfrac{4\pi\mu^{2}}{X^{2}})^{\epsilon}\dd{a}\dd{b}
     \end{equation*}
 
 E pela propriedade $\Gamma(z+1) = z\Gamma(z)$, a correção do vérice é 
     \begin{equation*}
-        \lim_{k\to\infty}\Gamma_{\text{v}}^{\mu} = \dfrac{ieg^{2}}{4\pi^{2}} Q_{f}C_{F}\bar{u}(p_{1}) \gamma^{\mu} u(p_{2}) (2-\epsilon)\Gamma(\epsilon) \int_{0}^{1}\int_{0}^{1} a\qty(\dfrac{4\pi\mu^{2}}{X^{2}})^{\epsilon}\dd{a}\dd{b}
+        \lim_{k\to\infty}\Gamma_{\text{v}}^{\mu} = \dfrac{ieg^{2}}{4\pi^{2}} Q_{f}C_{F}\bar{u}(p_{2}) \gamma^{\mu} v(p_{1}) (2-\epsilon)\Gamma(\epsilon) \int_{0}^{1}\int_{0}^{1} a\qty(\dfrac{4\pi\mu^{2}}{X^{2}})^{\epsilon}\dd{a}\dd{b}
     \end{equation*}
 
 Então teremos pólos no limite de $\epsilon\to0$ na função $\Gamma(\epsilon)$. Utilizando as expansões 
@@ -310,7 +312,7 @@ Então teremos pólos no limite de $\epsilon\to0$ na função $\Gamma(\epsilon)$
 
 Concluímos que 
     \begin{equation*}
-        \lim_{k\to\infty}\Gamma_{\text{v}}^{2} = \dfrac{ieg^{2}}{4\pi^{2}}Q_{f}C_{F}\bar{u}(p_{1})\gamma^{\mu}u(p_{2})\qty[
+        \lim_{k\to\infty}\Gamma_{\text{v}}^{2} = \dfrac{ieg^{2}}{4\pi^{2}}Q_{f}C_{F}\bar{u}(p_{2})\gamma^{\mu}v(p_{1})\qty[
             \dfrac{1}{\epsilon} - 
             \gamma_{EM} - 
             \dfrac{1}{2} + 
@@ -321,7 +323,7 @@ Concluímos que
 
 O que mostra a divergência para altos valores de momento do glúon. No caso da região de \textit{soft gluon}, a correção do vértice pode ser escrita, sem utilizar regularização dimensional, a parametrização de Feynman e os termos de $i\varepsilon$ que não são mais necessários, pois $p_{1}$ e $p_{2}$ são sempre diferentes de $k$, por
     \begin{align*}
-        \lim_{k\to0}\Gamma_{\text{v}}^{\mu} &\eq -eg^{2}Q_{f}C_{F} \int \dfrac{1}{(2\pi)^{4}}\dfrac{\bar{u}(p_{1})4\gamma^{\mu}(p_{1}\cdot p_{2})u(p_{2})}{[(p_{1}+k)^{2}-m^{2}][(p_{2}-k)^{2}-m^{2}]k^{2}}\dd[4]{k} 
+        \lim_{k\to0}\Gamma_{\text{v}}^{\mu} &\eq -eg^{2}Q_{f}C_{F} \int \dfrac{1}{(2\pi)^{4}}\dfrac{\bar{u}(p_{2})4\gamma^{\mu}(p_{1}\cdot p_{2})v(p_{1})}{[(p_{1}+k)^{2}-m^{2}][(p_{2}-k)^{2}-m^{2}]k^{2}}\dd[4]{k} 
     \end{align*}
 
 Considerando o fato de estarmos na camada de massa, temos que $p_{1}^{2} = m^{2}$ e $p_{2}^{2} = m^{2}$, portanto o denominador fica
@@ -331,7 +333,7 @@ Considerando o fato de estarmos na camada de massa, temos que $p_{1}^{2} = m^{2}
 
 Escrevemos então
     \begin{equation*}
-        \lim_{k\to0}\Gamma_{\text{v}}^{\mu} = 4eg^{2}Q_{f}C_{F}\bar{u}(p_{1})\gamma^{\mu}(p_{1}\cdot p_{2})u(p_{2}) \int \dfrac{1}{(2\pi)^{4}} \dfrac{1}{(2p_{1}\cdot k)(2p_{2}\cdot k)k^{2}}\dd[4]{k}
+        \lim_{k\to0}\Gamma_{\text{v}}^{\mu} = 4eg^{2}Q_{f}C_{F}\bar{u}(p_{2})\gamma^{\mu}(p_{1}\cdot p_{2})v(p_{1}) \int \dfrac{1}{(2\pi)^{4}} \dfrac{1}{(2p_{1}\cdot k)(2p_{2}\cdot k)k^{2}}\dd[4]{k}
     \end{equation*}
 
 Olhando apenas para os termos do denominador, temos que $(2p_{i}\cdot k)\sim \abs{k}$ e $k^{2}\sim\abs{k}^{2}$, portanto a integral vai como
@@ -381,13 +383,13 @@ No caso do segundo diagrama, que consiste de uma emissão real de glúon, temos 
 
 Chamando esse diagrama de $i\mathcal{M}_{\text{r}}$, pelas regras de Feynman temos
     \begin{align*}
-        i\mathcal{M}_{\text{r}} &\eq [\bar{u}(k_{1})][-ie\gamma_{\mu}][u(k_{2})]\qty[\dfrac{-ig^{\mu\nu}}{Q^{2}}][\bar{u}(p_{1})][-ieQ_{f}\gamma_{\nu}]\qty[\dfrac{i(\slashed{p}_{2}+\slashed{k}+m)}{(p_{2} + k)^{2} - m^{2}}][ig\gamma_{\alpha}T_{a}]\qty[\varepsilon^{\alpha}_{a}(k)]u(p_{2}) \\
-        &\eq -\dfrac{e^{2}g}{Q^{2}} Q_{f}T_{a} \bar{u}(k_{1})\gamma_{\mu}u(k_{2})\bar{u}(p_{1})\gamma^{\mu} \dfrac{(\slashed{p}_{2} + \slashed{k} + m)}{(p_{2} + k)^{2} - m^{2}}\slashed{\varepsilon}_{a}(k)u(p_{2})
+        i\mathcal{M}_{\text{r}} &\eq [\bar{v}(k_{1})][-ie\gamma_{\mu}][u(k_{2})]\qty[\dfrac{-ig^{\mu\nu}}{Q^{2}}][\bar{u}(p_{2})][-ieQ_{f}\gamma_{\nu}]\qty[\dfrac{i(\slashed{p}_{2}+\slashed{k}+m)}{(p_{2} + k)^{2} - m^{2}}][ig\gamma_{\alpha}T_{a}]\qty[\varepsilon^{\alpha}_{a}(k)]v(p_{1}) \\
+        &\eq -\dfrac{e^{2}g}{Q^{2}} Q_{f}T_{a} \bar{v}(k_{1})\gamma_{\mu}u(k_{2})\bar{u}(p_{2})\gamma^{\mu} \dfrac{(\slashed{p}_{2} + \slashed{k} + m)}{(p_{2} + k)^{2} - m^{2}}\slashed{\varepsilon}_{a}(k)v(p_{1})
     \end{align*}
 
 Considerando novamente que estamos na camada de massa, $p_{2}^{2} = m^{2}$, o denominador pode ser substituído por $2p_{2}\cdot k + k^{2}$ e portanto
     \begin{equation*}
-        i\mathcal{M}_{\text{r}} = -\dfrac{e^{2}g}{Q^{2}}Q_{f}T_{a}\bar{u}(k_{1})\gamma_{\mu}u(k_{2})\bar{u}(p_{1})\gamma^{\mu}\dfrac{(\slashed{p}_{2} + \slashed{k} + m)}{(2p_{2}\cdot k + k^{2})}\slashed{\varepsilon}_{a} u(p_{2})
+        i\mathcal{M}_{\text{r}} = -\dfrac{e^{2}g}{Q^{2}}Q_{f}T_{a}\bar{v}(k_{1})\gamma_{\mu}u(k_{2})\bar{u}(p_{2})\gamma^{\mu}\dfrac{(\slashed{p}_{2} + \slashed{k} + m)}{(2p_{2}\cdot k + k^{2})}\slashed{\varepsilon}_{a} v(p_{1})
     \end{equation*}
 
 Aqui temos que todos os termos no denominador dependem de $k$, então na região de \textit{soft gluon}, onde $k\to0$, esse diagrama diverge. Então
