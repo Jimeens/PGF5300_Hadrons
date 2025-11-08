@@ -1,6 +1,6 @@
-PWD /home/jimeens/PGF5300_Hadrons-1/Listas
+PWD /home/jimeens/PGF5300_Hadrons-2/Listas
 INPUT /var/lib/texmf/web2c/luahbtex/lualatex.fmt
-INPUT /home/jimeens/PGF5300_Hadrons-1/Listas/lista2.tex
+INPUT /home/jimeens/PGF5300_Hadrons-2/Listas/lista2.tex
 OUTPUT lista2.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tex-ini-files/lualatexquotejobname.lua
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ltluatex.lua

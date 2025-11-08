@@ -1,3 +1,6 @@
+\textbf{\textsc{Nota:}} Eu modifiquei o diagrama que foi informado no exercício apenas para manter o fluxo das linhas do diagrama, isto é, troquei a posição do quark e do antiquark, o que pode ser feito sem qualquer perda de generalidade, já
+
+
 Para calcular o primeiro diagrama, podemos explicitar os momentos que devem ser considerados e depois aplicar as regras de Feynman da QCD. O diagrama é então
     \begin{center}
         \begin{tikzpicture}
@@ -185,7 +188,7 @@ podemos escrever
             \gamma^{\mu} 
             (2p_{1}^{\alpha} - \gamma^{\alpha}\slashed{p}_{1})v(p_{1}) -
             \bar{u}(p_{2}) \gamma_{\alpha} \slashed{k} \gamma^{\mu}
-            (2p_{1}^{\alpha} - \gamma^{\alpha}\slashed{p}_{1})v(p_{1}) + \\
+            (2p_{1}^{\alpha} + \gamma^{\alpha}\slashed{p}_{1})v(p_{1}) + \\
         &\noeq +
             \bar{u}(p_{2})m \gamma_{\alpha} \gamma^{\mu} 
             (2p_{1}^{\alpha} - \gamma^{\alpha}\slashed{p}_{1})v(p_{1}) + 
@@ -193,8 +196,8 @@ podemos escrever
             \gamma^{\mu} \slashed{k} \gamma^{\alpha} v(p_{1}) - \\
         &\noeq -
             \bar{u}(p_{2}) \gamma_{\alpha} \slashed{k} \gamma^{\mu} \slashed{k} \gamma^{\alpha} v(p_{1}) +
-            \bar{u}(p_{2}) m \gamma_{\alpha} \gamma^{\mu} \slashed{k} \gamma^{\alpha} v(p_{1}) + 
-            \bar{u}(p_{2}) m (2p_{2\alpha} - \slashed{p}_{2}\gamma_{\alpha})
+            \bar{u}(p_{2}) m \gamma_{\alpha} \gamma^{\mu} \slashed{k} \gamma^{\alpha} v(p_{1}) - 
+            \bar{u}(p_{2}) m (2p_{2\alpha} + \slashed{p}_{2}\gamma_{\alpha})
             \gamma^{\mu} \gamma^{\alpha} v(p_{1}) - \\
         &\noeq -
             \bar{u}(p_{2}) m \gamma_{\alpha} \slashed{k} \gamma^{\mu} \gamma^{\alpha} v(p_{1}) + 
@@ -205,7 +208,7 @@ podemos escrever
             2\bar{u}(p_{2}) \gamma^{\mu}\slashed{p}_{2} \slashed{p}_{1} v(p_{1}) + \\
         &\noeq +
             \bar{u}(p_{2}) \slashed{p}_{2}\gamma_{\alpha}\gamma^{\mu}\gamma^{\alpha}\slashed{p}_{1} v(p_{1}) -
-            2\bar{u}(p_{2}) \slashed{p}_{1}\slashed{k}\gamma^{\mu} v(p_{1}) + 
+            2\bar{u}(p_{2}) \slashed{p}_{1}\slashed{k}\gamma^{\mu} v(p_{1}) - 
             \bar{u}(p_{2}) \gamma_{\alpha}\slashed{k}\gamma^{\mu}\gamma^{\alpha}\slashed{p}_{1} v(p_{1}) + \\
         &\noeq +
             2\bar{u}(p_{2}) m\slashed{p}_{1}\gamma^{\mu} v(p_{1}) - 
@@ -214,8 +217,8 @@ podemos escrever
         &\noeq -
             \bar{u}(p_{2}) \slashed{p}_{2}\gamma_{\alpha}\gamma^{\mu}\slashed{k}\gamma^{\alpha} v(p_{1}) -
             \bar{u}(p_{2}) \gamma_{\alpha}\slashed{k}\gamma^{\mu}\slashed{k}\gamma^{\alpha} v(p_{1}) +
-            \bar{u}(p_{2}) m\gamma_{\alpha}\gamma^{\mu}\slashed{k}\gamma^{\alpha} v(p_{1}) + \\
-        &\noeq +
+            \bar{u}(p_{2}) m\gamma_{\alpha}\gamma^{\mu}\slashed{k}\gamma^{\alpha} v(p_{1}) - \\
+        &\noeq -
             2\bar{u}(p_{2}) m\gamma^{\mu}\slashed{p}_{2} v(p_{1}) - 
             \bar{u}(p_{2}) m\slashed{p}_{2}\gamma_{\alpha}\gamma^{\mu}\gamma^{\alpha} v(p_{1}) -
             \bar{u}(p_{2}) m\gamma_{\alpha}\slashed{k}\gamma^{\mu}\gamma^{\alpha} v(p_{1}) + \\

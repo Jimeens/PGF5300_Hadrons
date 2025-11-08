@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  8 NOV 2025 14:20
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.10.2)  8 NOV 2025 16:40
  system commands enabled.
  file:line:error style messages enabled.
-**/home/jimeens/PGF5300_Hadrons-1/Listas/lista2.tex
-(/home/jimeens/PGF5300_Hadrons-1/Listas/lista2.tex
+**/home/jimeens/PGF5300_Hadrons-2/Listas/lista2.tex
+(/home/jimeens/PGF5300_Hadrons-2/Listas/lista2.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 Lua module: luaotfload 2023-08-31 3.26 Lua based OpenType font support
@@ -3052,60 +3052,60 @@ Package luatex.def Info: Figures/vanilla.png  used on input line 148.
  [24] (./Solutions/Solutions2/ex8.tex
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 36.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 39.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 36.
+Package luatex.def Info: Figures/vanilla.png  used on input line 39.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [25]
-Overfull \hbox (0.39453pt too wide) detected at line 71
+Overfull \hbox (0.39453pt too wide) detected at line 74
 []
  []
 
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 137.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 140.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 137.
+Package luatex.def Info: Figures/vanilla.png  used on input line 140.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
 [26]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 238.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 241.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 238.
+Package luatex.def Info: Figures/vanilla.png  used on input line 241.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [27]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 279.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 282.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 279.
+Package luatex.def Info: Figures/vanilla.png  used on input line 282.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [28]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 332.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 335.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 332.
+Package luatex.def Info: Figures/vanilla.png  used on input line 335.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [29]
 File: Figures/Impression, soleil levant - Claude Monet.png Graphic file (type png)
 <use Figures/Impression, soleil levant - Claude Monet.png>
-Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 393.
+Package luatex.def Info: Figures/Impression, soleil levant - Claude Monet.png  used on input line 396.
 (luatex.def)             Requested size: 1088.4324pt x 845.04684pt.
 File: Figures/vanilla.png Graphic file (type png)
 <use Figures/vanilla.png>
-Package luatex.def Info: Figures/vanilla.png  used on input line 393.
+Package luatex.def Info: Figures/vanilla.png  used on input line 396.
 (luatex.def)             Requested size: 71.12491pt x 71.13188pt.
  [30] (/usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian80.pgf)) 
 AED: pageslts setting LastPage 
@@ -3148,7 +3148,7 @@ Here is how much of LuaTeX's memory you used:
  75 fonts using 17093079 bytes
  167i,19n,152p,1189b,3185s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/fonts/opentype/ebgaramond/EBGaramond08-Regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSans-Regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Italic.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/EBGaramond-Bold.otf></usr/share/fonts/opentype/ebgaramond/EBGaramond12-Regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lista2.pdf (32 pages, 4293283 bytes).
+Output written on lista2.pdf (32 pages, 4293320 bytes).
 
 PDF statistics: 293 PDF objects out of 1000 (max. 8388607)
  119 compressed objects within 2 object streams
