@@ -1,5 +1,6 @@
-\textbf{\textsc{Nota:}} Eu modifiquei o diagrama que foi informado no exercício apenas para manter o fluxo das linhas do diagrama, isto é, troquei a posição do quark e do antiquark, o que pode ser feito sem qualquer perda de generalidade, já
+\textbf{\textsc{Nota:}} Eu modifiquei o diagrama que foi informado no exercício apenas para manter o fluxo das linhas do diagrama (apenas por preciosismo), isto é, troquei a posição do quark e do antiquark, o que pode ser feito sem qualquer perda de generalidade.
 
+\noindent\rule{\linewidth}{1pt}
 
 Para calcular o primeiro diagrama, podemos explicitar os momentos que devem ser considerados e depois aplicar as regras de Feynman da QCD. O diagrama é então
     \begin{center}
@@ -375,7 +376,7 @@ No caso do segundo diagrama, que consiste de uma emissão real de glúon, temos 
 
                 \diagram*{
                     (i3) -- [fermion, rmomentum={[arrow shorten=0.7]$k_{2}$}] (i2) -- [fermion, momentum={[arrow shorten=0.7]$k_{1}$}] (i1),
-                    (i2) -- [boson, rmomentum={[arrow shorten=0.7]$Q$}] (i5),
+                    (i2) -- [boson, rmomentum'={[arrow shorten=0.7]$Q$}] (i5),
                     (i6) -- [fermion, momentum'={[arrow shorten=0.7]$p_{1}$}] (vg1) -- [fermion, momentum'={[arrow shorten=0.7]$p_{1}-k$}] (i5) -- [fermion, rmomentum'={[arrow shorten=0.7]$p_{2}$}] (i4),
                     (vg1) -- [gluon, rmomentum'={[arrow shorten=0.7]$k$}] (vg2)
                 };
@@ -386,13 +387,13 @@ No caso do segundo diagrama, que consiste de uma emissão real de glúon, temos 
 
 Chamando esse diagrama de $i\mathcal{M}_{\text{r}}$, pelas regras de Feynman temos
     \begin{align*}
-        i\mathcal{M}_{\text{r}} &\eq [\bar{v}(k_{1})][-ie\gamma_{\mu}][u(k_{2})]\qty[\dfrac{-ig^{\mu\nu}}{Q^{2}}][\bar{u}(p_{2})][-ieQ_{f}\gamma_{\nu}]\qty[\dfrac{i(\slashed{p}_{2}+\slashed{k}+m)}{(p_{2} + k)^{2} - m^{2}}][ig\gamma_{\alpha}T_{a}]\qty[\varepsilon^{\alpha}_{a}(k)]v(p_{1}) \\
-        &\eq -\dfrac{e^{2}g}{Q^{2}} Q_{f}T_{a} \bar{v}(k_{1})\gamma_{\mu}u(k_{2})\bar{u}(p_{2})\gamma^{\mu} \dfrac{(\slashed{p}_{2} + \slashed{k} + m)}{(p_{2} + k)^{2} - m^{2}}\slashed{\varepsilon}_{a}(k)v(p_{1})
+        i\mathcal{M}_{\text{r}} &\eq [\bar{v}(k_{1})][-ie\gamma_{\mu}][u(k_{2})]\qty[\dfrac{-ig^{\mu\nu}}{Q^{2}}][\bar{u}(p_{2})][-ieQ_{f}\gamma_{\nu}]\qty[\dfrac{i(\slashed{p}_{1}- \slashed{k} + m)}{(p_{1} - k)^{2} - m^{2}}][ig\gamma_{\alpha}T_{a}]\qty[\varepsilon^{\alpha}_{a}(k)]v(p_{1}) \\
+        &\eq -\dfrac{e^{2}g}{Q^{2}} Q_{f}T_{a} \bar{v}(k_{1})\gamma_{\mu}u(k_{2})\bar{u}(p_{2})\gamma^{\mu} \dfrac{i(\slashed{p}_{1} - \slashed{k} + m)}{(p_{1} - k)^{2} - m^{2}}\slashed{\varepsilon}_{a}(k)v(p_{1})
     \end{align*}
 
-Considerando novamente que estamos na camada de massa, $p_{2}^{2} = m^{2}$, o denominador pode ser substituído por $2p_{2}\cdot k + k^{2}$ e portanto
+Considerando novamente que estamos na camada de massa, $p_{1} = m^{2}$, o denominador pode ser substituído por $-2p_{1}\cdot k + k^{2}$ e portanto
     \begin{equation*}
-        i\mathcal{M}_{\text{r}} = -\dfrac{e^{2}g}{Q^{2}}Q_{f}T_{a}\bar{v}(k_{1})\gamma_{\mu}u(k_{2})\bar{u}(p_{2})\gamma^{\mu}\dfrac{(\slashed{p}_{2} + \slashed{k} + m)}{(2p_{2}\cdot k + k^{2})}\slashed{\varepsilon}_{a} v(p_{1})
+        i\mathcal{M}_{\text{r}} = -\dfrac{e^{2}g}{Q^{2}}Q_{f}T_{a}\bar{v}(k_{1})\gamma_{\mu}u(k_{2})\bar{u}(p_{2})\gamma^{\mu}\dfrac{i(\slashed{p}_{1} - \slashed{k} + m)}{(-2p_{1}\cdot k + k^{2})}\slashed{\varepsilon}_{a} v(p_{1})
     \end{equation*}
 
 Aqui temos que todos os termos no denominador dependem de $k$, então na região de \textit{soft gluon}, onde $k\to0$, esse diagrama diverge. Então
