@@ -365,7 +365,7 @@ No caso do segundo diagrama, que consiste de uma emissão real de glúon, temos 
                 \vertex [below left=1.25cm and 1.75cm of i2] (i3) {$e^{-}$};
 
                 \vertex [right=6cm of i1] (i4) {$q$};
-                \vertex [below left=0.75cm and 1cm of i4] (vg1); % gluon vertex 1
+                \vertex [above left=0.75cm and 1cm of i6] (vg1); % gluon vertex 1
                 \vertex [below left=1.5cm and 2cm of i4] (i5);
                 \vertex [right= 1.75cm of i5] (vg2) {$g$}; % gluon vertex 2
                 \vertex [below right=1.25cm and 1.75cm of i5] (i6) {$\bar{q}$};
@@ -376,7 +376,7 @@ No caso do segundo diagrama, que consiste de uma emissão real de glúon, temos 
                 \diagram*{
                     (i3) -- [fermion, rmomentum={[arrow shorten=0.7]$k_{2}$}] (i2) -- [fermion, momentum={[arrow shorten=0.7]$k_{1}$}] (i1),
                     (i2) -- [boson, rmomentum={[arrow shorten=0.7]$Q$}] (i5),
-                    (i6) -- [fermion, momentum'={[arrow shorten=0.7]$p_{1}$}] (i5) -- [fermion, rmomentum'={[arrow shorten=0.7]$p_{2}+k$}] (vg1) -- [fermion, rmomentum'={[arrow shorten=0.7]$p_{2}$}] (i4),
+                    (i6) -- [fermion, momentum'={[arrow shorten=0.7]$p_{1}$}] (vg1) -- [fermion, momentum'={[arrow shorten=0.7]$p_{1}-k$}] (i5) -- [fermion, rmomentum'={[arrow shorten=0.7]$p_{2}$}] (i4),
                     (vg1) -- [gluon, rmomentum'={[arrow shorten=0.7]$k$}] (vg2)
                 };
 
